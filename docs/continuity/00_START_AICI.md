@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**Progres M1:** conceptul multipagină este implementat local pe `design/m1-static-cinematic`; citește [checkpoint-ul M1](09_M1_PROPUNERE_VIZUALA.md) pentru ce este gata, ce nu a fost verificat și ce urmează. Nu s-a făcut deploy. Direcția de design M0.2 rămâne autoritatea cerințelor.
+
 **Direcția curentă M0.2:** citește întâi [clarificările vizuale și navigarea](08_DIRECTIE_VALIDATA_SI_NAVIGARE.md). Acasă aerisit cu un singur hero static; fără mișcarea fotografiei sau alte imagini culinare. Pagină Meniu vizuală, Galerie editată cinematic și Evenimente cu upload de postere.
 
 **Actualizare ulterioară M0.1, aceeași zi:** utilizatorul a stabilit găzduirea finală pe cPanel și excluderea Berăriei. Citește [strategia curentă](07_STRATEGIE_EXECUTIE.md) înaintea restului planului; referințele M0 la viitoare preview-uri Vercel sunt depășite.

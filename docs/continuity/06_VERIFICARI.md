@@ -1,5 +1,9 @@
 # Verificări și jurnal de milestone
 
+## M1 — concept multipagină, 18.10.2026
+
+Implementare și verificări în `09_M1_PROPUNERE_VIZUALA.md`. Surse și prompturi în `../design/ASSET_PROMPTS_M1.md`. Verificări statice PASS; browser QA și Lighthouse neexecutate deoarece control-browser nu este disponibil în mediul managed. Administrare doar demo local; contact incomplet; imagini de produs de concept. Nicio publicare sau mutație în cPanel/celelalte aplicații. Ramură de design cu guard Vercel de non-deploy.
+
 ## M0.2 — clarificare vizuală și structură, 18.10.2026
 
 - Bază remote: `d7dcf7c43d4968ee279ed3b497d12ba5856d8b6b`.

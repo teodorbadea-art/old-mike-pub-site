@@ -2,7 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "git": {
     "deploymentEnabled": {
-      "docs/continuity-audit-20261018": false
+      "docs/continuity-audit-20261018": false,
+      "design/m1-static-cinematic": false
     }
   }
 }

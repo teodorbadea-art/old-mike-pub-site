@@ -4,6 +4,8 @@ Repository dedicat site-ului de prezentare. Meniu Electronic și Old Mike Commun
 
 ## Începe aici
 
+**M1 — concept implementat local:** [stare, verificări și limitări](docs/continuity/09_M1_PROPUNERE_VIZUALA.md). Pagini: `index.html`, `meniu.html`, `evenimente.html`, `galerie.html`, `contact.html`. Pentru fișierul autonom de evaluare: `python3 scripts/build_pages.py`, apoi `python3 scripts/build_review.py`. Nu este publicat; administrarea evenimentelor este doar o demonstrație locală.
+
 **Direcția curentă M0.2:** [Homepage static aerisit, pagini și administrare Evenimente](docs/continuity/08_DIRECTIE_VALIDATA_SI_NAVIGARE.md). Clarificările utilizatorului înlocuiesc propunerea anterioară de homepage lung și mișcarea imaginilor pe straturi.
 
 Checkpoint de recuperare: **18 octombrie 2026**, milestone **M0 — audit și continuitate**.
