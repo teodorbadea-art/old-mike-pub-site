@@ -8,6 +8,8 @@ Repository dedicat site-ului de prezentare. Meniu Electronic și Old Mike Commun
 
 **Decizie curentă:** [păstrăm designul M2.2 și testăm posterele](docs/continuity/24_DECIZIE_PASTRARE_M22_TEST_POSTERE.md). ÎncercărileM2.3/M2.4 sunt istorice și nu se aplică.
 
+**M2.5 — postere8MB:** [modificări și verificări](docs/continuity/25_M25_POSTERE_8MB.md). Aplicat exclusiv în staging; designM2.2 păstrat.
+
 ## Începe aici
 
 **M2.2 — curent:** [introduceri cinematice și verificări staging](docs/continuity/21_M22_INTRODUCERI_CINEMATICE.md). Fundaluri fotografice integrate în Meniu, Galerie, Evenimente și Contact; actualizare exclusiv în zona de test protejată.

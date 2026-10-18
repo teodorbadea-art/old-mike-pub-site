@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**Checkpoint tehnic M2.5:** [Postere până la8MB](25_M25_POSTERE_8MB.md), aplicat în staging. ConfigPHP doar pe directorul site-ului;41testeCLI PASS șiHTTP401. TestulHTTP cu posterul utilizatorului rămâne deschis. DesignM2.2.
+
 **Decizie curentă: design M2.2 păstrat.** [Revenire surse și testarea posterelor](24_DECIZIE_PASTRARE_M22_TEST_POSTERE.md). M2.3/M2.4 respinse; stagingul rămâneM2.2, sursele sunt readuse la aceeași variantă. Urmează testul de upload/publicare prin administrare.
 
 **Checkpoint local curent M2.4:** [Meniu în perechi compacte](23_M24_MENIU_MOZAIC_COMPACT.md). Încercare pregătită pentru evaluare; M2.3 respins din cauza golurilor. Stagingul rămâneM2.2, uploadul nu a fost reluat.

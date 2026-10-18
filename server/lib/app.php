@@ -125,7 +125,7 @@ function event_values(array $v): array {
     return ['title'=>$title,'category'=>$category,'starts'=>$start->format(DATE_ATOM),'ends'=>$end->format(DATE_ATOM)];
 }
 function poster(array $file, array $c): string {
-    if (($file['error'] ?? UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK || ($file['size'] ?? 0)>1900000 || !is_uploaded_file($file['tmp_name'] ?? '')) throw new Problem(422,'Alege un poster JPG, PNG sau WebP de maximum 1,8 MB.');
+    if (($file['error'] ?? UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK || ($file['size'] ?? 0)>8000000 || !is_uploaded_file($file['tmp_name'] ?? '')) throw new Problem(422,'Alege un poster JPG, PNG sau WebP de maximum 8 MB.');
     if (!function_exists('imagecreatefromstring')) throw new Problem(503,'Prelucrarea imaginilor trebuie activată pe găzduire.');
     $info=@getimagesize($file['tmp_name']);
     if (!$info || !in_array($info['mime'],['image/jpeg','image/png','image/webp'],true) || $info[0]<100 || $info[1]<100 || $info[0]>6000 || $info[1]>6000 || $info[0]*$info[1]>12000000) throw new Problem(422,'Posterul trebuie să fie o imagine validă, între100px și12megapixeli.');

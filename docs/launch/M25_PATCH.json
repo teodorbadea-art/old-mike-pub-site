@@ -1,0 +1,14 @@
+{
+  "lib/app.php": {
+    "before": "a65c03091407472236de01fe0071e13bde015ba2372ec1a49ac0ae17f4f8eb83",
+    "after": "b02495037952763b5007ed8ae9bc3b3c8dfd03aaf7265be74458b24d0549a6da"
+  },
+  "admin/index.php": {
+    "before": "6adbe4a8818ccbf7850fde86a28177f80d83b57b745b17e04f65504f1d7f766f",
+    "after": "67b0f9c806a1d52bc9e56cbd3cfe71f1099b9607672e37eb0aa80b1028701a07"
+  },
+  ".user.ini": {
+    "before": null,
+    "after": "761c851abcb97d04d384a5a6a09c198ec8a898288cb1f48bdbb67491ffc883e0"
+  }
+}

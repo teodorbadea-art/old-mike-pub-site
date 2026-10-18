@@ -46,6 +46,7 @@ with (PUBLIC/'assets/site.css').open('a') as f:f.write('\n.form-honeypot{positio
 for folder in ['api','admin','lib']:shutil.copytree(ROOT/'server'/folder,PUBLIC/folder)
 (PUBLIC/'robots.txt').write_text('User-agent: *\nDisallow: /\n')
 (PUBLIC/'.htaccess').write_text('Require all denied\nOptions -Indexes\nDirectoryIndex index.html index.php\n<IfModule mod_headers.c>\nHeader always set X-Content-Type-Options "nosniff"\nHeader always set X-Robots-Tag "noindex, nofollow"\n</IfModule>\n')
+shutil.copy2(ROOT/'server/staging.user.ini',PUBLIC/'.user.ini')
 # Configuration example belongs OUTSIDE the public directory, and remains disabled.
 shutil.copy2(ROOT/'server/config/config.example.php',OUT/'config.example.php')
 shutil.copy2(ROOT/'server/setup.php',OUT/'setup.php')
