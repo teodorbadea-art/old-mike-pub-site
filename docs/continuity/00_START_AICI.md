@@ -1,6 +1,8 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
-**Versiunea curentă: M1.2.** Citește [hero-ul cu doi bucătari și emailul confirmat](11_M12_HERO_BUCATARI_EMAIL.md). Contact: office@oldmike.ro, notificări încă inactive.
+**Versiunea curentă: M1.3.** Citește [categoriile vizuale din Meniu](12_M13_CATEGORII_MENIU.md). Hero-ul Acasă M1.2 a fost evaluat favorabil și rămâne neschimbat.
+
+**M1.2 (istoric).** Citește [hero-ul cu doi bucătari și emailul confirmat](11_M12_HERO_BUCATARI_EMAIL.md). Contact: office@oldmike.ro, notificări încă inactive.
 
 **M1.1 (istoric).** Citește [corecțiile și starea Contact](10_M11_CORECTII_VIZUALE_CONTACT.md). Datele de la M1 sunt istorice; adresa a fost între timp confirmată, Galeria are patru zone, hero-ul este diferit, iar formularul este numai preview local.
 

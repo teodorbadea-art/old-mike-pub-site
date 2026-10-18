@@ -1,5 +1,9 @@
 # Verificări și jurnal de milestone
 
+## M1.3 — categorii vizuale Meniu, 18.10.2026
+
+Vezi `12_M13_CATEGORII_MENIU.md`. Trei imagini noi de categorie cu bucătari miniaturali; catalog/media citite read-only; pagina Meniu extinsă și navigare locală. Verificări statice și inspecție imagini; browser QA neexecutat. Celelalte pagini și backend-ul sunt neschimbate. Fără deploy.
+
 ## M1.2 — hero artistic și email, 18.10.2026
 
 Vezi `11_M12_HERO_BUCATARI_EMAIL.md`. Doi bucătari miniaturali în hero static; office@oldmike.ro confirmat și afișat în Contact. Verificări statice și inspecție imagine desktop/derivat mobil PASS. Formularul rămâne local, fără trimiteri. Browser QA neexecutat. Fără deploy.

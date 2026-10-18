@@ -4,7 +4,9 @@ Repository dedicat site-ului de prezentare. Meniu Electronic și Old Mike Commun
 
 ## Începe aici
 
-**M1.2 — versiunea curentă:** [doi bucătari miniaturali și email confirmat](docs/continuity/11_M12_HERO_BUCATARI_EMAIL.md). Hero artistic static actualizat și office@oldmike.ro în Contact. Formularul rămâne numai previzualizare locală.
+**M1.3 — versiunea curentă:** [categorii culinare și bucătari miniaturali](docs/continuity/12_M13_CATEGORII_MENIU.md). Meniu extins cu Platouri, Grătar de vită și Deserturi; imagini statice, scurtături și CTA către meniul complet. Fără deploy.
+
+**M1.2 — istoric:** [doi bucătari miniaturali și email confirmat](docs/continuity/11_M12_HERO_BUCATARI_EMAIL.md). Hero artistic static actualizat și office@oldmike.ro în Contact. Formularul rămâne numai previzualizare locală.
 
 **M1.1 — istoric:** [corecții vizuale, hartă și cerere pentru grupuri](docs/continuity/10_M11_CORECTII_VIZUALE_CONTACT.md). Hero artistic descompus pe Acasă, Meniu generic, Galerie cu patru zone, CTA mai accesibil și Contact extins. Cererile sunt încă în mod de previzualizare, fără trimitere.
 

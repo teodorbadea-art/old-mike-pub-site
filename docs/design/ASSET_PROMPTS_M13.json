@@ -1,0 +1,58 @@
+{
+  "tool": "built-in imagegen",
+  "date": "2026-10-18",
+  "style_reference": "assets/images/hero-chefs-v3.webp",
+  "sources": [
+    {
+      "name": "Papanasi cu Smantana si Dulceata / Finetti",
+      "status": "verified",
+      "bucket": "menu-media",
+      "path": "94e9c174-e9d6-4cdb-a912-b2a7e7a8f2db/ba2c5f07-3ea2-444e-9711-6dc6e0f55652/cbf9867b-77e6-4f3b-993f-d7e2f5a6bf7d.jpg"
+    },
+    {
+      "name": "Platou Butcher Old Mike Cald 2400gr",
+      "status": "verified",
+      "bucket": "menu-media",
+      "path": "94e9c174-e9d6-4cdb-a912-b2a7e7a8f2db/a006c0f8-7b92-4b33-adf0-ac1ca3d09b8c/1d0f38bb-5f4b-46fc-ae94-99cfd2d6b6f5.jpg"
+    }
+  ],
+  "steak_source": {
+    "name": "Muschi de Vita la Gratar.png",
+    "status": "archived",
+    "scope": "Old Mike UAT, historical media; artistic reference only, not proof of current served dish",
+    "bucket": "menu-media",
+    "path": "7692d273-eac2-4649-abf8-f1564714ddb4/2e6ff80e-1df6-41f1-a020-5b25314d927d/1a61a0c2-4d1f-42c8-b97d-b178051a2e74.png"
+  },
+  "assets": [
+    {
+      "key": "platouri",
+      "reference_file": "platou-butcher-original.jpg",
+      "prompt": "Use case: ads-marketing. Asset type: premium restaurant menu category photograph, static landscape 1536x1024. Input image 1 is FOOD reference, preserve recognizable dish type and honest rustic pub character. Input image 2 is STYLE reference ONLY: match warm amber studio side light, charcoal brown seamless background, appetizing hyperrealistic food textures and tiny photographic adult chefs with subtle surreal humor. Do not include any burger. Center dish with generous dark breathing room on every side; full platter/plate visible and two chefs fully visible with hats and feet, comfortably inside central 85 percent of frame. Food should occupy about 70 percent width, not fill or crop the frame. Camera food advertising three-quarter angle. Dark background should merge naturally with a warm near-black website. Tiny chefs are realistic adult people in white chef jackets, aprons and hats, about one quarter of plate diameter high; coherent shadows and perspective, believable anatomy and hands. This is an artistic category illustration, not a menu recipe or exact serving size. No text, logos, watermark, beer, brand labels, signage, cartoon, plastic 3D people, duplicated limbs, border or collage. Primary request: a generous long oval rustic wooden mixed grill sharing platter inspired by input 1, containing grilled pork and chicken, browned Romanian mici (short skinless minced-meat rolls), grilled sausages, golden fries, a little pickle garnish and two small simple sauce bowls. Do not retain the branded beer glasses or table menu from input 1. Make varied grills distinct and recognizable, moist grill texture and appetizing restrained steam. Add EXACTLY TWO miniature adult chefs beside the platter: one on the tabletop gripping an oversized full-size dining fork with both hands to gently position a grilled sausage, the other on a discreet low wooden step near the opposite edge, using tongs to arrange a mic. Humor comes only from scale and effort, no silly faces. Premium cinematic photographic realism, warm highlights, soft deep shadows. Show the ENTIRE platter and both chefs; no food in left/right edges.",
+      "output_hint": "Generated images are saved to /workspace/scratch/52be6ffe8fd8/generated_images as /workspace/scratch/52be6ffe8fd8/generated_images/exec-3a35f90c-3c99-425e-a33f-36ed57e71831.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "repo_asset": "assets/images/platouri-chefs-v1.webp",
+      "conversion": "1536x1024 to 1200x800, Lanczos, WebP quality84, no cropping",
+      "reference_sha256": "f9dd2f88170b511c17d7886bbe7b914fb468b5fd4f6e1425b05dfcb166513b91",
+      "asset_sha256": "34d5acc1a67f8ba65504c49f2cf656be83b48ebe665e7856a8d2b7f165c944b7"
+    },
+    {
+      "key": "vita",
+      "reference_file": "vita-original.png",
+      "prompt": "Use case: ads-marketing. Asset type: premium restaurant menu category photograph, static landscape 1536x1024. Input image 1 is FOOD reference, preserve recognizable dish type and honest rustic pub character. Input image 2 is STYLE reference ONLY: match warm amber studio side light, charcoal brown seamless background, appetizing hyperrealistic food textures and tiny photographic adult chefs with subtle surreal humor. Do not include any burger. Center dish with generous dark breathing room on every side; full platter/plate visible and two chefs fully visible with hats and feet, comfortably inside central 85 percent of frame. Food should occupy about 70 percent width, not fill or crop the frame. Camera food advertising three-quarter angle. Dark background should merge naturally with a warm near-black website. Tiny chefs are realistic adult people in white chef jackets, aprons and hats, about one quarter of plate diameter high; coherent shadows and perspective, believable anatomy and hands. This is an artistic category illustration, not a menu recipe or exact serving size. No text, logos, watermark, beer, brand labels, signage, cartoon, plastic 3D people, duplicated limbs, border or collage. Primary request: grilled beef steak category, one thick browned juicy steak with convincing seared crust and a few cut slices showing a warm rosy cooked center, a restrained few roast potato pieces and rosemary on a simple dark ceramic plate, inspired by the food texture of reference 1. Avoid decorative fine dining additions. Add EXACTLY ONE tiny adult chef standing on the tabletop at the right of the plate, using both arms to tip a full-size plain glass salt shaker taller than his torso, sprinkling just a delicate few salt crystals onto the steak. Make him clearly visible without covering the beef; readable playful pose, realistic effort and hands. Salt shaker plain, no label; understated surreal photographic food advertisement, not a cartoon. Keep the whole plate and chef inside frame.",
+      "output_hint": "Generated images are saved to /workspace/scratch/52be6ffe8fd8/generated_images as /workspace/scratch/52be6ffe8fd8/generated_images/exec-387bfc2d-e639-4d62-8930-ebaa687b8d3a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "repo_asset": "assets/images/vita-chefs-v1.webp",
+      "conversion": "1536x1024 to 1200x800, Lanczos, WebP quality84, no cropping",
+      "reference_sha256": "a73fcb25897b8248708569e286390500c468b5d1a40eb3ab4608564f777a19af",
+      "asset_sha256": "7976c94f1323b04ea6e4685a4d0896bfad77648bd66d61f915ca3c6843e384c7"
+    },
+    {
+      "key": "papanasi",
+      "reference_file": "papanasi-original.jpg",
+      "prompt": "Use case: ads-marketing. Asset type: premium restaurant menu category photograph, static landscape 1536x1024. Input image 1 is FOOD reference, preserve recognizable dish type and honest rustic pub character. Input image 2 is STYLE reference ONLY: match warm amber studio side light, charcoal brown seamless background, appetizing hyperrealistic food textures and tiny photographic adult chefs with subtle surreal humor. Do not include any burger. Center dish with generous dark breathing room on every side; full platter/plate visible and two chefs fully visible with hats and feet, comfortably inside central 85 percent of frame. Food should occupy about 70 percent width, not fill or crop the frame. Camera food advertising three-quarter angle. Dark background should merge naturally with a warm near-black website. Tiny chefs are realistic adult people in white chef jackets, aprons and hats, about one quarter of plate diameter high; coherent shadows and perspective, believable anatomy and hands. This is an artistic category illustration, not a menu recipe or exact serving size. No text, logos, watermark, beer, brand labels, signage, cartoon, plastic 3D people, duplicated limbs, border or collage. Primary request: Romanian fried cheese papanasi dessert category. Closely respect the distinctive reference 1 arrangement: golden brown rounded fried cheese dough pieces piled in a white shallow ceramic plate, topped with real thick sour cream and glossy dark berry preserve, a small mint garnish; rustic airy fried dough crumb, visible uneven handmade texture, fresh appetizing sour cream, no chocolate. Do not substitute pancakes, macarons, doughnuts with sprinkles or a cake. Add EXACTLY TWO tiny adult pastry chefs on the tabletop alongside the plate, one on a small tasteful wooden step using a full-size teaspoon held in both hands to carefully pour a ribbon of dark berry preserve over a papanas; the other standing near the lower right plate edge holding a tiny clean pastry spatula and watching his colleague. Utensils have coherent scale, gravity and realistic interaction. Playful but premium photorealism, no mess, no giant spill. Entire white plate, both chefs and full spoon visible with breathing room.",
+      "output_hint": "Generated images are saved to /workspace/scratch/52be6ffe8fd8/generated_images as /workspace/scratch/52be6ffe8fd8/generated_images/exec-766a5b04-91be-4a10-9465-aee53affb169.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "repo_asset": "assets/images/papanasi-chefs-v1.webp",
+      "conversion": "1536x1024 to 1200x800, Lanczos, WebP quality84, no cropping",
+      "reference_sha256": "f1e39a9aeeedaee039f53b83bad8bfcced20f851eb6a1bf7ad4009d43d291095",
+      "asset_sha256": "5d30a074db1a089385b3bfd5ce01e8a202aec901bb0307266e0374dd6bacb01d"
+    }
+  ]
+}
