@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**Checkpoint local M2.3:** [Meniu compact și blocaj upload](22_M23_MENIU_RANDURI_COMPACTE.md). Corecție implementată și verificată local. Stagingul rămâne M2.2: încărcarea a fost refuzată de dialogul de permisiuni; reluarea necesită autorizare.
+
 **Checkpoint curent M2.2:** [introduceri cinematice și actualizare în staging](21_M22_INTRODUCERI_CINEMATICE.md). Imagini în prima vedere la Meniu/Galerie/Evenimente/Contact; negru în stânga, fade spre fotografie în dreapta, text mic suprapus. Aplicat și verificat tehnic în oldmike-test; evaluarea vizuală M2.2 și uploadul posterelor rămân deschise.
 
 **Checkpoint tehnic anterior: M2.1 — [backend și instalare de test blocată](20_M21_BACKEND_INSTALARE_TEST.md).**41teste PHP CLI și7fișiere PHP lint PASS pe găzduire. Staging instalat în oldmike-test; configurarea contului a fost încheiată de utilizator și accesul anonim401 este confirmat. Accesul utilizatorului la pagini și linkuri a fost confirmat; testele HTTP ale administrării rămân de făcut; vezi actualizarea de la finalul raportului M2.1. Nicio lansare pe pagina principală. **Design curent: M1.7.1.** Citește [restaurarea imaginilor cinematice ale spațiilor](18_M171_REVENIRE_SPATII_CINEMATICE.md). Cele patru imagini generate v2 sunt din nou active. Citește [corecțiile de utilizare, fidelitate și SEO](17_M17_CORECTII_UTILIZARE_SEO.md). Program confirmat, burger simplu/Pizza Old Mike/vită cu cartofi prăjiți; datele sociale și firma amânate. Fără publicare.

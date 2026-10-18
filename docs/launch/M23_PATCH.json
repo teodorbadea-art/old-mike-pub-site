@@ -1,0 +1,34 @@
+{
+  "index.html": {
+    "before": "6eb47c7a91be948d596e2a0784697283c1a4ff0901379c75b1def18c7d74265b",
+    "after": "5921c44bd009073dbaed488c4370754d8eca0fcf4ce0d9ec601ade9d5fcc9fe2"
+  },
+  "meniu.html": {
+    "before": "b150b57abdacac40ad9d63f23dd8ba80b0093eb2eabb930594e9efb956cf8b89",
+    "after": "844105cdcfb0ef45a45cbb7adef23fb2268e3ce7f836ae369d2471c72c171db2"
+  },
+  "galerie.html": {
+    "before": "f20c81f5abb6408775fe8e57411a032ca50d9efb25b77f289ec437f98e8a9baf",
+    "after": "705b83c9301221b60514f7934791016e73e478ee22df5902c8358d0d002988ab"
+  },
+  "evenimente.html": {
+    "before": "2f3dafa974771da94367886483cabd277b66eab0131d5b93775981f0b678b4b9",
+    "after": "9e380de8c4d5e36cceb282adbc6bfacbc9202270138e42639269a0b9b93e39bb"
+  },
+  "contact.html": {
+    "before": "d55ac13cc3450b28e138523de8ce44f1a76febbce2218df0ef1180dda9cec528",
+    "after": "4f858097c41bad188602a1e6df6abace2fbc993785f2c4ed76a627dea82723f9"
+  },
+  "confidentialitate.html": {
+    "before": "62926e94496466e270906b38e686bd4e2c6928a9915455020d2fecc72827a1f4",
+    "after": "95618606809a6e6ffd9d02f676c86fb855d46b0ac6fb815712425a8f7f9bb88d"
+  },
+  "404.html": {
+    "before": "f31f647b8f6a2ab187a79740cc974e2a097d18a419f8d09838839d8a109211fe",
+    "after": "522eb8b4f1db28f14b67321cbe69da9be9da5bc91d53f6018198c9fd7612a649"
+  },
+  "assets/site.css": {
+    "before": "7191889837332a4d2d8758c1f0f84ebb73675798ef73e11a1fdca6dedc13b032",
+    "after": "7c6fa46dc4379275982b30ff385d4ee6bb69cc7b672f7583c1b7cd01e3f15331"
+  }
+}

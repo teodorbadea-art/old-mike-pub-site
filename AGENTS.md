@@ -2,6 +2,8 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
+M2.3: citește `22_M23_MENIU_RANDURI_COMPACTE.md`. Meniu local reorganizat în6rânduri compacte; fotografii max510px desktop/360px mobil și text alăturat. NU este aplicat pe cPanel: upload refuzat de permisiuni; nu ocoli refuzul. Staging=M2.2.
+
 M2.2: citește `21_M22_INTRODUCERI_CINEMATICE.md`. Cover-uri fotografice în Meniu/Galerie/Evenimente/Contact: negru stânga, fotografie cu fade dreapta și descriere suprapusă. Aplicate în staging; 11 fișiere verificate, HTTP401 păstrat. Acasă neschimbat. QA vizual și upload postere încă neconfirmate.
 
 M2.1: citește `20_M21_BACKEND_INSTALARE_TEST.md`. Backend PHP implementat, testat CLI41probe pe cPanel;7fișiere lint PASS. Staging configurat de utilizator, protejat Basic HTTP401; accesul utilizatorului la pagini confirmat. Config/secrete/date exclusiv în afara public_html, nu le citi/introduce în chat/Git. Cereri/email inactive. Nu confunda teste CLI cu QA HTTP/browser. Vezi `docs/launch/INSTALL_TEST_M21.md`.
