@@ -2,6 +2,8 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
+DECIZIE CURENTĂ: citește `24_DECIZIE_PASTRARE_M22_TEST_POSTERE.md`. Utilizatorul păstrează designul deja instalat M2.2; sursele readuse la30fc88b. M2.3/M2.4 respinse: NU le aplica. Urmează testarea posterelor în administrarea stagingului.
+
 M2.4: citește `23_M24_MENIU_MOZAIC_COMPACT.md`. Încercare locală:3perechi compacte fără coloane goale/decalaje, imagini205–255px desktop, titlu/descriere/link imediat sub ele. M2.3 a fost respins vizual. Staging încăM2.2; nu relua uploadul refuzat fără autorizare nouă.
 
 M2.3: citește `22_M23_MENIU_RANDURI_COMPACTE.md`. Meniu local în compoziție asimetrică: imagini de scări diferite, blocuri decalate și Platouri/Bere orizontale. USER VALIDATED: nici tabel, nici listă repetitivă. NU este aplicat pe cPanel: upload refuzat de permisiuni; nu ocoli refuzul. Staging=M2.2.

@@ -63,19 +63,3 @@
  .page-intro.page-cover .intro{max-width:480px;margin:0;font-size:15px;line-height:1.6;text-shadow:none}
  .page-cover-title>.button{margin:2px 0 18px;min-height:48px}.contact-layout.contact-details{margin:0 0 25px}
 }
-
-/* M2.4: three compact pairs, full-width composition without empty grid tracks. */
-.menu-composition{max-width:1240px;margin:12px auto 0;display:grid;grid-template-columns:repeat(20,minmax(0,1fr));column-gap:28px;row-gap:28px;align-items:stretch}
-.menu-category-panel{grid-column:span 11;min-width:0;position:relative;margin:0;padding:0;display:flex;flex-direction:column}
-.menu-panel-pizza,.menu-panel-platouri,.menu-panel-bauturi{grid-column:span 9}
-.menu-category-photo{width:100%;min-width:0;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent),linear-gradient(0deg,transparent,#000 4%,#000 98%,transparent);mask-composite:intersect}
-.menu-category-photo img{display:block;width:100%;height:clamp(205px,20vw,255px);object-fit:contain;object-position:center bottom}
-.menu-category-copy{position:relative;min-width:0;padding:6px 16px 12px;max-width:none;flex:1}
-.menu-category-copy h2{font:400 clamp(30px,2.8vw,40px)/1.08 var(--serif);letter-spacing:-.035em;margin:9px 0 10px}
-.menu-category-copy h2 em{font-size:.84em;white-space:normal}
-.menu-category-copy p{font-size:15px;line-height:1.65;color:var(--muted);margin:0 0 7px;max-width:440px}
-.menu-category-copy .feature-index{font-size:11px;letter-spacing:.08em;line-height:1.5}
-.menu-category-copy .text-link{display:inline-flex;align-items:center;min-height:44px;font-size:14px;line-height:1.5;gap:16px}
-@media(min-width:801px){.menu-page .menu-access{padding:8px 18px;min-height:62px;margin-bottom:14px}.menu-page .menu-access .button{min-height:44px}.menu-page .menu-jumps{padding-bottom:12px;margin-bottom:0}.menu-page .menu-complete{margin-top:20px;padding-top:25px}}
-@media(min-width:801px) and (max-width:1050px){.menu-composition{column-gap:18px;row-gap:22px}.menu-category-copy{padding-left:8px;padding-right:8px}.menu-category-copy h2{font-size:32px}}
-@media(max-width:800px){.menu-composition{display:flex;flex-direction:column;gap:22px;max-width:520px;margin-top:7px}.menu-category-panel{width:100%;margin:0;padding:0}.menu-category-photo img{height:clamp(190px,58vw,270px);object-position:center}.menu-category-copy{padding:5px 4px 8px}.menu-category-copy h2{font-size:34px;margin:9px 0 10px}.menu-category-copy p{font-size:16px;line-height:1.65}.menu-category-copy .feature-index{font-size:11px}.menu-page .menu-complete{margin-top:20px;padding-top:25px}}
