@@ -35,3 +35,5 @@ Direcție aprobată: premium, minimalist, cinematic, hero dominant, animații fl
 **M1.4 — evaluare telefon:** `python3 scripts/build_mobile_review.py` produce un fișier vizual fără JavaScript/iframe, cu toate paginile derulabile. [Detalii și limite](docs/continuity/13_M14_PREVIEW_TELEFON.md). Site-ul nu este modificat sau publicat.
 
 **M1.5 — burger simplu:** [corectat în Acasă și Meniu](docs/continuity/14_M15_BURGER_SIMPLU.md), un singur strat de carne, bucătarii miniaturali păstrați în hero; ambele preview-uri regenerate.
+
+**M1.6 — Galerie:** [Atmosfera și Spațiile restaurantului](docs/continuity/15_M16_GALERIE_ATMOSFERA.md). Patru scene fotorealiste generate cu oameni, bazate pe localul real, separate de cele patru perspective existente. Fără publicare.

@@ -1,5 +1,9 @@
 # Verificări și jurnal de milestone
 
+## M1.6 — Atmosfera în Galerie
+
+Vezi `15_M16_GALERIE_ATMOSFERA.md`. Patru scene generate, două zone în Galerie, imagini existente păstrate. Inspecție vizuală și verificări statice; browser/dispozitiv real neexecutate. Fără deploy.
+
 ## M1.5 — burger simplu
 
 Vezi `14_M15_BURGER_SIMPLU.md`. Două imagini corectate, patru derivate inspectate; o singură bucată de carne. Generatoare/verificări statice efectuate; browser și dispozitiv real neexecutate. Fără deploy.
