@@ -1,6 +1,8 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
-**Checkpoint curent: M1.6.** Vezi [Galerie: Atmosfera și Spațiile](15_M16_GALERIE_ATMOSFERA.md). Cerință clarificată: oameni generați fotorealist, cu scene spontane bazate pe spațiile existente.
+**Evaluare externă după M1.6:** citește [trierea critică a raportului Claude](16_REVIEW_EXTERN_M16.md). Recomandările sunt propuse, nu implementate sau aprobate implicit.
+
+**Checkpoint vizual curent: M1.6.** Vezi [Galerie: Atmosfera și Spațiile](15_M16_GALERIE_ATMOSFERA.md). Cerință clarificată: oameni generați fotorealist, cu scene spontane bazate pe spațiile existente.
 
 **M1.5 (istoric).** [Burger simplu în Acasă și Meniu](14_M15_BURGER_SIMPLU.md), fără dublă carne; bucătarii din hero păstrați.
 
