@@ -2,7 +2,7 @@
 
 Repository dedicat site-ului de prezentare. Meniu Electronic și Old Mike Community sunt aplicații independente și nu se modifică aici.
 
-**M2.3 — corecție locală pregătită:** [Meniu în rânduri compacte](docs/continuity/22_M23_MENIU_RANDURI_COMPACTE.md). Upload cPanel blocat de permisiuni; stagingul rămâne M2.2.
+**M2.3 — corecție locală pregătită:** [Meniu în compoziție asimetrică](docs/continuity/22_M23_MENIU_RANDURI_COMPACTE.md). Upload cPanel blocat de permisiuni; stagingul rămâne M2.2.
 
 ## Începe aici
 

@@ -64,16 +64,23 @@
  .page-cover-title>.button{margin:2px 0 18px;min-height:48px}.contact-layout.contact-details{margin:0 0 25px}
 }
 
-/* M2.3: compact menu categories; image and copy share each desktop row. */
-.menu-category-list{max-width:1120px;margin:0 auto;display:grid;gap:8px}
-.menu-category-row{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center;padding:22px 0;min-width:0}
-.menu-category-photo{width:100%;max-width:510px;justify-self:center;min-width:0;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent),linear-gradient(0deg,transparent,#000 5%,#000 96%,transparent);mask-composite:intersect}
+/* M2.3: asymmetric culinary composition, with a controlled image scale. */
+.menu-composition{max-width:1140px;margin:15px auto 0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:28px;row-gap:42px;align-items:start}
+.menu-category-panel{min-width:0;position:relative}
+.menu-category-photo{width:100%;min-width:0;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent),linear-gradient(0deg,transparent,#000 6%,#000 97%,transparent);mask-composite:intersect}
 .menu-category-photo img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
-.menu-category-copy{max-width:390px;min-width:0;padding:12px 0}
-.menu-category-copy h2{font:400 clamp(34px,3.4vw,48px)/1.1 var(--serif);letter-spacing:-.035em;margin:15px 0 17px}
+.menu-category-copy{position:relative;max-width:380px;padding:8px 18px 0}
+.menu-category-copy h2{font:400 clamp(34px,3.5vw,49px)/1.08 var(--serif);letter-spacing:-.035em;margin:12px 0 14px}
 .menu-category-copy h2 em{display:block;margin-top:4px}
-.menu-category-copy p{font-size:16px;line-height:1.8;color:var(--muted);margin:0 0 17px}
-.menu-category-copy .feature-index{font-size:12px;letter-spacing:.1em;line-height:1.6}
-.menu-category-copy .text-link{display:inline-flex;align-items:center;min-height:44px;font-size:14px;line-height:1.5;gap:20px}
-@media(min-width:801px){.menu-category-row:nth-child(even){grid-template-columns:.95fr 1.05fr}.menu-category-row:nth-child(even) .menu-category-photo{grid-column:2;grid-row:1}.menu-category-row:nth-child(even) .menu-category-copy{grid-column:1;grid-row:1;justify-self:end}.menu-page .menu-access{padding:10px 20px;min-height:66px}.menu-page .menu-access .button{min-height:46px}.menu-page .menu-jumps{margin-bottom:5px}}
-@media(max-width:800px){.menu-category-list{gap:5px;max-width:520px}.menu-category-row{grid-template-columns:1fr;gap:0;padding:16px 0 22px}.menu-category-photo{max-width:360px}.menu-category-copy{max-width:none;padding:8px 4px 0}.menu-category-copy h2{font-size:36px;margin:10px 0 12px}.menu-category-copy p{font-size:16px;line-height:1.7;margin-bottom:10px}.menu-category-copy .feature-index{font-size:11px}.menu-category-copy .text-link{font-size:14px}.menu-page .menu-complete{margin-top:15px;padding-top:28px}}
+.menu-category-copy p{font-size:16px;line-height:1.75;color:var(--muted);margin:0 0 10px}
+.menu-category-copy .feature-index{font-size:11px;letter-spacing:.1em;line-height:1.6}
+.menu-category-copy .text-link{display:inline-flex;align-items:center;min-height:44px;font-size:14px;line-height:1.5;gap:16px}
+.menu-panel-burgeri{grid-column:1/span 7}.menu-panel-burgeri .menu-category-photo{max-width:490px}.menu-panel-burgeri .menu-category-copy{margin-left:22px}
+.menu-panel-pizza{grid-column:9/span 4;margin-top:90px}.menu-panel-pizza .menu-category-photo{max-width:330px}.menu-panel-pizza .menu-category-copy{padding-left:10px}.menu-panel-pizza h2{font-size:38px}
+.menu-panel-platouri{grid-column:2/span 10;display:grid;grid-template-columns:1.25fr 1fr;gap:24px;align-items:center;padding:10px 0}.menu-panel-platouri .menu-category-photo{max-width:550px}.menu-panel-platouri .menu-category-copy{padding-left:0}.menu-panel-platouri h2{font-size:clamp(40px,4.2vw,57px)}
+.menu-panel-gratar{grid-column:1/span 6;margin-top:12px}.menu-panel-gratar .menu-category-photo{max-width:440px}.menu-panel-gratar .menu-category-copy{margin-left:12px}
+.menu-panel-deserturi{grid-column:8/span 5;margin-top:76px}.menu-panel-deserturi .menu-category-photo{max-width:350px;margin-left:auto}.menu-panel-deserturi .menu-category-copy{margin-left:auto;max-width:340px}.menu-panel-deserturi h2{font-size:40px}
+.menu-panel-bauturi{grid-column:3/span 10;display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;margin-top:8px}.menu-panel-bauturi .menu-category-photo{max-width:440px}.menu-panel-bauturi .menu-category-copy{padding-left:0}
+@media(min-width:801px){.menu-page .menu-access{padding:10px 20px;min-height:66px}.menu-page .menu-access .button{min-height:46px}.menu-page .menu-jumps{margin-bottom:5px}}
+@media(min-width:801px) and (max-width:1050px){.menu-composition{column-gap:18px;row-gap:30px}.menu-panel-burgeri{grid-column:1/span 7}.menu-panel-pizza{grid-column:8/span 5;margin-top:70px}.menu-panel-platouri{grid-column:1/-1}.menu-panel-deserturi{grid-column:7/span 6;margin-top:65px}.menu-panel-bauturi{grid-column:2/span 11}.menu-category-copy{padding-left:10px;padding-right:5px}.menu-panel-burgeri .menu-category-copy,.menu-panel-gratar .menu-category-copy{margin-left:0}}
+@media(max-width:800px){.menu-composition{display:flex;flex-direction:column;gap:27px;max-width:520px;margin-top:5px}.menu-category-panel{display:block;width:100%;margin:0;padding:0}.menu-category-photo{max-width:360px!important}.menu-category-copy{padding:5px 4px 0!important;max-width:420px!important;margin:0!important}.menu-category-copy h2,.menu-panel-platouri h2{font-size:36px;margin:10px 0 12px}.menu-category-copy p{font-size:16px;line-height:1.7}.menu-panel-pizza .menu-category-photo,.menu-panel-deserturi .menu-category-photo{max-width:300px!important;margin-left:auto}.menu-panel-bauturi .menu-category-photo{margin-left:auto}.menu-page .menu-complete{margin-top:25px;padding-top:28px}}

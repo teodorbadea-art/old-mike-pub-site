@@ -1,13 +1,16 @@
-# M2.3 — Meniu în rânduri compacte, 19.10.2026
+# M2.3 — Compoziție asimetrică Meniu, 19.10.2026
 
 ## Cerință și decizie
 USER VALIDATED: imaginile mari în grilă, două alăturate, făceau pagina Meniu să pară album; capturile image(20261018-220914).png și image(20261018-221043).png arată problema la zoom100%. Utilizatorul a aprobat reorganizarea propusă în rânduri compacte, fotografie lângă titlu/descriere/acces la meniu, alternare discretă pe desktop și imagini de dimensiune controlată pe mobil.
 
+## Clarificare prioritară ulterioară — USER VALIDATED
+Utilizatorul a precizat: «pot fi asimetrice» și «să nu trecem de la tabel la listă». Această cerință înlocuiește compoziția uniformă în rânduri. Nu reactiva varianta din primul commit M2.3.
+
 ## Implementare locală — FACT
-- Șase categorii cu aceeași structură: Burgeri, Pizza, Platouri, Grătar de vită, Deserturi, Băuturi.
+- Șase categorii semantice: Burgeri, Pizza, Platouri, Grătar de vită, Deserturi, Băuturi.
 - Eliminată secțiunea supradimensionată a burgerului și grila de două fotografii mari. Helper comun menu_category în scripts/build_pages.py.
-- Desktop: listă centrată maximum1120px, fotografie maximum510px, titlu/descriere/link în coloana alăturată. Poziția fotografiei alternează; ordinea semantică rămâne constantă.
-- Mobil: o coloană, fotografie maximum360px, proporții3:2 fără crop; textul imediat sub ea. Fără animații sau dependențe noi.
+- Desktop: compoziție centrată maximum1140px pe12coloane. Burger mai amplu stânga (imagine max490px), Pizza mică dreapta (max330px) decalată90px. Platouri într-o secțiune lată cu imagine max550px și text alăturat. Grătar max440px și Desert max350px, decalate; Bere într-o încheiere orizontală. Titlurile și textele sunt asociate fiecărei imagini. Fără rame/carduri opace, două coloane identice sau șase rânduri repetitive.
+- Mobil: ordinea firească de lectură într-o coloană; imagini până la360px, Pizza/Desert până la300px cu aliniere la dreapta, proporții3:2 fără crop. Textul imediat sub imagine. Fără animații sau dependențe noi.
 - Margini estompate prin CSS; păstrate toate cele șase imagini existente, bucătarii miniaturali, burgerul simplu și cartofii prăjiți la vită. Nicio regenerare de imagini.
 - Linkul pe fiecare rând este «Vezi preparatele și prețurile» și deschide aceeași aplicație Meniu Electronic. Ancorele și butonul principal de acces la meniul complet rămân.
 - Intro-ul cu fotografie M2.2 și celelalte pagini își păstrează compoziția. Versiunea site-ului și a fișierelor autonome de evaluare: M2.3.
@@ -15,7 +18,7 @@ USER VALIDATED: imaginile mari în grilă, două alăturate, făceau pagina Meni
 ## Verificări efectuate — FACT
 python3 tests/validate_site.py PASS: 8 pagini, resurse/ancore, metadate, JSON-LD, fonturi/logo, active culinare, hartă, review-uri; 4 imagini cinematice ale spațiilor păstrate, cover-uri responsive și compoziție Acasă păstrate.
 
-python3 scripts/package_cpanel.py și python3 tests/package_cpanel.py PASS: arhivă, checksum-uri, resurse, excludere secrete și integrare runtime. Probă structurală: exact6rânduri cu ancorele în ordinea burgeri/pizza/platouri/gratar/deserturi/bauturi, fără menu-feature. git diff --check PASS.
+python3 scripts/package_cpanel.py și python3 tests/package_cpanel.py PASS: arhivă, checksum-uri, resurse, excludere secrete și integrare runtime. Probă structurală: exact6categorii cu ancorele în ordinea burgeri/pizza/platouri/gratar/deserturi/bauturi, fără menu-feature. git diff --check PASS.
 
 Nu s-a făcut QA vizual în browser: mediul nu are control-browser pentru preview local, iar stagingul protejat Basic nu poate fi deschis automat. Aceste verificări nu confirmă încă aspectul pe dispozitivele utilizatorului.
 

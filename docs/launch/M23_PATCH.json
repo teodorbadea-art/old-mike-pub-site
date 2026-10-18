@@ -5,7 +5,7 @@
   },
   "meniu.html": {
     "before": "b150b57abdacac40ad9d63f23dd8ba80b0093eb2eabb930594e9efb956cf8b89",
-    "after": "844105cdcfb0ef45a45cbb7adef23fb2268e3ce7f836ae369d2471c72c171db2"
+    "after": "712c56b2df98457d74ce7e78de7a3ec4ca75380266584b6f892a446c08666cbd"
   },
   "galerie.html": {
     "before": "f20c81f5abb6408775fe8e57411a032ca50d9efb25b77f289ec437f98e8a9baf",
@@ -29,6 +29,6 @@
   },
   "assets/site.css": {
     "before": "7191889837332a4d2d8758c1f0f84ebb73675798ef73e11a1fdca6dedc13b032",
-    "after": "7c6fa46dc4379275982b30ff385d4ee6bb69cc7b672f7583c1b7cd01e3f15331"
+    "after": "d4d2fc64f43afdf57ca6678615ac9c8adeb570198500279f465c80093abd1016"
   }
 }
