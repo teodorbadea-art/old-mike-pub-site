@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**Checkpoint local curent M2.4:** [Meniu în perechi compacte](23_M24_MENIU_MOZAIC_COMPACT.md). Încercare pregătită pentru evaluare; M2.3 respins din cauza golurilor. Stagingul rămâneM2.2, uploadul nu a fost reluat.
+
 **Checkpoint local M2.3:** [Compoziție asimetrică Meniu și blocaj upload](22_M23_MENIU_RANDURI_COMPACTE.md). Corecție implementată și verificată local. Stagingul rămâne M2.2: încărcarea a fost refuzată de dialogul de permisiuni; reluarea necesită autorizare.
 
 **Checkpoint curent M2.2:** [introduceri cinematice și actualizare în staging](21_M22_INTRODUCERI_CINEMATICE.md). Imagini în prima vedere la Meniu/Galerie/Evenimente/Contact; negru în stânga, fade spre fotografie în dreapta, text mic suprapus. Aplicat și verificat tehnic în oldmike-test; evaluarea vizuală M2.2 și uploadul posterelor rămân deschise.

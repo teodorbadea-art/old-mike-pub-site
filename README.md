@@ -4,6 +4,8 @@ Repository dedicat site-ului de prezentare. Meniu Electronic și Old Mike Commun
 
 **M2.3 — corecție locală pregătită:** [Meniu în compoziție asimetrică](docs/continuity/22_M23_MENIU_RANDURI_COMPACTE.md). Upload cPanel blocat de permisiuni; stagingul rămâne M2.2.
 
+**M2.4 — încercare locală:** [trei perechi compacte pentru Meniu](docs/continuity/23_M24_MENIU_MOZAIC_COMPACT.md). Preview pregătit pentru evaluare; nu este încărcat în staging.
+
 ## Începe aici
 
 **M2.2 — curent:** [introduceri cinematice și verificări staging](docs/continuity/21_M22_INTRODUCERI_CINEMATICE.md). Fundaluri fotografice integrate în Meniu, Galerie, Evenimente și Contact; actualizare exclusiv în zona de test protejată.

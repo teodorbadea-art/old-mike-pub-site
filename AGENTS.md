@@ -2,6 +2,8 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
+M2.4: citește `23_M24_MENIU_MOZAIC_COMPACT.md`. Încercare locală:3perechi compacte fără coloane goale/decalaje, imagini205–255px desktop, titlu/descriere/link imediat sub ele. M2.3 a fost respins vizual. Staging încăM2.2; nu relua uploadul refuzat fără autorizare nouă.
+
 M2.3: citește `22_M23_MENIU_RANDURI_COMPACTE.md`. Meniu local în compoziție asimetrică: imagini de scări diferite, blocuri decalate și Platouri/Bere orizontale. USER VALIDATED: nici tabel, nici listă repetitivă. NU este aplicat pe cPanel: upload refuzat de permisiuni; nu ocoli refuzul. Staging=M2.2.
 
 M2.2: citește `21_M22_INTRODUCERI_CINEMATICE.md`. Cover-uri fotografice în Meniu/Galerie/Evenimente/Contact: negru stânga, fotografie cu fade dreapta și descriere suprapusă. Aplicate în staging; 11 fișiere verificate, HTTP401 păstrat. Acasă neschimbat. QA vizual și upload postere încă neconfirmate.
