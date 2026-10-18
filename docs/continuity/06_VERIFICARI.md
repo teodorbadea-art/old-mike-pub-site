@@ -1,5 +1,9 @@
 # Verificări și jurnal de milestone
 
+## M1.4 — preview telefon
+
+Vezi `13_M14_PREVIEW_TELEFON.md`. Fișier separat static verificat structural; site neschimbat; problema pe dispozitiv nereprodusă și verificarea reală rămâne deschisă. Fără deploy.
+
 ## M1.3 — categorii vizuale Meniu, 18.10.2026
 
 Vezi `12_M13_CATEGORII_MENIU.md`. Trei imagini noi de categorie cu bucătari miniaturali; catalog/media citite read-only; pagina Meniu extinsă și navigare locală. Verificări statice și inspecție imagini; browser QA neexecutat. Celelalte pagini și backend-ul sunt neschimbate. Fără deploy.

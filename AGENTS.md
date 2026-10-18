@@ -2,6 +2,8 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
+M1.4: citește `13_M14_PREVIEW_TELEFON.md`. Fișier separat de evaluare statică pentru telefon, fără JS/iframe. Nu afirma reproducerea/remedierea pe dispozitiv fără confirmare.
+
 M1.3: citește `12_M13_CATEGORII_MENIU.md`. Acasă M1.2 evaluat favorabil; Meniu include Platouri, Grătar de vită și Deserturi cu imagini artistice și bucătari miniaturali. Nu prezenta selecția ca meniu exhaustiv sau imaginile ca porții exacte.
 
 M1.2 (istoric): citește `11_M12_HERO_BUCATARI_EMAIL.md`. Email confirmat: office@oldmike.ro; Contact are mailto. Hero artistic static cu exact doi bucătari miniaturali. Destinatarul viitoarelor notificări este confirmat, dar backend-ul rămâne neimplementat și trimiterile inactive.
