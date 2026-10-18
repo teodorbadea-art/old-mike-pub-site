@@ -2,6 +2,8 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
+M1.1: citește `10_M11_CORECTII_VIZUALE_CONTACT.md`. Acasă are burger descompus static, Meniu alt burger asamblat; Pizza generic, niciun „Noroc” la bere; Galerie patru zone recognoscibile fără crop arbitrar. Adresă USER VALIDATED: Matei Voievod 67, București. Cererile pentru grupuri trebuie primite în administrare + email, dar în concept sunt doar previzualizate. Nu activa trimiteri până la configurarea/testarea backend-ului și confirmarea adresei destinatare.
+
 Prioritate de design: `08_DIRECTIE_VALIDATA_SI_NAVIGARE.md`. Homepage cu un singur produs hero static; fără plutire/parallax/zoom al pozei și fără alte fotografii cu mâncare pe Acasă. Meniu este pagină vizuală proprie cu recomandări și băuturi + link la meniul complet. Galerie: originale editate cinematic, arhitectură recognoscibilă. Evenimente: sport și altele, upload simplu de postere; automatizarea nu este cerută acum.
 
 - Scope exclusiv: `teodorbadea-art/old-mike-pub-site`.

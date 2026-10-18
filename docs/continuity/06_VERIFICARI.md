@@ -1,5 +1,9 @@
 # Verificări și jurnal de milestone
 
+## M1.1 — corecții cerute și Contact, 18.10.2026
+
+Vezi `10_M11_CORECTII_VIZUALE_CONTACT.md`. Cerințe și adresa confirmate, hero descompus, CTA de meniu accesibil, Pizza/Bere generice, Galerie cu patru zone, hartă și formular local de grup. Fotografii de meniu recuperate prin citiri read-only; fără mutații Supabase sau în repo-ul meniului. Verificări statice și validare formular PASS; browser, hartă live și trimitere email neexecutate. Cererile nu sunt salvate sau trimise. Niciun deploy sau acces la Berăria.
+
 ## M1 — concept multipagină, 18.10.2026
 
 Implementare și verificări în `09_M1_PROPUNERE_VIZUALA.md`. Surse și prompturi în `../design/ASSET_PROMPTS_M1.md`. Verificări statice PASS; browser QA și Lighthouse neexecutate deoarece control-browser nu este disponibil în mediul managed. Administrare doar demo local; contact incomplet; imagini de produs de concept. Nicio publicare sau mutație în cPanel/celelalte aplicații. Ramură de design cu guard Vercel de non-deploy.
