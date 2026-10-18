@@ -1,5 +1,9 @@
 # Verificări și jurnal de milestone
 
+## M1.2 — hero artistic și email, 18.10.2026
+
+Vezi `11_M12_HERO_BUCATARI_EMAIL.md`. Doi bucătari miniaturali în hero static; office@oldmike.ro confirmat și afișat în Contact. Verificări statice și inspecție imagine desktop/derivat mobil PASS. Formularul rămâne local, fără trimiteri. Browser QA neexecutat. Fără deploy.
+
 ## M1.1 — corecții cerute și Contact, 18.10.2026
 
 Vezi `10_M11_CORECTII_VIZUALE_CONTACT.md`. Cerințe și adresa confirmate, hero descompus, CTA de meniu accesibil, Pizza/Bere generice, Galerie cu patru zone, hartă și formular local de grup. Fotografii de meniu recuperate prin citiri read-only; fără mutații Supabase sau în repo-ul meniului. Verificări statice și validare formular PASS; browser, hartă live și trimitere email neexecutate. Cererile nu sunt salvate sau trimise. Niciun deploy sau acces la Berăria.

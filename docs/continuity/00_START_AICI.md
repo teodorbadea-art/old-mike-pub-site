@@ -1,6 +1,8 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
-**Versiunea curentă: M1.1.** Citește [corecțiile și starea Contact](10_M11_CORECTII_VIZUALE_CONTACT.md). Datele de la M1 sunt istorice; adresa a fost între timp confirmată, Galeria are patru zone, hero-ul este diferit, iar formularul este numai preview local.
+**Versiunea curentă: M1.2.** Citește [hero-ul cu doi bucătari și emailul confirmat](11_M12_HERO_BUCATARI_EMAIL.md). Contact: office@oldmike.ro, notificări încă inactive.
+
+**M1.1 (istoric).** Citește [corecțiile și starea Contact](10_M11_CORECTII_VIZUALE_CONTACT.md). Datele de la M1 sunt istorice; adresa a fost între timp confirmată, Galeria are patru zone, hero-ul este diferit, iar formularul este numai preview local.
 
 **Progres M1:** conceptul multipagină este implementat local pe `design/m1-static-cinematic`; citește [checkpoint-ul M1](09_M1_PROPUNERE_VIZUALA.md) pentru ce este gata, ce nu a fost verificat și ce urmează. Nu s-a făcut deploy. Direcția de design M0.2 rămâne autoritatea cerințelor.
 

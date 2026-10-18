@@ -1,0 +1,12 @@
+{
+  "tool": "built-in imagegen",
+  "use_case": "compositing",
+  "prompt": "Use case: compositing. Asset type: static premium restaurant website hero. Input image 1 is the edit target. Preserve its landscape 1536x1024 composition, exploded giant burger on the right, empty dark left 43 percent for website typography, warm cinematic light, realistic food textures and charcoal slab. Add EXACTLY TWO tiny adult chefs realistically working on this gigantic burger, as a witty surreal fine food advertising photograph. One miniature adult chef in white jacket, apron and chef hat stands on the slab at the lower right of the burger, actively arranging a lower ingredient with a small utensil. The second miniature adult chef in white chef clothing stands on a discreet small ladder beside the right middle of the burger, carefully positioning a lettuce or onion layer. Both must be clearly visible, anatomically convincing photographic humans with natural hands and plausible interaction; scale about one eighth of the burger height. Keep both chefs entirely within x=700..1450 and y=250..950 so they survive the right-side square crop on phones. Match light direction, contact shadows, depth and warm color grade precisely. Burger is an artistic surreal concept, not a specific real menu item. Keep image premium, restrained and hyperrealistic; subtle humor through scale only. No cartoon, illustration, plastic 3D characters, extra people, text, branding, watermark, extra food or floating tools. Preserve the clean left copy area and dark background.",
+  "source": "assets/images/hero-exploded-v2.webp",
+  "output_master": "exec-4e535f18-8962-46e2-8eda-b69271c29a45.png",
+  "project_assets": [
+    "assets/images/hero-chefs-v3.webp",
+    "assets/images/hero-chefs-mobile-v3.webp"
+  ],
+  "derivatives": "WebP quality 86; mobile crop (512,0,1536,1024) resized 900x900; old assets preserved."
+}

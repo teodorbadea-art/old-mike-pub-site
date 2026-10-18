@@ -4,7 +4,9 @@ Repository dedicat site-ului de prezentare. Meniu Electronic și Old Mike Commun
 
 ## Începe aici
 
-**M1.1 — versiunea curentă:** [corecții vizuale, hartă și cerere pentru grupuri](docs/continuity/10_M11_CORECTII_VIZUALE_CONTACT.md). Hero artistic descompus pe Acasă, Meniu generic, Galerie cu patru zone, CTA mai accesibil și Contact extins. Cererile sunt încă în mod de previzualizare, fără trimitere.
+**M1.2 — versiunea curentă:** [doi bucătari miniaturali și email confirmat](docs/continuity/11_M12_HERO_BUCATARI_EMAIL.md). Hero artistic static actualizat și office@oldmike.ro în Contact. Formularul rămâne numai previzualizare locală.
+
+**M1.1 — istoric:** [corecții vizuale, hartă și cerere pentru grupuri](docs/continuity/10_M11_CORECTII_VIZUALE_CONTACT.md). Hero artistic descompus pe Acasă, Meniu generic, Galerie cu patru zone, CTA mai accesibil și Contact extins. Cererile sunt încă în mod de previzualizare, fără trimitere.
 
 **M1 — concept implementat local:** [stare, verificări și limitări](docs/continuity/09_M1_PROPUNERE_VIZUALA.md). Pagini: `index.html`, `meniu.html`, `evenimente.html`, `galerie.html`, `contact.html`. Pentru fișierul autonom de evaluare: `python3 scripts/build_pages.py`, apoi `python3 scripts/build_review.py`. Nu este publicat; administrarea evenimentelor este doar o demonstrație locală.
 
