@@ -1,5 +1,7 @@
 # Arhitectură și medii
 
+**Plan curent după M0.1:** site static complet portabil, publicat în găzduirea cPanel existentă pentru `oldmike.ro`. Fără servicii Vercel, API-uri plătite sau resurse servite din raw GitHub. Informațiile Vercel de mai jos sunt istoric verificat, nu instrucțiune de publicare curentă. `beraria.oldmike.ro` este exclus complet. Vezi `07_STRATEGIE_EXECUTIE.md`.
+
 ## Existent, verificat
 
 Site static: un `index.html` cu CSS și JS inline, cinci JPG în `img/`. Nu există `package.json`, lockfile, API, bază de date, autentificare sau framework în ramura hero v1. Nu introduce automat React/Next/Supabase doar pentru o pagină de prezentare.
@@ -36,4 +38,4 @@ Sursă oficială verificată în documentația Vercel: https://vercel.com/docs/p
 
 Păstrează site-ul static cât timp cerințele nu cer backend. Livrează logo și imagini din același site, în formate și dimensiuni adecvate; restul integrării rămâne prin link-uri. Nu adăuga login, formular de rezervare, catalog duplicat, analytics/cookies sau CMS fără o cerință nouă.
 
-Preview viitor: verifică explicit ținta, ramura și SHA înainte de creare. Un singur preview după verificări locale și după alinierea vizuală; nu modifica DNS și nu promova aliasul `oldmike.ro`. Producția este un milestone separat, după prezentare și autorizare explicită.
+Prezentare viitoare: verificare locală și prezentare desktop/mobil/mișcare. O eventuală zonă temporară pe cPanel se pregătește numai după verificarea accesului, a document root-ului și a izolării; nu a fost creată. Publicarea pe `oldmike.ro` rămâne un milestone separat, după prezentare și autorizare explicită. Nu modifica DNS sau setări comune contului implicit.

@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**Actualizare ulterioară M0.1, aceeași zi:** utilizatorul a stabilit găzduirea finală pe cPanel și excluderea Berăriei. Citește [strategia curentă](07_STRATEGIE_EXECUTIE.md) înaintea restului planului; referințele M0 la viitoare preview-uri Vercel sunt depășite.
+
 ## Rezultatul recuperării
 
 Proiectul există și nu se reîncepe. Au fost recuperate codul hero-ului, șapte mock-up-uri, fotografii ale localului, capturi de inspirație, cele cinci imagini existente și un deployment Vercel anterior. Nu a fost recuperată corespondența completă dintre fiecare variantă vizuală și aprobările/corecțiile utilizatorului.
@@ -29,6 +31,6 @@ Checkpoint-ul se salvează pe `docs/continuity-audit-20261018`, pornind din hero
 2. Citește [deciziile](01_DECIZII.md), [designul](03_DESIGN.md) și [problemele](05_PROBLEME_SI_PASI.md).
 3. Folosește catalogul M01–M07 și inventarul de resurse; nu cere încă o dată toate materialele.
 4. Prezintă diferența dintre hero v1 și referințele recuperate. Revalidează numai elementele fără dovadă de aprobare, fără a redeschide direcția cinematică deja stabilită.
-5. Implementează M1 după acest punct de control; verifică local, salvează milestone-ul și creează cel mult un preview pentru pachetul pregătit.
+5. Implementează M1 conform strategiei M0.1; verifică local, salvează milestone-ul și pregătește o singură prezentare completă desktop/mobil/mișcare. Nu crea deployment Vercel.
 
 Auditul nu certifică funcționalitatea în browser, performanța, fidelitatea produselor AI sau pregătirea de producție. Vezi jurnalul pentru ce a fost verificat efectiv.

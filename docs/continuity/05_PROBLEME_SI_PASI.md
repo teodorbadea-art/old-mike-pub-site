@@ -1,5 +1,7 @@
 # Probleme și pași următori
 
+**Actualizare M0.1:** planul operațional curent este în `07_STRATEGIE_EXECUTIE.md`. Vercel rămâne doar istoric. Excludere completă Berăria. Conceptul recomandat pornește din M06 și exemplele culinare recuperate; nu se consideră încă aprobat individual.
+
 | ID | Prioritate | Constatare | Pas următor |
 |---|---|---|---|
 | P01 | Blocant vizual | Aprobarea exactă M01–M07 / hero v1 nu a fost recuperată | Prezentare checkpoint; revalidare punctuală a compoziției |
@@ -25,9 +27,9 @@ Recuperează sursele, distinge confirmările, documentează codul, resursele, me
 
 După prezentarea M0: revalidează doar vizualele nedovedite; păstrează implementarea ca punct de plecare. Rezolvă livrarea locală de asset-uri, logo-ul, navigarea și performanța. Nu promite ofertă, program sau adresă nevalidate. Documentează schimbările și salvează milestone-ul în GitHub.
 
-### M2 — preview unic pentru pachetul verificat
+### M2 — prezentare unică pentru pachetul verificat
 
-Teste locale complete: layout mobil/desktop, lizibilitate, navigare, apel, meniu/club, mișcare redusă, tastatură, imagini și console. Verifică proiect/ramură/SHA/mediu Vercel și accesul utilizatorului. Grupează corecțiile și publică un singur preview pentru evaluare; nu folosi fiecare salvare drept motiv de build.
+Teste locale complete: layout mobil/desktop, lizibilitate, navigare, apel, meniu/club, mișcare redusă, tastatură, imagini și console. Prezintă o singură variantă coerentă și grupează feedback-ul. Dacă e nevoie de link de test, verifică întâi o zonă izolată în găzduirea existentă; nu crea deployment Vercel.
 
 ### M3 — lansare separată
 

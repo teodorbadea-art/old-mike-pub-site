@@ -1,5 +1,7 @@
 # Decizii, confirmări și limite
 
+**D19–D23, actualizare ulterioară M0.1:** USER VALIDATED — găzduire finală pe cPanel, fără dependență Vercel și costuri noi; excludere completă `beraria.oldmike.ro`; utilizator cu experiență web zero, ghidare simplă pas cu pas; analiză și execuție eficientă, fără încercări vizuale fără direcție; evaluarea aplicațiilor free înaintea oricărei conectări. Vezi `07_STRATEGIE_EXECUTIE.md`. Aceste instrucțiuni înlocuiesc partea Vercel din D08 pentru pașii viitori.
+
 ## Clasificare
 
 - **USER VALIDATED**: instrucțiune explicită a utilizatorului, vizibilă în cererea de 18.10.2026 sau feedback de utilizator recuperat ca atare.

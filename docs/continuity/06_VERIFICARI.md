@@ -1,5 +1,15 @@
 # Verificări și jurnal de milestone
 
+## M0.1 — strategie și corecția destinației de hosting, 18.10.2026
+
+- Bază: checkpoint `d9daedf45d308466390132e785a23a41c6159380`; HEAD remote reverificat înainte de scriere.
+- Cerințe consemnate: cPanel final fără Vercel/costuri noi; Berăria exclusă complet; ghidare pentru începător; execuție eficientă într-o direcție coerentă.
+- Creat `07_STRATEGIE_EXECUTIE.md`: strategie comercială, propunere M06, storyboard de mișcare, necesar, evaluare instrumente și plan până la lansare.
+- Actualizate punctele de intrare, arhitectura, deciziile și planul pentru a marca Vercel drept istoric. README și AGENTS trimit la strategia curentă.
+- Verificare documentară: diff fără erori de whitespace, toate link-urile locale rezolvate, cele șase fișiere runtime identice cu hero v1; nicio modificare la `vercel.json`. Nu au fost rulate teste UI.
+- Nu s-a folosit Canva/Lovable, nu s-a conectat Flair, nu s-au generat active noi și nu s-a accesat cPanel/Berăria. Nu s-a făcut deploy.
+- Rămâne: prezentarea strategiei, apoi pregătirea unui singur concept local desktop/mobil/mișcare și confirmarea vizuală. M06 rămâne recomandare a asistentului.
+
 ## M0 — 18.10.2026
 
 ### Citiri și recuperări efectuate
