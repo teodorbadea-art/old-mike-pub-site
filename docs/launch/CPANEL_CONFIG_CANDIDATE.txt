@@ -1,0 +1,22 @@
+NOT INSTALLED — candidate only, validate the oldmike.ro document root first.
+Do not copy this into a shared/group root or any Beraria directory.
+
+# After cPanel audit, a scoped oldmike.ro .htaccess may include:
+ErrorDocument 404 /404.html
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType font/woff "access plus 365 days"
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json application/xml
+</IfModule>
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+HTTPS enforcement, host canonicalization and any directory/API rewrite depend
+on current cPanel/proxy configuration. No blind redirects or overwrite.
+These lines have NOT been tested on the actual server.

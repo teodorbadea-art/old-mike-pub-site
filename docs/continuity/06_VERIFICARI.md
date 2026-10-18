@@ -1,5 +1,9 @@
 # Verificări și jurnal de milestone
 
+## M1.7 — utilizare, imagini și SEO
+
+Vezi `17_M17_CORECTII_UTILIZARE_SEO.md`. Verificări statice cross-page/preview și logica orar/formular/evenimente PASS; browser/Lighthouse neexecutate. Program confirmat, indexare blocată, formulare fără trimitere, niciun deploy.
+
 ## M1.6 — Atmosfera în Galerie
 
 Vezi `15_M16_GALERIE_ATMOSFERA.md`. Patru scene generate, două zone în Galerie, imagini existente păstrate. Inspecție vizuală și verificări statice; browser/dispozitiv real neexecutate. Fără deploy.

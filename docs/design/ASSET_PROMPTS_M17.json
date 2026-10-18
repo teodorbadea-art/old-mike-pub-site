@@ -1,0 +1,47 @@
+{
+  "tool": "built-in imagegen",
+  "food_edits": [
+    {
+      "key": "pizza",
+      "refs": [
+        "/workspace/scratch/52be6ffe8fd8/menu-source-refs/pizza-oldmike-original.jpg",
+        "/workspace/scratch/52be6ffe8fd8/old-mike-pub-site/assets/images/platouri-chefs-v1.webp"
+      ],
+      "prompt": "Use case: ads-marketing. Create a premium hyperrealistic static food category photograph for Old Mike website, landscape1536x1024. Reference1 is the actual Pizza Old Mike menu-associated photo and topping character, not a margherita. Reference2 is ONLY cinematic lighting, charcoal-brown backdrop and realistic miniature-chef style; do not include any grills or platter from reference2. Subject: one normal round pizza on a simple wooden board, with tomato sauce, melted mozzarella, cotto ham pieces, red chorizo slices, sliced mushrooms, olives, green/red bell pepper and a little onion, matching the listed Old Mike recipe. Toppings balanced, recognizable and appetizing, do not add seafood or basil-covered margherita appearance. One slice is gently being lifted with realistic soft cheese stretch, inspired by reference1 but whole pizza and board entirely in frame. Exactly TWO tiny adult chefs in white coats, aprons and hats work from the tabletop beside the pizza: one leans back with believable effort holding a FULL-SIZE pizza cutter wheel taller than his torso with both hands; the other on a small discreet wooden step uses a full-size spatula to gently lift the slice. Their arms/feet are photographic and anatomically natural, humor through scale and effort, no cartoons, no silly poses. Chefs fully visible, not cut at edges. Camera three-quarter food-advertising angle, centered subject with dark breathing room all around for seamless integration in warm dark site, lighting and warmth coherent with reference2 but realistic food textures. No text/logo/watermark, no menu book, no additional food. This is artistic category imagery inspired by a real menu item; no recipe names rendered inside image.",
+      "hint": "Generated images are saved to /workspace/scratch/52be6ffe8fd8/generated_images as /workspace/scratch/52be6ffe8fd8/generated_images/exec-93745ebe-ea4f-4265-a024-05b8b44b3ed4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "key": "burger",
+      "refs": [
+        "/workspace/scratch/52be6ffe8fd8/old-mike-pub-site/assets/images/burger-single-v2.webp",
+        "/workspace/scratch/52be6ffe8fd8/old-mike-pub-site/assets/images/hero-single-chefs-v4.webp"
+      ],
+      "prompt": "Use case: compositing. Edit image1, the assembled SINGLE-PATTY burger photograph, adding exactly TWO tiny photographic ADULT chefs. Image2 is only reference for consistent realistic miniature chefs, warm cinematic lighting and humor; keep image1 ASSEMBLED, not exploded. Mandatory invariant: EXACTLY ONE whole beef patty and one cheddar layer, do not add meat or make a double burger. Preserve sesame bun, existing ingredients, appetizing texture, dark slab, charcoal brown background, RIGHT-aligned burger and clean empty LEFT43percent for website copy. Landscape1536x1024. Humorous action distinct from the homepage: one tiny chef stands on the right of the slab steadying a full-size wooden pepper mill with both hands, mill taller than his torso, next to but not blocking the burger; the second tiny chef on a modest low wooden step uses a long full-size pair of tongs to carefully align a pickle near the bun. Very restrained pepper grains, no black cloud. Both chefs white coat/apron/hat, photographic adult anatomy/hands, contact shadows and perspective coherent. Keep burger and both complete chefs fully within rightmost square x512..1536 for phone crop; no chopped feet, hats or utensils. No logos, words, watermark, cartoon, plastic CGI, extra people, fries or additions to burger. Preserve normal single meat patty thickness. Premium food campaign photo with understated scale humor.",
+      "hint": "Generated images are saved to /workspace/scratch/52be6ffe8fd8/generated_images as /workspace/scratch/52be6ffe8fd8/generated_images/exec-36815102-7e1b-4ab6-a00b-e072934ed296.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ],
+  "steak_correction": {
+    "prompt": "Use case: precise-object-edit. Edit the supplied restaurant food category photo with exactly ONE targeted correction: replace ALL the oven-roasted/baked potato chunks at the LEFT SIDE of the steak with a small appetizing serving of GOLDEN FRENCH FRIES (cartofi prajiti), long distinct deep-fried potato sticks with crisp golden surfaces, not wedges, not round/baby potatoes, no baked potato skin, no browned roast chunks. This restaurant does NOT serve oven-baked potatoes. Keep the steak, slices, rare pink center, plate shape, miniature adult chef lifting an oversized salt shaker, scattering a few salt grains, cinematic amber light, camera angle, charcoal background, composition and all other elements as unchanged as possible. Fries sit naturally where the former potatoes were, appropriately scaled to a normal steak serving. No additional chef, no text, no logos, no watermark, no cartoon. Hyperrealistic food photograph, same landscape3:2 composition. The crucial correction is that not a single roast/baked potato remains.",
+    "reference": "assets/images/vita-chefs-v1.webp",
+    "hint": "Generated images are saved to /workspace/scratch/52be6ffe8fd8/generated_images as /workspace/scratch/52be6ffe8fd8/generated_images/exec-644ad801-c03b-4c74-9ae6-d93ec4567a90.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "requirement": "USER VALIDATED: French fries or mashed potato; no oven-roasted potatoes. Selected French fries."
+  },
+  "pizza_menu_evidence": {
+    "name": "Pizza Old Mike",
+    "description": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, șuncă cotto, salam chorizo, ciuperci, măsline, ardei și ceapă.",
+    "status": "verified",
+    "published": true,
+    "available": true,
+    "bucket": "menu-media",
+    "storage_path": "94e9c174-e9d6-4cdb-a912-b2a7e7a8f2db/f0370c08-1b42-4fe2-9e6f-4143ff328b25/8e03b63c-4bc6-43cc-95ea-c513ebcf2a76.jpg",
+    "method": "SELECT only, no menu changes",
+    "source_sha256": "ce5e4f2ef1aab23b12d159541512349eb92afc6800ad866cf9c677d0a204aaeb"
+  },
+  "active_food_assets": [
+    "pizza-oldmike-chefs-v3.webp",
+    "burger-single-chefs-v3.webp",
+    "burger-single-chefs-v3-mobile.webp",
+    "vita-chefs-fries-v2.webp"
+  ],
+  "derivatives": "scripts/prepare_m17_assets.py. WebP84,1200x800; mobileburgercrop512,0,1536,1024 resized900x900. Existing hero/platouri/papanasi untouched."
+}

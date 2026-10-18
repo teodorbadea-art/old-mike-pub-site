@@ -1,0 +1,66 @@
+[
+  {
+    "asset": "terrace-photo-v3.webp",
+    "source": "IMG_6692.jpeg",
+    "source_sha256": "70e17c875d6ff6aa0f072d5cb7c7e7c73f6c77ba91f1305cdaa35989bc035b67",
+    "crop": [
+      0,
+      340,
+      1152,
+      1204
+    ],
+    "size": [
+      1152,
+      864
+    ],
+    "processing": "autocontrast cutoff0.35,color0.94,contrast1.06,red1.025,blue0.96,sharpness1.08; no generated pixels/objects/signage"
+  },
+  {
+    "asset": "covered-terrace-photo-v3.webp",
+    "source": "IMG_6685.jpeg",
+    "source_sha256": "a5c3b57994e232d63c1ca3dd3a558a385f868aa7863278b05db3825984d65976",
+    "crop": [
+      0,
+      280,
+      1000,
+      1030
+    ],
+    "size": [
+      1000,
+      750
+    ],
+    "processing": "autocontrast cutoff0.35,color0.94,contrast1.06,red1.025,blue0.96,sharpness1.08; no generated pixels/objects/signage"
+  },
+  {
+    "asset": "interior-photo-v3.webp",
+    "source": "IMG_6690.jpeg",
+    "source_sha256": "20d53051840dd5c25e8d71c72734228d8fd02181cf7a8b2bba87f65394ab0369",
+    "crop": [
+      0,
+      360,
+      1152,
+      1224
+    ],
+    "size": [
+      1152,
+      864
+    ],
+    "processing": "autocontrast cutoff0.35,color0.94,contrast1.06,red1.025,blue0.96,sharpness1.08; no generated pixels/objects/signage"
+  },
+  {
+    "asset": "bar-photo-v3.webp",
+    "source": "IMG_6689.jpeg",
+    "source_sha256": "9c6ea35b99b3f080e4d2f882a476ad87217a9e085817a13e6b5b57ca8dc1a20b",
+    "crop": [
+      0,
+      500,
+      800,
+      1100
+    ],
+    "size": [
+      800,
+      600
+    ],
+    "processing": "autocontrast cutoff0.35,color0.94,contrast1.06,red1.025,blue0.96,sharpness1.08; no generated pixels/objects/signage"
+  }
+]

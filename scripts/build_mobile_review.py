@@ -9,11 +9,12 @@ from io import BytesIO
 import base64
 import re
 from PIL import Image
+from review_assets import inline_css, inline_html
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = [('index.html', 'acasa', 'Acasă'), ('meniu.html', 'meniu', 'Meniu'),
          ('galerie.html', 'galerie', 'Galerie'), ('evenimente.html', 'evenimente', 'Evenimente'),
-         ('contact.html', 'contact', 'Contact')]
+         ('contact.html', 'contact', 'Contact'), ('confidentialitate.html', 'confidentialitate', 'Confidențialitate')]
 PAGE_IDS = {name: key for name, key, title in PAGES}
 assets = {}
 
@@ -24,7 +25,7 @@ def embed(path):
         # Keep the official logo byte-for-byte. Resize/compress review photos only.
         if not path.startswith('assets/brand/'):
             im = Image.open(BytesIO(data)).convert('RGB')
-            im.thumbnail((900, 900), Image.Resampling.LANCZOS)
+            im.thumbnail((760, 760), Image.Resampling.LANCZOS)
             output = BytesIO()
             im.save(output, format='JPEG', quality=82, optimize=True)
             data, mime = output.getvalue(), 'image/jpeg'
@@ -43,6 +44,9 @@ for filename, key, title in PAGES:
     body = body.replace('</form>', '</fieldset></form>')
     body = re.sub(r'<button([^>]*\bdata-gallery\b[^>]*)>', r'<div\1>', body)
     body = re.sub(r'(</img>|<img[^>]*>)(</button>)', r'\1</div>', body)
+    # Review photographs are already bounded JPEGs; remove duplicate full/srcset payloads.
+    body = re.sub(r'(<img\b[^>]*?)\s+srcset="[^"]*"', r'\1', body)
+    body = re.sub(r'\s+data-full="[^"]*"', '', body)
     # Prefix IDs and all local references, avoiding collisions between pages.
     body = re.sub(r'\bid="([^"]+)"', lambda m: f'id="{key}-{m[1]}"', body)
     for attr in ['aria-labelledby', 'aria-controls', 'for']:
@@ -57,16 +61,15 @@ for filename, key, title in PAGES:
             return 'href="#'+target+('-'+match[2] if match[2] else '')+'"'
         return m[0]
     body = re.sub(r'href="([^"]+)"', link, body)
-    for path in set(re.findall(r'(?:src|srcset|href)="(assets/[^\"]+)"', body)):
-        body = body.replace('"'+path+'"', '"'+embed(path)+'"')
+    body = inline_html(body, embed)
     parts.append(f'<section id="{key}" class="static-page {classes}" aria-label="Pagina {title}"><div class="static-page-label">{title}</div>{body}</section>')
 
-css = (ROOT/'assets/site.css').read_text()
+css = inline_css((ROOT/'assets/site.css').read_text())
 css += '''
-.static-toolbar{position:sticky;top:0;z-index:100;background:#211b13;border-bottom:1px solid #d8ad6955;padding:10px 16px;font:12px Arial;color:#f5f0e7}.static-toolbar strong{display:block;font-size:12px;margin:0 0 8px}.static-toolbar nav{display:flex;flex-wrap:wrap;gap:5px 20px}.static-toolbar a{display:inline-block;padding:9px 0;color:#e8c590;min-height:36px}.static-note{font:12px/1.7 Arial;color:#c9beae;padding:16px;margin:0;background:#18140f}.static-page{scroll-margin-top:110px}.static-page [id]{scroll-margin-top:130px}.static-page-label{font:12px Arial;letter-spacing:.18em;text-transform:uppercase;padding:14px 20px;background:#302619;color:#e8c590}.static-page .site-nav,.static-page .nav-toggle,.static-page .header-cta{display:none}.static-page .site-header{justify-content:flex-start}.static-page .menu-access{position:relative;top:auto}.static-page .map-canvas{height:auto;padding:25px}.static-map{font:14px/1.7 Arial;color:#c9beae}.static-disabled-form{border:0;margin:0;padding:0;min-width:0;display:contents}.static-page .gallery-button{cursor:default}.static-page .venue-enlarge{display:none}.static-page .site-footer{margin-top:20px}
+.static-toolbar{position:sticky;top:0;z-index:100;background:#211b13;border-bottom:1px solid #d8ad6955;padding:10px 16px;font:12px Arial;color:#f5f0e7}.static-toolbar strong{display:block;font-size:12px;margin:0 0 8px}.static-toolbar nav{display:flex;flex-wrap:wrap;gap:5px 20px}.static-toolbar a{display:inline-block;padding:9px 0;color:#e8c590;min-height:36px}.static-note{font:12px/1.7 Arial;color:#c9beae;padding:16px;margin:0;background:#18140f}.static-page{scroll-margin-top:110px}.static-page [id]{scroll-margin-top:130px}.static-page-label{font:12px Arial;letter-spacing:.18em;text-transform:uppercase;padding:14px 20px;background:#302619;color:#e8c590}.static-page .site-nav,.static-page .nav-toggle,.static-page .header-cta{display:none}.static-page .mobile-call{display:inline-flex;margin-left:auto}.static-page .map-load{display:none}.static-page .site-header{justify-content:flex-start}.static-page .menu-access{position:relative;top:auto}.static-page .map-canvas{height:auto;padding:25px}.static-map{font:14px/1.7 Arial;color:#c9beae}.static-page .venue-photo img{aspect-ratio:auto!important}.static-disabled-form{border:0;margin:0;padding:0;min-width:0;display:contents}.static-page .gallery-button{cursor:default}.static-page .venue-enlarge{display:none}.static-page .site-footer{margin-top:20px}
 '''
 nav = ''.join(f'<a href="#{key}">{title}</a>' for _,key,title in PAGES)
-html = '<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Old Mike · previzualizare pentru telefon</title><style>'+css+'</style></head><body><div class="static-toolbar"><strong>OLD MIKE · Evaluare vizuală</strong><nav aria-label="Pagini">'+nav+'</nav></div><p class="static-note">Toate paginile sunt mai jos. Apasă un nume pentru a ajunge direct la pagina dorită. Această versiune este pentru evaluarea designului; formularele sunt inactive.</p>'+''.join(parts)+'</body></html>'
+html = '<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Old Mike · M1.7 · previzualizare pentru telefon</title><style>'+css+'</style></head><body><div class="static-toolbar"><strong>OLD MIKE · M1.7 · Evaluare vizuală</strong><nav aria-label="Pagini">'+nav+'</nav></div><p class="static-note">M1.7 · Toate paginile sunt mai jos. Versiune statică, pentru evaluarea vizuală. Apasă un nume pentru a ajunge direct la pagina dorită. Această versiune este pentru evaluarea designului; formularele sunt inactive.</p>'+''.join(parts)+'</body></html>'
 out = ROOT/'output/old-mike-previzualizare-telefon.html'
 out.parent.mkdir(exist_ok=True)
 out.write_text(html)

@@ -2,7 +2,9 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
-M1.6: citește `15_M16_GALERIE_ATMOSFERA.md`. Galerie cu Atmosfera (4 scene generate cu adulți fotorealiști) și Spațiile (4 imagini existente). Utilizatorul a clarificat că dorește oameni generați realistici, nu fotografiere nouă; nu cere poze cu clienți. Nu prezenta scenele ca evenimente/clienți documentați.
+M1.7: citește `17_M17_CORECTII_UTILIZARE_SEO.md`. Program USER VALIDATED L–V10–24,S–D12–24; configurație data/site.json. Pizza Old Mike cu bucătari, burger simplu cu bucătari, vită cu cartofi prăjiți (niciodată cartofi la cuptor). Spațiile sunt originale cu corecții deterministe, Atmosfera rămâne generată. Social/firma amânate explicit; urmărite înainte de lansare. Noindex păstrat; backend neimplementat; nu declara browser QA PASS.
+
+M1.6 (istoric): citește `15_M16_GALERIE_ATMOSFERA.md`. Galerie cu Atmosfera (4 scene generate cu adulți fotorealiști) și Spațiile (4 imagini existente). Utilizatorul a clarificat că dorește oameni generați realistici, nu fotografiere nouă; nu cere poze cu clienți. Nu prezenta scenele ca evenimente/clienți documentați.
 
 M1.5: citește `14_M15_BURGER_SIMPLU.md`. Cerință obligatorie: burgerii Old Mike au o singură bucată de carne. Nici Acasă, nici Meniu nu trebuie să arate două patties. Bucătarii miniaturali se păstrează în hero.
 

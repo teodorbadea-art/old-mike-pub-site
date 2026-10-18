@@ -37,3 +37,7 @@ Direcție aprobată: premium, minimalist, cinematic, hero dominant, animații fl
 **M1.5 — burger simplu:** [corectat în Acasă și Meniu](docs/continuity/14_M15_BURGER_SIMPLU.md), un singur strat de carne, bucătarii miniaturali păstrați în hero; ambele preview-uri regenerate.
 
 **M1.6 — Galerie:** [Atmosfera și Spațiile restaurantului](docs/continuity/15_M16_GALERIE_ATMOSFERA.md). Patru scene fotorealiste generate cu oameni, bazate pe localul real, separate de cele patru perspective existente. Fără publicare.
+
+**M1.7 — versiunea curentă:** [corecții de utilizare, fidelitate și SEO](docs/continuity/17_M17_CORECTII_UTILIZARE_SEO.md). Program confirmat, apel mobil, homepage practic, Pizza Old Mike și bucătari în cele5categorii de mâncare, vită/cartofi prăjiți, fotografii originale ale spațiilor, imagini responsive, font local, metadate și hartă la cerere. Fără deploy; noindex activ.
+
+Verificări: `python3 tests/validate_site.py`, `node tests/hours-and-form.cjs`. Generare: `python3 scripts/build_pages.py`, `python3 scripts/build_review.py`, `python3 scripts/build_mobile_review.py`. Pentru SEO/lansare: [checklist](docs/launch/BEFORE_PRODUCTION.md).
