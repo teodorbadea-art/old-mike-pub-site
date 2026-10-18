@@ -87,3 +87,13 @@ for filename in ['old-mike-propunere-vizuala-m1.html','old-mike-previzualizare-t
             if ref.startswith('#'):assert ref[1:] in p.ids,ref
         assert len(data.encode())<4_000_000
 print(f'PASS: {len(pages)} pages, local resources/anchors, metadata/JSON-LD, fonts, official logo, current food assets, map opt-in and both self-contained reviews.')
+
+# Preserve the explicitly requested cinematic venue selection across rebuilds.
+venue_sources = ['terrace-wide-v2', 'covered-terrace-v2', 'interior-wide-v2', 'bar-wide-v2']
+venue_markup = (ROOT/'galerie.html').read_text()
+for source in venue_sources:
+    assert f'data-full="assets/images/{source}.webp"' in venue_markup
+    for width in [480, 800]:
+        assert f'assets/images/{source}-{width}.webp {width}w' in venue_markup
+assert '-photo-v3' not in venue_markup
+print('PASS: all four cinematic venue masters and responsive variants retained.')

@@ -4,7 +4,7 @@ Repository dedicat site-ului de prezentare. Meniu Electronic și Old Mike Commun
 
 ## Începe aici
 
-**M1.3 — versiunea curentă:** [categorii culinare și bucătari miniaturali](docs/continuity/12_M13_CATEGORII_MENIU.md). Meniu extins cu Platouri, Grătar de vită și Deserturi; imagini statice, scurtături și CTA către meniul complet. Fără deploy.
+**M1.3 — istoric:** [categorii culinare și bucătari miniaturali](docs/continuity/12_M13_CATEGORII_MENIU.md). Meniu extins cu Platouri, Grătar de vită și Deserturi; imagini statice, scurtături și CTA către meniul complet. Fără deploy.
 
 **M1.2 — istoric:** [doi bucătari miniaturali și email confirmat](docs/continuity/11_M12_HERO_BUCATARI_EMAIL.md). Hero artistic static actualizat și office@oldmike.ro în Contact. Formularul rămâne numai previzualizare locală.
 
@@ -38,6 +38,8 @@ Direcție aprobată: premium, minimalist, cinematic, hero dominant, animații fl
 
 **M1.6 — Galerie:** [Atmosfera și Spațiile restaurantului](docs/continuity/15_M16_GALERIE_ATMOSFERA.md). Patru scene fotorealiste generate cu oameni, bazate pe localul real, separate de cele patru perspective existente. Fără publicare.
 
-**M1.7 — versiunea curentă:** [corecții de utilizare, fidelitate și SEO](docs/continuity/17_M17_CORECTII_UTILIZARE_SEO.md). Program confirmat, apel mobil, homepage practic, Pizza Old Mike și bucătari în cele5categorii de mâncare, vită/cartofi prăjiți, fotografii originale ale spațiilor, imagini responsive, font local, metadate și hartă la cerere. Fără deploy; noindex activ.
+**M1.7 — istoric:** [corecții de utilizare, fidelitate și SEO](docs/continuity/17_M17_CORECTII_UTILIZARE_SEO.md). Program confirmat, apel mobil, homepage practic, Pizza Old Mike și bucătari în cele5categorii de mâncare, vită/cartofi prăjiți, fotografii originale ale spațiilor, imagini responsive, font local, metadate și hartă la cerere. Fără deploy; noindex activ.
 
 Verificări: `python3 tests/validate_site.py`, `node tests/hours-and-form.cjs`. Generare: `python3 scripts/build_pages.py`, `python3 scripts/build_review.py`, `python3 scripts/build_mobile_review.py`. Pentru SEO/lansare: [checklist](docs/launch/BEFORE_PRODUCTION.md).
+
+**M1.7.1 — versiunea curentă:** [revenire la spațiile cinematice generate](docs/continuity/18_M171_REVENIRE_SPATII_CINEMATICE.md). Patru imagini v2 restaurate, responsive și lightbox păstrate; fără deploy.

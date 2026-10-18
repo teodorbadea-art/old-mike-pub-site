@@ -29,8 +29,8 @@ menu = f'''<main id="continut" class="page-main menu-page">{intro('La ce ți-e p
 <div class="menu-complete"><p><strong>Ai mai multe de descoperit.</strong><br>Toate produsele, prețurile și detaliile sunt în meniul complet.</p>{button('https://meniu.oldmike.ro/','Vezi meniul complet')}</div></main>'''
 
 def venue_image(source,title,subtitle,index):
-    image=photo_markup(source,f'{title}, fotografie originală Old Mike cu corecții de lumină și culoare')
-    return f'<figure class="venue-shot" id="zona-{index}"><button class="gallery-button venue-photo" data-gallery type="button" aria-label="Mărește: {title}">{image}</button><figcaption><span class="feature-index">0{index} / OLD MIKE</span><h3>{title}</h3><p>{subtitle}</p><span class="venue-enlarge">Mărește fotografia</span></figcaption></figure>'
+    image=photo_markup(source,f'{title}, reinterpretare cinematică generată după fotografia locației Old Mike')
+    return f'<figure class="venue-shot" id="zona-{index}"><button class="gallery-button venue-photo" data-gallery type="button" aria-label="Mărește: {title}">{image}</button><figcaption><span class="feature-index">0{index} / OLD MIKE</span><h3>{title}</h3><p>{subtitle}</p><span class="venue-enlarge">Mărește imaginea</span></figcaption></figure>'
 
 def atmosphere_image(source,title,subtitle,key):
     image=photo_markup(source,f'Scenă ilustrativă generată în spațiul Old Mike: {title}')
@@ -43,7 +43,7 @@ gallery = f'''<main id="continut" class="page-main gallery-main">{intro('Oamenii
 <p class="atmosphere-note">Scene de atmosferă generate, inspirate de spațiile Old Mike.</p></section>
 <section class="gallery-section gallery-spaces" id="spatii" aria-labelledby="spatii-title"><div class="gallery-section-heading"><div class="eyebrow">02 / SPAȚIILE RESTAURANTULUI</div><h2 id="spatii-title">Tu unde<br><em>te așezi?</em></h2><p>Terasa exterioară, terasa acoperită, interiorul și barul. Patru perspective ale aceluiași loc.</p></div>
 <nav class="gallery-jumps" aria-label="Zonele localului"><a href="#zona-1">Terasa exterioară</a><a href="#zona-2">Terasa acoperită</a><a href="#zona-3">Interior</a><a href="#zona-4">Bar</a></nav>
-<div class="venue-grid">{venue_image('terrace-photo-v3.webp','Terasa exterioară','Mai aproape de aer liber. Mai mult timp împreună.',1)}{venue_image('covered-terrace-photo-v3.webp','Terasa acoperită','Lumină caldă și loc pentru povești.',2)}{venue_image('interior-photo-v3.webp','Interior','Un colț de pub, cu oamenii tăi.',3)}{venue_image('bar-photo-v3.webp','Barul','Aici începe seara Old Mike.',4)}</div></section>
+<div class="venue-grid">{venue_image('terrace-wide-v2.webp','Terasa exterioară','Mai aproape de aer liber. Mai mult timp împreună.',1)}{venue_image('covered-terrace-v2.webp','Terasa acoperită','Lumină caldă și loc pentru povești.',2)}{venue_image('interior-wide-v2.webp','Interior','Un colț de pub, cu oamenii tăi.',3)}{venue_image('bar-wide-v2.webp','Barul','Aici începe seara Old Mike.',4)}</div></section>
 <div class="gallery-bottom"><p>Alege oamenii.<br><em>De masă ne ocupăm noi.</em></p>{button('tel:+40787366166','Rezervă · 0787 366 166')}{button('contact.html#cerere-grup','Veniți în grup?',True)}</div>
 <dialog id="image-viewer" aria-label="Fotografie mărită"><button class="close-dialog" type="button" aria-label="Închide fotografia">×</button><img alt="Fotografie mărită"></dialog></main>'''
 

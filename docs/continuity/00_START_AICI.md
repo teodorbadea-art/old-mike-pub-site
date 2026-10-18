@@ -1,6 +1,6 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
-**Checkpoint curent: M1.7.** Citește [corecțiile de utilizare, fidelitate și SEO](17_M17_CORECTII_UTILIZARE_SEO.md). Program confirmat, burger simplu/Pizza Old Mike/vită cu cartofi prăjiți; datele sociale și firma amânate. Fără publicare.
+**Checkpoint curent: M1.7.1.** Citește [restaurarea imaginilor cinematice ale spațiilor](18_M171_REVENIRE_SPATII_CINEMATICE.md). Cele patru imagini generate v2 sunt din nou active. Citește [corecțiile de utilizare, fidelitate și SEO](17_M17_CORECTII_UTILIZARE_SEO.md). Program confirmat, burger simplu/Pizza Old Mike/vită cu cartofi prăjiți; datele sociale și firma amânate. Fără publicare.
 
 **Evaluare externă după M1.6:** citește [trierea critică a raportului Claude](16_REVIEW_EXTERN_M16.md). Recomandările sunt propuse, nu implementate sau aprobate implicit.
 

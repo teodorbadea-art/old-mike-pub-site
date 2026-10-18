@@ -2,7 +2,9 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
-M1.7: citește `17_M17_CORECTII_UTILIZARE_SEO.md`. Program USER VALIDATED L–V10–24,S–D12–24; configurație data/site.json. Pizza Old Mike cu bucătari, burger simplu cu bucătari, vită cu cartofi prăjiți (niciodată cartofi la cuptor). Spațiile sunt originale cu corecții deterministe, Atmosfera rămâne generată. Social/firma amânate explicit; urmărite înainte de lansare. Noindex păstrat; backend neimplementat; nu declara browser QA PASS.
+M1.7.1: citește `18_M171_REVENIRE_SPATII_CINEMATICE.md`. USER VALIDATED: cele patru Spații folosesc din nou imaginile generate cinematice v2, cu variante responsive. Nu înlocui cu originale fără cererea utilizatorului. Inscripțiile AI rămân de verificat/corectat înainte de lansare.
+
+M1.7 (istoric): citește `17_M17_CORECTII_UTILIZARE_SEO.md`. Program USER VALIDATED L–V10–24,S–D12–24; configurație data/site.json. Pizza Old Mike cu bucătari, burger simplu cu bucătari, vită cu cartofi prăjiți (niciodată cartofi la cuptor). Selecția fotografiilor originale a fost înlocuită de M1.7.1; nu o reactiva. Social/firma amânate explicit; urmărite înainte de lansare. Noindex păstrat; backend neimplementat; nu declara browser QA PASS.
 
 M1.6 (istoric): citește `15_M16_GALERIE_ATMOSFERA.md`. Galerie cu Atmosfera (4 scene generate cu adulți fotorealiști) și Spațiile (4 imagini existente). Utilizatorul a clarificat că dorește oameni generați realistici, nu fotografiere nouă; nu cere poze cu clienți. Nu prezenta scenele ca evenimente/clienți documentați.
 

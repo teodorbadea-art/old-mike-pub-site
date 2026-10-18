@@ -94,3 +94,7 @@ Nu s-a invocat niciun build/deploy, nu s-au schimbat setări Vercel, domenii, DN
 - Commit salvat în GitHub:
 - Preview: SHA, mediu, URL; număr build-uri/deploy-uri:
 - Probleme rămase și următorul pas:
+
+## M1.7.1 — Restaurare Galerie
+
+Vezi [raportul complet](18_M171_REVENIRE_SPATII_CINEMATICE.md). Au trecut verificările statice ale celor8pagini și ambelor fișiere autonome, regresia nouă a celor4imagini cinematice/responsive, cele10cazuri program și testele formularului, plus git diff --check. Nu s-a făcut browser QA sau deploy. Masterele generate v2 au rămas identice cu baza Git.
