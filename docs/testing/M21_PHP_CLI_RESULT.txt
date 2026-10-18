@@ -1,0 +1,20 @@
+Observed through authenticated cPanel File Manager View, private result.txt:
+PASS: 41 backend checks; synthetic data only; no mail or production data. PHP 8.3.35
+
+Executed in /home/oldmikero/oldmike-site-check-m21:
+php tests/php/backend.php > result.txt 2>&1
+
+Scope: function/CLI checks. Not HTTP/browser end-to-end tests. No real customer data or email transport used.
+
+Final candidate lint observed:
+No syntax errors detected in candidate/config.example.php
+No syntax errors detected in candidate/install-test.php
+No syntax errors detected in candidate/public/admin/index.php
+No syntax errors detected in candidate/public/admin/poster.php
+No syntax errors detected in candidate/public/api/index.php
+No syntax errors detected in candidate/public/lib/app.php
+No syntax errors detected in candidate/setup.php
+
+Installer result observed:
+OK: site de test copiat numai in public_html/oldmike-test; Require all denied activ. Site-ul principal nu a fost modificat.
+Anonymous HTTPS gate observed:403 (curl from hosting; TLS validation enabled).

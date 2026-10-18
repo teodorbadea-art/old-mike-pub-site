@@ -56,6 +56,7 @@ function setupSite(){
   const value=type=>parts.find(p=>p.type===type).value,today=`${value('year')}-${value('month')}-${value('day')}`;
   request.elements.date.min=today;
   request.addEventListener('submit',e=>{
+   if(request.dataset.mode==='server')return;
    e.preventDefault();const values=Object.fromEntries(new FormData(request)),status=document.querySelector('#request-status'),summary=document.querySelector('#request-summary'),details=document.querySelector('#request-summary-details');
    summary.hidden=true;status.textContent='';const error=groupRequestError(values,today);
    if(error){status.textContent=error;return;}

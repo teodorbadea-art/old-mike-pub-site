@@ -43,3 +43,5 @@ Direcție aprobată: premium, minimalist, cinematic, hero dominant, animații fl
 Verificări: `python3 tests/validate_site.py`, `node tests/hours-and-form.cjs`. Generare: `python3 scripts/build_pages.py`, `python3 scripts/build_review.py`, `python3 scripts/build_mobile_review.py`. Pentru SEO/lansare: [checklist](docs/launch/BEFORE_PRODUCTION.md).
 
 **M1.7.1 — versiunea curentă:** [revenire la spațiile cinematice generate](docs/continuity/18_M171_REVENIRE_SPATII_CINEMATICE.md). Patru imagini v2 restaurate, responsive și lightbox păstrate; fără deploy.
+
+**M2.1 — backend și hosting:** [checkpoint](docs/continuity/20_M21_BACKEND_INSTALARE_TEST.md), [instalare](docs/launch/INSTALL_TEST_M21.md).41probe PHP CLI și7fișiere lint PASS; staging copiat cu acces blocat403; configurare privată și teste HTTP încă necesare. Design M1.7.1 păstrat, fără lansare publică.
