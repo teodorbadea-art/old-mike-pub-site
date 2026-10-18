@@ -1,6 +1,8 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
-**Checkpoint curent: M1.4.** Vezi [previzualizarea pentru telefon](13_M14_PREVIEW_TELEFON.md). Designul site-ului rămâne M1.3.
+**Checkpoint curent: M1.5.** [Burger simplu în Acasă și Meniu](14_M15_BURGER_SIMPLU.md), fără dublă carne; bucătarii din hero păstrați.
+
+**M1.4 (istoric).** Vezi [previzualizarea pentru telefon](13_M14_PREVIEW_TELEFON.md). Designul site-ului rămâne M1.3.
 
 **Design M1.3.** Citește [categoriile vizuale din Meniu](12_M13_CATEGORII_MENIU.md). Hero-ul Acasă M1.2 a fost evaluat favorabil și rămâne neschimbat.
 

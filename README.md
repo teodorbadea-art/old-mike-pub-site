@@ -33,3 +33,5 @@ Direcție aprobată: premium, minimalist, cinematic, hero dominant, animații fl
 **Nu se publică în producție în etapa de audit.** Ramura `docs/continuity-audit-20261018` conține un guard Vercel care dezactivează deployment-urile automate doar pentru această ramură. Nu modifica DNS, domenii sau celelalte aplicații.
 
 **M1.4 — evaluare telefon:** `python3 scripts/build_mobile_review.py` produce un fișier vizual fără JavaScript/iframe, cu toate paginile derulabile. [Detalii și limite](docs/continuity/13_M14_PREVIEW_TELEFON.md). Site-ul nu este modificat sau publicat.
+
+**M1.5 — burger simplu:** [corectat în Acasă și Meniu](docs/continuity/14_M15_BURGER_SIMPLU.md), un singur strat de carne, bucătarii miniaturali păstrați în hero; ambele preview-uri regenerate.

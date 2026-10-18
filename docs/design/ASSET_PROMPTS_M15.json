@@ -1,0 +1,25 @@
+{
+  "tool": "built-in imagegen",
+  "requirement": "USER VALIDATED: single beef patty only; preserve miniature chefs",
+  "edits": [
+    {
+      "key": "home",
+      "source": "hero-chefs-v3.webp",
+      "prompt": "Use case: precise-object-edit. Edit the supplied restaurant website hero photograph. Mandatory food correction: this restaurant serves ONLY SINGLE-PATTY BURGERS. Remove the second beef patty completely and its duplicate cheese layer. The final exploded burger must have EXACTLY ONE distinct whole beef patty total, topped by ONE cheddar cheese layer, between the single bottom bun and single top bun. Do not make the remaining patty extra thick to imitate a double burger. Keep the existing separated top bun, lettuce, onion, pickles, restrained bacon and bottom bun, reposition the existing layers elegantly to suit a normal single burger, with clear air gaps for the artistic exploded presentation. Preserve EXACTLY TWO tiny photorealistic adult chefs, white chef clothes, one on the slab working at the one remaining beef patty and one on the right ladder arranging lettuce. Preserve their charming realistic scale, believable hands and interaction. Keep the same premium cinematic amber food photography, dark slab, warm charcoal background, burger in the RIGHT half and left 43 percent empty for HTML text, landscape1536x1024. Keep full burger and both chefs inside frame, both within x700..1450 so the right-side phone crop retains them. No additional meat discs, no stacked patties, no extra person, text, logo, cartoon or watermark. This is a targeted correction of the meat count, not a redesign.",
+      "output_hint": "Generated images are saved to /workspace/scratch/52be6ffe8fd8/generated_images as /workspace/scratch/52be6ffe8fd8/generated_images/exec-05bb1e0e-70c9-489d-8667-5818ab36da90.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "key": "menu",
+      "source": "hero-burger-v1.webp",
+      "prompt": "Use case: precise-object-edit. Edit this existing restaurant website burger photo with ONE targeted food correction: the restaurant does NOT serve double burgers. Final assembled burger must contain EXACTLY ONE whole beef patty, with ONE cheese layer, never two meat discs. Remove the extra beef patty and duplicate cheese layer, naturally reassemble existing bun, lettuce, onion, pickles and restrained bacon around a normal single beef patty of ordinary thickness. Do not enlarge or thicken meat to mimic a double burger. Keep sesame top bun and bottom bun, premium juicy food textures, existing warm cinematic lighting, dark stone slab, charcoal background, camera perspective and right-aligned placement with generous empty dark left43 percent for website copy. Landscape1536x1024. Whole burger visible. Preserve photographic realism, no added characters or new garnishes, no text, logo or watermark. The result should be a believable normal SINGLE-PATTY burger, recognizably the same photographic scene, naturally shorter than before.",
+      "output_hint": "Generated images are saved to /workspace/scratch/52be6ffe8fd8/generated_images as /workspace/scratch/52be6ffe8fd8/generated_images/exec-19936ab0-f972-468a-8874-a8207bf2e0f1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ],
+  "derivatives": "WebP quality86, desktop1536x1024, mobile crop512,0,1536,1024 resized900x900",
+  "active_assets": [
+    "hero-single-chefs-v4.webp",
+    "hero-single-chefs-v4-mobile.webp",
+    "burger-single-v2.webp",
+    "burger-single-v2-mobile.webp"
+  ]
+}

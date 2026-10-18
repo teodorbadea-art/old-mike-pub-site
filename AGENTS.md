@@ -2,6 +2,8 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
+M1.5: citește `14_M15_BURGER_SIMPLU.md`. Cerință obligatorie: burgerii Old Mike au o singură bucată de carne. Nici Acasă, nici Meniu nu trebuie să arate două patties. Bucătarii miniaturali se păstrează în hero.
+
 M1.4: citește `13_M14_PREVIEW_TELEFON.md`. Fișier separat de evaluare statică pentru telefon, fără JS/iframe. Nu afirma reproducerea/remedierea pe dispozitiv fără confirmare.
 
 M1.3: citește `12_M13_CATEGORII_MENIU.md`. Acasă M1.2 evaluat favorabil; Meniu include Platouri, Grătar de vită și Deserturi cu imagini artistice și bucătari miniaturali. Nu prezenta selecția ca meniu exhaustiv sau imaginile ca porții exacte.

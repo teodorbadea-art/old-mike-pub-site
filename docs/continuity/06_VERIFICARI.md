@@ -1,5 +1,9 @@
 # Verificări și jurnal de milestone
 
+## M1.5 — burger simplu
+
+Vezi `14_M15_BURGER_SIMPLU.md`. Două imagini corectate, patru derivate inspectate; o singură bucată de carne. Generatoare/verificări statice efectuate; browser și dispozitiv real neexecutate. Fără deploy.
+
 ## M1.4 — preview telefon
 
 Vezi `13_M14_PREVIEW_TELEFON.md`. Fișier separat static verificat structural; site neschimbat; problema pe dispozitiv nereprodusă și verificarea reală rămâne deschisă. Fără deploy.
