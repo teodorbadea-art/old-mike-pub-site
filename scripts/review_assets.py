@@ -22,3 +22,10 @@ def inline_html(text,embed):
             value=embed(value)
         return attr+'="'+value+'"'
     return re.sub(r'\b(src|srcset|href|data-full)="([^\"]*)"',replace,text)
+
+
+def write_review(path,content):
+    path=Path(path)
+    temporary=path.with_suffix(path.suffix+'.tmp')
+    temporary.write_text(content,encoding='utf-8')
+    temporary.replace(path)

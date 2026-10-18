@@ -1,0 +1,30 @@
+{
+  "milestone": "M2.2",
+  "date": "2026-10-19 Europe/Bucharest",
+  "tool": "imagegen",
+  "original": "generated_images/exec-f2787654-f66c-41b6-8f51-f81c387844b1.png",
+  "references": [
+    "pizza-oldmike-chefs-v3.webp",
+    "platouri-chefs-v1.webp",
+    "burger-single-chefs-v3.webp",
+    "atmosfera-gasca-v1.webp"
+  ],
+  "brief": "Photorealistic premium pub table toward right, dark left negative space. Single-patty burger with cheddar bacon pickles red onion lettuce; pizza ham salami mushroom olive pepper; grilled mici sausage chicken with French fries; two unbranded beers, candle, warm wood/green pub atmosphere. No people, text, logos or roasted potatoes. Static general menu cover; category tiny chefs retained separately.",
+  "derivatives": [
+    {
+      "path": "assets/images/menu-table-cover-v1-480.webp",
+      "sha256": "9fb4fd54883db739a8848bb539e28b155edf8a240f63eb773d1b273d66a9b694",
+      "bytes": 38444
+    },
+    {
+      "path": "assets/images/menu-table-cover-v1-800.webp",
+      "sha256": "5861054d91f61bb84dec61b98b731fe54ec1dda97eb99eb1a5bce1ecdd33ace8",
+      "bytes": 92230
+    },
+    {
+      "path": "assets/images/menu-table-cover-v1.webp",
+      "sha256": "e5a645879c01ae226301e7aa8a2604f62ae34dd88689a97207021a39d5634076",
+      "bytes": 171594
+    }
+  ]
+}

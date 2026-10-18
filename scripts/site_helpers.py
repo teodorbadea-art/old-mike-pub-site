@@ -25,6 +25,20 @@ HOURS_HTML='<br>'.join(hours_label(days)+' · <strong>'+clock(start)+'–'+clock
 def intro(kicker,title,text):
     return f'<div class="page-intro"><div><div class="eyebrow">{kicker}</div><h1>{title}</h1></div><p class="intro">{text}</p></div>'
 
+
+def page_cover(kicker,title,text,theme):
+    sources={
+        'menu':('menu-table-cover-v1','Masă de pub cu burger simplu, pizza, platou cu grătare, cartofi prăjiți și bere; compoziție generată'),
+        'gallery':('atmosfera-gasca-v1','Scenă de socializare generată, inspirată de spațiile Old Mike'),
+        'events':('atmosfera-meci-v1','Scenă generată cu oaspeți care urmăresc un meci în terasa acoperită Old Mike'),
+        'contact':('atmosfera-terasa-v1','Scenă generată de seară pe terasa Old Mike')
+    }
+    stem,alt=sources[theme]
+    sizes='(max-width:800px) 100vw, (max-width:1440px) 76vw, 1000px'
+    srcset=', '.join(f'assets/images/{stem}-{w}.webp {w}w' for w in [480,800])+f', assets/images/{stem}.webp 1200w'
+    cta=button('tel:'+SITE['phone'],'Sună · '+SITE['phone_display'],True) if theme=='contact' else ''
+    return f'<section class="page-intro page-cover cover-{theme}" aria-labelledby="page-cover-title"><picture class="page-cover-media"><img src="assets/images/{stem}.webp" srcset="{srcset}" sizes="{sizes}" width="1200" height="800" alt="{escape(alt,quote=True)}" loading="eager" fetchpriority="high" decoding="async"></picture><div class="page-cover-title"><div class="eyebrow">{kicker}</div><h1 id="page-cover-title">{title}</h1>{cta}</div><p class="intro">{text}</p></section>'
+
 def button(href,text,ghost=False):
     arrow='↗' if href.startswith('https://') else '→' if not href.startswith(('tel:','mailto:')) else ''
     icon=f'<span class="arrow" aria-hidden="true">{arrow}</span>' if arrow else ''

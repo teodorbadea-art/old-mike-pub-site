@@ -74,7 +74,7 @@ for p in (ROOT/'assets/fonts').glob('*.woff'):
     font=TTFont(p);cmap=font.getBestCmap();assert all(ord(c) in cmap for c in 'ĂăÂâÎîȘșȚț'),p
 assert subprocess.check_output(['git','hash-object','assets/brand/oldmike-logo.png'],cwd=ROOT,text=True).strip()=='5ce2fc5ac8c93fd2aff434c0e8eb617c5a3ed1dc'
 for filename in ['old-mike-propunere-vizuala-m1.html','old-mike-previzualizare-telefon.html']:
-    data=(ROOT/'output'/filename).read_text();p=Page();p.feed(data);assert 'M1.7' in p.title
+    data=(ROOT/'output'/filename).read_text();p=Page();p.feed(data);assert SITE['version'] in p.title
     for kind,code in p.scripts:json.loads(code) if kind in ['application/json','application/ld+json'] else syntax(code)
     # Verify each distinct embedded image, including responsive variants and dialog sources.
     for uri in set(re.findall(r'data:image/[^;]+;base64,([A-Za-z0-9+/=]+)',data)):
@@ -97,3 +97,13 @@ for source in venue_sources:
         assert f'assets/images/{source}-{width}.webp {width}w' in venue_markup
 assert '-photo-v3' not in venue_markup
 print('PASS: all four cinematic venue masters and responsive variants retained.')
+
+for page,stem in [('meniu.html','menu-table-cover-v1'),('galerie.html','atmosfera-gasca-v1'),('evenimente.html','atmosfera-meci-v1'),('contact.html','atmosfera-terasa-v1')]:
+    markup=(ROOT/page).read_text()
+    assert markup.count('class="page-intro page-cover ')==1,page
+    assert f'assets/images/{stem}.webp' in markup,page
+    assert 'id="page-cover-title"' in markup,page
+    for width in [480,800]: assert f'assets/images/{stem}-{width}.webp {width}w' in markup,page
+    assert 'fetchpriority="high"' in markup,page
+assert 'page-cover-media' not in (ROOT/'index.html').read_text()
+print('PASS: four photographic page introductions, eager responsive imagery and unchanged homepage composition.')
