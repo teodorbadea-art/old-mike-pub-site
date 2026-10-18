@@ -39,3 +39,13 @@ Nu au fost modificate index.php/php.ini existente sau setări comune. Nu au fost
 - La lansarea finală sunt necesare backup strict al fișierelor înlocuite, plan de revenire, HTTPS/cache/404 și indexare; fără operații recursive pe public_html care ar include alte aplicații.
 
 Ghid de instalare: ../launch/INSTALL_TEST_M21.md. Sursă tehnică primară consultată pentru sesiuni: https://www.php.net/manual/en/session.security.ini.php . Nicio afirmație despre livrare/ranking sau certificare juridică.
+
+## Actualizare acces — 19.10.2026, după confirmarea utilizatorului
+
+USER VALIDATED: utilizatorul a încheiat configurarea contului în terminal și a spus „gata”. FACT: mesajul final al setup a fost observat: configurare terminată, cereri/emailuri încă dezactivate. Parola nu a fost citită sau introdusă de agent; config și htpasswd nu au fost afișate.
+
+FACT: curl HTTPS anonim către https://oldmike.ro/oldmike-test/ a produs401, observat în gate-after.txt prin cPanel File Manager View. Acesta confirmă solicitarea autentificării, NU validitatea accesului după introducerea parolei. Nu echivala401 cu test end-to-end PASS.
+
+Browserul automat a încercat să deschidă URL-ul și a raportat net::ERR_INVALID_AUTH_CREDENTIALS la protecția HTTPBasic, înaintea furnizării oricărei parole de către agent. Acest rezultat nu demonstrează că parola utilizatorului este greșită. Nu o solicita în chat, nu include credențiale în URL/curl, nu citește hash-uri și nu elimina protecția pentru a evita blocajul. Linkul poate fi oferit pentru evaluarea utilizatorului în propriul browser, cu limitarea explicită că aceasta nu autentifică browserul automat.
+
+Pașii rămași: confirmare acces autenticat (inclusiv permisiunea Apache de citire a fișierului de autentificare, fără a-i afișa conținutul), teste HTTP ale administrării/posterelor, cereri cu date fictive și verificarea notificării după autorizarea pasului. Documentația de la secțiunea anterioară este istoric înaintea configurării: nu rerula setup.php și nu suprascrie contul existent.
