@@ -4,6 +4,8 @@ Repository dedicat site-ului de prezentare. Meniu Electronic și Old Mike Commun
 
 ## Începe aici
 
+**Direcția curentă M0.2:** [Homepage static aerisit, pagini și administrare Evenimente](docs/continuity/08_DIRECTIE_VALIDATA_SI_NAVIGARE.md). Clarificările utilizatorului înlocuiesc propunerea anterioară de homepage lung și mișcarea imaginilor pe straturi.
+
 Checkpoint de recuperare: **18 octombrie 2026**, milestone **M0 — audit și continuitate**.
 
 **Actualizare M0.1:** [Strategia de execuție și găzduirea cPanel](docs/continuity/07_STRATEGIE_EXECUTIE.md). Acest document înlocuiește planul anterior cu Vercel: găzduire finală pe cPanel, fără dependență Vercel sau costuri noi. `beraria.oldmike.ro` este exclus complet din intervenție.

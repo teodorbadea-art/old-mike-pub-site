@@ -2,6 +2,8 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
+Prioritate de design: `08_DIRECTIE_VALIDATA_SI_NAVIGARE.md`. Homepage cu un singur produs hero static; fără plutire/parallax/zoom al pozei și fără alte fotografii cu mâncare pe Acasă. Meniu este pagină vizuală proprie cu recomandări și băuturi + link la meniul complet. Galerie: originale editate cinematic, arhitectură recognoscibilă. Evenimente: sport și altele, upload simplu de postere; automatizarea nu este cerută acum.
+
 - Scope exclusiv: `teodorbadea-art/old-mike-pub-site`.
 - Nu modifica Meniu Electronic sau Old Mike Community. Integrarea curentă: link-uri externe, fără DB comună.
 - Nu utiliza Lovable sau Canva. Nu adăuga servicii/abonamente plătite.

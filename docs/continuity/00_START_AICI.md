@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**Direcția curentă M0.2:** citește întâi [clarificările vizuale și navigarea](08_DIRECTIE_VALIDATA_SI_NAVIGARE.md). Acasă aerisit cu un singur hero static; fără mișcarea fotografiei sau alte imagini culinare. Pagină Meniu vizuală, Galerie editată cinematic și Evenimente cu upload de postere.
+
 **Actualizare ulterioară M0.1, aceeași zi:** utilizatorul a stabilit găzduirea finală pe cPanel și excluderea Berăriei. Citește [strategia curentă](07_STRATEGIE_EXECUTIE.md) înaintea restului planului; referințele M0 la viitoare preview-uri Vercel sunt depășite.
 
 ## Rezultatul recuperării

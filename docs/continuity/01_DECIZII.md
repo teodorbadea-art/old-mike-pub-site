@@ -1,5 +1,7 @@
 # Decizii, confirmări și limite
 
+**Clarificări USER VALIDATED M0.2:** homepage aerisit cu un singur produs hero; static hiperrealist preferat mișcării artificiale a imaginii; fotografii de local editate cinematic cu arhitectura recognoscibilă; pagină Meniu proprie, vizuală, cu mâncare/băuturi și link la meniul complet; Evenimente sport și altele, upload de postere, automatizare doar ca posibilitate ulterioară. Vezi `08_DIRECTIE_VALIDATA_SI_NAVIGARE.md`. Aceste instrucțiuni au prioritate față de propunerile anterioare.
+
 **D19–D23, actualizare ulterioară M0.1:** USER VALIDATED — găzduire finală pe cPanel, fără dependență Vercel și costuri noi; excludere completă `beraria.oldmike.ro`; utilizator cu experiență web zero, ghidare simplă pas cu pas; analiză și execuție eficientă, fără încercări vizuale fără direcție; evaluarea aplicațiilor free înaintea oricărei conectări. Vezi `07_STRATEGIE_EXECUTIE.md`. Aceste instrucțiuni înlocuiesc partea Vercel din D08 pentru pașii viitori.
 
 ## Clasificare

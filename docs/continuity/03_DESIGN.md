@@ -1,5 +1,7 @@
 # Design recuperat
 
+**Prioritate M0.2:** `08_DIRECTIE_VALIDATA_SI_NAVIGARE.md` conține cerințele explicite ulterioare: homepage cu un singur hero static, fără animație aproximativă; preparatele suplimentare apar în pagina Meniu proprie; fotografii de local editate cinematic, păstrând arhitectura. Catalogul de mai jos este referință, nu layout aprobat integral.
+
 ## Direcție deja stabilită
 
 Premium, minimalist, cinematic, hero dominant, imagini culinare realiste și câteva animații fluide. Logo oficial integral. CTA clare pentru meniu, club și apel telefonic. Prioritate mobil. Nu se redeschide această direcție printr-un nou proiect/template.

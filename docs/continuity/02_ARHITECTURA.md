@@ -1,5 +1,7 @@
 # Arhitectură și medii
 
+**Extindere M0.2:** site cu pagini distincte Acasă/Meniu/Evenimente/Galerie/Contact și link Club. Cerința de upload de postere justifică un modul mic de administrare local, propus în PHP; suportul hostingului și securitatea trebuie verificate înainte de implementare. Propunerea anterioară strict statică nu acoperă noul flux de upload. Vezi `08_DIRECTIE_VALIDATA_SI_NAVIGARE.md`.
+
 **Plan curent după M0.1:** site static complet portabil, publicat în găzduirea cPanel existentă pentru `oldmike.ro`. Fără servicii Vercel, API-uri plătite sau resurse servite din raw GitHub. Informațiile Vercel de mai jos sunt istoric verificat, nu instrucțiune de publicare curentă. `beraria.oldmike.ro` este exclus complet. Vezi `07_STRATEGIE_EXECUTIE.md`.
 
 ## Existent, verificat

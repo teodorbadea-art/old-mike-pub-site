@@ -1,5 +1,7 @@
 # M0.1 — Strategie de execuție Old Mike Pub
 
+**SUPRASEDAT PARȚIAL prin M0.2:** `08_DIRECTIE_VALIDATA_SI_NAVIGARE.md` înlocuiește homepage-ul cu secțiuni culinare, planul pe straturi în mișcare și structura într-o singură pagină. Static hiperrealist este baza; Meniu este pagină vizuală proprie; Evenimente are upload. Restul documentului păstrează istoricul propunerii și regulile de hosting/costuri.
+
 Data: 18.10.2026. Scope: strategie, resurse, instrumente și continuitate. Nicio implementare UI, generare de imagini, instalare de aplicații sau publicare în acest milestone.
 
 ## 1. Cerințe noi, validate de utilizator

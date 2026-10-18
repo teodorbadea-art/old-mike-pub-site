@@ -1,5 +1,7 @@
 # Probleme și pași următori
 
+**Prioritate M0.2:** următorul livrabil urmează `08_DIRECTIE_VALIDATA_SI_NAVIGARE.md`, cu homepage static și pagini separate. Referințele mai vechi la demo de mișcare se aplică doar dacă există animație hiperrealistă demonstrată; nu folosim mișcarea fotografiei ca substitut.
+
 **Actualizare M0.1:** planul operațional curent este în `07_STRATEGIE_EXECUTIE.md`. Vercel rămâne doar istoric. Excludere completă Berăria. Conceptul recomandat pornește din M06 și exemplele culinare recuperate; nu se consideră încă aprobat individual.
 
 | ID | Prioritate | Constatare | Pas următor |

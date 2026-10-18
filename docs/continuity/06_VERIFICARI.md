@@ -1,5 +1,13 @@
 # Verificări și jurnal de milestone
 
+## M0.2 — clarificare vizuală și structură, 18.10.2026
+
+- Bază remote: `d7dcf7c43d4968ee279ed3b497d12ba5856d8b6b`.
+- Înregistrate cerințele explicite: static hiperrealist preferat animației aproximative; homepage aerisit cu un singur produs; editare cinematică a localului recognoscibil; încărcare săptămânală de postere.
+- Două clarificări primite: Meniu vizual propriu cu mâncare/băuturi și link către meniul complet; Evenimente pentru sport și alte evenimente.
+- Creat `08_DIRECTIE_VALIDATA_SI_NAVIGARE.md`, actualizate punctele de intrare. Propus modul local PHP de administrare, dependent de verificarea hostingului; nu a fost implementat.
+- Nicio schimbare HTML, imagini runtime sau configurare. Fără generare/editare de imagini, acces cPanel sau deploy. Verificări documentare și integritate runtime, nu teste UI.
+
 ## M0.1 — strategie și corecția destinației de hosting, 18.10.2026
 
 - Bază: checkpoint `d9daedf45d308466390132e785a23a41c6159380`; HEAD remote reverificat înainte de scriere.
