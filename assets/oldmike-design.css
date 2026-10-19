@@ -1,0 +1,38 @@
+/* Canonical Old Mike design tokens. Sync to Meniu Electronic with scripts/sync_menu_brand.py. */
+@font-face{font-family:'Manrope Old Mike';font-style:normal;font-weight:400 700;font-display:swap;src:url('fonts/manrope-ro-v1.woff') format('woff')}
+@font-face{font-family:'Cormorant Old Mike';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/cormorant-garamond-regular-ro.woff') format('woff')}
+@font-face{font-family:'Cormorant Old Mike';font-style:italic;font-weight:400;font-display:swap;src:url('fonts/cormorant-garamond-italic-ro.woff') format('woff')}
+:root{
+ --om-font-body:'Manrope Old Mike',system-ui,sans-serif;
+ --om-font-heading:'Cormorant Old Mike',Georgia,serif;
+ --om-bg:#100e0b;--om-panel:#191610;--om-text:#f5f0e7;--om-gold:#d8ad69;--om-muted:#c9c0b2;--om-line:#ffffff21;
+ --om-space-1:8px;--om-space-2:16px;--om-space-3:24px;--om-space-4:32px;--om-space-5:48px;
+ --om-content:760px;--om-wide:1440px;--om-body-leading:1.65;
+}
+/* Shared restaurant chrome; native details remains usable without JavaScript. */
+.om-header,.om-footer{font-family:var(--om-font-body);color:var(--om-text);background:var(--om-bg)}
+.om-header{min-height:100px;max-width:1600px;margin:auto;padding:14px 5.2%;display:flex;align-items:center;gap:24px;border-bottom:1px solid var(--om-line)}
+.om-header a,.om-footer a{color:inherit;text-decoration:none}
+.om-brand{display:flex;gap:15px;align-items:center;margin-right:auto;flex-shrink:0}
+.om-brand img{width:73px;height:73px;object-fit:contain}
+.om-brand-name{font-size:14px;letter-spacing:.12em;line-height:1.6}
+.om-brand-name small{display:block;font-size:12px;letter-spacing:.14em;color:var(--om-muted)}
+.om-desktop-nav{display:flex;gap:22px;font-size:13px;align-items:center}
+.om-desktop-nav a{padding:12px 0;white-space:nowrap}
+.om-header a[aria-current=page],.om-header nav a:hover{color:var(--om-gold)}
+.om-header .om-call,.om-footer .om-call{display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--om-gold);color:#1b140c;padding:0 16px;font-size:14px;font-weight:600;white-space:nowrap}
+.om-mobile-nav{display:none;position:relative}
+.om-mobile-nav summary{list-style:none;border:1px solid var(--om-line);min-height:44px;padding:10px 12px;cursor:pointer;font-size:14px}
+.om-mobile-nav summary::-webkit-details-marker{display:none}
+.om-mobile-nav nav{position:absolute;right:0;top:calc(100% + 8px);z-index:60;background:var(--om-panel);border:1px solid var(--om-line);min-width:230px;padding:12px;box-shadow:0 12px 30px #0009}
+.om-mobile-nav nav a{display:block;padding:12px;font-size:14px}
+.om-footer{border-top:1px solid var(--om-line);padding:var(--om-space-5) 5.2% var(--om-space-3);max-width:1440px;margin:auto}
+.om-footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--om-space-4)}
+.om-footer strong{font-size:14px;font-weight:600;letter-spacing:.04em}
+.om-footer p{font-size:14px;color:var(--om-muted);line-height:var(--om-body-leading);margin:14px 0}
+.om-footer nav{display:flex;flex-direction:column;align-items:flex-start;gap:14px;font-size:14px}
+.om-footer .om-call{margin:6px 0 16px}
+.om-footer-note{font-size:12px!important;border-top:1px solid var(--om-line);padding-top:var(--om-space-3);margin-top:var(--om-space-4)!important}
+.om-header a:focus-visible,.om-header summary:focus-visible,.om-footer a:focus-visible{outline:2px solid var(--om-gold);outline-offset:4px}
+@media(max-width:1100px){.om-desktop-nav{display:none}.om-mobile-nav{display:block}}
+@media(max-width:600px){.om-header{min-height:80px;padding:12px 16px;gap:10px}.om-brand{gap:8px;min-width:0}.om-brand img{width:52px;height:52px}.om-brand-name{font-size:12px}.om-brand-name small{font-size:9px;letter-spacing:.08em}.om-header .om-call{font-size:13px;min-height:44px;padding:0 12px}.om-call-number{display:none}.om-footer{padding:32px 20px 20px}.om-footer-grid{grid-template-columns:1fr;gap:24px}}

@@ -1,3 +1,6 @@
+# M2.12 prioritar
+Citește docs/continuity/33_M212_IDENTITATE_COMUNA.md. Site și Meniu folosesc același shell și tokens; Manrope+Cormorant. Meniu complet/prețuri live în site AMÂNAT explicit de utilizator. Surse locale; neaplicate live.
+
 # Continuitate Old Mike Pub
 
 M2.11 PRIORITAR: citește docs/continuity/31_PUBLIC_MENU_LINK_M211.md. Linkul general de meniu afișează bara admin dacă există sesiune. Corecție LOCALĂ: ruta publică /m/old-mike/loc-oldmike-matei, verificată cu produse în browser. Updater strict Garden pregătit; NEAPLICAT LIVE, cPanel cere autentificare. Nu modifica Meniu Electronic.

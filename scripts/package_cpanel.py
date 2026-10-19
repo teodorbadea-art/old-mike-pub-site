@@ -36,10 +36,10 @@ for name in pages:
  source=source.replace('</body>','<script src="assets/site-runtime.js" defer></script><noscript><p class="form-note">Pentru rezervări și informații despre evenimente, sună la 0787 366 166.</p></noscript></body>')
  (PUBLIC/name).write_text(source)
 # CSS font/image references are relative to their stylesheet, not the HTML root.
-for match in re.finditer(r'url\([\'"]?([^\)\'\"]+)',(ROOT/'assets/site.css').read_text()):
+for match in re.finditer(r'url\([\'"]?([^\)\'\"]+)','\n'.join((ROOT/name).read_text() for name in ['assets/site.css','assets/oldmike-design.css'])):
  ref=match.group(1)
  if not ref.startswith('data:'):add('assets/'+ref)
-files.update(['assets/site-runtime.js','assets/images/oldmike-share-v1.jpg','assets/fonts/OFL-Cormorant.txt'])
+files.update(['assets/site-runtime.js','assets/images/oldmike-share-v1.jpg','assets/fonts/OFL-Cormorant.txt','assets/fonts/OFL-Manrope.txt'])
 for name in sorted(files):
  target=PUBLIC/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/name,target)
 with (PUBLIC/'assets/site.css').open('a') as f:f.write('\n.form-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}\n')

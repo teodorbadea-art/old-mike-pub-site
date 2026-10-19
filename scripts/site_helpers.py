@@ -44,14 +44,22 @@ def button(href,text,ghost=False):
     icon=f'<span class="arrow" aria-hidden="true">{arrow}</span>' if arrow else ''
     return f'<a class="button{" ghost" if ghost else ""}" href="{escape(href,quote=True)}">{text}{icon}</a>'
 
+def brand_shell(kind,current=''):
+    # Build-time rendering from the same dependency-free module used by the app.
+    import subprocess
+    facts={k:SITE[k] for k in ['name','phone','phone_display','email','address','hours_display','menu_url','club_url']}
+    facts['website']='';facts['home']='index.html'
+    facts['logo']='assets/brand/oldmike-logo.png'
+    facts['operator']=' · '.join(SITE[k] for k in ['operator_name','operator_cui','operator_trade_registry'])
+    program="const shell=require(process.argv[1]);console.log(shell[process.argv[2]](JSON.parse(process.argv[3]),process.argv[4]));"
+    return subprocess.check_output(['node','-e',program,str(ROOT/'assets/oldmike-shell.js'),kind,json.dumps(facts),current],text=True).strip()
+
 def header(current):
-    links=''.join(f'<a href="{url}"'+(' aria-current="page"' if url==current else '')+f'>{label}</a>' for url,label in PAGES)
-    return f'''<a class="skip" href="#continut">Sari la conținut</a><header class="site-header"><a class="brand" href="index.html" aria-label="Old Mike Pub, Acasă"><img src="assets/brand/oldmike-logo.png" width="73" height="73" alt="Logo oficial Old Mike"><span class="brand-name">OLD MIKE<small>PUB · BUCUREȘTI</small></span></a><a class="mobile-call" href="tel:{SITE['phone']}" aria-label="Sună pentru rezervări la {SITE['phone_display']}">Sună</a><button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Deschide meniul" type="button">☰</button><nav class="site-nav" id="site-nav" aria-label="Navigare principală">{links}<a href="{SITE['club_url']}">Old Mike Club <span aria-hidden="true">↗</span></a><a class="nav-phone" href="tel:{SITE['phone']}">Rezervări · {SITE['phone_display']}</a></nav><a class="header-cta" href="tel:{SITE['phone']}">Rezervă · {SITE['phone_display']}</a></header>'''
+    current='' if current=='index.html' else current
+    return '<a class="skip" href="#continut">Sari la conținut</a>'+brand_shell('header',current)
 
 def footer():
-    social=''.join(f'<a href="{escape(SITE[k])}">{label} ↗</a>' for k,label in [('facebook_url','Facebook'),('instagram_url','Instagram')] if SITE.get(k))
-    operator=' · '.join(str(SITE[k]) for k in ['operator_name','operator_cui','operator_trade_registry'] if SITE.get(k))
-    return f'''<footer class="site-footer"><div class="footer-main"><div><strong>OLD MIKE PUB</strong><p>Pub și terasă în București.<br>{SITE['address']}</p><a href="{escape(MAP_LINK)}" target="_blank" rel="noopener noreferrer">Indicații de orientare ↗</a></div><div><strong>Program</strong><p>{HOURS_HTML}</p><a class="footer-phone" href="tel:{SITE['phone']}">Rezervări · {SITE['phone_display']}</a><a href="mailto:{SITE['email']}">{SITE['email']}</a></div><div><a class="footer-club" href="{SITE['club_url']}"><strong>Old Mike Club ↗</strong><span>Oferte și beneficii pentru membri.</span></a><nav aria-label="Legături utile"><a href="meniu.html">Meniu →</a><a href="galerie.html">Galerie →</a><a href="contact.html">Contact →</a><a href="confidentialitate.html">Confidențialitate →</a>{social}</nav></div></div><div class="footer-bottom"><span>Mâncare bună. Oameni faini.</span>{f'<span>{escape(operator)}</span>' if operator else ''}</div></footer>'''
+    return brand_shell('footer')
 
 META={
 'index.html':('Old Mike Pub București | Burgeri, pizza și terasă','Old Mike Pub, pub și terasă pe Strada Matei Voievod 67, București. Burgeri, pizza și meciuri pe ecran. Rezervări: 0787 366 166.'),
@@ -71,7 +79,7 @@ def head(filename):
     # Indexing stays disabled in this milestone. Launch requires an explicit later review.
     robots='index,follow' if SITE['indexing_enabled'] and filename not in ['administrare-demo.html','404.html'] else 'noindex,nofollow'
     ld=json.dumps(structured_data(),ensure_ascii=False).replace('</','<\\/') if filename in ['index.html','contact.html'] else ''
-    return f'''<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="{robots}"><meta name="theme-color" content="#100e0b"><title>{escape(title)}</title><meta name="description" content="{escape(description,quote=True)}"><link rel="canonical" href="{url}"><meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:site_name" content="Old Mike Pub"><meta property="og:title" content="{escape(title,quote=True)}"><meta property="og:description" content="{escape(description,quote=True)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE['base_url']}assets/images/oldmike-share-v1.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Old Mike Pub, burger cu bucătari miniaturali"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/brand/favicon-180.png"><link rel="stylesheet" href="assets/site.css">{f'<script type="application/ld+json">{ld}</script>' if ld else ''}'''
+    return f'''<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="{robots}"><meta name="theme-color" content="#100e0b"><title>{escape(title)}</title><meta name="description" content="{escape(description,quote=True)}"><link rel="canonical" href="{url}"><meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:site_name" content="Old Mike Pub"><meta property="og:title" content="{escape(title,quote=True)}"><meta property="og:description" content="{escape(description,quote=True)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE['base_url']}assets/images/oldmike-share-v1.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Old Mike Pub, burger cu bucătari miniaturali"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/brand/favicon-180.png"><link rel="stylesheet" href="assets/oldmike-design.css?v=1"><link rel="stylesheet" href="assets/site.css?v=m212">{f'<script type="application/ld+json">{ld}</script>' if ld else ''}'''
 
 def config_tag():
     public={k:SITE[k] for k in ['version','timezone','hours']}

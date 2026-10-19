@@ -1,3 +1,6 @@
+# Actualizare M2.12 —20.10.2026
+[Identitate comună Site/Meniu, fonturi și navigare](33_M212_IDENTITATE_COMUNA.md). Implementare locală verificată; cPanel cere login nou. Punctul3 (meniu complet/live în site) AMÂNAT explicit.
+
 # M0 — Audit și checkpoint, 18.10.2026
 
 **Audit conex Meniu Electronic, numai citire:** [producție, branding, SEO, alergeni și imagini](32_AUDIT_MENIU_ELECTRONIC_20261019.md). main în urmă cu1100commituri; 69liste alergeni stocate, toate257rețete draft;57poze Mâncare7,19MiB. Nicio corecție aplicată în meniu/DB/Vercel. M2.11 Garden rămâne de aplicat.
