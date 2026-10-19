@@ -1,6 +1,6 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
-**M2.9 în curs:** [Garden autorizat și DNS Cloudflare lipsă](29_GARDEN_LANSARE.md). Destinație confirmată de utilizator și creată în cPanel; pachet nou izolat. Nu confunda pregătirea cu lansare publică.
+**M2.9 instalat pe server, lansare publică blocată DNS/HTTPS:** [Garden autorizat și DNS Cloudflare lipsă](29_GARDEN_LANSARE.md). Garden instalat izolat,65hash-uri și PHP41+26PASS. M2.8 aplicat și în staging. DNS Cloudflare lipsește, certificatul trebuie emis după DNS. Nu declara site-ul accesibil public.
 
 **Checkpoint local M2.8:** [ciorne și promovare permanentă](28_CIORNE_PROMOVARE_PERMANENTA.md). Cod/pachet pregătite; instalarea și verificărilePHP blocate de eroarea conexiunii cPanel. Site-ul de test rămâne la implementarea precedentă.
 

@@ -1,5 +1,7 @@
 # M2.8 — Ciorne și promovare permanentă pentru meciuri, 19.10.2026
 
+**Actualizare M2.9:** testelePHP41+26și lintPASS pe găzduire; M2.8 aplicat în staging cu13hash-uri verificate,HTTP401păstrat. Inclus și în Garden instalat; accesul public Garden blocat DNS/HTTPS. Vezi29_GARDEN_LANSARE.md. Restul documentului descrie checkpoint-ul inițial, anterior aplicării.
+
 ## Scop autorizat
 USER VALIDATED: editarea/ștergerea ciornelor, înlocuirea posterului; adăugarea promovării permanente a meciurilor. Site-ul rămâne în staging; pagina grupului oldmike.ro este exclusă. Fără probe reale de email.
 
