@@ -13,3 +13,5 @@ Verificări efectuate:28suite Node PASS în meniul electronic;8pagini site și r
 LIVE NEAPLICAT: cPanel răspunde la pagina de login, sesiunea invalidă; nu s-a autentificat și nu s-au modificat fișiere pe server. Nu există deploy nou Vercel sau migrare hosted executată în această etapă. Pagina grupului, Berăria, Community, DNS și email sunt excluse.
 
 Pachet incremental Garden:output/old-mike-garden-brand-m212.zip,11fișiere,65,780bytes. Updater CLI server/update-brand-m212.py pregătit, testat pe fixture temporar (preflight fără scriere, apply, backup, idempotent, corupție refuzată, pagina grupului/.htaccess păstrate). NEEXECUTAT pe server.
+
+Rezultat Chrome pe commitul Meniuc4e14288:frontendSUCCESS,4probe (941navigare, câmpuri opționale, alergeni/preț/publicare, brand desktop/mobil),28suite Node. Baza de date rulează separat; niciun deploy. Conectarea securizată cPanel a reușit; terminal disponibil. Instalarea încă de executat.
