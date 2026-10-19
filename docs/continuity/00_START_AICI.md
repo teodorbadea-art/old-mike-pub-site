@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**Audit conex Meniu Electronic, numai citire:** [producție, branding, SEO, alergeni și imagini](32_AUDIT_MENIU_ELECTRONIC_20261019.md). main în urmă cu1100commituri; 69liste alergeni stocate, toate257rețete draft;57poze Mâncare7,19MiB. Nicio corecție aplicată în meniu/DB/Vercel. M2.11 Garden rămâne de aplicat.
+
 **M2.11 pregătit, neaplicat live:** [link către meniul public dedicat clienților](31_PUBLIC_MENU_LINK_M211.md). URL verificat în browser, corecție surse și updater izolat Garden. Necesită acces cPanel pentru aplicare.
 
 **M2.10 aplicat manual de utilizator:** [Admin Forbidden corectat](30_ADMIN_ROUTING_M210.md). /admin/200,homepage200,API200,lib403. DNS/HTTPS public funcționează. Login real/POST încă de confirmat. Vezi rezultatul aplicării în document.
