@@ -1,5 +1,7 @@
 # Continuitate Old Mike Pub
 
+M2.9 PRIORITAR: utilizatorul a AUTORIZAT explicit lansarea la garden.oldmike.ro. Citește `docs/continuity/29_GARDEN_LANSARE.md`. Domeniu creat în cPanel, folder separat public_html/garden.oldmike.ro. DNS autoritativ Cloudflare încă fără A garden; lansarea publică nu este confirmată. Folosește DOAR noul installer Garden, niciodată installerul M26 la rădăcină. Pagina grupului și Berăria rămân excluse.
+
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
 M2.8: citește `28_CIORNE_PROMOVARE_PERMANENTA.md`. Ciorne editare/înlocuireposter/ștergere cu confirmare și revizie; promovare sportivă permanentă. Implementate LOCAL; NEAPLICATE, acces cPanel eșuat. TestelePHPnoi/lint încă NEEXECUTATE. Nu declara deploy sau PHP PASS; nu elimina autentificarea.
