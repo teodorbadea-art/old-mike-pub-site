@@ -5,7 +5,7 @@
 :root{
  --om-font-body:'Manrope Old Mike',system-ui,sans-serif;
  --om-font-heading:'Cormorant Old Mike',Georgia,serif;
- --om-bg:#100e0b;--om-panel:#191610;--om-text:#f5f0e7;--om-gold:#d8ad69;--om-muted:#c9c0b2;--om-line:#ffffff21;
+ --om-bg:#100e0b;--om-panel:#181612;--om-text:#f5f0e7;--om-gold:#d9a441;--om-muted:#aa9f91;--om-line:#342d24;
  --om-space-1:8px;--om-space-2:16px;--om-space-3:24px;--om-space-4:32px;--om-space-5:48px;
  --om-content:760px;--om-wide:1440px;--om-body-leading:1.65;
 }

@@ -7,6 +7,10 @@ ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'output/menu-m3';OUT.mkdir(par
 env={**os.environ,'OM_MENU_SNAPSHOT':str(ROOT/'data/menu-redesign/menu-preview-snapshot.json')}
 html=subprocess.check_output([os.environ.get('OM_PHP_BIN','php'),str(ROOT/'meniu.php')],env=env).decode()
 (OUT/'preview.html').write_text(html)
+# Exact production renderer with fixture data: no publication and no preview noindex.
+code="require 'server/lib/menu/data.php';require 'server/lib/menu/render.php';$m=OldMikeMenu\\read_cache('data/menu-redesign/menu-preview-snapshot.json');echo OldMikeMenu\\render($m,getcwd(),false);"
+production=subprocess.check_output([os.environ.get('OM_PHP_BIN','php'),'-r',code],env=env,cwd=ROOT).decode()
+(OUT/'audit.html').write_text(production)
 def uri(path):
  data=path.read_bytes();mime=mimetypes.guess_type(str(path))[0] or 'application/octet-stream';return 'data:'+mime+';base64,'+base64.b64encode(data).decode()
 def css_link(match):
@@ -25,7 +29,7 @@ def image_src(m):
   if variant.is_file():path=variant
  return 'src="'+uri(path)+'"'
 review=re.sub(r'src="(assets/[^"?]+)"',image_src,review)
-review=review.replace('@@HERO_MOBILE@@','<source media="(max-width:600px)" srcset="'+uri(ROOT/'assets/images/hero-single-chefs-v4-mobile.webp')+'">')
+review=review.replace('@@HERO_MOBILE@@','<source media="(max-width:600px)" srcset="'+uri(ROOT/'assets/images/hero-single-chefs-v4-mobile-800.webp')+'">')
 review=re.sub(r'href="(assets/brand/[^"?]+)"',lambda m:'href="'+uri(ROOT/m[1])+'"',review)
 (OUT/'Old-Mike-Meniu-Previzualizare.html').write_text(review)
 print('Preview rendered from PHP:',len(html),'bytes; offline review:',len(review),'characters')

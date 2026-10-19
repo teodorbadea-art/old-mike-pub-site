@@ -76,7 +76,7 @@ body{line-height:var(--om-body-leading)}textarea{font:inherit}
    OLD MIKE M3 · MENIU EDITORIAL LIVE — scoped, shared restaurant chrome.
    Keep these additions together. Other pages retain their current layouts.
    ===================================================================== */
-.menu-editorial{--om-bg:#100e0b;--om-panel:#181612;--om-line:#342d24;--om-gold:#d9a441;--om-text:#f5f0e7;--om-muted:#aa9f91;--bg:var(--om-bg);--panel:var(--om-panel);--gold:var(--om-gold);--cream:var(--om-text);--muted:var(--om-muted);--line:var(--om-line);font-family:var(--om-font-body);background:var(--bg);color:var(--cream);line-height:1.65;overflow-wrap:break-word}
+.menu-editorial{--bg:var(--om-bg);--panel:var(--om-panel);--gold:var(--om-gold);--cream:var(--om-text);--muted:var(--om-muted);--line:var(--om-line);font-family:var(--om-font-body);background:var(--bg);color:var(--cream);line-height:1.65;overflow-wrap:break-word}
 .menu-editorial *, .menu-editorial *:before,.menu-editorial *:after{box-sizing:border-box}
 .menu-editorial a:focus-visible,.menu-editorial summary:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
 .menu-editorial .sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}

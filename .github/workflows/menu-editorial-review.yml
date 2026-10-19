@@ -32,7 +32,7 @@ jobs:
           node tests/menu-browser.mjs "$CHROME_BIN"
       - name: Lighthouse mobile audit (target 90)
         run: |
-          npx --yes lighthouse@12.8.2 http://127.0.0.1:4188/preview --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=output/menu-m3/lighthouse-mobile.json --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --quiet
+          npx --yes lighthouse@12.8.2 http://127.0.0.1:4188/audit --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=output/menu-m3/lighthouse-mobile.json --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --quiet
           node -e "const r=require('./output/menu-m3/lighthouse-mobile.json');console.log(Object.fromEntries(Object.entries(r.categories).map(([k,v])=>[k,Math.round(v.score*100)])))"
       - uses: actions/upload-artifact@v4
         if: always()

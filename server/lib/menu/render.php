@@ -21,7 +21,7 @@ function picture(string $stem,string $alt,string $root,bool $hero=false):string{
     $path='assets/images/'.$stem.'.webp';$size=@getimagesize($root.'/'.$path);if(!$size)return '';
     $srcset=[];foreach([480,800,1200] as $w)if(is_file($root.'/assets/images/'.$stem.'-'.$w.'.webp'))$srcset[]='assets/images/'.$stem.'-'.$w.'.webp '.$w.'w';
     $srcset[]=$path.' '.$size[0].'w';$mobile='';
-    if($hero&&is_file($root.'/assets/images/'.$stem.'-mobile.webp'))$mobile='<source media="(max-width:600px)" srcset="assets/images/'.e($stem).'-mobile.webp">';
+    if($hero&&is_file($root.'/assets/images/'.$stem.'-mobile.webp'))$mobile='<source media="(max-width:600px)" srcset="assets/images/'.e($stem).'-mobile-480.webp 480w, assets/images/'.e($stem).'-mobile-800.webp 800w" sizes="100vw">';
     return '<picture>'.$mobile.'<img src="'.e($path).'" srcset="'.e(implode(', ',$srcset)).'" sizes="'.($hero?'100vw':'(max-width:800px) 100vw, (max-width:1500px) 55vw, 800px').'" width="'.$size[0].'" height="'.$size[1].'" alt="'.e($alt).'" '.($hero?'fetchpriority="high" loading="eager"':'loading="lazy"').' decoding="async"></picture>';
 }
 function rows_html(array $rows):string{

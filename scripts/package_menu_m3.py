@@ -32,7 +32,7 @@ shutil.copy2(ROOT/'meniu.php',PUBLIC/'meniu.php');shutil.copytree(ROOT/'server/l
 (PUBLIC/'cache').mkdir();shutil.copy2(ROOT/'cache/.htaccess',PUBLIC/'cache/.htaccess');shutil.copy2(ROOT/'data/menu-redesign/menu-preview-snapshot.json',PUBLIC/'cache/menu.json')
 shutil.copytree(ROOT/'docs/menu-redesign',OUT/'instructiuni-si-prompturi')
 shutil.copy2(ROOT/'output/menu-m3/Old-Mike-Meniu-Previzualizare.html',OUT/'Old-Mike-Meniu-Previzualizare.html')
-(OUT/'APACHE-routing-DOAR-DUPA-APROBARE.txt').write_text('# Only in Garden .htaccess, AFTER approval; do not replace existing rules.\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule ^meniu\\.html$ meniu.php [END]\n</IfModule>\n')
+(OUT/'APACHE-routing-DOAR-DUPA-APROBARE.txt').write_text('# Only in Garden .htaccess, AFTER approval; do not replace existing rules.\n<IfModule mod_deflate.c>\nAddOutputFilterByType DEFLATE text/html text/css application/javascript application/json\n</IfModule>\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule ^meniu\\.html$ meniu.php [END]\n</IfModule>\n')
 manifest={p.relative_to(OUT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(OUT.rglob('*')) if p.is_file()}
 (OUT/'MANIFEST_SHA256.json').write_text(json.dumps(manifest,indent=2)+'\n')
 archive=ROOT/'output/menu-m3/Old-Mike-Meniu-M3-Pachet.zip'
