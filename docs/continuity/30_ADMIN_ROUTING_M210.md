@@ -1,5 +1,12 @@
 # M2.10 — Administrare Forbidden după conectare
 
+## Rezultat final —19:09 Europe/Bucharest
+USER VALIDATED: utilizatorul a modificat manual linia3în .htaccess Garden, din DirectoryIndex index.html în DirectoryIndex index.html index.php, conform capturii verificate, apoi a confirmat salvarea. Agentul nu a executat updaterulCLI și nu a obținut acces cPanel.
+
+FACT după salvare: /admin/HTTPS200(fusese403), homepageHTTPS200, /api/index.php?action=eventsHTTPS200, /lib/app.php403(protecție păstrată). Corecția de rutare este aplicată. Autentificarea reală și acțiunilePOST rămân de confirmat de utilizator; verificarea GET200 nu certifică loginul complet. Scriptul updater rămâne istoric/reluabil idempotent, NU a fost rulat sau lintat. Nu declara backupul automat/guardurile sale executate în această aplicare manuală.
+
+Textul de mai jos păstrează istoricul diagnosticului și blocajului anterior.
+
 19.10.2026, utilizatorul raportează Forbidden inclusiv după folosirea linkului complet de administrare.
 
 FACT: GET HTTPS /admin/index.php returnează200 și formularul real de conectare. GET /admin/ returnează403 Apache. În server/admin/index.php autentificarea reușită, logout și acțiunile POST redirecționează303 la path(config,'admin/'). Pachetul Garden setează DirectoryIndex numai index.html, deci adresa de destinație nu execută index.php. Recomandarea anterioară de link complet nu remedia fluxul după login; problema este a instalării noastre.
