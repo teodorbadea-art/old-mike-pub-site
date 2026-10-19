@@ -8,3 +8,6 @@ state.json
 state.lock
 .env
 .env.*
+
+# Local reference originals and QA sheets (not deployed)
+/work/

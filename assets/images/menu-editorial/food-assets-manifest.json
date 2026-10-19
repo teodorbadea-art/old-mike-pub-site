@@ -1,0 +1,66 @@
+[
+  {
+    "category": "tomahawk",
+    "file": "assets/images/menu-editorial/cat-tomahawk.webp",
+    "alt": "Doi bucătari în miniatură ridică un tomahawk de porc cu un scripete, lângă cartofi și sos.",
+    "source_code": "OM-0004",
+    "source_name": "Tomahwk de Porc si Cartofi cu Parmezan",
+    "master": "/workspace/scratch/52be6ffe8fd8/generated_images/exec-0cd69b21-9a49-4e51-8246-f3f2ef411de3.png"
+  },
+  {
+    "category": "ciorbe",
+    "file": "assets/images/menu-editorial/cat-ciorbe.webp",
+    "alt": "Bucătari în miniatură gustă ciorba din vasul portocaliu, alături de un ardei iute.",
+    "source_code": "OM-0034",
+    "source_name": "Ciorba de Vacuta",
+    "master": "/workspace/scratch/52be6ffe8fd8/generated_images/exec-d7ff87d0-4ea2-43de-a5c1-6c5838407c57.png"
+  },
+  {
+    "category": "salate",
+    "file": "assets/images/menu-editorial/cat-salate.webp",
+    "alt": "Bucătari în miniatură aranjează salata cu fâșii crocante și brânză rasă, pe farfuria neagră.",
+    "source_code": "OM-0038",
+    "source_name": "Salata Old Mike",
+    "master": "/workspace/scratch/52be6ffe8fd8/generated_images/exec-ce3364ce-969e-4bad-936b-0a6610a337f5.png"
+  },
+  {
+    "category": "paste",
+    "file": "assets/images/menu-editorial/cat-paste.webp",
+    "alt": "Doi bucătari în miniatură trag o panglică de paste, pe farfuria galbenă cu paste și brânză rasă.",
+    "source_code": "OM-0040",
+    "source_name": "PENNE Carbonara Original",
+    "master": "/workspace/scratch/52be6ffe8fd8/generated_images/exec-967603c9-e00d-416c-a601-2d6a1cbd30a3.png"
+  },
+  {
+    "category": "peste",
+    "file": "assets/images/menu-editorial/cat-peste.webp",
+    "alt": "Bucătari în miniatură măsoară o doradă la grătar, alături de legume și midii, pe platou dreptunghiular.",
+    "source_code": "OM-0066",
+    "source_name": "Dorada la Gratar cu Orez Salbatic",
+    "master": "/workspace/scratch/52be6ffe8fd8/generated_images/exec-d39de9a7-de26-4071-9a20-e3ae2b07384e.png"
+  },
+  {
+    "category": "gatite",
+    "file": "assets/images/menu-editorial/cat-gatite.webp",
+    "alt": "Un bucătar în miniatură escaladează ciolanul pe pat de fasole, ajutat de un coleg.",
+    "source_code": "OM-0068",
+    "source_name": "Ciolan Afumat cu Iahnie de Fasole",
+    "master": "/workspace/scratch/52be6ffe8fd8/generated_images/exec-2d2df9a5-106d-4607-b942-a65bc6eada72.png"
+  },
+  {
+    "category": "pasare",
+    "file": "assets/images/menu-editorial/cat-pasare.webp",
+    "alt": "Bucătari în miniatură ung cocoșelul rumenit, alături de mămăligă și mujdei, în vasul metalic.",
+    "source_code": "OM-0067",
+    "source_name": "COQUELET la Ceaun cu Mamaliga si Mujdei de Usturoi",
+    "master": "/workspace/scratch/52be6ffe8fd8/generated_images/exec-b40cff41-7c3c-4c92-871b-dfe369c977e6.png"
+  },
+  {
+    "category": "starters",
+    "file": "assets/images/menu-editorial/cat-starters.webp",
+    "alt": "Bucătari în miniatură aranjează roșii și busuioc pe bruschete, folosind o mistrie mică.",
+    "source_code": "OM-0026",
+    "source_name": "Bruschetta cu Rosii si Busuioc",
+    "master": "/workspace/scratch/52be6ffe8fd8/generated_images/exec-e44de961-6275-48f3-b133-6283745ab0b9.png"
+  }
+]

@@ -3,7 +3,8 @@
   "git": {
     "deploymentEnabled": {
       "docs/continuity-audit-20261018": false,
-      "design/m1-static-cinematic": false
+      "design/m1-static-cinematic": false,
+      "design/m3-live-menu-editorial": false
     }
   }
 }

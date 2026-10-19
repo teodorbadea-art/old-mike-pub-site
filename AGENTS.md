@@ -1,3 +1,6 @@
+# M3 prioritar — previzualizare, NU publica
+Utilizatorul a autorizat20.10 redesignul complet cu produse/prețuri live în site, inversând amânarea M2.12. Citește docs/menu-redesign/README.md. Fără aplicare live sau schimbare rutare până la evaluarea utilizatorului.
+
 # M2.12 prioritar
 Citește docs/continuity/33_M212_IDENTITATE_COMUNA.md. Site și Meniu folosesc același shell și tokens; Manrope+Cormorant. Meniu complet/prețuri live în site AMÂNAT explicit de utilizator. Surse locale; neaplicate live.
 

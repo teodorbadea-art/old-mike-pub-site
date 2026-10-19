@@ -1,0 +1,42 @@
+name: Review menu editorial (no deploy)
+on:
+  push:
+    branches: ['design/m3-live-menu-editorial']
+    paths-ignore: ['docs/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: menu-editorial-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: PHP checks and real server render
+        run: |
+          php -v
+          php -l meniu.php
+          php -l server/lib/menu/data.php
+          php -l server/lib/menu/render.php
+          php tests/php/menu.php
+          python3 scripts/build_menu_preview.py
+      - name: Chrome responsive interaction checks
+        run: |
+          node tests/menu-static-server.mjs >/tmp/menu-review-server.log 2>&1 &
+          echo $! >/tmp/menu-review-server.pid
+          for i in {1..40}; do curl -sf http://127.0.0.1:4188/preview >/dev/null && break; sleep .2; done
+          CHROME_BIN=$(command -v google-chrome || command -v chromium)
+          node tests/menu-browser.mjs "$CHROME_BIN"
+      - name: Lighthouse mobile audit (target 90)
+        run: |
+          npx --yes lighthouse@12.8.2 http://127.0.0.1:4188/preview --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=output/menu-m3/lighthouse-mobile.json --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --quiet
+          node -e "const r=require('./output/menu-m3/lighthouse-mobile.json');console.log(Object.fromEntries(Object.entries(r.categories).map(([k,v])=>[k,Math.round(v.score*100)])))"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: old-mike-menu-review
+          path: output/menu-m3/
+          retention-days: 14

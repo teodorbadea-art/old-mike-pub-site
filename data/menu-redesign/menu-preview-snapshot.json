@@ -1,0 +1,2318 @@
+{
+  "at": 1792447018,
+  "rows": [
+    {
+      "group_code": "Bauturi",
+      "category_name": "Promotie Bere",
+      "name_ro": "Bere Tuborg la Metru 8 Halbe 0,4L",
+      "price": 95.0,
+      "portion_display": "3200 ML",
+      "description_ro": "tuborg draught 0,4 l x 8 halbe",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Pachete Bauturi",
+      "name_ro": "Jameson + 4 Pepsi",
+      "price": 255.0,
+      "portion_display": "700 ML / 1000 ML",
+      "description_ro": "whisky Jameson + 4 Pepsi",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Pachete Bauturi",
+      "name_ro": "CHIVAS 12 YO + 4 Cola",
+      "price": 355.0,
+      "portion_display": "700 ML / 1000 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Pachete Bauturi",
+      "name_ro": "Vodka Absolut + 4 Cola / Granini",
+      "price": 240.0,
+      "portion_display": "700 ML / 1000 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Pachete Bauturi",
+      "name_ro": "Havana Club White + 4 Cola",
+      "price": 255.0,
+      "portion_display": "700 ML / 1000 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Berea Casei 0.4 L",
+      "price": 9.99,
+      "portion_display": "400 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Skol Blonda",
+      "price": 11.99,
+      "portion_display": "500 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Tuborg Drought 0.4l",
+      "price": 14.5,
+      "portion_display": "400 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Tuborg 0.5",
+      "price": 15.5,
+      "portion_display": "500 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Bucur Draught 0,4l",
+      "price": 15.99,
+      "portion_display": "400 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Tuborg F.a. 0,5",
+      "price": 16.99,
+      "portion_display": "500 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Holsten Radler 0,5",
+      "price": 17.5,
+      "portion_display": "500 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Carlsberg 0,5",
+      "price": 17.5,
+      "portion_display": "500 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Bucur Blonda 0,35",
+      "price": 18.99,
+      "portion_display": "350 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Holsten Nefiltrata 0.5",
+      "price": 18.99,
+      "portion_display": "500 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Bucur Bruna 0,35",
+      "price": 18.99,
+      "portion_display": "350 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Kronenbourg Blanc 0,33",
+      "price": 24.99,
+      "portion_display": "330 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Somersby Mere / Pere / Blackberry / Blueberry",
+      "price": 17.0,
+      "portion_display": "330 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Bere Weihenstephan 0,33 Ml",
+      "price": 27.0,
+      "portion_display": "330 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Bere",
+      "name_ro": "Guinness Draught 0,5",
+      "price": 30.0,
+      "portion_display": "500 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Apa Plata - 1000 ml",
+      "price": 17.99,
+      "portion_display": "1000 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "PEPSI Cola / PEPSI Cola Zero",
+      "price": 12.99,
+      "portion_display": "250 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "MIRINDA Portocale",
+      "price": 12.99,
+      "portion_display": "250 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "7 UP",
+      "price": 12.99,
+      "portion_display": "250 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Schwepps",
+      "price": 13.99,
+      "portion_display": "250 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "LIPTON Tea Lamaie / Piersica",
+      "price": 14.99,
+      "portion_display": "250 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Granini Portocale / Piersica",
+      "price": 15.99,
+      "portion_display": "330 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Limonada",
+      "price": 21.0,
+      "portion_display": "400 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Limonada Old Mike",
+      "price": 23.0,
+      "portion_display": "400 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Limonada cu Menta",
+      "price": 21.0,
+      "portion_display": "400 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Limonada cu Aroma capsuni/visine/soc",
+      "price": 22.0,
+      "portion_display": "400 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Fresh de Portocale / Grape Fruit",
+      "price": 25.0,
+      "portion_display": "300 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Apa Minerala Harghita 0.5",
+      "price": 9.99,
+      "portion_display": "500 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Apa Plata Aqua Carpatica 0.5",
+      "price": 9.99,
+      "portion_display": "500 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Soft Drinks",
+      "name_ro": "Smoothies Fructe",
+      "price": 30.0,
+      "portion_display": "330 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cafea si Bauturi Calde",
+      "name_ro": "Espresso Scurt",
+      "price": 9.99,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cafea si Bauturi Calde",
+      "name_ro": "Espresso Lung",
+      "price": 9.99,
+      "portion_display": "80 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cafea si Bauturi Calde",
+      "name_ro": "Espresso Dublu",
+      "price": 19.0,
+      "portion_display": "80 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cafea si Bauturi Calde",
+      "name_ro": "Cafea Decofeinizata",
+      "price": 16.0,
+      "portion_display": "100 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cafea si Bauturi Calde",
+      "name_ro": "Caffe Latte",
+      "price": 19.0,
+      "portion_display": "200 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cafea si Bauturi Calde",
+      "name_ro": "Cappuccino",
+      "price": 14.99,
+      "portion_display": "120 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cafea si Bauturi Calde",
+      "name_ro": "Irish Coffee",
+      "price": 23.0,
+      "portion_display": "200 ML",
+      "description_ro": "cafea calda si 40 ml whiskey",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cafea si Bauturi Calde",
+      "name_ro": "Caffe Frappe",
+      "price": 27.0,
+      "portion_display": "300 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cafea si Bauturi Calde",
+      "name_ro": "Ceai Cald Diverse Arome",
+      "price": 12.0,
+      "portion_display": "250 ML",
+      "description_ro": "lamaie, fructe de padure, menta, ghimbir, negru",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cafea si Bauturi Calde",
+      "name_ro": "Ciocolata Calda",
+      "price": 21.0,
+      "portion_display": "200 ML",
+      "description_ro": "ciocolata cu lapte, neagra, alune, alba",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Energizante",
+      "name_ro": "Redbull",
+      "price": 19.0,
+      "portion_display": "250 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Energizante",
+      "name_ro": "Figa",
+      "price": 21.0,
+      "portion_display": "250 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "BUDUREASCA Sauvignon Blanc 150ml",
+      "price": 20.0,
+      "portion_display": "150 ML",
+      "description_ro": "CUVEE REGIA DEMI SEC",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "Jidvei Iluziv Pahar",
+      "price": 23.0,
+      "portion_display": "150 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "Vinul Casei Sauvignon Blanc CARAFA 1 L",
+      "price": 64.0,
+      "portion_display": "1000 ML",
+      "description_ro": "demi sec",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "BUDUREASCA Sauvignon Blanc Sec",
+      "price": 79.0,
+      "portion_display": "750 ML",
+      "description_ro": "CUVEE REGIA DEMI SEC",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "Jidvei Mysterium Sec",
+      "price": 145.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "Purcari Chardonnay Nocturne",
+      "price": 145.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "Purcari Sauvignon Blanc Nocturne",
+      "price": 145.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "Sarica Caii de la Letea Vol I ALIGOTE",
+      "price": 115.0,
+      "portion_display": "750 ML",
+      "description_ro": "aligote",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "Caii de la Letea Vol 2",
+      "price": 156.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "Jidvei Iluziv Sec",
+      "price": 95.0,
+      "portion_display": "750 ML",
+      "description_ro": "sauvignon blanc, riesling italian, muscat otonel",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "Jidvei Maria Feteasca Alba",
+      "price": 170.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Albe",
+      "name_ro": "Gramofon Feteasca Regala Dealu Mare",
+      "price": 148.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Roze",
+      "name_ro": "BUDUREASCA Pahar 150ML",
+      "price": 20.0,
+      "portion_display": "150 ML",
+      "description_ro": "CABERNET SAUVIGNON SI MERLOT DEMI SEC",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Roze",
+      "name_ro": "Jidvei Iluziv Pahar 150ml",
+      "price": 23.0,
+      "portion_display": "150 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Roze",
+      "name_ro": "Vinul Casei Roze CARAFA 1 L",
+      "price": 64.0,
+      "portion_display": "1000 ML",
+      "description_ro": "cabernet sauvignon si merlot demi sec",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Roze",
+      "name_ro": "BUDUREASCA Roze",
+      "price": 79.0,
+      "portion_display": "750 ML",
+      "description_ro": "CABERNET SAUVIGNON SI MERLOT DEMI SEC",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Roze",
+      "name_ro": "Jidvei Iluziv Sec",
+      "price": 95.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Roze",
+      "name_ro": "Purcari Rose Nocturne",
+      "price": 145.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Roze",
+      "name_ro": "Jidvei Misteryum Cupaj Rose",
+      "price": 145.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Roze",
+      "name_ro": "Sarica Caii de la Letea Vol I Rose",
+      "price": 115.0,
+      "portion_display": "750 ML",
+      "description_ro": "cupaj pinot noir, syrah, feteasca neagra",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Roze",
+      "name_ro": "Caii de la Letea Vol 2",
+      "price": 156.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Rosii",
+      "name_ro": "Vin Fiert cu Portocala si Scortisoara",
+      "price": 23.0,
+      "portion_display": "200 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Rosii",
+      "name_ro": "BUDUREASCA FETEASCA NEAGRA SI PINOT NOIR 140ml",
+      "price": 20.0,
+      "portion_display": "140 ML",
+      "description_ro": "DEMI SEC",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Rosii",
+      "name_ro": "Vunul Casei Rosu CARAFA 1 L",
+      "price": 64.0,
+      "portion_display": "1000 ML",
+      "description_ro": "demi sec",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Rosii",
+      "name_ro": "BUDUREASCA FETEASCA NEAGRA SI PINOT NOIR",
+      "price": 79.0,
+      "portion_display": "750 ML",
+      "description_ro": "DEMI SEC",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Rosii",
+      "name_ro": "Purcari Rara Neagra Nocturne",
+      "price": 145.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Rosii",
+      "name_ro": "Sarica Caii de la Letea Vol I Feteasca Neagra",
+      "price": 115.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Spumante / Sampanie",
+      "name_ro": "Prosecco Pahar 0,14l",
+      "price": 22.0,
+      "portion_display": "140 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Spumante / Sampanie",
+      "name_ro": "Vin Spumant Zaz",
+      "price": 84.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Spumante / Sampanie",
+      "name_ro": "Mumm Cordon Rouge Brut",
+      "price": 445.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Spumante / Sampanie",
+      "name_ro": "Mumm Cordon Rouge Rose",
+      "price": 495.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Spumante / Sampanie",
+      "name_ro": "Luc Belaire Luxe Rose",
+      "price": 360.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vinuri Spumante / Sampanie",
+      "name_ro": "Luc Belaire Luxe Brut",
+      "price": 360.0,
+      "portion_display": "750 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Whisky",
+      "name_ro": "Chivas Regal 12 Y.o",
+      "price": 36.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alcool",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Whisky",
+      "name_ro": "Jameson",
+      "price": 26.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Whisky",
+      "name_ro": "Ballantine's Finest",
+      "price": 26.0,
+      "portion_display": "40 ML",
+      "description_ro": "blended",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Whisky",
+      "name_ro": "Glenlivet Founder Reserve",
+      "price": 39.0,
+      "portion_display": "40 ML",
+      "description_ro": "single malt",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Whisky",
+      "name_ro": "Ballantine's 7 Yo",
+      "price": 29.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Whisky",
+      "name_ro": "The Deacon",
+      "price": 42.0,
+      "portion_display": "40 ML",
+      "description_ro": "whisky afumat",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Whisky",
+      "name_ro": "Chivas Regal 18 Y.o",
+      "price": 48.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vodka",
+      "name_ro": "Wyborowa",
+      "price": 23.0,
+      "portion_display": "40 ML",
+      "description_ro": "37,5% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vodka",
+      "name_ro": "Absolut",
+      "price": 26.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vodka",
+      "name_ro": "Grey Goose",
+      "price": 39.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Vodka",
+      "name_ro": "Vodka Ostoya",
+      "price": 39.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Coniac",
+      "name_ro": "Jidvei V.s",
+      "price": 25.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Coniac",
+      "name_ro": "Jidvei Vsop",
+      "price": 29.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Coniac",
+      "name_ro": "Martell V.s",
+      "price": 40.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Coniac",
+      "name_ro": "Martell Vsop",
+      "price": 49.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Rom",
+      "name_ro": "Havana Club 3YO",
+      "price": 26.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Rom",
+      "name_ro": "Havana Club Cuban Spiced",
+      "price": 28.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Rom",
+      "name_ro": "Rom Bumbu Original",
+      "price": 36.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Rom",
+      "name_ro": "Rom Bumbu Cream",
+      "price": 42.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Tequilla",
+      "name_ro": "Olmeca Silver/gold",
+      "price": 15.0,
+      "portion_display": "30 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Tequilla",
+      "name_ro": "Martini Rosso/bianco",
+      "price": 20.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Tequilla",
+      "name_ro": "Tequilla Olmeca Altos Plata",
+      "price": 26.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Tequilla",
+      "name_ro": "Tequilla Olmeca Altos Reposado",
+      "price": 27.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Jagermeister",
+      "price": 26.0,
+      "portion_display": "40 ML",
+      "description_ro": "35% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Sambuca",
+      "price": 25.0,
+      "portion_display": "40 ML",
+      "description_ro": "42% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Kahlua",
+      "price": 25.0,
+      "portion_display": "40 ML",
+      "description_ro": "20% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "CAROLAN'S",
+      "price": 25.0,
+      "portion_display": "40 ML",
+      "description_ro": "17% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Disaronno Amaretto",
+      "price": 26.0,
+      "portion_display": "40 ML",
+      "description_ro": "27% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Campari",
+      "price": 25.0,
+      "portion_display": "40 ML",
+      "description_ro": "27% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Cointreau",
+      "price": 26.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Aperol",
+      "price": 25.0,
+      "portion_display": "40 ML",
+      "description_ro": "12% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Beefeater",
+      "price": 25.0,
+      "portion_display": "40 ML",
+      "description_ro": "40% alc",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Beffeater Pink",
+      "price": 26.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Gin Malfy Rosa",
+      "price": 39.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Vermuth Petroni Blanco/rojo",
+      "price": 18.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Malibu",
+      "price": 25.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Lichior/vermuth/gin",
+      "name_ro": "Amaro Ramazzotti",
+      "price": 25.0,
+      "portion_display": "40 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail cu Alcool",
+      "name_ro": "Godfather",
+      "price": 32.0,
+      "portion_display": "80 ML",
+      "description_ro": "Jameson, Disaronno",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail cu Alcool",
+      "name_ro": "Orgasm",
+      "price": 32.0,
+      "portion_display": "80 ML",
+      "description_ro": "Kahlua, Baileys, Disaronno",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail cu Alcool",
+      "name_ro": "Margarita",
+      "price": 32.0,
+      "portion_display": "100 ML",
+      "description_ro": "tequila, triplu sec, lime",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail cu Alcool",
+      "name_ro": "Cosmopolitan",
+      "price": 32.0,
+      "portion_display": "100 ML",
+      "description_ro": "vodka, triplu sec, fresh lamaie, suc merisor",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail cu Alcool",
+      "name_ro": "Mai Tai",
+      "price": 32.0,
+      "portion_display": "120 ML",
+      "description_ro": "rom alb, triplu sec, rom negru, sirop migdale, lime, suc ananas",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail cu Alcool",
+      "name_ro": "Sex on The Beach",
+      "price": 32.0,
+      "portion_display": "250 ML",
+      "description_ro": "vodka, archers, suc portocale, suc merisor",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail cu Alcool",
+      "name_ro": "Hugo",
+      "price": 32.0,
+      "portion_display": "250 ML",
+      "description_ro": "sirop soc, prosecco, menta",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail cu Alcool",
+      "name_ro": "Aperol Spritz",
+      "price": 32.0,
+      "portion_display": "250 ML",
+      "description_ro": "aperol, prosecco, apa minerala",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail cu Alcool",
+      "name_ro": "Mojito",
+      "price": 32.0,
+      "portion_display": "250 ML",
+      "description_ro": "rom alb, lime, zahar brun, menta, apa minerala",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail Fara Alcool",
+      "name_ro": "Mojito",
+      "price": 28.0,
+      "portion_display": null,
+      "description_ro": "lime, fructe padure, menta, suc merisor",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail Fara Alcool",
+      "name_ro": "Green Apple",
+      "price": 28.0,
+      "portion_display": "250 ML",
+      "description_ro": "lime, fructe padure, suc merisor",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail Fara Alcool",
+      "name_ro": "Safe Sex",
+      "price": 28.0,
+      "portion_display": "250 ML",
+      "description_ro": "grenadine, suc portocale, suc piersici",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Cocktail Fara Alcool",
+      "name_ro": "Strawberry Kiss",
+      "price": 28.0,
+      "portion_display": "250 ML",
+      "description_ro": "capsuni, lamaie, merisor, apa minerala",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Long Drinks",
+      "name_ro": "Cuba Libre",
+      "price": 32.0,
+      "portion_display": "250 ML",
+      "description_ro": "Havana Club, cola, lime",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Long Drinks",
+      "name_ro": "Whisky Cola",
+      "price": 32.0,
+      "portion_display": "250 ML",
+      "description_ro": "Jameson, cola",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Long Drinks",
+      "name_ro": "Vodka Juice",
+      "price": 32.0,
+      "portion_display": "260 ML",
+      "description_ro": "Absolut, suc merisor/mere/portocale",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Long Drinks",
+      "name_ro": "Gin Tonic",
+      "price": 32.0,
+      "portion_display": "250 ML",
+      "description_ro": "Beefeater, apa tonica, lamaie",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Long Drinks",
+      "name_ro": "Campari Orange",
+      "price": 32.0,
+      "portion_display": "250 ML",
+      "description_ro": "Campari, suc portocale",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Long Drinks",
+      "name_ro": "Jager Juice",
+      "price": 32.0,
+      "portion_display": "250 ML",
+      "description_ro": "Jagermeister, suc merisoare/portocale",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Long Drinks",
+      "name_ro": "Tequila Sunrise",
+      "price": 32.0,
+      "portion_display": "250 ML",
+      "description_ro": "tequila, suc portocale, grenadine",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Long Drinks",
+      "name_ro": "Long Island Ice Tea",
+      "price": 34.0,
+      "portion_display": "250 ML",
+      "description_ro": "vodka, rom alb, tequila, triplu sec, lime, cola",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "Palinca Prune Din Bran 50% Alcool",
+      "price": 16.0,
+      "portion_display": "30 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "Tequila 25 ml Shot",
+      "price": 15.0,
+      "portion_display": "30 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "Jagermeister 25 ML",
+      "price": 15.0,
+      "portion_display": "25 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "Vodka",
+      "price": 14.0,
+      "portion_display": "25 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "Absinth",
+      "price": 14.0,
+      "portion_display": "25 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "Kamikaze",
+      "price": 17.0,
+      "portion_display": "25 ML",
+      "description_ro": "vodka, triplu sec, fresh lime",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "B52",
+      "price": 18.0,
+      "portion_display": "25 ML",
+      "description_ro": "Baileys, Kahlua, triplu sec",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "God Mother",
+      "price": 17.0,
+      "portion_display": "25 ML",
+      "description_ro": "vodka, Disaronno",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "God Father",
+      "price": 16.0,
+      "portion_display": "25 ML",
+      "description_ro": "whisky, Disaronno",
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "Shot Whisky",
+      "price": 14.0,
+      "portion_display": "25 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Bauturi",
+      "category_name": "Shots 25 Ml",
+      "name_ro": "Shot Rom",
+      "price": 14.0,
+      "portion_display": "25 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Noi la Old Mike",
+      "name_ro": "Rasol de Miel Gatit Sous-Vide si Piure de Cartofi",
+      "price": 79.0,
+      "portion_display": "300 gr",
+      "description_ro": "rasol de miel 300 gr, piure de cartofi 180 gr",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Noi la Old Mike",
+      "name_ro": "Obrajori de Vita Gatiti Sous-Vide, in Sos de Vin Rosu si Piure de Cartofi",
+      "price": 78.0,
+      "portion_display": "200 gr",
+      "description_ro": "obraji de vita in sos de vin rosu si piure de cartofi",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Noi la Old Mike",
+      "name_ro": "Tomahwk de Porc si Cartofi cu Parmezan",
+      "price": 78.0,
+      "portion_display": "350/160 GR",
+      "description_ro": "cotlet porc cu os 350 gr, cartofi prajiti 160 gr, parmezan 30 gr, usturoi sos 5 ml",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Noi la Old Mike",
+      "name_ro": "PLATOU DE CIUGULEALA 2-3 PERSOANE",
+      "price": 88.0,
+      "portion_display": "600 GR/200/50",
+      "description_ro": "mozzarella pane, masline verzi pane, chilli cheese nuggets, cream cheese jalapenos, inele de ceapa pane, cartofi dip, sos sweet chilli",
+      "featured": true
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Noi la Old Mike",
+      "name_ro": "Frigarui de Vita",
+      "price": 76.0,
+      "portion_display": "200/150/50",
+      "description_ro": "antricot vita, cartofi dip prajiti si sos tzatziki",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Noi la Old Mike",
+      "name_ro": "Frigarui de Berbecut cu Sos Tzatziki",
+      "price": 76.0,
+      "portion_display": "200/150/50",
+      "description_ro": "carne berbecut, cartofi dip si sos tzatziki",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Noi la Old Mike",
+      "name_ro": "Frigarui Din Muschiulet de Porc",
+      "price": 65.0,
+      "portion_display": "200/150/50",
+      "description_ro": "muschiulet porc, cartofi dip si sos tzatziki",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Noi la Old Mike",
+      "name_ro": "Frigarui de Pui cu Cartofi Dip si Sos Tzatziki",
+      "price": 60.0,
+      "portion_display": "220/150/50",
+      "description_ro": "piept de pui, cartofi dip, sos tzatziki",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Burgeri",
+      "name_ro": "Smashed Burger cu Cartofi Dip si Sosul Casei",
+      "price": 54.0,
+      "portion_display": "350g/150g/70g",
+      "description_ro": "carne vita 200g, chifla 120g, salata crocanta, ceapa crispy, maioneza, mustar, ketchup, miere, castraveti murati, ou, cheddar, cartofi dip",
+      "featured": true
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Burgeri",
+      "name_ro": "Crispy Chiken Burger cu Cartofi Dip si Sosul Casei",
+      "price": 39.0,
+      "portion_display": "350g/150g/70g",
+      "description_ro": "piept de pui, chifla burger, ketchup, mustar, maioneza, cheddar, rosii uscate, salata crocanta, miere, cartofi dip",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Burgeri",
+      "name_ro": "Burger Italian si Cartofi Steak House",
+      "price": 49.0,
+      "portion_display": "500 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Burgeri",
+      "name_ro": "Burger Texas Bbq si Cartofi Steak House",
+      "price": 52.0,
+      "portion_display": "600 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Burgeri",
+      "name_ro": "Burger Old Mike",
+      "price": 52.0,
+      "portion_display": "560 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Burgeri",
+      "name_ro": "Burger Halloumi",
+      "price": 52.0,
+      "portion_display": "350 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Platouri",
+      "name_ro": "Platou Rece 4 Pers 1300gr",
+      "price": 152.0,
+      "portion_display": "1100 GR",
+      "description_ro": "cascaval, telemea, salam chorizo, sunca Praga, salata de vinete, castraveti, rosii, masline",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Platouri",
+      "name_ro": "Platou Nice to Meat You Cald 2200 Gr",
+      "price": 255.0,
+      "portion_display": "2200 GR",
+      "description_ro": "platou cald mixt",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Platouri",
+      "name_ro": "Platou Butcher Old Mike Cald 2400gr",
+      "price": 295.0,
+      "portion_display": "2400 GR",
+      "description_ro": "carne de oaie, coaste de porc BBQ, ceafa, piept pui, mici, cartofi, muraturi",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Starters",
+      "name_ro": "Focaccia simpla",
+      "price": 19.0,
+      "portion_display": "130g",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Starters",
+      "name_ro": "Focaccia cu Parmesan si Usturoi",
+      "price": 27.0,
+      "portion_display": "145g",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Starters",
+      "name_ro": "Bruschetta cu Rosii si Busuioc",
+      "price": 26.0,
+      "portion_display": "200g",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Starters",
+      "name_ro": "Bruschetta cu Ton Bucati si Porumb",
+      "price": 37.0,
+      "portion_display": "200 gr",
+      "description_ro": "ciabatta, ton, porumb, ceapa",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Starters",
+      "name_ro": "Hamsii Prajit cu Paine Calda si Usturoi",
+      "price": 39.0,
+      "portion_display": "160 GR",
+      "description_ro": "hamsii prajit, paine, usturoi",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Starters",
+      "name_ro": "Bruschetta cu Somon Fume si Philadelphia",
+      "price": 38.0,
+      "portion_display": "200 GR",
+      "description_ro": "ciabatta, somon fume, lime, crema de branza",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Starters",
+      "name_ro": "Quesadilla cu Pui cu Sos Tartar si Cartofi Steakhouse",
+      "price": 49.0,
+      "portion_display": "400 gr",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Ciorbe si Supe",
+      "name_ro": "Ciorba de Legume",
+      "price": 25.0,
+      "portion_display": "350 ml",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Ciorbe si Supe",
+      "name_ro": "Ciorba de Pui a la Grec",
+      "price": 28.0,
+      "portion_display": "300ml/60gr",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Ciorbe si Supe",
+      "name_ro": "Ciorba de Perisoare a la Grec",
+      "price": 29.0,
+      "portion_display": "300ml/60gr",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Ciorbe si Supe",
+      "name_ro": "Ciorba de Vacuta",
+      "price": 29.0,
+      "portion_display": "300ml/60gr",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Salate",
+      "name_ro": "Salata Greceasca",
+      "price": 40.0,
+      "portion_display": "400 gr",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Salate",
+      "name_ro": "Salata Caesar cu Pui",
+      "price": 49.0,
+      "portion_display": "400 gr",
+      "description_ro": "pui, salata, sos Caesar, parmezan",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Salate",
+      "name_ro": "Salata cu Ton",
+      "price": 48.0,
+      "portion_display": "350 gr",
+      "description_ro": "ton, salata verde, masline, porumb, ceapa, lime",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Salate",
+      "name_ro": "Salata Old Mike",
+      "price": 54.0,
+      "portion_display": "430 gr",
+      "description_ro": "snitel pui, iceberg, rosii cherry, sos Caesar, ou, parmezan, mix seminte",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Salate",
+      "name_ro": "Salata Halloumi",
+      "price": 49.0,
+      "portion_display": null,
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paste",
+      "name_ro": "PENNE Carbonara Original",
+      "price": 54.0,
+      "portion_display": "350g",
+      "description_ro": "penne, guanciale, galbenus ou, parmezan, piper, sare, usturoi",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paste",
+      "name_ro": "TAGLIATELLE A.o.p",
+      "price": 31.0,
+      "portion_display": "200 GR",
+      "description_ro": "paste, ulei masline, peperoncini, sare",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paste",
+      "name_ro": "TAGLIATELLE A.o.p cu Creveti",
+      "price": 67.0,
+      "portion_display": "200/80 GR",
+      "description_ro": "paste, creveti, ulei masline, peperoncini, sare",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paste",
+      "name_ro": "Penne Fresh Arrabbiata",
+      "price": 37.0,
+      "portion_display": null,
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paste",
+      "name_ro": "TAGLIATELLE a la Romana Carbonara",
+      "price": 48.0,
+      "portion_display": "390 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paste",
+      "name_ro": "Penne Fresh Al Forno cu Pui, Ciuperci si Sos Rosu",
+      "price": 54.0,
+      "portion_display": "500 GR",
+      "description_ro": "paste, pui, mozzarella, ciuperci, bulion",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paste",
+      "name_ro": "Penne Quattro Formagi",
+      "price": 54.0,
+      "portion_display": "280 GR",
+      "description_ro": "penne, crema gatit, gorgonzola, brie, parmesan",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Margherita",
+      "price": 36.0,
+      "portion_display": "300 gr",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, busuioc și ulei de măsline.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Primavera",
+      "price": 47.0,
+      "portion_display": "400 GR",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, ardei, dovlecel, ciuperci, roșii, măsline și porumb.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Prosciutto Funghi",
+      "price": 46.0,
+      "portion_display": "400g",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, șuncă cotto și ciuperci.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Carnivora",
+      "price": 53.0,
+      "portion_display": "450g",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, salam chorizo, șuncă cotto, bacon și cârnați afumați.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Quattro Stagioni",
+      "price": 51.0,
+      "portion_display": "450 GR",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, șuncă cotto, salam chorizo, ciuperci și măsline.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza con Tonno",
+      "price": 53.0,
+      "portion_display": "400 GR",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, ton, porumb și ceapă.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Gamberi",
+      "price": 62.0,
+      "portion_display": "450g",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, creveți, ardei, roșii și busuioc.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Anchois",
+      "price": 51.0,
+      "portion_display": "300g",
+      "description_ro": "Aluat de pizza, sos de roșii, anșoa și capere.",
+      "featured": true
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Prosciutto Crudo",
+      "price": 60.0,
+      "portion_display": "300 GR",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte și prosciutto crudo.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Pollo",
+      "price": 50.0,
+      "portion_display": "350 GR",
+      "description_ro": "Aluat de pizza, mozzarella Fior di Latte, piept de pui, ciuperci, porumb și smântână pentru gătit.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Old Mike",
+      "price": 55.0,
+      "portion_display": "400 gr",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, șuncă cotto, salam chorizo, ciuperci, măsline, ardei și ceapă.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Diavola",
+      "price": 50.0,
+      "portion_display": "350 gr",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, salam chorizo și ardei iute.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Calzone",
+      "price": 50.0,
+      "portion_display": "350g",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, șuncă cotto și ciuperci.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Capriciosa",
+      "price": 50.0,
+      "portion_display": "400 gr",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, șuncă cotto, salam chorizo, ciuperci și ardei.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Quattro Formaggi",
+      "price": 55.0,
+      "portion_display": "400 gr",
+      "description_ro": "Aluat de pizza, mozzarella Fior di Latte, gorgonzola, brie, parmezan și cremă pentru gătit.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Pizza",
+      "name_ro": "Pizza Mexicana",
+      "price": 52.0,
+      "portion_display": "400 gr",
+      "description_ro": "Aluat de pizza, sos de roșii, mozzarella Fior di Latte, salam chorizo, bacon, gorgonzola, porumb și ardei iute.",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Peste si Fructe de Mare",
+      "name_ro": "Fritto Misto",
+      "price": 86.0,
+      "portion_display": "450g",
+      "description_ro": "creveti, inele calamar, midii, salau, sosuri, cartofi dip",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Peste si Fructe de Mare",
+      "name_ro": "CREVETI TEMPURA CU CARTOFI DIP SI SOS SWEET CHILLY",
+      "price": 65.0,
+      "portion_display": "350 gr",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Peste si Fructe de Mare",
+      "name_ro": "Pastrav Intreg la Gratar",
+      "price": 52.0,
+      "portion_display": "320g",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Peste si Fructe de Mare",
+      "name_ro": "Dorada la Gratar cu Orez Salbatic",
+      "price": 62.0,
+      "portion_display": "400 gr",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Mancare Gatita Old Mike",
+      "name_ro": "COQUELET la Ceaun cu Mamaliga si Mujdei de Usturoi",
+      "price": 64.0,
+      "portion_display": "600 GR",
+      "description_ro": "pui, mamaliga, mujdei",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Mancare Gatita Old Mike",
+      "name_ro": "Ciolan Afumat cu Iahnie de Fasole",
+      "price": 69.0,
+      "portion_display": "890 GR",
+      "description_ro": "ciolan porc, iahnie fasole, bulion, ceapa, morcov",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Mancare Gatita Old Mike",
+      "name_ro": "Garnita Old Mike cu Mamaliga si Mujdei",
+      "price": 64.0,
+      "portion_display": "530 GR",
+      "description_ro": "mamaliga, pulpa porc, mujdei",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Pasare",
+      "name_ro": "Piept de Pui Crispy si Cartofi Dip PICANT/NEPICANT",
+      "price": 49.0,
+      "portion_display": "200 GR/150 GR/50 GR",
+      "description_ro": "piept pui, cartofi dip",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Pasare",
+      "name_ro": "Aripioare Pui Crispy 8 Buc cu Cartofi Dip si sos AliOli",
+      "price": 49.0,
+      "portion_display": "430 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Pasare",
+      "name_ro": "Snitel Pui in Panko",
+      "price": 45.0,
+      "portion_display": "250 GR",
+      "description_ro": "piept pui, ou, pesmet, faina",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Pasare",
+      "name_ro": "Piept de Pui la Gratar",
+      "price": 42.0,
+      "portion_display": "220 GR",
+      "description_ro": "piept pui, ulei, piper, sare",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate cu Vita si Oaie",
+      "name_ro": "Muschi de Vita la Gratar",
+      "price": 119.0,
+      "portion_display": "220GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate cu Vita si Oaie",
+      "name_ro": "Antricot de Vita Maturat 30 Zile",
+      "price": 105.0,
+      "portion_display": "220GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate cu Vita si Oaie",
+      "name_ro": "Pastrama de Oaie Mamaliga",
+      "price": 79.0,
+      "portion_display": "250/100",
+      "description_ro": "pastrama 200 gr, mamaliga 100 gr",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate cu Porc",
+      "name_ro": "Coaste de Porc cu Sos Bbq si Cartofi Steak House",
+      "price": 76.0,
+      "portion_display": "460 GR/150gr/60gr",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate cu Porc",
+      "name_ro": "Snitel de Porc in crusta de Panko",
+      "price": 45.0,
+      "portion_display": "250 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate cu Porc",
+      "name_ro": "Ceafa de Porc la Gratar",
+      "price": 43.0,
+      "portion_display": "250 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate cu Porc",
+      "name_ro": "Meniu Mici cu Cartofi Steakhouse 4buc",
+      "price": 43.0,
+      "portion_display": "300gr/150gr/50",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Preparate Vegetariene",
+      "name_ro": "Legume la Gratar Preparat de Post",
+      "price": 29.0,
+      "portion_display": "300 GR",
+      "description_ro": "vinata, dovlecel, ciuperci, ceapa, ardei",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Garnituri si Salate Acompaniament",
+      "name_ro": "Cartofi prajiti",
+      "price": 18.0,
+      "portion_display": "200 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Garnituri si Salate Acompaniament",
+      "name_ro": "Cartofi PRAJITI cu Usturoi si Parmezan",
+      "price": 24.0,
+      "portion_display": "200",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Garnituri si Salate Acompaniament",
+      "name_ro": "Piure de Cartofi cu Unt",
+      "price": 23.0,
+      "portion_display": "200 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Garnituri si Salate Acompaniament",
+      "name_ro": "Legume la Gratar",
+      "price": 29.0,
+      "portion_display": "300 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Garnituri si Salate Acompaniament",
+      "name_ro": "Orez Salbatic",
+      "price": 26.0,
+      "portion_display": "240 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Garnituri si Salate Acompaniament",
+      "name_ro": "Salata Verde cu Lamaie",
+      "price": 14.0,
+      "portion_display": "150 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Garnituri si Salate Acompaniament",
+      "name_ro": "Salata de Varza",
+      "price": 11.0,
+      "portion_display": "200 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Garnituri si Salate Acompaniament",
+      "name_ro": "Salata Asortata",
+      "price": 23.0,
+      "portion_display": "200 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Garnituri si Salate Acompaniament",
+      "name_ro": "Salata de Rosii",
+      "price": 19.0,
+      "portion_display": "250g",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Garnituri si Salate Acompaniament",
+      "name_ro": "Salata de Muraturi Asortate",
+      "price": 17.0,
+      "portion_display": "200 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paine si Sosuri",
+      "name_ro": "Paine",
+      "price": 3.5,
+      "portion_display": "60 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paine si Sosuri",
+      "name_ro": "Smantana",
+      "price": 8.0,
+      "portion_display": "60 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paine si Sosuri",
+      "name_ro": "Sos Smantana si Usturoi",
+      "price": 8.0,
+      "portion_display": "60 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paine si Sosuri",
+      "name_ro": "Sos Pizza",
+      "price": 8.0,
+      "portion_display": "60 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Paine si Sosuri",
+      "name_ro": "Ardei Iute murat/fresh",
+      "price": 3.0,
+      "portion_display": null,
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Profiterol",
+      "price": 35.0,
+      "portion_display": "100 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Brownie cu Sos de Vanilie și crema de Caramel",
+      "price": 32.0,
+      "portion_display": "120g/100/30",
+      "description_ro": "ciocolata, unt, zahar, cacao, faina, vanilie, lapte",
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Papanasi cu Smantana si Dulceata / Finetti",
+      "price": 33.0,
+      "portion_display": "400 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Cheese Cake FACUT IN CASA",
+      "price": 32.0,
+      "portion_display": "120 GR",
+      "description_ro": null,
+      "featured": true
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Lava Cake",
+      "price": 34.0,
+      "portion_display": "120 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Clatite cu Dulceata / Finetti",
+      "price": 21.0,
+      "portion_display": "150 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Baileys Cake",
+      "price": 32.0,
+      "portion_display": "100 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Pistachio Dome",
+      "price": 32.0,
+      "portion_display": "100 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Sorbet de Pere",
+      "price": 34.0,
+      "portion_display": "90 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Sorbet de Lamaie",
+      "price": 34.0,
+      "portion_display": "90 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Inghetata de Caramel Sarat",
+      "price": 34.0,
+      "portion_display": "90 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Inghetata Artizanala Vanilie/cheese Cake/fistic/cirese",
+      "price": 35.0,
+      "portion_display": "120 ML",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Mancare",
+      "category_name": "Desert",
+      "name_ro": "Tiramisu cu Mascarpone",
+      "price": 35.0,
+      "portion_display": "100 GR",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Narghilea",
+      "category_name": "Narghilea",
+      "name_ro": "Narghilea Simpla Cu Arome la alegere",
+      "price": 70.0,
+      "portion_display": "20 GR",
+      "description_ro": "arome la alegere",
+      "featured": false
+    },
+    {
+      "group_code": "Narghilea",
+      "category_name": "Narghilea",
+      "name_ro": "Narghilea Speciala",
+      "price": 85.0,
+      "portion_display": "20GR/100ML/100GR",
+      "description_ro": "narghilea speciala",
+      "featured": false
+    },
+    {
+      "group_code": "Narghilea",
+      "category_name": "Narghilea",
+      "name_ro": "Carbuni Extra",
+      "price": 6.0,
+      "portion_display": "2 BUC",
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Narghilea",
+      "category_name": "Narghilea",
+      "name_ro": "Furtun Extra",
+      "price": 5.0,
+      "portion_display": null,
+      "description_ro": null,
+      "featured": false
+    },
+    {
+      "group_code": "Narghilea",
+      "category_name": "Narghilea",
+      "name_ro": "Furtun de Gheata",
+      "price": 10.0,
+      "portion_display": null,
+      "description_ro": null,
+      "featured": false
+    }
+  ]
+}
