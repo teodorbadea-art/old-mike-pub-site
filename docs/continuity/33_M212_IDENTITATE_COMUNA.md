@@ -11,3 +11,5 @@ Meniu Electronic: shell numai pe restaurantulold-mike/locațialoc-oldmike-matei;
 Verificări efectuate:28suite Node PASS în meniul electronic;8pagini site și resurse/ancore/fonturi/logo/metadate PASS; sincronizare9resurse PASS; pachete cPanel/Garden + manifest/arhivă PASS. Test Chrome nou desktop390px/mobil, fonturi, navigare, detaliu/înapoi este pregătit pentru CI; nu este încă un rezultat. CI precedent2d5acc93 a fost verificat completed/success (39322121026).
 
 LIVE NEAPLICAT: cPanel răspunde la pagina de login, sesiunea invalidă; nu s-a autentificat și nu s-au modificat fișiere pe server. Nu există deploy nou Vercel sau migrare hosted executată în această etapă. Pagina grupului, Berăria, Community, DNS și email sunt excluse.
+
+Pachet incremental Garden:output/old-mike-garden-brand-m212.zip,11fișiere,65,780bytes. Updater CLI server/update-brand-m212.py pregătit, testat pe fixture temporar (preflight fără scriere, apply, backup, idempotent, corupție refuzată, pagina grupului/.htaccess păstrate). NEEXECUTAT pe server.
