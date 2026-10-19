@@ -1,5 +1,7 @@
 # Continuitate Old Mike Pub
 
+M2.11 PRIORITAR: citește docs/continuity/31_PUBLIC_MENU_LINK_M211.md. Linkul general de meniu afișează bara admin dacă există sesiune. Corecție LOCALĂ: ruta publică /m/old-mike/loc-oldmike-matei, verificată cu produse în browser. Updater strict Garden pregătit; NEAPLICAT LIVE, cPanel cere autentificare. Nu modifica Meniu Electronic.
+
 M2.10 FINAL: citește docs/continuity/30_ADMIN_ROUTING_M210.md. Garden este accesibil public prin HTTPS; DNS corect. Utilizatorul a salvat manual DirectoryIndex index.html index.php în .htaccess Garden la19:09. Confirmat/admin/200(fusese403),homepage200,APIindex.php200,lib/app.php403. UpdaterulCLI NU a fost rulat/lintat, backup/guardautomat NEEXECUTATE. Login real/POST încă de confirmat; nu confunda GETlogin200 cu test autentificatPASS.
 
 M2.9 PRIORITAR: utilizatorul a AUTORIZAT explicit lansarea la garden.oldmike.ro. Citește `docs/continuity/29_GARDEN_LANSARE.md`. Garden INSTALAT în cPanel, folder separat public_html/garden.oldmike.ro,65hash-uri verificate. M2.8 aplicat și în staging(13fișiere),HTTP401 păstrat. PHP41+26PASS/lintPASS. DNS autoritativ Cloudflare încă fără A garden; HTTPSorigin are certificat self-signed. Lansarea publică NU este confirmată. Folosește DOAR noul installer Garden, niciodată installerul M26 la rădăcină. Pagina grupului și Berăria rămân excluse.

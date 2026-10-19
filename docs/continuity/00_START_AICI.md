@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**M2.11 pregătit, neaplicat live:** [link către meniul public dedicat clienților](31_PUBLIC_MENU_LINK_M211.md). URL verificat în browser, corecție surse și updater izolat Garden. Necesită acces cPanel pentru aplicare.
+
 **M2.10 aplicat manual de utilizator:** [Admin Forbidden corectat](30_ADMIN_ROUTING_M210.md). /admin/200,homepage200,API200,lib403. DNS/HTTPS public funcționează. Login real/POST încă de confirmat. Vezi rezultatul aplicării în document.
 
 **M2.9 instalat pe server, lansare publică blocată DNS/HTTPS:** [Garden autorizat și DNS Cloudflare lipsă](29_GARDEN_LANSARE.md). Garden instalat izolat,65hash-uri și PHP41+26PASS. M2.8 aplicat și în staging. DNS Cloudflare lipsește, certificatul trebuie emis după DNS. Nu declara site-ul accesibil public.
