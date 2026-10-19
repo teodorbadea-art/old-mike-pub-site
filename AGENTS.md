@@ -2,6 +2,8 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
+REGULĂ PRIORITARĂ19.10: citește `26_LANSARE_OPRITA_PAGINA_GRUP.md`. oldmike.ro este pagina GRUPULUI și NU se înlocuiește/modifică. LansareaM26 NU s-a executat; doar arhivă în director privat. Installerul/packagerulM26 sunt RETIRED/blocate. Utilizatorul a cerut pauză la publicare; destinația separată trebuie confirmată. garden.oldmike.ro este doar link observat, nu target autorizat.
+
 M2.5: citește `25_M25_POSTERE_8MB.md`. Limita posterelor8MB aplicată în staging: app/admin/.user.ini(upload8M/post10M).41testeCLI PASS, HTTP401 păstrat; proba reală2,5MB încă de confirmat, .user.ini poate avea cache300s. DesignM2.2 păstrat.
 
 DECIZIE CURENTĂ: citește `24_DECIZIE_PASTRARE_M22_TEST_POSTERE.md`. Utilizatorul păstrează designul deja instalat M2.2; sursele readuse la30fc88b. M2.3/M2.4 respinse: NU le aplica. Urmează testarea posterelor în administrarea stagingului.

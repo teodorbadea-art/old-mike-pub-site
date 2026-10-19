@@ -10,6 +10,8 @@ Repository dedicat site-ului de prezentare. Meniu Electronic și Old Mike Commun
 
 **M2.5 — postere8MB:** [modificări și verificări](docs/continuity/25_M25_POSTERE_8MB.md). Aplicat exclusiv în staging; designM2.2 păstrat.
 
+**Stare curentă:** [lansare oprită, oldmike.ro este pagina grupului](docs/continuity/26_LANSARE_OPRITA_PAGINA_GRUP.md). Nu modifica pagina principală; site-ul nou rămâne în staging până la confirmarea unei destinații separate.
+
 ## Începe aici
 
 **M2.2 — curent:** [introduceri cinematice și verificări staging](docs/continuity/21_M22_INTRODUCERI_CINEMATICE.md). Fundaluri fotografice integrate în Meniu, Galerie, Evenimente și Contact; actualizare exclusiv în zona de test protejată.

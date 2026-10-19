@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**PRIORITATE: lansarea oprită; pagina grupului se păstrează.** [Starea verificată și destinația de clarificat](26_LANSARE_OPRITA_PAGINA_GRUP.md). Site-ul nou NU este lansat pe domeniul principal; rămâne în staging. Nu utiliza candidatulM26 de instalare la rădăcină.
+
 **Checkpoint tehnic M2.5:** [Postere până la8MB](25_M25_POSTERE_8MB.md), aplicat în staging. ConfigPHP doar pe directorul site-ului;41testeCLI PASS șiHTTP401. TestulHTTP cu posterul utilizatorului rămâne deschis. DesignM2.2.
 
 **Decizie curentă: design M2.2 păstrat.** [Revenire surse și testarea posterelor](24_DECIZIE_PASTRARE_M22_TEST_POSTERE.md). M2.3/M2.4 respinse; stagingul rămâneM2.2, sursele sunt readuse la aceeași variantă. Urmează testul de upload/publicare prin administrare.
