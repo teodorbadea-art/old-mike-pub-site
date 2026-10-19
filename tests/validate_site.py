@@ -63,7 +63,12 @@ assert 'noroc' not in menu.lower() and 'diavola' not in menu.lower()
 assert '<iframe' not in contact and 'data-load-map' in contact and 'confidentialitate.html' in contact
 assert 'data-mode="preview"' in contact and 'type="email" autocomplete="email" maxlength="160" required' not in contact
 assert 'data-filter' not in events and '>OM.<' not in events
-assert not SITE['indexing_enabled'] and SITE['operator_cui'] is None
+assert not SITE['indexing_enabled']
+assert SITE['operator_name']=='OLD MIKE PUB SRL' and SITE['operator_cui']=='RO40178199'
+assert SITE['operator_trade_registry']=='J2018016609401'
+for page in ['index.html','meniu.html','galerie.html','evenimente.html','contact.html']:
+    html=(ROOT/page).read_text()
+    assert all(SITE[k] in html for k in ['operator_name','operator_cui','operator_trade_registry'])
 schema=structured_data();assert schema['openingHoursSpecification'][0]['opens']=='10:00';assert schema['openingHoursSpecification'][1]['opens']=='12:00';assert all(x['closes']=='00:00' for x in schema['openingHoursSpecification'])
 assert (ROOT/'robots.txt').read_text().strip().endswith('Disallow: /')
 from xml.etree import ElementTree

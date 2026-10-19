@@ -7,15 +7,47 @@
   "email": "office@oldmike.ro",
   "address": "Strada Matei Voievod 67, București",
   "timezone": "Europe/Bucharest",
-  "hours": {"1": [600,1440],"2": [600,1440],"3": [600,1440],"4": [600,1440],"5": [600,1440],"6": [720,1440],"7": [720,1440]},
+  "hours": {
+    "1": [
+      600,
+      1440
+    ],
+    "2": [
+      600,
+      1440
+    ],
+    "3": [
+      600,
+      1440
+    ],
+    "4": [
+      600,
+      1440
+    ],
+    "5": [
+      600,
+      1440
+    ],
+    "6": [
+      720,
+      1440
+    ],
+    "7": [
+      720,
+      1440
+    ]
+  },
   "hours_display": "Luni–vineri 10:00–24:00 · Sâmbătă–duminică 12:00–24:00",
   "menu_url": "https://meniu.oldmike.ro/",
   "club_url": "https://club.oldmike.ro/",
   "facebook_url": null,
   "instagram_url": null,
-  "operator_name": null,
-  "operator_cui": null,
-  "operator_trade_registry": null,
+  "operator_name": "OLD MIKE PUB SRL",
+  "operator_cui": "RO40178199",
+  "operator_trade_registry": "J2018016609401",
   "indexing_enabled": false,
-  "pending_business_fields": ["facebook_url", "instagram_url", "operator_name", "operator_cui", "operator_trade_registry"]
+  "pending_business_fields": [
+    "facebook_url",
+    "instagram_url"
+  ]
 }

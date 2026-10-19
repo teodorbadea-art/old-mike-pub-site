@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**Actualizare locală:** [date firmă și fără probe reale de email](27_DATE_FIRMA_FARA_TEST_EMAIL.md). CUI furnizat de utilizator, date publice concordante; footer completat local. Nu este un deploy sau activare formular.
+
 **PRIORITATE: lansarea oprită; pagina grupului se păstrează.** [Starea verificată și destinația de clarificat](26_LANSARE_OPRITA_PAGINA_GRUP.md). Site-ul nou NU este lansat pe domeniul principal; rămâne în staging. Nu utiliza candidatulM26 de instalare la rădăcină.
 
 **Checkpoint tehnic M2.5:** [Postere până la8MB](25_M25_POSTERE_8MB.md), aplicat în staging. ConfigPHP doar pe directorul site-ului;41testeCLI PASS șiHTTP401. TestulHTTP cu posterul utilizatorului rămâne deschis. DesignM2.2.
