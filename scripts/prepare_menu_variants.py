@@ -12,3 +12,12 @@ for stem in ['burger-single-chefs-v3','pizza-oldmike-chefs-v3','platouri-chefs-v
    if dest.is_file():continue
    image=im.convert('RGB');image.thumbnail((size,size),Image.Resampling.LANCZOS);temp=dest.with_suffix('.tmp');image.save(temp,'WEBP',quality=83,method=6);os.replace(temp,dest)
 print('Responsive variants prepared; original masters retained')
+
+# Mobile hero and official logo: format/size derivatives, unchanged composition.
+for name,extension,widths in [('assets/images/hero-single-chefs-v4-mobile','webp',[480,800]),('assets/brand/oldmike-logo','png',[146])]:
+ with Image.open(ROOT/(name+'.'+extension)) as im:
+  for width in widths:
+   dest=ROOT/(name+'-'+str(width)+'.webp')
+   if dest.is_file():continue
+   image=im.copy();image.thumbnail((width,10000),Image.Resampling.LANCZOS)
+   temp=dest.with_suffix('.tmp');image.save(temp,'WEBP',quality=80,method=6);os.replace(temp,dest)

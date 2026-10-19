@@ -2,12 +2,12 @@
 
 Acum nu trebuie schimbat nimic online.
 
-1. În cPanel → File Manager intră exclusiv în `public_html/garden.oldmike.ro`. Fă o copie de siguranță a `meniu.html`, `assets/site.css` și `.htaccess` în afara folderului public. Nu lucra direct în `public_html` și nu modifica pagina grupului/Berăria.
-2. Pachetul are un folder `public`. Urcă CONȚINUTUL acestuia în folderul Garden: `meniu.php`, `lib/menu/`, `cache/`, fonturi, CSS/JS și imaginile indicate. Păstrează structura; nu urca folderul `public` ca nivel suplimentar.
-3. Pentru `cache`,0755este suficient dacă PHP rulează cu utilizatorul contului, așa cum este uzual în cPanel. Dacă găzduirea cere scriere prin grup, folosește0775doar cu grupul corect. Nu folosi0777. Fișierele obișnuite:0644. `cache/.htaccess` trebuie păstrat: blochează citirea cache-ului din browser. `cache/menu.json` din pachet este copia publică bună de pornire, cu timestamp-ul original, nu o copie declarată fals ca fiind proaspătă.
-4. Verifică în cPanel că versiunea PHP este8.1sau mai nouă și extensia cURL este activă. mbstring este recomandată; există fallback pentru diacriticele românești.
-5. Mai întâi verifică `https://garden.oldmike.ro/meniu.php`:produse,prețuri,imagini,telefon,navigare. Restul site-ului rămâne neschimbat.
-6. Doar după verificarea paginii și acordul de lansare, adaugă în `.htaccess` DIN GARDEN, după regulile de HTTPS:
+1. În cPanel → File Manager, intră în folderul domeniului **garden.oldmike.ro** (în configurația actuală: `public_html/garden.oldmike.ro`). Verifică document root-ul domeniului înainte de upload. Salvează copii ale `meniu.html`, `assets/site.css` și `.htaccess` în afara folderului public.
+2. Urcă **conținutul** folderului `public` din pachet: `meniu.php`, `lib/menu/`, `cache/`, fonturile, CSS/JS și imaginile. Păstrează structura; nu crea încă un nivel numit `public` în domeniu. Nu modifica site-ul grupului sau Berăria.
+3. Folderul `cache` trebuie să permită scrierea pentru PHP. În cPanel, de obicei este suficient **0755**. Dacă găzduirea cere scriere prin grup, folosește **0775** cu grupul corect; nu folosi 0777. Fișierele obișnuite: **0644**. Păstrează `cache/.htaccess` și `lib/.htaccess`. `cache/menu.json` este copia reală de pornire, cu timestamp-ul original, pentru cazul în care prima conexiune nu reușește.
+4. Activează **PHP 8.1 sau mai nou și extensia cURL**. mbstring este recomandată; există fallback pentru diacriticele românești.
+5. Verifică mai întâi `https://garden.oldmike.ro/meniu.php`: produse, prețuri, imagini, telefon și navigare. Verifică dacă timestamp-ul cache-ului se actualizează după acces. Dacă nu, verifică permisiunile și conexiunea HTTPS către Supabase în logul PHP al găzduirii. Nu activa afișarea erorilor pe pagina publică.
+6. După verificare și acordul de lansare, adaugă în `.htaccess` **al domeniului Garden**, după regulile HTTPS și înaintea regulilor generale care pot captura pagina:
 
 ```apache
 # BEGIN OLDMIKE MENU M3
@@ -18,14 +18,18 @@ RewriteRule ^meniu\.html$ meniu.php [END]
 # END OLDMIKE MENU M3
 ```
 
-Adresa publică rămâne `garden.oldmike.ro/meniu.html`; produsele se randează intern prinPHP. Nu schimba linia `DirectoryIndex index.html index.php`. Nu înlocui întregul `.htaccess` și nu activa execuția PHP pentru toate fișiereleHTML.
+Adresa publică rămâne `garden.oldmike.ro/meniu.html`. Nu înlocui întregul `.htaccess`, nu schimba `DirectoryIndex` și nu activa PHP pentru toate fișierele HTML.
 
-7. Verifică apoi `meniu.html`,paginaAcasă,Evenimente,Contactși/admin/. Pentru cache, modifică PUBLICAT un preț în aplicație: pagina îl preia la primul acces după expirarea celor10minute. Nu este un pushinstantaneu. Dacă Supabase este indisponibil, se afișează ultima copie bună, care poate avea prețuri mai vechi până la revenirea conexiunii.
-8. Revenire: scoate DOAR blocul `OLDMIKE MENU M3` și restaureazăCSSdinbackupdacăeste necesar. PaginaHTMLprecedentă este păstrată. Datele din Supabase nu au fost schimbate de această instalare.
+7. Verifică `meniu.html`, Acasă, Evenimente și Contact. Publică o modificare de preț în Meniul Electronic: site-ul o preia la primul acces după expirarea celor 10 minute. Dacă Supabase este indisponibil, pagina păstrează ultima copie bună.
+8. Revenire: elimină doar blocul `OLDMIKE MENU M3` și restaurează CSS-ul din backup dacă este necesar. Pagina HTML veche rămâne păstrată. Instalarea nu modifică datele Supabase.
 
-## Unde se modifică pe viitor
+## Compresie pentru performanță
 
-- Produs/preț/disponibilitate:aplicațiaMeniuElectronic, urmat dePublică.
-- Categorie nouă:apareautomatca listăfărăimagine. Pentru ilustrație:adaugămaparea în`lib/menu/config.php`și cele3imaginiWebP.
-- Oferta de prânz/orele:secțiunea`lunch`dinacelașifișier; aceasta este o configurare separată, confirmată de utilizator.
-- Aspect:bloculCSScomentatla sfârșitul`assets/site.css`.
+Pachetul include un fragment Apache, separat și inactiv, cu `mod_deflate` pentru CSS/JS/HTML. După aprobare, activează această compresie dacă hostingul nu o aplică deja. PHP negociază gzip pentru HTML când compresia PHP nu este deja activă. Auditul Lighthouse simulează această configurare; scorul final depinde și de hosting.
+
+## Modificări ulterioare
+
+- Produse, prețuri și disponibilitate: în Meniul Electronic, apoi publicare.
+- Categorie nouă: apare automat ca listă. Pentru ilustrație, adaugă maparea în `lib/menu/config.php` și variantele WebP.
+- Oferta de prânz și intervalul: cheia `lunch` din `config.php`, separat de produsele live.
+- Design: blocul comentat de la finalul `assets/site.css`; culorile și fonturile comune sunt în `assets/oldmike-design.css`.

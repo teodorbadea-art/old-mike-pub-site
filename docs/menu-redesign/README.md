@@ -1,29 +1,35 @@
-# Old Mike — meniu editorial M3 (previzualizare, fără publicare)
+# Old Mike — meniu editorial M3, pentru aprobare
 
-## Ce este pregătit
+Pagina oficială nu a fost înlocuită. Previzualizarea autonomă se deschide fără instalare și conține produsele și prețurile reale din copia de evaluare. Fișierul PHP este varianta care citește datele live.
 
-- `meniu.php` + `server/lib/menu/`: randare PHP completă, fără dependență de JavaScript pentru produse/prețuri.
-- Funcția publică existentă `get_public_menu`, strict restaurantul `old-mike`, locația `loc-oldmike-matei`; numai cele7câmpuri necesare. Nu scrie nimic în Supabase și nu utilizează chei secrete.
-- Cache `cache/menu.json`,600secunde, actualizare atomică/lock, ultima copie validă la eroare. Un răspuns HTTP200cu listă goală este tratat ca meniu gol legitim. JSONinvalid sau rânduri invalide nu înlocuiesc copia bună. La prima pornire fără cache și fără conexiune rămâne o invitație utilă spre meniul electronic/telefon, fără erori tehnice.
-- `server/lib/menu/config.php`: singurul loc pentru categorie→imagine, texte editoriale și oferta de prânz. Necunoscutele apar automat în „Și altele”. Toate257produsele din snapshot apar o singură dată în HTML și JSON-LD; filtrele clientului din aplicație nu sunt copiate aici.
-- Oferta transmisă de utilizator:33,99lei, ciorbă+fel de bază+garnitură. Interval USERVALIDATED20.10.2026:luni–vineri12:00–16:00. Oferta este configurată separat, deoarece RPC-ul produselor nu o expune; schimbarea acestei oferte se face aici, nu pretindem sincronizare automată pentru ea.
-- Meniu/site folosesc aceleași fonturi locale Manrope+Cormorant și shell-ul comun M2.12. CSS-ul nou este blocul comentat „OLDMIKEM3 ·MENIU EDITORIAL LIVE” de la finalul `assets/site.css`; este izolat pe `.menu-editorial`.
--13imagini noi:8mâncare+5băuturi;39WebP-uri (master1536×1024,480/800). Imaginile existente sunt păstrate. Fiecare are „Imagine ilustrativă” sub ea. Prompturi exacte și limite: `food-image-prompts.md`, `drink-image-prompts.md`.
+## Ce conține pachetul
+
+- `public/meniu.php`: intrarea PHP, cu HTML complet pentru vizitatori și motoare de căutare.
+- `public/lib/menu/data.php`: apelul public Supabase și cache-ul de 10 minute, cu ultima copie bună la întrerupere. Nu scrie în baza de date și nu folosește chei secrete.
+- `public/lib/menu/config.php`: unicul loc pentru maparea categorie → imagine, texte editoriale și oferta de prânz. Categoriile necunoscute apar automat în „Și altele”.
+- `public/lib/menu/render.php`: afișarea și JSON-LD Restaurant/Menu, cu toate produsele și prețurile.
+- `public/assets/site.css`: stilurile existente, urmate de blocul comentat „OLD MIKE M3 · MENIU EDITORIAL LIVE”. Același bloc este livrat separat în `instructiuni-si-prompturi/meniu-adaugiri.css`.
+- Fonturi locale Manrope și Cormorant, navigarea comună, ilustrații WebP și variante responsive.
+- 13 ilustrații noi: 8 pentru mâncare și 5 pentru băuturi. Imaginile existente sunt păstrate. Prompturile exacte și textele alternative sunt în documentele de imagini; textele alternative folosite pe pagină sunt în configurare.
+
+## Actualizarea datelor
+
+RPC-ul public întoarce numai produsele publicate și disponibile pentru restaurantul `old-mike`, locația `loc-oldmike-matei`. Copia folosită la evaluare are 257 de produse; PHP nu fixează acest număr și acceptă produse/categorii noi.
+
+Cache-ul se reîmprospătează la primul acces după expirarea celor 10 minute. Nu este actualizare instantanee prin push. Scrierea este atomică și protejată prin lock. Un răspuns invalid nu înlocuiește copia bună. La întrerupere se păstrează ultima copie, chiar dacă are prețuri mai vechi. O listă goală validă este tratată ca meniu gol legitim. Fără nicio copie disponibilă rămân telefonul și legătura spre meniul electronic, fără mesaje tehnice.
+
+Oferta de prânz este configurată separat: **33,99 lei, ciorbă + fel de bază + garnitură, luni–vineri, 12:00–16:00**, conform confirmării utilizatorului. RPC-ul produselor nu expune această ofertă; schimbarea ei se face în `config.php`.
 
 ## Fotografii și limite
 
-Fotografiile-sursă provin din imaginile publicate în Meniul Electronic, nu din imagini de mâncare inventate. Tomahawk-ul este de PORC. Fișierul asociat produsului „PENNE Carbonara Original” arată paste panglică; dorada asociată cu orez în denumire apare în fotografie cu legume/midii. Generarea a urmat fotografia, fără să inventeze penne sau orez. Aceste nepotriviri sunt de revizuit separat în catalog; nu s-au schimbat datele.
+Imaginile de mâncare au pornit de la fotografii reale publicate în Meniul Electronic. Tomahawk-ul fotografiat este de porc. Produsul „PENNE Carbonara Original” are o fotografie cu paste panglică; dorada menționată cu orez în nume apare fotografiată cu legume și midii. Ilustrațiile au urmat fotografiile; datele catalogului nu au fost modificate. Aceste nepotriviri merită verificate separat în catalog.
 
-Lipsește fotografia reală pentru coastele BBQ cu cartofi prăjiți. Nu s-a generat o imagine pentru porc; categoria apare temporar ca listă fără fotografie, fără spațiu gol sau imagine greșită. Este necesară fotografia utilizatorului pentru a închide această ilustrație. Generarea AI poate modifica detalii fine: imaginile sunt de evaluat vizual înainte de aprobare; nu se declară păstrare pixel-cu-pixel a farfuriei.
+**Lipsește fotografia reală a coastelor BBQ cu cartofi prăjiți.** Categoria porc apare temporar ca listă, fără fotografie și fără spațiu gol. Este necesară fotografia restaurantului pentru ultima ilustrație. Generarea reconstruiește fotografia și poate modifica detalii fine; imaginile trebuie aprobate vizual înainte de lansare.
 
-## Previzualizare
+## Verificări și lansare
 
-`output/menu-m3/Old-Mike-Meniu-Previzualizare.html` este o copie autonomă, cu toate produsele/prețurile reale la momentul indicat în banner. Se poate deschide pe telefon sau calculator, fără instalare; acesta este un snapshot pentru evaluare, nu un meniu live. Versiunea PHP din pachet citește live și reîmprospătează cache-ul la primul acces după10minute.
+32 de verificări PHP au trecut: cache rece/cald, întrerupere simulată, răspuns invalid, categorie nouă, formatare, escaping, toate cele 257 de produse în HTML și JSON-LD. Endpoint-ul real a returnat 257 de produse prin PHP cURL HTTPS în CI. Conectivitatea PHP de pe cPanel trebuie verificată înainte de lansare.
 
-Nu este necesar și nu este autorizat acum un upload în pagina oficială. Nu s-a schimbat `meniu.html`, nu s-a modificat rutarea Apache, DNS sau baza de date. Nicio publicare pe Vercel; ramura este exclusă explicit de la build automat. Sursa nouă este salvată pe `design/m3-live-menu-editorial`.
+Chrome a verificat afișarea la 1440, 390 și 360 px, fără scroll orizontal, fonturile, imaginile, listele extensibile, navigarea activă, meniul mobil și reducerea animațiilor. Scorurile Lighthouse și verificările rămase sunt în `CHECKLIST.md`.
 
-## Verificări
-
-LocalPHP8.3:32 probePASS(cache rece/cald/întrerupere/JSONinvalid/date noi/categorie nouă/formatare/XSS/257produseși257elementeJSON-LD). Request-ul public a fost verificat în timp real prin HTTPS și a returnat257produse. PHPcURL pe runtime-ul local a întâmpinat timeoutla conexiune; comportamentul de fallback a fost verificat. Testul real cPanel nu este efectuat în această etapă.
-
-Workflow-ul `Review menu editorial (no deploy)` verifică Chrome1440/390/360, overflow, fonturi, imagini, details,navigareactivă,motionredus și produce capturi + raport Lighthouse. Rezultatele se completează după rulare; nu declara scorLighthouse≥90fără raport măsurat.
+Nu s-au schimbat `meniu.html`, rutarea Apache, DNS sau baza de date. Ramura `design/m3-live-menu-editorial` nu publică automat pe Vercel. Instrucțiunile cPanel se execută numai după aprobarea previzualizării.

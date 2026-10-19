@@ -1,5 +1,5 @@
 # M3 — meniu editorial LIVE în previzualizare
-Utilizatorul a cerut20.10.2026 pagina completă cu prețuri sincronizate, dar vrea evaluare ÎNAINTE de publicare. Vezi [M3README](../menu-redesign/README.md). Nu aplica rutarea sau pachetul pe producție.
+Utilizatorul a cerut pagina completă cu prețuri sincronizate, dar vrea evaluare ÎNAINTE de publicare. Vezi [starea M3](34_M3_MENIU_EDITORIAL_PREVIEW.md) și [README](../menu-redesign/README.md). Verificat în CI, nepublicat; lipsește fotografia coastelor BBQ. Nu aplica rutarea sau pachetul pe producție.
 
 # Actualizare M2.12 —20.10.2026
 [Identitate comună Site/Meniu, fonturi și navigare](33_M212_IDENTITATE_COMUNA.md). Implementare locală verificată; cPanel cere login nou. Punctul3 (meniu complet/live în site) AMÂNAT explicit.

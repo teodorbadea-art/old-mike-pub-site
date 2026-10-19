@@ -33,6 +33,12 @@ shutil.copy2(ROOT/'meniu.php',PUBLIC/'meniu.php');shutil.copytree(ROOT/'server/l
 shutil.copytree(ROOT/'docs/menu-redesign',OUT/'instructiuni-si-prompturi')
 shutil.copy2(ROOT/'output/menu-m3/Old-Mike-Meniu-Previzualizare.html',OUT/'Old-Mike-Meniu-Previzualizare.html')
 (OUT/'APACHE-routing-DOAR-DUPA-APROBARE.txt').write_text('# Only in Garden .htaccess, AFTER approval; do not replace existing rules.\n<IfModule mod_deflate.c>\nAddOutputFilterByType DEFLATE text/html text/css application/javascript application/json\n</IfModule>\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule ^meniu\\.html$ meniu.php [END]\n</IfModule>\n')
+for name in ['browser-checks.json','lighthouse-mobile.json','live-rpc-check.json']:
+ source=ROOT/'output/menu-m3'/name
+ if source.is_file():
+  (OUT/'verificari').mkdir(exist_ok=True);shutil.copy2(source,OUT/'verificari'/name)
+for p in OUT.rglob('*'):
+ p.chmod(0o755 if p.is_dir() else 0o644)
 manifest={p.relative_to(OUT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(OUT.rglob('*')) if p.is_file()}
 (OUT/'MANIFEST_SHA256.json').write_text(json.dumps(manifest,indent=2)+'\n')
 archive=ROOT/'output/menu-m3/Old-Mike-Meniu-M3-Pachet.zip'
