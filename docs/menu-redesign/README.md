@@ -24,6 +24,6 @@ Nu este necesar și nu este autorizat acum un upload în pagina oficială. Nu s-
 
 ## Verificări
 
-LocalPHP8.3:31probePASS(cache rece/cald/întrerupere/JSONinvalid/date noi/categorie nouă/formatare/XSS/257produseși257elementeJSON-LD). Request-ul public a fost verificat în timp real prin HTTPS și a returnat257produse. PHPcURL pe runtime-ul local a întâmpinat timeoutla conexiune; comportamentul de fallback a fost verificat. Testul real cPanel nu este efectuat în această etapă.
+LocalPHP8.3:32 probePASS(cache rece/cald/întrerupere/JSONinvalid/date noi/categorie nouă/formatare/XSS/257produseși257elementeJSON-LD). Request-ul public a fost verificat în timp real prin HTTPS și a returnat257produse. PHPcURL pe runtime-ul local a întâmpinat timeoutla conexiune; comportamentul de fallback a fost verificat. Testul real cPanel nu este efectuat în această etapă.
 
 Workflow-ul `Review menu editorial (no deploy)` verifică Chrome1440/390/360, overflow, fonturi, imagini, details,navigareactivă,motionredus și produce capturi + raport Lighthouse. Rezultatele se completează după rulare; nu declara scorLighthouse≥90fără raport măsurat.
