@@ -2,6 +2,8 @@
 
 Înainte de lucru citește `docs/continuity/00_START_AICI.md`, apoi documentele legate de task. Nu reconstrui istoricul din ultimul mesaj și nu considera o propunere drept aprobare.
 
+M2.8: citește `28_CIORNE_PROMOVARE_PERMANENTA.md`. Ciorne editare/înlocuireposter/ștergere cu confirmare și revizie; promovare sportivă permanentă. Implementate LOCAL; NEAPLICATE, acces cPanel eșuat. TestelePHPnoi/lint încă NEEXECUTATE. Nu declara deploy sau PHP PASS; nu elimina autentificarea.
+
 DECIZIE EMAIL/DATE: citește `27_DATE_FIRMA_FARA_TEST_EMAIL.md`. Nu trimite emailuri de test: utilizatorul nu are acces laoffice și confirmă proba la celălalt site. Nu marca transportul noului site ca testat; nu accesa Berăria pentru configurări. Datele firmei completate local:OLD MIKE PUB SRL,RO40178199,J2018016609401.
 
 REGULĂ PRIORITARĂ19.10: citește `26_LANSARE_OPRITA_PAGINA_GRUP.md`. oldmike.ro este pagina GRUPULUI și NU se înlocuiește/modifică. LansareaM26 NU s-a executat; doar arhivă în director privat. Installerul/packagerulM26 sunt RETIRED/blocate. Utilizatorul a cerut pauză la publicare; destinația separată trebuie confirmată. garden.oldmike.ro este doar link observat, nu target autorizat.

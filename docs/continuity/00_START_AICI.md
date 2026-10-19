@@ -1,5 +1,7 @@
 # M0 — Audit și checkpoint, 18.10.2026
 
+**Checkpoint local M2.8:** [ciorne și promovare permanentă](28_CIORNE_PROMOVARE_PERMANENTA.md). Cod/pachet pregătite; instalarea și verificărilePHP blocate de eroarea conexiunii cPanel. Site-ul de test rămâne la implementarea precedentă.
+
 **Actualizare locală:** [date firmă și fără probe reale de email](27_DATE_FIRMA_FARA_TEST_EMAIL.md). CUI furnizat de utilizator, date publice concordante; footer completat local. Nu este un deploy sau activare formular.
 
 **PRIORITATE: lansarea oprită; pagina grupului se păstrează.** [Starea verificată și destinația de clarificat](26_LANSARE_OPRITA_PAGINA_GRUP.md). Site-ul nou NU este lansat pe domeniul principal; rămâne în staging. Nu utiliza candidatulM26 de instalare la rădăcină.

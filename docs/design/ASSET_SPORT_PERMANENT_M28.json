@@ -1,0 +1,24 @@
+{
+  "tool": "imagegen built-in",
+  "source": "../generated_images/exec-e2bb9fc2-024c-45c3-9947-3a6a0acb287b.png",
+  "references": [
+    "upload/Derby de Champions League la Old Mike.png (style only)",
+    "assets/brand/oldmike-logo.png (official logo reference)",
+    "generated_images/exec-0819bf01-62ac-4eb6-bf2c-2ec5453426d5.png (photographic scene reference)"
+  ],
+  "brief": "Finished portrait4:5 sports hospitality poster with text and supplied official round logo, recognizable covered terrace, adults watching anonymous football, beer, mixed grills and French fries. No teams, date, time, UEFA/broadcaster marks. Exact text: MECIURILE IMPORTANTE / LIVE LA OLD MIKE / Fotbal mare. Bere rece. Gașca ta. / Str. Matei Voievod 67 · București / Rezervări: 0787 366 166.",
+  "outputs": [
+    {
+      "path": "assets/images/poster-sport-permanent-v1-480.webp",
+      "sha256": "21c2055a7a9a349c8f0899d3c7c7bb0c3e6bd288afa8b6083c64a7c4b343dcb5"
+    },
+    {
+      "path": "assets/images/poster-sport-permanent-v1-800.webp",
+      "sha256": "cafa9d8fa26d21d35f7ebb75199f723c20ca637e3fcea67d3684c10dd6593837"
+    },
+    {
+      "path": "assets/images/poster-sport-permanent-v1.webp",
+      "sha256": "6c875a32acfed67a61840feb4a8cc38026bcf5b965cc1776380afd5c7e29d1e9"
+    }
+  ]
+}

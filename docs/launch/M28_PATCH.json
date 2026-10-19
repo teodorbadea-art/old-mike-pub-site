@@ -1,0 +1,54 @@
+{
+  "lib/drafts.php": {
+    "before": null,
+    "after": "aebcb970579d50642044db2566f38586ac0f90f790edbc8436fd179b3cea27bb"
+  },
+  "assets/images/poster-sport-permanent-v1.webp": {
+    "before": null,
+    "after": "6c875a32acfed67a61840feb4a8cc38026bcf5b965cc1776380afd5c7e29d1e9"
+  },
+  "assets/images/poster-sport-permanent-v1-480.webp": {
+    "before": null,
+    "after": "21c2055a7a9a349c8f0899d3c7c7bb0c3e6bd288afa8b6083c64a7c4b343dcb5"
+  },
+  "assets/images/poster-sport-permanent-v1-800.webp": {
+    "before": null,
+    "after": "cafa9d8fa26d21d35f7ebb75199f723c20ca637e3fcea67d3684c10dd6593837"
+  },
+  "assets/site.css": {
+    "before": "7191889837332a4d2d8758c1f0f84ebb73675798ef73e11a1fdca6dedc13b032",
+    "after": "c36f4ce36632bc3ac855e537109fa381069694817b1be93edf3701faacd6adf4"
+  },
+  "index.html": {
+    "before": "6eb47c7a91be948d596e2a0784697283c1a4ff0901379c75b1def18c7d74265b",
+    "after": "d2ae4559d747fae5ca0c479d08d45d7a9916a89fcfb4696de342a7f54d62a831"
+  },
+  "meniu.html": {
+    "before": "b150b57abdacac40ad9d63f23dd8ba80b0093eb2eabb930594e9efb956cf8b89",
+    "after": "0d00046f230c17012554ce0d66cc6b79b1fdf9dfc10fe2d8af97e4a2574b678a"
+  },
+  "galerie.html": {
+    "before": "f20c81f5abb6408775fe8e57411a032ca50d9efb25b77f289ec437f98e8a9baf",
+    "after": "6b09e4e2af3b8217363784b887bc8bf5e1fd95e8b615d5545665cf8c172e33cb"
+  },
+  "evenimente.html": {
+    "before": "2f3dafa974771da94367886483cabd277b66eab0131d5b93775981f0b678b4b9",
+    "after": "4c2464f02b83c2dc20d9f4681e45baf664d35579247d95bc8cd4cce64df8d29f"
+  },
+  "contact.html": {
+    "before": "d55ac13cc3450b28e138523de8ce44f1a76febbce2218df0ef1180dda9cec528",
+    "after": "fe95c11acaa1af0cb51f032c865ed59b8c9c4724c906ea4d7d9014aa057cc8f2"
+  },
+  "confidentialitate.html": {
+    "before": "62926e94496466e270906b38e686bd4e2c6928a9915455020d2fecc72827a1f4",
+    "after": "87de2cf4987674ad7ed87c35c500698010237f23b18faf7719205c5dfb82546c"
+  },
+  "404.html": {
+    "before": "f31f647b8f6a2ab187a79740cc974e2a097d18a419f8d09838839d8a109211fe",
+    "after": "c1ecef7f55d93c4b98c306a936b757b881fe4f04348dac8debea414a84d54f79"
+  },
+  "admin/index.php": {
+    "before": "67b0f9c806a1d52bc9e56cbd3cfe71f1099b9607672e37eb0aa80b1028701a07",
+    "after": "b57a2a4d1e075884c0fb1888f30d5c927675b4598d5f1384eca95d1427e3bf38"
+  }
+}

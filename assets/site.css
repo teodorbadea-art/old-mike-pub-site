@@ -63,3 +63,9 @@
  .page-intro.page-cover .intro{max-width:480px;margin:0;font-size:15px;line-height:1.6;text-shadow:none}
  .page-cover-title>.button{margin:2px 0 18px;min-height:48px}.contact-layout.contact-details{margin:0 0 25px}
 }
+
+/* M2.8: complete evergreen poster with a readable reservation action. */
+.evergreen-event{max-width:1060px;margin:40px auto 30px;display:grid;grid-template-columns:minmax(0,480px) minmax(0,1fr);gap:42px;align-items:center}
+.evergreen-poster,.evergreen-poster picture{display:block}.evergreen-poster img{display:block;width:100%;height:auto;object-fit:contain}
+.evergreen-copy{min-width:0;padding:20px 0}.evergreen-copy .eyebrow{font-size:12px;line-height:1.6;letter-spacing:.08em}.evergreen-copy h2{font:400 clamp(36px,4vw,57px)/1.06 var(--serif);letter-spacing:-.035em;margin:18px 0}.evergreen-copy p{font-size:16px;line-height:1.75;max-width:380px;color:var(--muted)}.evergreen-copy .button{margin-top:12px;min-height:48px}.evergreen-copy .evergreen-address{font-size:13px;margin-top:18px}
+@media(max-width:800px){.evergreen-event{display:block;max-width:480px;margin:25px auto}.evergreen-copy{padding:22px 0}.evergreen-copy h2{font-size:39px}.evergreen-copy p{font-size:16px;max-width:none}.evergreen-copy .button{width:100%;padding:0 12px}}

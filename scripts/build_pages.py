@@ -62,6 +62,10 @@ if EVENT_RECORDS:
     from event_pages import render_events
     events = render_events(EVENT_RECORDS, lambda kicker,title,text: page_cover(kicker,title,text,'events'), button)
 
+# Permanent promotion is independent of dated event records and expiry.
+PERMANENT_SPORT = '<section class="evergreen-event" aria-labelledby="evergreen-title"><a class="evergreen-poster" href="tel:+40787366166" aria-label="Rezervă la Old Mike: 0787 366 166"><picture><img src="assets/images/poster-sport-permanent-v1.webp" srcset="assets/images/poster-sport-permanent-v1-480.webp 480w, assets/images/poster-sport-permanent-v1-800.webp 800w, assets/images/poster-sport-permanent-v1.webp 1200w" sizes="(max-width:800px) 100vw, 480px" width="1200" height="1499" alt="Poster: Meciurile importante live la Old Mike. Fotbal mare, bere rece, gașca ta. Str. Matei Voievod 67, București. Rezervări: 0787 366 166. Scenă ilustrativă generată." loading="lazy" decoding="async"></picture></a><div class="evergreen-copy"><div class="eyebrow">Ne vedem la meci</div><h2 id="evergreen-title">Meciurile importante.<br><em>Cu gașca ta.</em></h2><p>Vezi meciurile importante live la Old Mike. Strânge gașca, alege ceva bun și bucură-te de atmosfera serii.</p><a class="button" href="tel:+40787366166">Rezervă · 0787 366 166</a><p class="evergreen-address">Str. Matei Voievod 67 · București</p></div></section>'
+events=events.replace('<div class="events-bottom">',PERMANENT_SPORT+'<div class="events-bottom">',1)
+
 CONTENT = {'index.html': home, 'meniu.html': menu, 'evenimente.html': events, 'galerie.html': gallery, 'contact.html': contact}
 for filename, title in PAGES:
     html = f'''<!doctype html><html lang="ro"><head>{head(filename)}</head><body class="{'home' if filename == 'index.html' else 'inner-page gallery-page' if filename == 'galerie.html' else 'inner-page'}">{header(filename)}{CONTENT[filename]}{footer()}{config_tag()}<script src="assets/site.js" defer></script></body></html>'''

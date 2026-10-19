@@ -14,6 +14,8 @@ Repository dedicat site-ului de prezentare. Meniu Electronic și Old Mike Commun
 
 **Date firmă:** [identificare și decizia privind emailul](docs/continuity/27_DATE_FIRMA_FARA_TEST_EMAIL.md), completate local, fără trimitere de probe.
 
+**M2.8 — pregătit local:** [editare/ștergere ciorne și promovare permanentă](docs/continuity/28_CIORNE_PROMOVARE_PERMANENTA.md). Pachet de test pregătit; cPanel inaccesibil în sesiunea curentă.
+
 ## Începe aici
 
 **M2.2 — curent:** [introduceri cinematice și verificări staging](docs/continuity/21_M22_INTRODUCERI_CINEMATICE.md). Fundaluri fotografice integrate în Meniu, Galerie, Evenimente și Contact; actualizare exclusiv în zona de test protejată.
