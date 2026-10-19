@@ -26,7 +26,7 @@ for p in PUBLIC.glob('*.html'):
 (PUBLIC/'robots.txt').write_text('User-agent: *\nDisallow: /admin/\nDisallow: /api/\nDisallow: /lib/\nSitemap: https://garden.oldmike.ro/sitemap.xml\n')
 rules='''# BEGIN OLDMIKE GARDEN M29
 Options -Indexes
-DirectoryIndex index.html
+DirectoryIndex index.html index.php
 ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
