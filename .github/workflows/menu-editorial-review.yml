@@ -23,6 +23,7 @@ jobs:
           php -l server/lib/menu/render.php
           php tests/php/menu.php
           python3 scripts/build_menu_preview.py
+          php tests/php/menu-live.php
       - name: Chrome responsive interaction checks
         run: |
           node tests/menu-static-server.mjs >/tmp/menu-review-server.log 2>&1 &

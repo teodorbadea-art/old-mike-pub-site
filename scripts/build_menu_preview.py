@@ -31,5 +31,6 @@ def image_src(m):
 review=re.sub(r'src="(assets/[^"?]+)"',image_src,review)
 review=review.replace('@@HERO_MOBILE@@','<source media="(max-width:600px)" srcset="'+uri(ROOT/'assets/images/hero-single-chefs-v4-mobile-800.webp')+'">')
 review=re.sub(r'href="(assets/brand/[^"?]+)"',lambda m:'href="'+uri(ROOT/m[1])+'"',review)
+review=re.sub(r'href="([a-z-]+\.html(?:#[^"]*)?)"',lambda m:'href="'+('#continut' if m[1]=='meniu.html' else 'https://garden.oldmike.ro/'+m[1])+'"',review)
 (OUT/'Old-Mike-Meniu-Previzualizare.html').write_text(review)
 print('Preview rendered from PHP:',len(html),'bytes; offline review:',len(review),'characters')

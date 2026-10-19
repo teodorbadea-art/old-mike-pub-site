@@ -162,6 +162,7 @@ body{line-height:var(--om-body-leading)}textarea{font:inherit}
 .om-menu-end>p{font-size:14px;color:var(--muted)}
 .om-menu-end .om-menu-fineprint{font-size:12px;line-height:1.8;margin-top:30px}
 .om-menu-fallback{padding:40px 0 80px;text-align:center}
+.menu-editorial .om-footer a{display:inline-flex;align-items:center;min-height:44px}
 .menu-editorial .om-footer .om-call,.menu-editorial .button{font-variant-numeric:tabular-nums}
 @media(min-width:1600px){.om-menu-hero{min-height:740px}}
 @media(max-width:1100px) and (min-width:801px){.om-category,.om-category-reverse{gap:28px;grid-template-columns:minmax(0,52fr) minmax(0,48fr)}.om-dish-name,.om-dish-price{font-size:14px}.om-menu-hero-copy{width:58%}.om-menu-hero-copy h1{font-size:82px}}
