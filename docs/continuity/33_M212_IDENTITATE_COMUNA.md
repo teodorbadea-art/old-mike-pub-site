@@ -15,3 +15,8 @@ LIVE NEAPLICAT: cPanel răspunde la pagina de login, sesiunea invalidă; nu s-a 
 Pachet incremental Garden:output/old-mike-garden-brand-m212.zip,11fișiere,65,780bytes. Updater CLI server/update-brand-m212.py pregătit, testat pe fixture temporar (preflight fără scriere, apply, backup, idempotent, corupție refuzată, pagina grupului/.htaccess păstrate). NEEXECUTAT pe server.
 
 Rezultat Chrome pe commitul Meniuc4e14288:frontendSUCCESS,4probe (941navigare, câmpuri opționale, alergeni/preț/publicare, brand desktop/mobil),28suite Node. Baza de date rulează separat; niciun deploy. Conectarea securizată cPanel a reușit; terminal disponibil. Instalarea încă de executat.
+
+## Rezultat final sesiune — acces cPanel întrerupt
+FACT: autentificarea securizată a reușit și a fost observat pozitiv cPanelTools, utilizatoroldmikero. Terminalul afișaPython3.9.25. Comanda lungă de staging s-a oprit prin deadline în timpul tastării, înainte deEnter. Nu a descărcat/extras pachetul și nu a lansat updaterul. O încercare de anulare a tastării și lipire a fost blocată de protecția datelor de browser; revenirea la originea canonică, apoi verificarea într-o filă nouă au afișat upstream connect error / connection termination. STOP acces cPanel; niciun fișier public modificat. Nu relua logarea în buclă.
+
+Garden:M2.12 și M2.11 încă NEAPLICATE. Meniu:c4e14288, frontend/ChromePASS, DB încă rulează (la ultima verificare probaUIV5.0.26), migrarea hosted/deploy neschimbate. RepoSite:9ec81268 conține arhiva deploy/garden-brand-m212.zip și updaterul; SHA256arhivă478f0b1e4779aa8768afd4052ca471e5c1c12431dab773410c7ef6cf34a8b24e. Preflight/apply server încă NECONFIRMATE.
