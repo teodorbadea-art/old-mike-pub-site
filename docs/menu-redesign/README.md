@@ -32,7 +32,7 @@ Taburile suportă click, tastatură (săgeți, Home, End), focus și roluri ARIA
 
 Hero-ul nou arată o masă cu burger cu o singură bucată de carne, pizza, platou, halbe și cinci bucătari. Berea are un bucătar la dozator și unul care transportă spuma cu o lopățică, fără mărci lizibile. Pe mobil, fotografia integrală este deasupra textului; eticheta nu se suprapune peste bucătari.
 
-Originalele au maximum 1536 px (sursele de 1200 px sunt păstrate la 1200); variantele au 480 și 800 px. Hero-ul nou de 1672 px a fost redus la 1536, fără crop. Nu se livrează exporturi mărite la 2000 px. `m32-image-manifest.json` este manifestul curent; documentele M3.1 păstrează istoricul cerinței anterioare de 2000 px, acum anulată.
+Originalele au maximum 1536 px (sursele de 1200 px sunt păstrate la 1200); variantele au 480 și 800 px. Hero-ul nou de 1672 px a fost redus la 1536, fără crop. Nu se livrează exporturi mărite la 2000 px. `m33-image-manifest.json` este manifestul curent; documentele M3.1 păstrează istoricul cerinței anterioare de 2000 px, acum anulată.
 
 Hero-ul mobil este o compoziție nouă, verticală **4:5**, cu trei bucătari mari. Lipsa masterului mobil este tratată fără avertismente; variantele480/800 rămân utilizabile. Masterul este1120×1400, variantele480×600și800×1000; fiecare în WebP și AVIF. Imaginea desktop este limitată la60vh, cu cadrul întreg. Textul mobil este sub fotografie.
 

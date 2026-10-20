@@ -1,3 +1,6 @@
+# M3.3.1 — pachet corectat fără HTML-uri
+Vezi [M3.3.1](38_M331_PACHET_FARA_HTML.md). Import CSS restabilit; paginile existente nu se înlocuiesc. M3.3 anterior nu se instalează.96pxsticky mobil,94/100/100/100Lighthouse. NU publica.
+
 # M3.3 — audit corectat, coaste generate la cererea utilizatorului
 Vezi [M3.3](37_M33_AUDIT_SI_COASTE_GENERATE.md). Toate cele8corecții implementate; pachet pentru evaluare, NU publica. Nu mai este necesară fotografia coastelor.
 
