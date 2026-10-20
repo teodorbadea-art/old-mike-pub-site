@@ -37,11 +37,25 @@ function read_cache(string $file):?array {
     $rows=valid_rows($value['rows']??null,'cache');if($rows===null)return null;
     return ['at'=>(int)$value['at'],'rows'=>$rows];
 }
+/** Shared timestamp + independent lock: at most one stale warning per hour. */
+function warn_old_cache(string $directory,int $at,int $now):void{
+    if($now-$at<=3600)return;
+    $logLock=@fopen($directory.'/menu.stale-warning','c+');
+    if(!$logLock)return;
+    if(!flock($logLock,LOCK_EX|LOCK_NB)){fclose($logLock);return;}
+    try{
+        $last=(int)stream_get_contents($logLock);
+        if($last>0&&$now-$last<3600)return;
+        rewind($logLock);
+        if(!ftruncate($logLock,0)||fwrite($logLock,(string)$now)===false||!fflush($logLock))return;
+        error_log('[Old Mike menu] Serving cache older than 60 minutes; age_minutes='.(int)floor(($now-$at)/60));
+    }finally{flock($logLock,LOCK_UN);fclose($logLock);}
+}
 /** Cache is always last-known-good. Concurrent requests never clobber it. */
 function menu(string $directory,?callable $fetcher=null,?int $now=null):array {
     $now??=time();$file=$directory.'/menu.json';$cached=read_cache($file);
-    $result=static function(?array $value,string $source)use($now):array{
-        if($value&&$source==='stale'&&$now-$value['at']>3600)error_log('[Old Mike menu] Serving cache older than60minutes; age_minutes='.(int)floor(($now-$value['at'])/60));
+    $result=static function(?array $value,string $source)use($now,$directory):array{
+        if($value&&$source==='stale')warn_old_cache($directory,$value['at'],$now);
         return ['rows'=>$value['rows']??[],'at'=>$value['at']??0,'source'=>$source,'stale'=>$source!=='live'&&$source!=='cache'];
     };
     if($cached&&$now-$cached['at']<TTL)return $result($cached,'cache');

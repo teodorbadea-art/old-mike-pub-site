@@ -170,3 +170,11 @@
  .om-menu-nav.is-grouped .om-menu-nav-inner{overflow-x:auto;white-space:nowrap;scrollbar-width:thin;scrollbar-color:var(--gold) var(--panel)}
  .om-menu-nav.is-grouped .om-menu-category-links{flex-wrap:nowrap}
 }
+
+/* M3.3.1 — mobile group controls: 44px targets, two compact rows (98px). */
+@media(max-width:800px){
+ .om-menu-nav-layout{padding:3px 12px}
+ .om-menu-group-switch{gap:4px;padding-bottom:0;margin-bottom:0;border-bottom:0}
+ .om-menu-group-switch>a{min-height:44px;padding:0 8px;font-size:12px}
+ .om-menu-category-links a{min-height:44px;padding-inline:10px}
+}

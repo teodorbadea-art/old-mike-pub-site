@@ -22,7 +22,6 @@ def add(url):
  files.add(u.path)
 html=(ROOT/'output/menu-m3/preview.html').read_text();assert 'data:image/' not in html
 Links().feed(html)
-for page in ['index.html','evenimente.html','galerie.html','contact.html']:Links().feed((ROOT/page).read_text())
 for name in ['assets/site.css','assets/oldmike-design.css']:
  for ref in re.findall(r'url\([\'\"]?([^\)\'\"]+)',(ROOT/name).read_text()):
   if not ref.startswith(('data:','http:','https:')):add('assets/'+ref)
@@ -34,7 +33,7 @@ shutil.copy2(ROOT/'meniu.php',PUBLIC/'meniu.php')
 preview=re.sub(r'href="([a-z-]+\.html(?:#[^"]*)?)"',lambda m:'href="'+('#continut' if m[1]=='meniu.html' else 'https://garden.oldmike.ro/'+m[1])+'"',html)
 preview=preview.replace('assets/','public/assets/')
 (OUT/'previzualizare.html').write_text(preview)
-for page in ['index.html','evenimente.html','galerie.html','contact.html']:shutil.copy2(ROOT/page,PUBLIC/page)
+(OUT/'FISIERE_DE_URCAT.txt').write_text('Numai aceste fișiere se combină cu site-ul existent; nu înlocui folderele întregi. Nicio pagină HTML existentă nu se înlocuiește.\n\n'+'\n'.join(['meniu.php',*sorted(files),'cache/.htaccess','cache/menu.json'])+'\n')
 (PUBLIC/'cache').mkdir();shutil.copy2(ROOT/'cache/.htaccess',PUBLIC/'cache/.htaccess');shutil.copy2(ROOT/'data/menu-redesign/menu-preview-snapshot.json',PUBLIC/'cache/menu.json')
 shutil.copytree(ROOT/'docs/menu-redesign',OUT/'instructiuni-si-prompturi',ignore=shutil.ignore_patterns('m31-image-manifest.json'))
 (OUT/'APACHE-routing-DOAR-DUPA-APROBARE.txt').write_text('# Only in Garden .htaccess, AFTER approval; do not replace existing rules.\n<IfModule mod_mime.c>\nAddType image/avif .avif\nAddType image/webp .webp\n</IfModule>\n<IfModule mod_deflate.c>\nAddOutputFilterByType DEFLATE text/html text/css application/javascript application/json\n</IfModule>\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule ^meniu\\.html$ meniu.php [END]\n</IfModule>\n')
@@ -49,7 +48,9 @@ archive=ROOT/'output/menu-m3/Old-Mike-Meniu-M3-Pachet.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED)as z:
  for p in sorted(OUT.rglob('*')):
   if p.is_file():z.write(p,p.relative_to(OUT))
-assert not(PUBLIC/'meniu.html').exists()and not(PUBLIC/'.htaccess').exists()
+assert not list(PUBLIC.rglob('*.html')), 'No HTML page may be shipped in public/'
+assert {p.name for p in PUBLIC.iterdir()}=={'meniu.php','assets','cache'}, 'Public payload allowlist'
+assert not(PUBLIC/'.htaccess').exists()
 assert (PUBLIC/'cache/menu.json').is_file()
 assert 'require ' not in (PUBLIC/'meniu.php').read_text()
 # 21 illustrations: native+480/800 ×2formats, plus6portrait mobile sources.

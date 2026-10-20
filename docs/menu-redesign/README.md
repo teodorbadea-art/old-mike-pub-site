@@ -1,4 +1,6 @@
-# Old Mike — M3.3, pachet PHP complet pentru evaluare
+> M3.3.1 corectează pachetul M3.3: HTML-urile nelive au fost eliminate complet din public. Nu folosi pachetul anterior pentru instalare.
+
+# Old Mike — M3.3.1, pachet PHP complet pentru evaluare
 
 Pagina oficială nu este înlocuită. Acest pachet corectează M3 cu un hero nou, Bere cu bucătari miniaturali, imagini separate WebP/AVIF, text mobil separat de fotografie și taburi pentru Spirtoase.
 
@@ -32,7 +34,7 @@ Hero-ul nou arată o masă cu burger cu o singură bucată de carne, pizza, plat
 
 Originalele au maximum 1536 px (sursele de 1200 px sunt păstrate la 1200); variantele au 480 și 800 px. Hero-ul nou de 1672 px a fost redus la 1536, fără crop. Nu se livrează exporturi mărite la 2000 px. `m32-image-manifest.json` este manifestul curent; documentele M3.1 păstrează istoricul cerinței anterioare de 2000 px, acum anulată.
 
-Hero-ul mobil este o compoziție nouă, verticală **4:5**, cu trei bucătari mari. Masterul este1120×1400, variantele480×600și800×1000; fiecare în WebP și AVIF. Imaginea desktop este limitată la60vh, cu cadrul întreg. Textul mobil este sub fotografie.
+Hero-ul mobil este o compoziție nouă, verticală **4:5**, cu trei bucătari mari. Lipsa masterului mobil este tratată fără avertismente; variantele480/800 rămân utilizabile. Masterul este1120×1400, variantele480×600și800×1000; fiecare în WebP și AVIF. Imaginea desktop este limitată la60vh, cu cadrul întreg. Textul mobil este sub fotografie.
 
 Imaginea Porc a fost generată cu autorizarea explicită a utilizatorului din20.10: coastele sunt imaginate, iar farfuria dreptunghiulară și tipul de cartofi sunt ghidate de fotografia reală a tomahawk-ului. Bucătarii aplică glazura cu bidineaua. Vezi `m33-pork-prompt.md` și `m33-mobile-hero-prompt.md` pentru prompturi și alt. `m33-image-manifest.json` inventariază toate cele 132 de fișiere livrate.
 
@@ -40,13 +42,15 @@ Tomahawk-ul din fotografia sursă este de porc. Fotografiile din catalog pentru 
 
 ## Fonturile pe întregul site
 
-Acasă, Evenimente, Galerie și Contact includ explicit `<link>` către `assets/oldmike-design.css`, înainte de `assets/site.css`. Importul CSS a fost eliminat. Variabilele `--sans` și `--serif` păstrează familiile de rezervă. **Cele patru pagini HTML sunt incluse în pachet și trebuie urcate împreună cu stilurile**, după aprobarea lansării. Testele verifică încărcarea efectivă Manrope/Cormorant pe toate patru, la1440și390px.
+Prima linie din `assets/site.css` este `@import url('oldmike-design.css');`. Fonturile și variabilele comune se încarcă pentru paginile existente, inclusiv Confidențialitate, fără editarea HTML-ului. Familiile de rezervă rămân în variabilele `--sans` și `--serif`. Testul Chrome blochează linkurile directe cu parametri către design.css și verifică fonturile încărcate prin import, pe cinci pagini, la1440și390px.
+
+**Publicarea nu înlocuiește niciun HTML existent.** Folderul `public/` conține exclusiv `meniu.php`, `assets/` și `cache/`. Astfel rămân intacte metadatele, JSON-LD și `site-runtime.js` din paginile live. Lista exactă este în `FISIERE_DE_URCAT.txt`. Combină doar fișierele livrate; nu înlocui folderele întregi.
 
 ## Navigare și reziliență M3.3
 
 Comutatorul Mâncare / Băuturi / Narghilea afișează categoriile grupei active. Pe desktop acestea se pot așeza pe două rânduri; pe telefon se derulează lateral. Derularea paginii actualizează grupa și categoria. Fără JavaScript toate linkurile și toate produsele rămân accesibile. Subtitlurile identice cu titlul sunt omise; o singură mențiune despre imaginile ilustrative apare în subsol.
 
-Validarea sare peste fiecare produs invalid și scrie `error_log` cu indexul/câmpul, fără conținutul produsului. Celelalte produse se actualizează normal. Un răspuns integral invalid păstrează cache-ul; o listă publicată legitim goală rămâne acceptată. Folosirea unei copii mai vechi de60minute este înregistrată în jurnal. Clientul păstrează pagina utilă.
+Validarea sare peste fiecare produs invalid și scrie `error_log` cu indexul/câmpul, fără conținutul produsului. Celelalte produse se actualizează normal. Un răspuns integral invalid păstrează cache-ul; o listă publicată legitim goală rămâne acceptată. Folosirea unei copii mai vechi de60minute este înregistrată în jurnal cel mult o dată pe oră, cu timestamp și lock comun tuturor cererilor. Clientul păstrează pagina utilă.
 
 ## Surse de dezvoltare
 

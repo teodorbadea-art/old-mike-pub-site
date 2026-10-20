@@ -1,3 +1,6 @@
+# M3.3.1 PRIORITAR — pachet fără HTML-uri, NU publica
+Pachetul M3.3 conținea HTML-uri nelive și NU trebuie instalat. Din public se livrează numai meniu.php/assets/cache. Nu edita/împacheta index, contact, evenimente, galerie, confidentialitate sau alt HTML. Importul oldmike-design.css este obligatoriu pe prima linie din site.css; nu cere editarea HTML-urilor live. Vezi docs/menu-redesign/INSTALARE_CPANEL.md. Mobile master opțional; avertisment cache vechi limitat la o dată/oră; sticky mobil compact.
+
 # M3.3 prioritar — evaluare, NU publica
 Utilizatorul a autorizat explicit generarea coastelor fără fotografie proprie: folosește farfuria și cartofii din tomahawk.jpg drept ghid. Imaginea Porc și hero-ul mobil vertical4:5 sunt generate. Navigare pe grupe, hero desktop60vh, validare individuală+log, previzualizare în afara public, CSS comun inclus explicit în cele4pagini. Citește docs/menu-redesign/README.md. Instrucțiunile vechi despre necesitatea fotografiei coastelor sunt depășite.
 

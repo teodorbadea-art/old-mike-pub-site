@@ -36,6 +36,8 @@ jobs:
         run: |
           npx --yes lighthouse@12.8.2 http://127.0.0.1:4188/audit --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=output/menu-m3/lighthouse-mobile.json --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --quiet
           node -e "const r=require('./output/menu-m3/lighthouse-mobile.json');console.log(Object.fromEntries(Object.entries(r.categories).map(([k,v])=>[k,Math.round(v.score*100)])))"
+      - name: Package public payload without any HTML pages
+        run: python3 scripts/package_menu_m3.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:

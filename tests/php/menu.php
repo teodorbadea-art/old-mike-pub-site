@@ -39,7 +39,7 @@ try{
  check(str_contains($page,'id="porc"')&&!str_contains($page,'pending_image'),'pork is a standalone section, no placeholder text');
  check(str_contains($page,'assets/images/meniu/hero-meniu-mobile-480.avif'),'mobile AVIF source');
  check(!str_contains($page,'-2000.')&&!str_contains($page,'-1200.'),'no2000/1200media requests');
- $css=file_get_contents($root.'/assets/site.css');check(!str_contains($css,'@import'),'shared CSS has no import');foreach(['index.html','evenimente.html','galerie.html','contact.html']as $sitePage)check(str_contains(file_get_contents($root.'/'.$sitePage),'href="assets/oldmike-design.css?'),'explicit shared typography '.$sitePage);
+ $css=file_get_contents($root.'/assets/site.css');check(str_starts_with($css,"@import url('oldmike-design.css');\n"),'shared typography import is first line');
  check(!preg_match('/\\d+\\s*%\\s*(?:alcool|alc\\b)/iu',$page),'ABV suffix removed from customer HTML and JSON-LD');
  check(substr_count($page,'Imagine ilustrativă')===1,'one illustration note');
  check(!str_contains($page,'<h3 class="om-subcategory-title">Bere</h3>'),'no duplicate beer subtitle');
@@ -50,7 +50,18 @@ try{
  $partial=menu($base,static fn()=>[['bad'=>true],array_replace($rows[0],['price'=>61])],$now);
  check(count($partial['rows'])===1&&$partial['rows'][0]['price']===61&&read_cache($base.'/menu.json')['rows'][0]['price']===61,'partial refresh updates and caches valid products');
  file_put_contents($base.'/menu.json',json_encode(['at'=>$now-3700,'rows'=>$rows]));menu($base,static fn()=>null,$now);
- check(str_contains(file_get_contents($log),'Skipped invalid product')&&str_contains(file_get_contents($log),'older than60minutes'),'invalid rows and old cache logged');
+ check(str_contains(file_get_contents($log),'Skipped invalid product')&&str_contains(file_get_contents($log),'older than 60 minutes'),'invalid rows and old cache logged');
+ $warnings=static fn()=>substr_count(file_get_contents($log),'Serving cache older than 60 minutes');
+ $initialWarnings=$warnings();menu($base,static fn()=>null,$now+10);menu($base,static fn()=>null,$now+3599);
+ check($initialWarnings===1&&$warnings()===1,'old cache warning suppressed within hour');
+ menu($base,static fn()=>null,$now+3600);check($warnings()===2,'old cache warning resumes after hour');
+ $held=fopen($base.'/menu.stale-warning','c+');flock($held,LOCK_EX);
+ OldMikeMenu\warn_old_cache($base,$now-3700,$now+7200);check($warnings()===2,'concurrent stale log lock suppresses duplicate');flock($held,LOCK_UN);fclose($held);
+ $mediaRoot=$base.'/media';mkdir($mediaRoot.'/assets/images/test',0755,true);
+ foreach(['webp','avif']as $format)foreach(['','-480','-800','-mobile-480','-mobile-800']as $suffix)copy($root.'/assets/images/meniu/hero-meniu'.($suffix===''?'':(str_starts_with($suffix,'-mobile')?$suffix:$suffix)).'.'.$format,$mediaRoot.'/assets/images/test/hero'.$suffix.'.'.$format);
+ set_error_handler(static function($severity,$message){throw new RuntimeException($message);});
+ try{$missing=OldMikeMenu\picture('test/hero','Test',$mediaRoot,true);}finally{restore_error_handler();}
+ check(str_contains($missing,'-mobile-800.webp 800w')&&!str_contains($missing,'hero-mobile.webp'),'absent optional mobile master causes no warning; variants retained');
  echo 'PASS '
 .$count.' menu checks: cache/outage/formatting/new category/escaping/257 complete real items'.PHP_EOL;
 }finally{
