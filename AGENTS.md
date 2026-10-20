@@ -1,3 +1,6 @@
+# LANSARE M3.3.1 AUTORIZATĂ20.10 08:30 — PAȘII1/2CONFIRMAȚI, PAS3BLOCAT
+Vezi docs/continuity/39_M331_LANSARE_AUTORIZATA.md. UseraaprobatGarden exclusiv, înordine, cu confirmaredupăfiecarepas. HoneypotcorectatînCSS/pachet. Backupprivatcreat; niciunfișierpublicnuafostmodificat. Blocajbrowsercredentialprotectionînainte deupload. InstrucțiunilevechiNUpublicadejos suntdepășite deaprobareaexplicităcurentă.
+
 # M3.3.1 PRIORITAR — pachet fără HTML-uri, NU publica
 Pachetul M3.3 conținea HTML-uri nelive și NU trebuie instalat. Din public se livrează numai meniu.php/assets/cache. Nu edita/împacheta index, contact, evenimente, galerie, confidentialitate sau alt HTML. Importul oldmike-design.css este obligatoriu pe prima linie din site.css; nu cere editarea HTML-urilor live. Vezi docs/menu-redesign/INSTALARE_CPANEL.md. Mobile master opțional; avertisment cache vechi limitat la o dată/oră; sticky mobil compact.
 

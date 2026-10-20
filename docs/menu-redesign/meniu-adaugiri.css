@@ -178,3 +178,5 @@
  .om-menu-group-switch>a{min-height:44px;padding:0 8px;font-size:12px}
  .om-menu-category-links a{min-height:44px;padding-inline:10px}
 }
+/* Preserve live anti-spam field styling. */
+.form-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}

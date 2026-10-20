@@ -1,3 +1,6 @@
+# Lansare aprobată — pașii1/2gata, uploadneînceput
+Vezi [lansareaM3.3.1](39_M331_LANSARE_AUTORIZATA.md). Honeypotcorectat; PHP8.3.35/cURL/mbstring confirmate; backupprivat053829verificat. Browserulesteînstareprotejată; este necesară preluareaferestrei. Nicio modificarepublicăexecutată.
+
 # M3.3.1 — pachet corectat fără HTML-uri
 Vezi [M3.3.1](38_M331_PACHET_FARA_HTML.md). Import CSS restabilit; paginile existente nu se înlocuiesc. M3.3 anterior nu se instalează.96pxsticky mobil,94/100/100/100Lighthouse. NU publica.
 
