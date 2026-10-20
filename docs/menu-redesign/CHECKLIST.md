@@ -6,12 +6,21 @@
 - [x] 50 de probe PHP: cache rece/cald, expirare, întrerupere simulată, ultima copie bună, răspuns invalid, categorie nouă, escaping și toate cele 257 de produse în HTML/JSON-LD.
 - [x] Cantitate și alcool inline numai când valorile există; lipsurile nu sunt inventate, procentul de fructe nu este tratat drept alcool.
 - [x] Spirtoase: 8 taburi, inclusiv Gin separat din categoria comună, fără pierderi sau duplicări de produse.
-- [x] 20 de ilustrații, fiecare în WebP și AVIF la original/480/800 px: 124 de fișiere separate în `assets/images/meniu/`. Dimensiuni și decodare verificate; fără base64.
+- [x] 20 de ilustrații, fiecare în WebP și AVIF la dimensiunea originală și 480/800 px, plus patru surse mobile: 124 de fișiere separate în `assets/images/meniu/`. Dimensiuni și decodare verificate; fără base64.
 - [x] Hero diferit de prima pagină și Bere cu bucătari miniaturali; hero eager și `fetchpriority="high"`.
 
 ## Verificări browser M3.2
 
-Se rulează din nou Chrome 1440/390/360 pentru meniu și separat index.html, evenimente.html, galerie.html, contact.html la1440/390, inclusiv încărcarea fonturilor doar prin importul site.css. Rezultatele M3.1 (96/100/100/100) sunt istorice și nu se declară automat pentru M3.2.
+- [x] Meniu în Chrome la **1440/390/360 px**: 257 produse, fără scroll orizontal, imagini/fonturi, taburi/tastatură, navigare și preferința reduced motion.
+- [x] Hero mobil selectează efectiv `hero-meniu-mobile-480.avif` la 390 și 360 px; eticheta este sub fotografie, fără suprapunere. Fallback WebP și sursele de800 sunt prezente în pachet.
+- [x] **index.html, evenimente.html, galerie.html, contact.html**, fiecare la1440și390px: Manrope și Cormorant încărcate efectiv. În test, linkul direct la `oldmike-design.css?v=1` a fost blocat intenționat; importul din `site.css` a fost suficient.
+- [x] PHP cURL real → Supabase: **257 produse**, 20.10.2026 04:49UTC, numai citire.
+- [x] Lighthouse mobil pe HTML de producție cu gzip înCI: **95 performanță / 100 accesibilitate / 100 bune practici / 100 SEO**. Scorul pe cPanel se măsoară după instalare.
+- [x] Capturile Acasă desktop/telefon și meniu telefon au fost inspectate vizual.
+
+Revizie verificată: `87f93ef385b37a2f56c8418c498aa66f6b62dc43`.
+Rulare: https://github.com/teodorbadea-art/old-mike-pub-site/actions/runs/39371579268
+Rapoartele din pachet includ proba separată `site-font-checks.json`.
 
 ## Înainte de publicare
 
