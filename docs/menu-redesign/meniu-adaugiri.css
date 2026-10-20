@@ -137,3 +137,36 @@
 @media(prefers-reduced-motion:reduce){.menu-editorial *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{.menu-editorial .om-menu-nav,.menu-editorial .om-header,.menu-editorial .om-footer,.menu-editorial .om-menu-hero,.menu-editorial .om-menu-end{display:none}.menu-editorial{background:white;color:#181612}.om-menu-wrap{padding:0}.om-category{display:block;margin-bottom:24px}.om-category-figure{display:none}.om-dish-name,.om-dish-description,.om-dish-price{color:#181612}.om-compact-grid{display:block}.om-lunch{background:white;color:#181612}.menu-editorial details:not([open])>*:not(summary){display:block!important}}
 /* END OLD MIKE M3 · MENIU EDITORIAL LIVE */
+
+/* M3.3 — compact desktop hero and progressive group/category navigation. */
+.menu-editorial .om-menu-hero{display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);min-height:0;align-items:center}
+.menu-editorial .om-menu-hero-copy{order:0;display:block;width:100%;padding:32px 0 32px 13%;margin:0}
+.menu-editorial .om-menu-hero-copy h1{font-size:clamp(58px,5.4vw,84px);line-height:.98;margin:18px 0 22px}
+.menu-editorial .om-menu-hero-copy>p:not(.eyebrow){font-size:16px;line-height:1.65;margin:0 0 24px}
+.menu-editorial .om-menu-hero-image{order:1;max-height:60svh;height:auto;aspect-ratio:16/9}
+.menu-editorial .om-menu-hero-image picture{height:100%;width:100%;position:absolute;inset:0}
+.menu-editorial .om-menu-hero-image img{object-fit:contain;object-position:center;height:100%;max-height:60svh}
+.om-menu-nav{position:relative}
+.om-menu-nav.is-grouped{position:sticky}
+.om-menu-nav-layout{max-width:1500px;margin:auto;padding:10px 5.2%}
+.om-menu-group-switch{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:6px}
+.om-menu-group-switch>a{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 18px;color:var(--cream);border:1px solid #6b5431;border-radius:3px;font-size:14px;font-weight:600}
+.om-menu-group-switch>a[aria-pressed=true]{background:var(--gold);color:#18120a;border-color:var(--gold)}
+.om-menu-nav-inner{display:block;padding:0;max-width:none;overflow:visible;white-space:normal}
+.om-menu-category-links{display:flex;flex-wrap:wrap;gap:2px;min-width:0}
+.om-menu-category-links[hidden]{display:none!important}
+.om-menu-category-links a{font-size:12px;padding-inline:11px}
+.om-menu-group,.om-category,.om-compact,.om-spirit-panel{scroll-margin-top:calc(var(--om-menu-nav-height,150px) + 12px)}
+@media(max-width:800px){
+ .menu-editorial .om-menu-hero{display:flex;min-height:0}
+ .menu-editorial .om-menu-hero-image{order:0;aspect-ratio:4/5;height:auto;max-height:none}
+ .menu-editorial .om-menu-hero-image img{max-height:none;object-fit:contain}
+ .menu-editorial .om-menu-hero-copy{order:1;padding:26px 20px 30px}
+ .menu-editorial .om-menu-hero-copy h1{font-size:59px}
+ .menu-editorial .om-menu-hero-copy>p:not(.eyebrow){font-size:15px}
+ .om-menu-nav-layout{padding:8px 16px}
+ .om-menu-group-switch{flex-wrap:nowrap}
+ .om-menu-group-switch>a{flex:1;padding:8px 10px;font-size:13px}
+ .om-menu-nav.is-grouped .om-menu-nav-inner{overflow-x:auto;white-space:nowrap;scrollbar-width:thin;scrollbar-color:var(--gold) var(--panel)}
+ .om-menu-nav.is-grouped .om-menu-category-links{flex-wrap:nowrap}
+}

@@ -1,3 +1,6 @@
+# M3.3 prioritar — evaluare, NU publica
+Utilizatorul a autorizat explicit generarea coastelor fără fotografie proprie: folosește farfuria și cartofii din tomahawk.jpg drept ghid. Imaginea Porc și hero-ul mobil vertical4:5 sunt generate. Navigare pe grupe, hero desktop60vh, validare individuală+log, previzualizare în afara public, CSS comun inclus explicit în cele4pagini. Citește docs/menu-redesign/README.md. Instrucțiunile vechi despre necesitatea fotografiei coastelor sunt depășite.
+
 # M3.2 prioritar — fonturi întregul site, native+480/800, NU publica
 Utilizatorul a anulat 2000px. Vezi docs/menu-redesign/README.md. Importul tipografiei în site.css, surse mobile verificate pe fișierul -mobile-800, Porc separat din Și altele. Fotografia reală pentru OM-0080 lipsește și din produsul public, și din media_assets; nu genera alt preparat. Fonturile verificate pe index/evenimente/galerie/contact (1440/390, CSS direct blocat), 50PHPprobe și Chrome/RPC PASS; Lighthouse95/100/100/100. Citește docs/continuity/36_M32_FONTURI_MOBILE_EXPORTURI.md.
 

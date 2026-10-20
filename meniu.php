@@ -1,7 +1,7 @@
 <?php
-/** OLD MIKE M3.1 — COMPLETE STANDALONE PHP. Public RPC + 600s cache + last-good fallback.
+/** OLD MIKE M3.3 — COMPLETE STANDALONE PHP. Public RPC + 600s cache + last-good fallback.
  * Images/CSS/JS are separate files. No runtime PHP includes or secret keys.
- * Maintained source: server/lib/menu; rebuild: python3 scripts/build_menu_php.py.
+ * Standalone server-side menu; keep the external assets and writable cache beside this file.
  */
 declare(strict_types=1);
 namespace OldMikeMenu;
@@ -9,36 +9,46 @@ namespace OldMikeMenu;
 const ENDPOINT='https://kghkbfzggfughelmzchl.supabase.co/rest/v1/rpc/get_public_menu?select=group_code,category_name,name_ro,price,portion_display,description_ro,featured';
 const PUBLIC_KEY='sb_publishable_rI7-1Mnf22VHw3G3ZZOpcw_q84eQXUO';
 const TTL=600;
-function valid_rows(mixed $rows):bool {
-    if(!is_array($rows)||!array_is_list($rows)||count($rows)>10000)return false;
-    foreach($rows as $r){
-        if(!is_array($r))return false;
-        foreach(['group_code','category_name','name_ro'] as $key)if(!isset($r[$key])||!is_string($r[$key])||trim($r[$key])===''||strlen($r[$key])>1000)return false;
-        if(!isset($r['price'])||!is_numeric($r['price'])||!is_finite((float)$r['price'])||(float)$r['price']<0||(float)$r['price']>1000000)return false;
-        foreach(['description_ro','portion_display'] as $key)if(isset($r[$key])&&!is_string($r[$key]))return false;
-        if(isset($r['featured'])&&!is_bool($r['featured']))return false;
-    }
-    return true;
+function invalid_row_reason(mixed $row):?string{
+    if(!is_array($row))return 'row_type';
+    foreach(['group_code','category_name','name_ro']as $key)if(!isset($row[$key])||!is_string($row[$key])||trim($row[$key])===''||strlen($row[$key])>1000)return $key;
+    if(!isset($row['price'])||!is_numeric($row['price'])||!is_finite((float)$row['price'])||(float)$row['price']<0||(float)$row['price']>1000000)return 'price';
+    foreach(['description_ro','portion_display']as $key)if(isset($row[$key])&&!is_string($row[$key]))return $key;
+    if(isset($row['featured'])&&!is_bool($row['featured']))return 'featured';
+    return null;
+}
+/** Invalid products do not prevent the valid products from refreshing. */
+function valid_rows(mixed $rows,string $source='menu'):?array{
+    if(!is_array($rows)||!array_is_list($rows)||count($rows)>10000){error_log('[Old Mike menu] Invalid response envelope; source='.$source);return null;}
+    $valid=[];
+    foreach($rows as $index=>$row){$reason=invalid_row_reason($row);if($reason!==null){error_log('[Old Mike menu] Skipped invalid product; source='.$source.'; row='.$index.'; field='.$reason);continue;}$valid[]=$row;}
+    // Distinguish a genuinely empty published menu from a wholly broken payload.
+    if($rows&&!$valid){error_log('[Old Mike menu] No valid products in nonempty response; keeping last good cache');return null;}
+    return $valid;
 }
 function fetch_live():?array {
-    if(!function_exists('curl_init'))return null;
+    if(!function_exists('curl_init')){error_log('[Old Mike menu] cURL unavailable');return null;}
     $ch=curl_init(ENDPOINT);
     curl_setopt_array($ch,[CURLOPT_POST=>true,CURLOPT_POSTFIELDS=>json_encode(['restaurant_slug'=>'old-mike','requested_location_code'=>'loc-oldmike-matei']),CURLOPT_HTTPHEADER=>['apikey: '.PUBLIC_KEY,'Content-Type: application/json','Accept: application/json'],CURLOPT_RETURNTRANSFER=>true,CURLOPT_MAXFILESIZE=>2097152,CURLOPT_CONNECTTIMEOUT=>5,CURLOPT_TIMEOUT=>8,CURLOPT_FOLLOWLOCATION=>false,CURLOPT_SSL_VERIFYPEER=>true,CURLOPT_SSL_VERIFYHOST=>2]);
     $body=curl_exec($ch);$status=(int)curl_getinfo($ch,CURLINFO_HTTP_CODE);curl_close($ch);
-    if(!is_string($body)||$status!==200||strlen($body)>2097152)return null;
+    if(!is_string($body)||$status!==200||strlen($body)>2097152){error_log('[Old Mike menu] Public RPC request failed; HTTP='.$status);return null;}
     $rows=json_decode($body,true);
-    return valid_rows($rows)?$rows:null;
+    return valid_rows($rows,'supabase');
 }
 function read_cache(string $file):?array {
     if(!is_file($file)||filesize($file)>3145728)return null;
     $value=json_decode((string)@file_get_contents($file),true);
-    if(!is_array($value)||!isset($value['at'])||!is_numeric($value['at'])||(int)$value['at']>time()+60||!valid_rows($value['rows']??null))return null;
-    return ['at'=>(int)$value['at'],'rows'=>$value['rows']];
+    if(!is_array($value)||!isset($value['at'])||!is_numeric($value['at'])||(int)$value['at']>time()+60)return null;
+    $rows=valid_rows($value['rows']??null,'cache');if($rows===null)return null;
+    return ['at'=>(int)$value['at'],'rows'=>$rows];
 }
 /** Cache is always last-known-good. Concurrent requests never clobber it. */
 function menu(string $directory,?callable $fetcher=null,?int $now=null):array {
     $now??=time();$file=$directory.'/menu.json';$cached=read_cache($file);
-    $result=static fn(?array $value,string $source):array=>['rows'=>$value['rows']??[],'at'=>$value['at']??0,'source'=>$source,'stale'=>$source!=='live'&&$source!=='cache'];
+    $result=static function(?array $value,string $source)use($now):array{
+        if($value&&$source==='stale'&&$now-$value['at']>3600)error_log('[Old Mike menu] Serving cache older than60minutes; age_minutes='.(int)floor(($now-$value['at'])/60));
+        return ['rows'=>$value['rows']??[],'at'=>$value['at']??0,'source'=>$source,'stale'=>$source!=='live'&&$source!=='cache'];
+    };
     if($cached&&$now-$cached['at']<TTL)return $result($cached,'cache');
     if($cached&&is_file($directory.'/menu.retry')&&$now-(int)@file_get_contents($directory.'/menu.retry')<60)return $result($cached,'stale');
     if(!is_dir($directory))@mkdir($directory,0755,true);
@@ -52,7 +62,8 @@ function menu(string $directory,?callable $fetcher=null,?int $now=null):array {
         $fresh=read_cache($file);
         if($fresh&&$now-$fresh['at']<TTL)return $result($fresh,'cache');
         try{$rows=($fetcher??__NAMESPACE__.'\\fetch_live')();}catch(\Throwable $e){$rows=null;}
-        if($rows!==null&&valid_rows($rows)){
+        if($rows!==null)$rows=valid_rows($rows,'refresh');
+        if($rows!==null){
             $value=['at'=>$now,'rows'=>$rows];
             $json=json_encode($value,JSON_UNESCAPED_UNICODE|JSON_INVALID_UTF8_SUBSTITUTE);
             $temp=@tempnam($directory,'.menu-');
@@ -125,7 +136,7 @@ return [
  ['id'=>'gatite','group'=>'Mancare','categories'=>['Mancare Gatita Old Mike'],'title'=>'Mâncare gătită.','italic'=>'Mai stăm o porție.','kicker'=>'Fără grabă','image'=>'meniu/cat-gatite','alt'=>'Ciolan cu fasole în farfuria pătrată albă Old Mike, cu bucătar miniatural care îl escaladează.'],
  ['id'=>'pasare','group'=>'Mancare','categories'=>['Preparate Pasare'],'title'=>'Pasăre.','italic'=>'Rumeneală cu echipă.','kicker'=>'Din ceaun, cu drag','image'=>'meniu/cat-pasare','alt'=>'Coquelet cu mămăligă și mujdei în vasul metalic original, cu bucătari miniaturali.'],
  ['id'=>'gratar','group'=>'Mancare','categories'=>['Preparate cu Vita si Oaie'],'title'=>'Vită și oaie.','italic'=>'Foc mic. Poftă mare.','kicker'=>'Rumenit cum trebuie','image'=>'meniu/cat-gratar','alt'=>'Grătar de vită și cartofi prăjiți cu bucătar miniatural și solniță uriașă.'],
- ['id'=>'porc','group'=>'Mancare','categories'=>['Preparate cu Porc'],'title'=>'Porc.','italic'=>'Glazură cu aplauze.','kicker'=>'De lins pe degete','image'=>'meniu/cat-porc','standalone'=>true,'pending_image'=>'meniu/cat-porc','alt'=>'Coaste BBQ Old Mike cu cartofi prăjiți, glazurate de un bucătar miniatural.'],
+ ['id'=>'porc','group'=>'Mancare','categories'=>['Preparate cu Porc'],'title'=>'Porc.','italic'=>'Glazură cu aplauze.','kicker'=>'De lins pe degete','image'=>'meniu/cat-porc','standalone'=>true,'alt'=>'Ilustrație cu coaste BBQ și cartofi prăjiți pe farfurie dreptunghiulară, glazurate de bucătari miniaturali.'],
  ['id'=>'deserturi','group'=>'Mancare','categories'=>['Desert'],'title'=>'Deserturi.','italic'=>'Mai este loc. Știm noi.','kicker'=>'Final cu zâmbet','image'=>'meniu/cat-deserturi','alt'=>'Papanași cu smântână și dulceață, în scena existentă cu bucătari miniaturali.'],
  ['id'=>'bere','group'=>'Bauturi','categories'=>['Bere','Promotie Bere'],'title'=>'Bere.','italic'=>'Rece. Restul mai vedem.','kicker'=>'La o vorbă','image'=>'meniu/cat-bere','alt'=>'Două halbe fără etichete, un bucătar miniatural la dozator și altul care transportă spuma pe o lopățică.'],
  ['id'=>'vinuri','group'=>'Bauturi','categories'=>['Vinuri Albe','Vinuri Roze','Vinuri Rosii','Vinuri Spumante / Sampanie'],'title'=>'Vinuri.','italic'=>'Poveștile curg.','kicker'=>'Cu un strop de răgaz','image'=>'meniu/cat-vinuri','alt'=>'Bucătar-somelier miniatural turnând vin dintr-o sticlă mare fără etichetă lizibilă.'],
@@ -169,7 +180,7 @@ function picture(string $stem,string $alt,string $root,bool $hero=false):string{
     $sizes=$hero?'100vw':'(max-width:800px) 100vw, (max-width:1500px) 55vw, 800px';$mobile='';
     // Check the file shipped in the package, not a nonexistent mobile master.
     if($hero&&is_file($root.'/'.$base.'-mobile-800.webp')){
-        foreach(['avif','webp']as $format)$mobile.='<source media="(max-width:800px)" type="image/'.$format.'" srcset="'.e($base.'-mobile-480.'.$format).' 480w, '.e($base.'-mobile-800.'.$format).' 800w" sizes="100vw">';
+        foreach(['avif','webp']as $format)$mobile.='<source media="(max-width:800px)" type="image/'.$format.'" srcset="'.e($base.'-mobile-480.'.$format).' 480w, '.e($base.'-mobile-800.'.$format).' 800w, '.e($base.'-mobile.'.$format).' '.getimagesize($root.'/'.$base.'-mobile.webp')[0].'w" sizes="100vw">';
     }
     return '<picture>'.$mobile.'<source type="image/avif" srcset="'.e($sets['avif']).'" sizes="'.e($sizes).'"><img src="'.e($path).'" srcset="'.e($sets['webp']).'" sizes="'.e($sizes).'" width="'.$size[0].'" height="'.$size[1].'" alt="'.e($alt).'" '.($hero?'fetchpriority="high" loading="eager"':'loading="lazy"').' decoding="async"></picture>';
 }
@@ -231,30 +242,32 @@ function render(array $menu,string $root,bool $preview=false):string{
     $total=count($menu['rows']);$description='Meniul Old Mike Pub: preparate și băuturi, cu prețuri actualizate. Strada Matei Voievod 67, București. Rezervări: 0787 366 166.';
     ob_start();
     ?>
-<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="<?= $preview?'noindex,nofollow':'index,follow' ?>"><meta name="theme-color" content="#100e0b"><title>Meniu Old Mike Pub București | Preparate și prețuri actualizate</title><meta name="description" content="<?= e($description) ?>"><link rel="canonical" href="https://garden.oldmike.ro/meniu.html"><meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:site_name" content="Old Mike Pub"><meta property="og:title" content="Meniu Old Mike Pub · Gusturi pentru seri bune"><meta property="og:description" content="<?= e($description) ?>"><meta property="og:url" content="https://garden.oldmike.ro/meniu.html"><meta property="og:image" content="https://garden.oldmike.ro/assets/images/meniu/hero-meniu.webp"><meta property="og:image:width" content="1536"><meta property="og:image:height" content="864"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/brand/favicon-32.png"><link rel="stylesheet" href="assets/oldmike-design.css?v=1"><link rel="stylesheet" href="assets/site.css?v=m32"><script type="application/ld+json"><?= json_encode(json_ld($m),JSON_UNESCAPED_UNICODE|JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT|JSON_INVALID_UTF8_SUBSTITUTE) ?></script></head>
+<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="<?= $preview?'noindex,nofollow':'index,follow' ?>"><meta name="theme-color" content="#100e0b"><title>Meniu Old Mike Pub București | Preparate și prețuri actualizate</title><meta name="description" content="<?= e($description) ?>"><link rel="canonical" href="https://garden.oldmike.ro/meniu.html"><meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:site_name" content="Old Mike Pub"><meta property="og:title" content="Meniu Old Mike Pub · Gusturi pentru seri bune"><meta property="og:description" content="<?= e($description) ?>"><meta property="og:url" content="https://garden.oldmike.ro/meniu.html"><meta property="og:image" content="https://garden.oldmike.ro/assets/images/meniu/hero-meniu.webp"><meta property="og:image:width" content="1536"><meta property="og:image:height" content="864"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/brand/favicon-32.png"><link rel="stylesheet" href="assets/oldmike-design.css?v=m33"><link rel="stylesheet" href="assets/site.css?v=m33"><script type="application/ld+json"><?= json_encode(json_ld($m),JSON_UNESCAPED_UNICODE|JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT|JSON_INVALID_UTF8_SUBSTITUTE) ?></script></head>
 <body class="menu-editorial">
 <?php if($preview): ?><aside class="om-preview-notice">Previzualizare · <?= $total ?> produse și prețuri reale<?= $menu['at']?' · '.e((new \DateTimeImmutable('@'.$menu['at']))->setTimezone(new \DateTimeZone('Europe/Bucharest'))->format('d.m.Y H:i')):'' ?> · Site-ul oficial nu a fost modificat.</aside><?php endif ?>
 <?= header_html() ?>
 <main id="continut">
-<section class="om-menu-hero" aria-labelledby="menu-title"><figure class="om-menu-hero-image"><?= picture($config['hero']['image'],$config['hero']['alt'],$root,true) ?><figcaption>Imagine ilustrativă</figcaption></figure><div class="om-menu-hero-copy"><p class="eyebrow">La ce ți-e poftă?</p><h1 id="menu-title">Gusturi pentru<br><em>seri bune.</em></h1><p>Burgeri, pizza, un prânz bun.<br>Și încă un motiv să mai stai.</p><div class="om-hero-actions"><a class="button" href="#pranz">Vezi meniul de prânz <span aria-hidden="true">↓</span></a><a class="button ghost" href="tel:+40787366166">Sună · Rezervă</a></div></div></section>
+<section class="om-menu-hero" aria-labelledby="menu-title"><figure class="om-menu-hero-image"><?= picture($config['hero']['image'],$config['hero']['alt'],$root,true) ?></figure><div class="om-menu-hero-copy"><p class="eyebrow">La ce ți-e poftă?</p><h1 id="menu-title">Gusturi pentru<br><em>seri bune.</em></h1><p>Burgeri, pizza, un prânz bun.<br>Și încă un motiv să mai stai.</p><div class="om-hero-actions"><a class="button" href="#pranz">Vezi meniul de prânz <span aria-hidden="true">↓</span></a><a class="button ghost" href="tel:+40787366166">Sună · Rezervă</a></div></div></section>
 <div class="om-menu-wrap">
 <section class="om-lunch" id="pranz" aria-labelledby="lunch-title"><div><p class="om-kicker">Pauza cu gust bun</p><h2 id="lunch-title">Marea <em>Prânzeală.</em></h2><p class="om-lunch-parts"><?= e($lunch['parts']) ?></p><p class="om-lunch-hours"><?= e($lunch['hours']) ?></p></div><div class="om-lunch-price"><strong><?= e(str_replace(' lei','',price($lunch['price']))) ?><small>lei</small></strong><a class="om-text-link" href="https://meniu.oldmike.ro/m/old-mike/loc-oldmike-matei">Deschide meniul electronic <span aria-hidden="true">↗</span></a></div></section>
 </div>
-<nav class="om-menu-nav" aria-label="Categoriile meniului"><div class="om-menu-nav-inner">
-<?php foreach($m['groups'] as $g=>$categories):$gid=$groupIds[$g]??('grup-'.substr(hash('sha256',$g),0,8)); ?><a class="om-group-link" href="#<?= e($gid) ?>"><?= e($groupNames[$g]??name($g)) ?></a><?php foreach($m['sections'][$g]??[] as $s): ?><a href="#<?= e($s['id']) ?>"><?= e(rtrim($s['title'],'.')) ?></a><?php endforeach ?><?php if(!empty($m['compact'][$g])): ?><a href="#altele-<?= e($gid) ?>">Și altele<span class="sr-only"> · <?= e($groupNames[$g]??$g) ?></span></a><?php endif ?><?php endforeach ?>
-</div></nav>
+<nav class="om-menu-nav" aria-label="Categoriile meniului"><div class="om-menu-nav-layout"><div class="om-menu-group-switch" aria-label="Grupele meniului">
+<?php foreach($m['groups'] as $g=>$categories):$gid=$groupIds[$g]??('grup-'.substr(hash('sha256',$g),0,8)); ?><a href="#<?= e($gid) ?>" data-menu-group="<?= e($gid) ?>"><?= e($groupNames[$g]??name($g)) ?></a><?php endforeach ?>
+</div><div class="om-menu-nav-inner">
+<?php foreach($m['groups'] as $g=>$categories):$gid=$groupIds[$g]??('grup-'.substr(hash('sha256',$g),0,8)); ?><div class="om-menu-category-links" data-menu-nav-group="<?= e($gid) ?>"><?php foreach($m['sections'][$g]??[] as $s): ?><a href="#<?= e($s['id']) ?>"><?= e(rtrim($s['title'],'.')) ?></a><?php endforeach ?><?php if(!empty($m['compact'][$g])): ?><a href="#altele-<?= e($gid) ?>">Și altele<span class="sr-only"> · <?= e($groupNames[$g]??$g) ?></span></a><?php endif ?></div><?php endforeach ?>
+</div></div></nav>
 <div class="om-menu-wrap om-menu-body">
 <?php if(!$menu['rows']): ?><section class="om-menu-fallback"><h2>Pofta rămâne.<br><em>Ne auzim la telefon.</em></h2><p>Pentru meniul complet și detalii, deschide meniul electronic sau sună-ne.</p><a class="button" href="https://meniu.oldmike.ro/m/old-mike/loc-oldmike-matei">Deschide meniul electronic ↗</a></section><?php endif ?>
 <?php $number=0;foreach($m['groups'] as $g=>$categories):$gid=$groupIds[$g]??('grup-'.substr(hash('sha256',$g),0,8)); ?>
 <section class="om-menu-group" id="<?= e($gid) ?>" aria-labelledby="title-<?= e($gid) ?>"><div class="om-group-heading"><span class="om-kicker">Pe îndelete</span><h2 id="title-<?= e($gid) ?>"><?= e($groupNames[$g]??name($g)) ?><span aria-hidden="true">.</span></h2></div>
 <?php foreach($m['sections'][$g]??[] as $s):$number++; ?>
-<section class="om-category <?= !$s['has_image']?'om-category-text':($number%2===0?'om-category-reverse':'') ?>" id="<?= e($s['id']) ?>" aria-labelledby="title-<?= e($s['id']) ?>"><?php if($s['has_image']): ?><figure class="om-category-figure"><div class="om-category-image"><?= picture($s['image'],$s['alt'],$root) ?></div><figcaption>Imagine ilustrativă</figcaption></figure><?php endif ?><div class="om-category-copy"><p class="om-kicker"><?= str_pad((string)$number,2,'0',STR_PAD_LEFT) ?> / <?= e($s['kicker']) ?></p><h2 id="title-<?= e($s['id']) ?>"><?= e($s['title']) ?><br><em><?= e($s['italic']) ?></em></h2>
-<?php if($s['id']==='spirtoase'): ?><?= spirits_html($s['lists'],$config) ?><?php else: ?><?php foreach($s['lists'] as $c=>$rows):if(count($s['lists'])>1): ?><h3 class="om-subcategory-title"><?= e(label($c,$config)) ?></h3><?php endif ?><?= dishes($rows,label($c,$config)) ?><?php endforeach ?><?php endif ?></div></section>
+<section class="om-category <?= !$s['has_image']?'om-category-text':($number%2===0?'om-category-reverse':'') ?>" id="<?= e($s['id']) ?>" aria-labelledby="title-<?= e($s['id']) ?>"><?php if($s['has_image']): ?><figure class="om-category-figure"><div class="om-category-image"><?= picture($s['image'],$s['alt'],$root) ?></div></figure><?php endif ?><div class="om-category-copy"><p class="om-kicker"><?= str_pad((string)$number,2,'0',STR_PAD_LEFT) ?> / <?= e($s['kicker']) ?></p><h2 id="title-<?= e($s['id']) ?>"><?= e($s['title']) ?><br><em><?= e($s['italic']) ?></em></h2>
+<?php if($s['id']==='spirtoase'): ?><?= spirits_html($s['lists'],$config) ?><?php else: ?><?php foreach($s['lists'] as $c=>$rows):if(count($s['lists'])>1&&lower(rtrim(label($c,$config),'. '))!==lower(rtrim($s['title'],'. '))): ?><h3 class="om-subcategory-title"><?= e(label($c,$config)) ?></h3><?php endif ?><?= dishes($rows,label($c,$config)) ?><?php endforeach ?><?php endif ?></div></section>
 <?php endforeach ?>
 <?php if(!empty($m['compact'][$g])): ?><section class="om-compact" id="altele-<?= e($gid) ?>" aria-labelledby="title-altele-<?= e($gid) ?>"><div class="om-compact-heading"><p class="om-kicker">Și încă ceva bun</p><h2 id="title-altele-<?= e($gid) ?>">Și <em>altele.</em></h2></div><div class="om-compact-grid">
 <?php foreach($m['compact'][$g] as $c=>$rows): ?><section class="om-compact-category" aria-labelledby="compact-<?= substr(hash('sha256',$g.'/'.$c),0,12) ?>"><h3 id="compact-<?= substr(hash('sha256',$g.'/'.$c),0,12) ?>"><?= e(label($c,$config)) ?></h3><?= dishes($rows,label($c,$config)) ?></section><?php endforeach ?>
 </div></section><?php endif ?></section><?php endforeach ?>
-<section class="om-menu-end" aria-label="Mai multe informații despre meniu"><p class="om-kicker">Ne vedem la masă</p><h2>Ai ales?<br><em>Noi am pus masa.</em></h2><a class="button" href="https://meniu.oldmike.ro/m/old-mike/loc-oldmike-matei">Deschide meniul electronic <span aria-hidden="true">↗</span></a><p>Poze de produs și detalii în meniul electronic.</p><p class="om-menu-fineprint">Prețurile se actualizează automat din meniul restaurantului.<br>Informații despre alergeni: întreabă ospătarul.</p></section>
+<section class="om-menu-end" aria-label="Mai multe informații despre meniu"><p class="om-kicker">Ne vedem la masă</p><h2>Ai ales?<br><em>Noi am pus masa.</em></h2><a class="button" href="https://meniu.oldmike.ro/m/old-mike/loc-oldmike-matei">Deschide meniul electronic <span aria-hidden="true">↗</span></a><p>Poze de produs și detalii în meniul electronic.</p><p class="om-menu-fineprint">Prețurile se actualizează automat din meniul restaurantului.<br>Informații despre alergeni: întreabă ospătarul.<br>Imagine ilustrativă: scenele de categorie sunt ilustrative; fotografiile produselor sunt în meniul electronic.</p></section>
 </div></main>
 <?= footer_html() ?>
 <script src="assets/site.js" defer></script><script src="assets/menu-editorial.js" defer></script>

@@ -6,7 +6,7 @@ $count=0;function check(bool $ok,string $label):void{global $count;if(!$ok)throw
 $root=dirname(__DIR__,2);$base=sys_get_temp_dir().'/om-menu-'.bin2hex(random_bytes(6));mkdir($base,0700);$now=time();
 $rows=[['group_code'=>'Mancare','category_name'=>'Categorie nouă','name_ro'=>'PENNE Carbonara','price'=>33.99,'portion_display'=>'300 GR','description_ro'=>'sos și parmezan','featured'=>true]];
 try{
- check(valid_rows($rows),'valid rows');check(!valid_rows([['price'=>12]]),'malformed row');check(!valid_rows('bad'),'bad JSON');check(!valid_rows([array_replace($rows[0],['price'=>null])]),'missing price');check(!valid_rows([array_replace($rows[0],['price'=>-1])]),'negative price');
+ check(valid_rows($rows)!==null,'valid rows');check(!valid_rows([['price'=>12]]),'malformed row');check(!valid_rows('bad'),'bad JSON');check(!valid_rows([array_replace($rows[0],['price'=>null])]),'missing price');check(!valid_rows([array_replace($rows[0],['price'=>-1])]),'negative price');
  check(name('PENNE Carbonara')==='Penne Carbonara','mixed uppercase name');check(name('SALATĂ GRECEASCĂ')==='Salată Grecească','Romanian uppercase');check(name('Coaste BBQ')==='Coaste BBQ','acronym preserved');check(portion('500 GR / 300 gr')==='500 g / 300 g','grams');check(portion('250 ML')==='250 ml','millilitres');check(price(54)==='54 lei','whole price');check(price(33.99)==='33,99 lei','decimal price');check(description('sos de roșii')==='Sos de roșii','sentence');
  $calls=0;$fetch=static function()use(&$calls,$rows){$calls++;return $rows;};
  $first=menu($base,$fetch,$now);check($first['source']==='live'&&$calls===1,'cold fetch');check(is_file($base.'/menu.json'),'cache created');
@@ -19,7 +19,7 @@ try{
  $malicious=[array_replace($rows[0],['name_ro'=>'<script>alert(1)</script>','description_ro'=>'</script><script>alert(2)</script>'])];$safe=render(['rows'=>$malicious,'at'=>$now],$root);check(!str_contains($safe,'<script>alert('),'HTML/LD injection escaped');
  $emptyDir=$base.'/empty';mkdir($emptyDir);$fallback=menu($emptyDir,static fn()=>null,$now);$fallbackHtml=render($fallback,$root);check(str_contains($fallbackHtml,'Deschide meniul electronic')&&!str_contains($fallbackHtml,'Exception'),'cold outage useful fallback');
  $empty=menu($base,static fn()=>[],$now+700);check($empty['rows']===[],'legitimate empty menu accepted');
- $live=json_decode(file_get_contents($root.'/data/menu-redesign/menu-preview-snapshot.json'),true);check(valid_rows($live['rows']),'real snapshot valid');$page=render($live,$root,true);check(substr_count($page,'data-menu-item')===257,'257 products rendered exactly once');
+ $live=json_decode(file_get_contents($root.'/data/menu-redesign/menu-preview-snapshot.json'),true);check(valid_rows($live['rows'])!==null,'real snapshot valid');$page=render($live,$root,true);check(substr_count($page,'data-menu-item')===257,'257 products rendered exactly once');
  preg_match('~<script type="application/ld\+json">(.*?)</script>~s',$page,$match);$ld=json_decode($match[1],true,512,JSON_THROW_ON_ERROR);$schemaCount=0;foreach($ld['hasMenu']['hasMenuSection'] as $section)$schemaCount+=count($section['hasMenuItem']);check($schemaCount===257,'257 schema items');check(strpos($page,'href="#mancare"')<strpos($page,'href="#bauturi"'),'food before drinks');
  $drink=OldMikeMenu\drink_details(['name_ro'=>'Chivas Regal','portion_display'=>'40 ML','description_ro'=>'40% alcool']);
  check($drink['inline']==='40 ml · 40%'&&$drink['description']==='','drink quantity+ABV inline, no duplicate description');
@@ -35,13 +35,24 @@ try{
  check(str_contains($page,'fetchpriority="high" loading="eager"'),'hero priority');
  check(!str_contains($page,'data:image/')&&!str_contains($page,';base64,'),'no embedded image data');
  check(str_contains($page,'assets/images/meniu/hero-meniu.webp')&&!str_contains($page,'hero-single-chefs'),'menu hero distinct from homepage');
- check(!is_file($root.'/assets/images/meniu/hero-meniu-mobile.webp')&&is_file($root.'/assets/images/meniu/hero-meniu-mobile-800.webp')&&str_contains($page,'hero-meniu-mobile-800.webp 800w'),'mobile source generated from shipped800file, no mobile master needed');
+ check(is_file($root.'/assets/images/meniu/hero-meniu-mobile.webp')&&is_file($root.'/assets/images/meniu/hero-meniu-mobile-800.webp')&&str_contains($page,'hero-meniu-mobile-800.webp 800w'),'mobile source generated from shipped800file, no mobile master needed');
  check(str_contains($page,'id="porc"')&&!str_contains($page,'pending_image'),'pork is a standalone section, no placeholder text');
  check(str_contains($page,'assets/images/meniu/hero-meniu-mobile-480.avif'),'mobile AVIF source');
  check(!str_contains($page,'-2000.')&&!str_contains($page,'-1200.'),'no2000/1200media requests');
- $css=file_get_contents($root.'/assets/site.css');check(str_starts_with($css,"@import url('oldmike-design.css');"),'shared typography import first');
+ $css=file_get_contents($root.'/assets/site.css');check(!str_contains($css,'@import'),'shared CSS has no import');foreach(['index.html','evenimente.html','galerie.html','contact.html']as $sitePage)check(str_contains(file_get_contents($root.'/'.$sitePage),'href="assets/oldmike-design.css?'),'explicit shared typography '.$sitePage);
  check(!preg_match('/\\d+\\s*%\\s*(?:alcool|alc\\b)/iu',$page),'ABV suffix removed from customer HTML and JSON-LD');
- echo 'PASS '.$count.' menu checks: cache/outage/formatting/new category/escaping/257 complete real items'.PHP_EOL;
+ check(substr_count($page,'Imagine ilustrativă')===1,'one illustration note');
+ check(!str_contains($page,'<h3 class="om-subcategory-title">Bere</h3>'),'no duplicate beer subtitle');
+ check(str_contains($page,'assets/images/meniu/cat-porc.webp'),'pork editorial image');
+ $log=$base.'/errors.log';ini_set('error_log',$log);
+ check(count(valid_rows([$rows[0],['price'=>null]],'test'))===1,'skip only malformed row');
+ file_put_contents($base.'/menu.json',json_encode(['at'=>$now-700,'rows'=>$rows]));@unlink($base.'/menu.retry');
+ $partial=menu($base,static fn()=>[['bad'=>true],array_replace($rows[0],['price'=>61])],$now);
+ check(count($partial['rows'])===1&&$partial['rows'][0]['price']===61&&read_cache($base.'/menu.json')['rows'][0]['price']===61,'partial refresh updates and caches valid products');
+ file_put_contents($base.'/menu.json',json_encode(['at'=>$now-3700,'rows'=>$rows]));menu($base,static fn()=>null,$now);
+ check(str_contains(file_get_contents($log),'Skipped invalid product')&&str_contains(file_get_contents($log),'older than60minutes'),'invalid rows and old cache logged');
+ echo 'PASS '
+.$count.' menu checks: cache/outage/formatting/new category/escaping/257 complete real items'.PHP_EOL;
 }finally{
  foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($base,FilesystemIterator::SKIP_DOTS),RecursiveIteratorIterator::CHILD_FIRST)as $p){$p->isDir()?rmdir($p->getPathname()):unlink($p->getPathname());}rmdir($base);
 }

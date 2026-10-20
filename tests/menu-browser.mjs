@@ -53,16 +53,20 @@ try{
   await evaluate('document.fonts.ready.then(()=>true)',true);
   await evaluate("Promise.all([...document.images].filter(x=>x.complete&&x.naturalWidth).map(x=>x.decode().catch(()=>{}))).then(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))))",true);
   const result=await evaluate(`(()=>{
-   const nav=document.querySelector('.om-menu-nav-inner'),links=[...nav.querySelectorAll('a')],rows=[...document.querySelectorAll('[data-menu-item]')],hero=document.querySelector('.om-menu-hero img');
+   const nav=document.querySelector('.om-menu-nav-inner'),links=[...document.querySelectorAll('.om-menu-group-switch a')],rows=[...document.querySelectorAll('[data-menu-item]')],hero=document.querySelector('.om-menu-hero img');
    return {width:innerWidth,scroll:document.documentElement.scrollWidth,count:rows.length,singleNavRow:new Set(links.map(x=>Math.round(x.getBoundingClientRect().top))).size===1,heroLoaded:hero.complete&&hero.naturalWidth>0,heroRect:{width:hero.getBoundingClientRect().width,height:hero.getBoundingClientRect().height},mobileHeroClear:innerWidth>=801||document.querySelector('.om-menu-hero-copy .eyebrow').getBoundingClientRect().top>=hero.getBoundingClientRect().bottom+16,heroStack:document.elementsFromPoint(innerWidth*.75,350).map(x=>({tag:x.tagName,cls:x.className})),heroStyles:[hero,hero.parentElement,hero.parentElement.parentElement].map(x=>{const s=getComputedStyle(x),b=x.getBoundingClientRect();return {tag:x.tagName,cls:x.className,src:x.currentSrc,rect:{x:b.x,y:b.y,w:b.width,h:b.height},opacity:s.opacity,visibility:s.visibility,z:s.zIndex,objectFit:s.objectFit,mask:s.maskImage}}),headingFont:getComputedStyle(document.querySelector('h1')).fontFamily,bodyFont:getComputedStyle(document.body).fontFamily,brokenImages:[...document.images].filter(x=>x.getBoundingClientRect().top<innerHeight&&(!x.complete||!x.naturalWidth)).map(x=>x.src),header:!!document.querySelector('.om-header'),footer:!!document.querySelector('.om-footer'),overflow:[...document.querySelectorAll('body *')].map(x=>({tag:x.tagName,cls:x.className,right:Math.round(x.getBoundingClientRect().right),width:Math.round(x.getBoundingClientRect().width)})).filter(x=>x.right>innerWidth+1).slice(0,18)};
   })()`);
   if(width===1440||width===390){await evaluate('window.scrollTo(0,0)');await delay(300);const normal=await send('Page.captureScreenshot',{format:'png'},sessionId);await writeFile('output/menu-m3/viewport-'+width+'.png',Buffer.from(normal.data,'base64'));const r=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width,height:width===1440?2000:2600,scale:1}},sessionId);await writeFile('output/menu-m3/'+(width===1440?'preview-desktop-top':'preview-telefon')+'.png',Buffer.from(r.data,'base64'));}
-  if(result.scroll>result.width+1||result.count!==257||!result.singleNavRow||!result.heroLoaded||result.heroRect.height<180||!result.mobileHeroClear||result.brokenImages.length||!result.header||!result.footer||!result.headingFont.includes('Cormorant')||!result.bodyFont.includes('Manrope')||(width<801&&!result.heroStyles[0].src.includes('hero-meniu-mobile-')))throw Error('Layout '+JSON.stringify(result));
+  if(result.scroll>result.width+1||result.count!==257||!result.singleNavRow||!result.heroLoaded||result.heroRect.height<180||(width>800&&result.heroRect.height>540)||!result.mobileHeroClear||result.brokenImages.length||!result.header||!result.footer||!result.headingFont.includes('Cormorant')||!result.bodyFont.includes('Manrope')||(width<801&&!result.heroStyles[0].src.includes('hero-meniu-mobile-')))throw Error('Layout '+JSON.stringify(result));
 
   await evaluate("document.querySelector('.om-more summary').click()");
   if(!await evaluate("!!document.querySelector('.om-more[open]')"))throw Error('Native details failed');
   await evaluate("document.getElementById('pizza').scrollIntoView()");await delay(150);
   if(!await evaluate("document.querySelector('.om-menu-nav a[href=\"#pizza\"]').getAttribute('aria-current')==='location'"))throw Error('Current category tracking failed');
+  if(width===1440){
+   const grouped=await evaluate(`(()=>{const buttons=[...document.querySelectorAll('[data-menu-group]')];return buttons.map(b=>{b.click();const visible=[...document.querySelectorAll('[data-menu-nav-group]:not([hidden]) a')];return {group:b.dataset.menuGroup,count:visible.length,reachable:visible.every(a=>{const r=a.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth;})};});})()`);
+   if(grouped.length!==3||grouped.some(x=>!x.reachable||!x.count))throw Error('Group categories inaccessible '+JSON.stringify(grouped));
+  }
   if(width<500){await evaluate("document.querySelector('.om-mobile-nav summary').click()");if(!await evaluate("document.querySelector('.om-mobile-nav').open"))throw Error('Mobile header navigation failed');}
   await evaluate("document.getElementById('spirtoase').scrollIntoView()");await delay(200);
   const tabs=await evaluate(`(()=>{const box=document.querySelector('[data-spirit-tabs]'),tabs=[...box.querySelectorAll('[role=tab]')],panels=[...box.querySelectorAll('[role=tabpanel]')];return {count:tabs.length,labels:tabs.map(t=>t.textContent.trim()),visible:panels.filter(p=>!p.hidden).length,overflow:document.documentElement.scrollWidth>innerWidth,allRows:document.querySelectorAll('[data-menu-item]').length};})()`);
@@ -79,22 +83,21 @@ try{
  await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]},sessionId);
  if(!await evaluate("getComputedStyle(document.querySelector('.om-category-image')).animationName==='none'"))throw Error('Reduced motion ignored');
  await writeFile('output/menu-m3/browser-checks.json',JSON.stringify({pass:true,checks,reducedMotion:true,nativeDetails:true,currentCategory:true,spiritTabs:true,tabKeyboard:true,mobileHeroClear:true},null,2));
- await send('Emulation.setScriptExecutionDisabled',{value:true},sessionId);await send('Page.navigate',{url:'http://127.0.0.1:4188/preview'},sessionId);await delay(600);if(!await evaluate("document.querySelectorAll('[data-menu-item]').length===257&&[...document.querySelectorAll('.om-spirit-panel')].every(p=>!p.hidden)"))throw Error('Server HTML without JavaScript incomplete');await send('Emulation.setScriptExecutionDisabled',{value:false},sessionId);
- // Verify actual site pages with the explicit design link blocked: site.css alone
- // must import typography (same dependency shape as older deployed HTML).
+ await send('Emulation.setScriptExecutionDisabled',{value:true},sessionId);await send('Page.navigate',{url:'http://127.0.0.1:4188/preview'},sessionId);await delay(600);if(!await evaluate("document.querySelectorAll('[data-menu-item]').length===257&&[...document.querySelectorAll('.om-spirit-panel')].every(p=>!p.hidden)&&[...document.querySelectorAll('[data-menu-nav-group]')].every(p=>!p.hidden)"))throw Error('Server HTML without JavaScript incomplete');await send('Emulation.setScriptExecutionDisabled',{value:false},sessionId);
+ // Verify explicit shared stylesheet links and actual loaded fonts on all site pages.
  const siteFonts=[];await send('Network.enable',{},sessionId);
- await send('Network.setBlockedURLs',{urls:['*oldmike-design.css?v=1']},sessionId);
+ await send('Network.setBlockedURLs',{urls:['*nonexistent-font-block-test*']},sessionId);
  for(const width of[1440,390])for(const page of['index.html','evenimente.html','galerie.html','contact.html']){
   await send('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<500},sessionId);
   await send('Page.navigate',{url:'http://127.0.0.1:4188/'+page},sessionId);
   const start=Date.now();while(Date.now()-start<20000){if(await evaluate("document.readyState==='complete'&&!!document.querySelector('h1')"))break;await delay(100);}
   await evaluate('document.fonts.ready.then(()=>true)',true);
-  const fonts=await evaluate(`(()=>{const faces=[...document.fonts];return{body:getComputedStyle(document.body).fontFamily,heading:getComputedStyle(document.querySelector('h1')).fontFamily,bodyToken:getComputedStyle(document.documentElement).getPropertyValue('--om-font-body').trim(),loadedBody:faces.some(f=>f.family.includes('Manrope')&&f.status==='loaded'),loadedHeading:faces.some(f=>f.family.includes('Cormorant')&&f.status==='loaded')}})()`);
-  if(!fonts.body.includes('Manrope')||!fonts.heading.includes('Cormorant')||!fonts.bodyToken||!fonts.loadedBody||!fonts.loadedHeading)throw Error('Site font regression '+JSON.stringify({page,width,fonts}));
+  const fonts=await evaluate(`(()=>{const faces=[...document.fonts];return{body:getComputedStyle(document.body).fontFamily,explicitLink:!!document.querySelector('link[href*="oldmike-design.css"]'),heading:getComputedStyle(document.querySelector('h1')).fontFamily,bodyToken:getComputedStyle(document.documentElement).getPropertyValue('--om-font-body').trim(),loadedBody:faces.some(f=>f.family.includes('Manrope')&&f.status==='loaded'),loadedHeading:faces.some(f=>f.family.includes('Cormorant')&&f.status==='loaded')}})()`);
+  if(!fonts.explicitLink||!fonts.body.includes('Manrope')||!fonts.heading.includes('Cormorant')||!fonts.bodyToken||!fonts.loadedBody||!fonts.loadedHeading)throw Error('Site font regression '+JSON.stringify({page,width,fonts}));
   siteFonts.push({page,width,...fonts});
   if(page==='index.html'){const shot=await send('Page.captureScreenshot',{format:'png'},sessionId);await writeFile('output/menu-m3/index-fonturi-'+width+'.png',Buffer.from(shot.data,'base64'));}
  }
  await send('Network.setBlockedURLs',{urls:[]},sessionId);
- await writeFile('output/menu-m3/site-font-checks.json',JSON.stringify({pass:true,designDirectLinkIntentionallyBlocked:true,checks:siteFonts},null,2));
+ await writeFile('output/menu-m3/site-font-checks.json',JSON.stringify({pass:true,explicitDesignLinks:true,checks:siteFonts},null,2));
  console.log('PASS Chrome:1440/390/360,257rows,no horizontal scroll,fonts,hero,details,active nav,mobile header,reduced motion');
 }finally{browser.kill('SIGKILL');await rm(profile,{recursive:true,force:true,maxRetries:10,retryDelay:100});}

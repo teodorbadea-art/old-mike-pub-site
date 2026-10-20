@@ -27,12 +27,7 @@ for name,source in sources.items():
      temp=path.with_suffix('.tmp');resized.save(temp,extension.upper(),**options);os.replace(temp,path)
     with Image.open(path)as check:assert check.size==(width,height);check.verify()
     manifest[name]['variants'].append({'path':str(path.relative_to(ROOT)),'width':width,'height':height,'bytes':path.stat().st_size})
-# Mobile sources show the exact same full16:9frame, no crop; no '-mobile.webp' master.
-for width in [480,800]:
- for extension in ['webp','avif']:
-  source=OUT/f'hero-meniu-{width}.{extension}';dest=OUT/f'hero-meniu-mobile-{width}.{extension}'
-  import shutil
-  shutil.copy2(source,dest)
+# M3.3 mobile and pork assets are generated separately; never overwrite them with the wide hero.
 for path in OUT.iterdir():
  if any(path.name.endswith(f'-{width}.{ext}')for width in [1200,2000]for ext in ['webp','avif']):path.unlink()
 (ROOT/'docs/menu-redesign/m32-image-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')

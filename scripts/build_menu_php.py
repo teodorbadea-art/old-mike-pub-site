@@ -27,7 +27,7 @@ header('Cache-Control: public, max-age=0, must-revalidate');
 header('X-Content-Type-Options: nosniff');
 echo render($loaded,__DIR__,$preview);
 '''
-output="<?php\n/** OLD MIKE M3.1 — COMPLETE STANDALONE PHP. Public RPC + 600s cache + last-good fallback.\n * Images/CSS/JS are separate files. No runtime PHP includes or secret keys.\n * Maintained source: server/lib/menu; rebuild: python3 scripts/build_menu_php.py.\n */\ndeclare(strict_types=1);\nnamespace OldMikeMenu;\n\n"+data+'\n// CATEGORY → IMAGE + EDITORIAL CONFIGURATION (one place).\nfunction configuration():array {\n'+config+'\n}\n'+shell+'\n'+renderer+entry
+output="<?php\n/** OLD MIKE M3.3 — COMPLETE STANDALONE PHP. Public RPC + 600s cache + last-good fallback.\n * Images/CSS/JS are separate files. No runtime PHP includes or secret keys.\n * Standalone server-side menu; keep the external assets and writable cache beside this file.\n */\ndeclare(strict_types=1);\nnamespace OldMikeMenu;\n\n"+data+'\n// CATEGORY → IMAGE + EDITORIAL CONFIGURATION (one place).\nfunction configuration():array {\n'+config+'\n}\n'+shell+'\n'+renderer+entry
 path=ROOT/'meniu.php'
 if '--check' in sys.argv:
  assert path.read_text()==output,'meniu.php needs regeneration'
