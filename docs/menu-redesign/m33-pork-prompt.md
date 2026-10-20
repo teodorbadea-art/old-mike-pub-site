@@ -8,7 +8,7 @@ Imaginea este o **ilustrație creativă autorizată**, nu fotografia exactă a c
 
 ## Referință reală
 
-`work/menu-reference-photos/tomahawk.jpg`, inspectată înainte de generare: farfurie albă dreptunghiulară cu colțuri rotunjite, margine joasă; cartofi groși, aurii, cu tăietură rustică. Carnea de vită și sosul din referință nu au fost folosite ca subiect.
+`work/menu-reference-photos/tomahawk.jpg`, inspectată înainte de generare: farfurie albă dreptunghiulară cu colțuri rotunjite, margine joasă; cartofi groși, aurii, cu tăietură rustică. Carnea și sosul din referință nu au fost folosite ca subiect.
 
 Alt: „Bucătari în miniatură glazurează coaste de porc BBQ cu o bidinea, pe o farfurie albă dreptunghiulară cu cartofi aurii.”
 

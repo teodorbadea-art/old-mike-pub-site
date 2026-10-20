@@ -1,7 +1,7 @@
 <?php
 /** The ONLY category -> illustration/editorial mapping. New categories need no edits. */
 return [
- 'hero'=>['image'=>'meniu/hero-meniu','alt'=>'Masă Old Mike cu burger, pizza, platou cu grătare și cartofi prăjiți, halbe și cinci bucătari în miniatură la lucru.'],
+ 'hero'=>['image'=>'meniu/hero-meniu','alt'=>'Masă Old Mike cu burger, pizza, platou cu grătare și cartofi prăjiți, halbe și bucătari în miniatură la lucru.'],
  'spirit_tabs'=>[
  ['id'=>'whisky','label'=>'Whisky','categories'=>['Whisky']],
  ['id'=>'rom','label'=>'Rom','categories'=>['Rom']],

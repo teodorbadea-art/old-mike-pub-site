@@ -1,0 +1,926 @@
+{
+  "cat-bere-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 23152
+  },
+  "cat-bere-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 32622
+  },
+  "cat-bere-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 57155
+  },
+  "cat-bere-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 88612
+  },
+  "cat-bere.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 156086
+  },
+  "cat-bere.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 225780
+  },
+  "cat-burgeri-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 22153
+  },
+  "cat-burgeri-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 29756
+  },
+  "cat-burgeri-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 52009
+  },
+  "cat-burgeri-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 67490
+  },
+  "cat-burgeri.avif": {
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 95879
+  },
+  "cat-burgeri.webp": {
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 127130
+  },
+  "cat-cafea-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 15227
+  },
+  "cat-cafea-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 19878
+  },
+  "cat-cafea-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 33523
+  },
+  "cat-cafea-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 43342
+  },
+  "cat-cafea.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 84827
+  },
+  "cat-cafea.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 111788
+  },
+  "cat-ciorbe-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 25082
+  },
+  "cat-ciorbe-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 33736
+  },
+  "cat-ciorbe-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 59115
+  },
+  "cat-ciorbe-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 77526
+  },
+  "cat-ciorbe.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 157409
+  },
+  "cat-ciorbe.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 206506
+  },
+  "cat-cocktailuri-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 21508
+  },
+  "cat-cocktailuri-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 28402
+  },
+  "cat-cocktailuri-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 52081
+  },
+  "cat-cocktailuri-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 68626
+  },
+  "cat-cocktailuri.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 144573
+  },
+  "cat-cocktailuri.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 191928
+  },
+  "cat-deserturi-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 21490
+  },
+  "cat-deserturi-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 28522
+  },
+  "cat-deserturi-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 54862
+  },
+  "cat-deserturi-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 68498
+  },
+  "cat-deserturi.avif": {
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 103080
+  },
+  "cat-deserturi.webp": {
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 137372
+  },
+  "cat-gatite-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 22270
+  },
+  "cat-gatite-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 28708
+  },
+  "cat-gatite-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 52915
+  },
+  "cat-gatite-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 66288
+  },
+  "cat-gatite.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 149919
+  },
+  "cat-gatite.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 183964
+  },
+  "cat-gratar-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 24512
+  },
+  "cat-gratar-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 33548
+  },
+  "cat-gratar-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 58527
+  },
+  "cat-gratar-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 78250
+  },
+  "cat-gratar.avif": {
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 109478
+  },
+  "cat-gratar.webp": {
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 151790
+  },
+  "cat-pasare-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 24550
+  },
+  "cat-pasare-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 32670
+  },
+  "cat-pasare-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 56629
+  },
+  "cat-pasare-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 72952
+  },
+  "cat-pasare.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 148893
+  },
+  "cat-pasare.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 194116
+  },
+  "cat-paste-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 22177
+  },
+  "cat-paste-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 29710
+  },
+  "cat-paste-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 49674
+  },
+  "cat-paste-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 63182
+  },
+  "cat-paste.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 134095
+  },
+  "cat-paste.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 170268
+  },
+  "cat-peste-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 26586
+  },
+  "cat-peste-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 36816
+  },
+  "cat-peste-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 62615
+  },
+  "cat-peste-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 85454
+  },
+  "cat-peste.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 169455
+  },
+  "cat-peste.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 237628
+  },
+  "cat-pizza-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 24697
+  },
+  "cat-pizza-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 33690
+  },
+  "cat-pizza-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 56948
+  },
+  "cat-pizza-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 75740
+  },
+  "cat-pizza.avif": {
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 108061
+  },
+  "cat-pizza.webp": {
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 145720
+  },
+  "cat-platouri-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 23155
+  },
+  "cat-platouri-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 31676
+  },
+  "cat-platouri-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 54922
+  },
+  "cat-platouri-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 73866
+  },
+  "cat-platouri.avif": {
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 106504
+  },
+  "cat-platouri.webp": {
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 148742
+  },
+  "cat-porc-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 24549
+  },
+  "cat-porc-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 38088
+  },
+  "cat-porc-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 57125
+  },
+  "cat-porc-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 85846
+  },
+  "cat-porc.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 145972
+  },
+  "cat-porc.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 221826
+  },
+  "cat-racoritoare-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 22093
+  },
+  "cat-racoritoare-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 30328
+  },
+  "cat-racoritoare-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 53241
+  },
+  "cat-racoritoare-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 70602
+  },
+  "cat-racoritoare.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 149519
+  },
+  "cat-racoritoare.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 199212
+  },
+  "cat-salate-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 27614
+  },
+  "cat-salate-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 37590
+  },
+  "cat-salate-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 62361
+  },
+  "cat-salate-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 83658
+  },
+  "cat-salate.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 166608
+  },
+  "cat-salate.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 221638
+  },
+  "cat-spirtoase-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 18349
+  },
+  "cat-spirtoase-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 24560
+  },
+  "cat-spirtoase-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 41334
+  },
+  "cat-spirtoase-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 55924
+  },
+  "cat-spirtoase.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 109705
+  },
+  "cat-spirtoase.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 151812
+  },
+  "cat-starters-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 20208
+  },
+  "cat-starters-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 27246
+  },
+  "cat-starters-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 43171
+  },
+  "cat-starters-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 56476
+  },
+  "cat-starters.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 108012
+  },
+  "cat-starters.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 136040
+  },
+  "cat-tomahawk-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 23066
+  },
+  "cat-tomahawk-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 31516
+  },
+  "cat-tomahawk-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 55121
+  },
+  "cat-tomahawk-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 71898
+  },
+  "cat-tomahawk.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 151440
+  },
+  "cat-tomahawk.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 198270
+  },
+  "cat-vinuri-480.avif": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 18721
+  },
+  "cat-vinuri-480.webp": {
+    "dimensions": [
+      480,
+      320
+    ],
+    "bytes": 24240
+  },
+  "cat-vinuri-800.avif": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 42842
+  },
+  "cat-vinuri-800.webp": {
+    "dimensions": [
+      800,
+      533
+    ],
+    "bytes": 56146
+  },
+  "cat-vinuri.avif": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 116349
+  },
+  "cat-vinuri.webp": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 155346
+  },
+  "hero-meniu-480.avif": {
+    "dimensions": [
+      480,
+      270
+    ],
+    "bytes": 33261
+  },
+  "hero-meniu-480.webp": {
+    "dimensions": [
+      480,
+      270
+    ],
+    "bytes": 47136
+  },
+  "hero-meniu-800.avif": {
+    "dimensions": [
+      800,
+      450
+    ],
+    "bytes": 91596
+  },
+  "hero-meniu-800.webp": {
+    "dimensions": [
+      800,
+      450
+    ],
+    "bytes": 130612
+  },
+  "hero-meniu-mobile-480.avif": {
+    "dimensions": [
+      480,
+      600
+    ],
+    "bytes": 65621
+  },
+  "hero-meniu-mobile-480.webp": {
+    "dimensions": [
+      480,
+      600
+    ],
+    "bytes": 103728
+  },
+  "hero-meniu-mobile-800.avif": {
+    "dimensions": [
+      800,
+      1000
+    ],
+    "bytes": 146034
+  },
+  "hero-meniu-mobile-800.webp": {
+    "dimensions": [
+      800,
+      1000
+    ],
+    "bytes": 227442
+  },
+  "hero-meniu-mobile.avif": {
+    "dimensions": [
+      1120,
+      1400
+    ],
+    "bytes": 229944
+  },
+  "hero-meniu-mobile.webp": {
+    "dimensions": [
+      1120,
+      1400
+    ],
+    "bytes": 360262
+  },
+  "hero-meniu.avif": {
+    "dimensions": [
+      1536,
+      864
+    ],
+    "bytes": 217110
+  },
+  "hero-meniu.webp": {
+    "dimensions": [
+      1536,
+      864
+    ],
+    "bytes": 307260
+  }
+}
