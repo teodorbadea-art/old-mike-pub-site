@@ -1,3 +1,6 @@
+# MeniuM3.3.1LIVE
+[Meniu publicat](40_M331_MENIU_LIVE.md) și [raport/revenire](../launch/M331_MENU_LIVE_REPORT_20261020.md). VerificatChromeLIVE1440/390/360,257produse,cache403. Mai rămânePAS7: schimbareprețpublicatădeutilizatorși verificareîn10minute. Nu relua instalarea sau modificareaDB.
+
 # Lansare aprobată — pașii1/2gata, uploadneînceput
 Vezi [lansareaM3.3.1](39_M331_LANSARE_AUTORIZATA.md). Honeypotcorectat; PHP8.3.35/cURL/mbstring confirmate; backupprivat053829verificat. Browserulesteînstareprotejată; este necesară preluareaferestrei. Nicio modificarepublicăexecutată.
 

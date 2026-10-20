@@ -1,3 +1,6 @@
+# M3.3.1 ESTE LIVE — verificat; așteaptă testul de preț al utilizatorului
+Vezi docs/continuity/40_M331_MENIU_LIVE.md și raportul docs/launch/M331_MENU_LIVE_REPORT_20261020.md.146fișiereGardeninstalate, .htaccessactivat, meniu.htmlnou257produse. Nu mai raporta blocajulvechicPanel sau previzualizare. PAS7pendinguserpricechange; nu modifica tu prețurile. ToateHTML-urile/runtime/grup/Berăria/DBpăstrate.
+
 # LANSARE M3.3.1 AUTORIZATĂ20.10 08:30 — PAȘII1/2CONFIRMAȚI, PAS3BLOCAT
 Vezi docs/continuity/39_M331_LANSARE_AUTORIZATA.md. UseraaprobatGarden exclusiv, înordine, cu confirmaredupăfiecarepas. HoneypotcorectatînCSS/pachet. Backupprivatcreat; niciunfișierpublicnuafostmodificat. Blocajbrowsercredentialprotectionînainte deupload. InstrucțiunilevechiNUpublicadejos suntdepășite deaprobareaexplicităcurentă.
 
