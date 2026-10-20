@@ -52,6 +52,6 @@ with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED)as z:
 assert not(PUBLIC/'meniu.html').exists()and not(PUBLIC/'.htaccess').exists()
 assert (PUBLIC/'cache/menu.json').is_file()
 assert 'require ' not in (PUBLIC/'meniu.php').read_text()
-# 20 illustrations: native+480/800 ×2formats, plus4mobile sources.
+# 21 illustrations: native+480/800 ×2formats, plus6portrait mobile sources.
 assert len(list((PUBLIC/'assets/images/meniu').glob('*.*')))==132
 print('PASS package',len(manifest),'files,',archive.stat().st_size,'bytes; standalone PHP +132media files; preview outside public; routing unchanged')

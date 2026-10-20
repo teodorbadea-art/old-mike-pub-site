@@ -1,3 +1,6 @@
+# M3.3 — audit corectat, coaste generate la cererea utilizatorului
+Vezi [M3.3](37_M33_AUDIT_SI_COASTE_GENERATE.md). Toate cele8corecții implementate; pachet pentru evaluare, NU publica. Nu mai este necesară fotografia coastelor.
+
 # M3.2 — rectificări suplimentare după proba locală a utilizatorului
 Cerința de 2000px este anulată: original +480/800, WebP/AVIF. Corecție critică pentru fonturile întregului site, mobile source și instrucțiuni PHP. Porc are secțiune proprie; fotografia reală OM-0080 lipsește în catalog. Nu publica. Vezi [M3.2 verificat](36_M32_FONTURI_MOBILE_EXPORTURI.md) și docs/menu-redesign/README.md.
 

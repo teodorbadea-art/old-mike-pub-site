@@ -6,7 +6,7 @@ Pagina oficială nu este înlocuită. Acest pachet corectează M3 cu un hero nou
 
 - **`public/meniu.php` este complet și autonom**, aproximativ 34 KB. Include proxy-ul public Supabase, validarea răspunsului, cache-ul de 600 de secunde, fallback-ul, toate textele, header/subsol, HTML complet și JSON-LD. Nu are nevoie de module PHP externe sau de Composer. CSS, JavaScript, fonturile și imaginile sunt fișiere externe. **Cerință minimă: PHP 8.1 + cURL** (`array_is_list`, `mixed`); aceasta este prima verificare din instrucțiunile de instalare.
 - `public/assets/images/meniu/`: 21 de ilustrații × 3 dimensiuni (original, 480 și 800 px) × 2 formate (WebP și AVIF), plus 6 variante mobile ale hero-ului: 132 de fișiere. Originalele sunt de maximum 1536 px; nu există mărire artificială la 2000 px. `picture` folosește AVIF cu fallback WebP; `srcset` conține cele două variante și lățimea originalului. Hero-ul are `fetchpriority="high"` și încărcare eager; celelalte imagini sunt lazy.
-- `public/assets/site.css`: stilurile comune plus blocul M3/M3.3 comentat. Același bloc este separat în `instructiuni-si-prompturi/meniu-adaugiri.css`.
+- `public/assets/site.css`: stilurile comune plus blocurile M3–M3.3 comentat. Același bloc este separat în `instructiuni-si-prompturi/meniu-adaugiri.css`.
 - `public/cache/menu.json`: copia publică reală de pornire, pentru funcționare și la prima întrerupere. `cache/.htaccess` blochează citirea ei din browser.
 - `previzualizare.html` (în afara folderului public): copia pentru evaluare, cu aceleași imagini externe. Dezarhivează pachetul înainte de deschidere și păstrează folderul `public` lângă HTML. Nu este meniu live. Nu există imagini base64 în PHP sau în previzualizare.
 
@@ -34,7 +34,7 @@ Originalele au maximum 1536 px (sursele de 1200 px sunt păstrate la 1200); vari
 
 Hero-ul mobil este o compoziție nouă, verticală **4:5**, cu trei bucătari mari. Masterul este1120×1400, variantele480×600și800×1000; fiecare în WebP și AVIF. Imaginea desktop este limitată la60vh, cu cadrul întreg. Textul mobil este sub fotografie.
 
-Imaginea Porc a fost generată cu autorizarea explicită a utilizatorului din20.10: coastele sunt imaginate, iar farfuria dreptunghiulară și tipul de cartofi sunt ghidate de fotografia reală a tomahawk-ului. Bucătarii aplică glazura cu bidineaua. Vezi `m33-pork-prompt.md` și `m33-mobile-hero-prompt.md` pentru prompturi și alt. Cele două manifesturi M3.3 completează manifestul exporturilor M3.2.
+Imaginea Porc a fost generată cu autorizarea explicită a utilizatorului din20.10: coastele sunt imaginate, iar farfuria dreptunghiulară și tipul de cartofi sunt ghidate de fotografia reală a tomahawk-ului. Bucătarii aplică glazura cu bidineaua. Vezi `m33-pork-prompt.md` și `m33-mobile-hero-prompt.md` pentru prompturi și alt. `m33-image-manifest.json` inventariază toate cele 132 de fișiere livrate.
 
 Tomahawk-ul din fotografia sursă este de porc. Fotografiile din catalog pentru „PENNE Carbonara Original” și dorada cu orez nu corespund complet denumirilor; ilustrațiile au urmat fotografiile. Vezi prompturile și limitele documentate; nu s-au modificat datele.
 
