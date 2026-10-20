@@ -32,6 +32,13 @@ jobs:
           for i in {1..40}; do curl -sf http://127.0.0.1:4188/preview >/dev/null && break; sleep .2; done
           CHROME_BIN=$(command -v google-chrome || command -v chromium)
           node tests/menu-browser.mjs "$CHROME_BIN"
+      - name: Chrome checks against installed Garden PHP before route activation
+        env:
+          OM_MENU_REVIEW_URL: https://garden.oldmike.ro/meniu.php
+          OM_MENU_REVIEW_OUTPUT: output/menu-m3/live
+        run: |
+          CHROME_BIN=$(command -v google-chrome || command -v chromium)
+          node tests/menu-browser.mjs "$CHROME_BIN"
       - name: Lighthouse mobile audit (target 90)
         run: |
           npx --yes lighthouse@12.8.2 http://127.0.0.1:4188/audit --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=output/menu-m3/lighthouse-mobile.json --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --quiet
