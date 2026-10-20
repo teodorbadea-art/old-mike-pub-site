@@ -45,6 +45,7 @@
 .om-group-heading .om-kicker{margin:0}
 .om-group-heading h2>span{color:var(--gold)}
 .om-category{display:grid;grid-template-columns:minmax(0,58fr) minmax(0,42fr);gap:clamp(28px,4vw,64px);align-items:start;margin:0 0 96px;min-width:0}
+.om-category-text{display:block;border:1px solid var(--line);padding:32px;background:var(--panel)}.om-category-text .om-category-copy{max-width:850px;margin:auto}
 .om-category-reverse{grid-template-columns:minmax(0,42fr) minmax(0,58fr)}
 .om-category-reverse .om-category-figure{grid-column:2;grid-row:1}
 .om-category-reverse .om-category-copy{grid-column:1;grid-row:1}

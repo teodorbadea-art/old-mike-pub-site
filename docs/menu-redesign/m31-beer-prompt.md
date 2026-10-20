@@ -1,3 +1,5 @@
+> Actualizare M3.2: cerința exportului de 2000 px a fost anulată. Pachetul actual conține originalul (maximum 1536 px) și variantele 480/800, WebP și AVIF. Detaliile de export de mai jos păstrează istoricul generării M3.1.
+
 # M3.1 — Bere cu bucătari în miniatură
 
 Generare nouă cu instrumentul built-in `image_gen`; fără CLI/API sau fallback plătit. Imaginea de bere existentă nu a fost modificată.

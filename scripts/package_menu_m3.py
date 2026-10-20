@@ -33,9 +33,9 @@ shutil.copy2(ROOT/'meniu.php',PUBLIC/'meniu.php')
 preview=re.sub(r'href="([a-z-]+\.html(?:#[^"]*)?)"',lambda m:'href="'+('#continut' if m[1]=='meniu.html' else 'https://garden.oldmike.ro/'+m[1])+'"',html)
 (PUBLIC/'previzualizare.html').write_text(preview)
 (PUBLIC/'cache').mkdir();shutil.copy2(ROOT/'cache/.htaccess',PUBLIC/'cache/.htaccess');shutil.copy2(ROOT/'data/menu-redesign/menu-preview-snapshot.json',PUBLIC/'cache/menu.json')
-shutil.copytree(ROOT/'docs/menu-redesign',OUT/'instructiuni-si-prompturi')
+shutil.copytree(ROOT/'docs/menu-redesign',OUT/'instructiuni-si-prompturi',ignore=shutil.ignore_patterns('m31-image-manifest.json'))
 (OUT/'APACHE-routing-DOAR-DUPA-APROBARE.txt').write_text('# Only in Garden .htaccess, AFTER approval; do not replace existing rules.\n<IfModule mod_mime.c>\nAddType image/avif .avif\nAddType image/webp .webp\n</IfModule>\n<IfModule mod_deflate.c>\nAddOutputFilterByType DEFLATE text/html text/css application/javascript application/json\n</IfModule>\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule ^meniu\\.html$ meniu.php [END]\n</IfModule>\n')
-for name in ['browser-checks.json','lighthouse-mobile.json','live-rpc-check.json']:
+for name in ['browser-checks.json','lighthouse-mobile.json','live-rpc-check.json','site-font-checks.json']:
  source=ROOT/'output/menu-m3'/name
  if source.is_file() and source.stat().st_mtime>(ROOT/'meniu.php').stat().st_mtime:
   (OUT/'verificari').mkdir(exist_ok=True);shutil.copy2(source,OUT/'verificari'/name)
@@ -49,6 +49,6 @@ with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED)as z:
 assert not(PUBLIC/'meniu.html').exists()and not(PUBLIC/'.htaccess').exists()
 assert (PUBLIC/'cache/menu.json').is_file()
 assert 'require ' not in (PUBLIC/'meniu.php').read_text()
-# 20 illustrations, each with3widths ×2formats, no old illustration paths.
-assert len(list((PUBLIC/'assets/images/meniu').glob('*.*')))==120
-print('PASS package',len(manifest),'files,',archive.stat().st_size,'bytes; standalone PHP +120media files; no officialHTML/routing changes')
+# 20 illustrations: native+480/800 ×2formats, plus4mobile sources.
+assert len(list((PUBLIC/'assets/images/meniu').glob('*.*')))==124
+print('PASS package',len(manifest),'files,',archive.stat().st_size,'bytes; standalone PHP +124media files; no officialHTML/routing changes')

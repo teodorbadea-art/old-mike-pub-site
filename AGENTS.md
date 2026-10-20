@@ -1,3 +1,6 @@
+# M3.2 prioritar — fonturi întregul site, native+480/800, NU publica
+Utilizatorul a anulat 2000px. Vezi docs/menu-redesign/README.md. Importul tipografiei în site.css, surse mobile verificate pe fișierul -mobile-800, Porc separat din Și altele. Fotografia reală pentru OM-0080 lipsește și din produsul public, și din media_assets; nu genera alt preparat. Se verifică fonturile pe index/evenimente/galerie/contact.
+
 # M3.1 prioritar — corecții pentru evaluare, NU publica
 Citește docs/continuity/35_M31_PHP_IMAGINI_TABURI.md. PHP autonom complet, 120 media externe, hero nou, Bere nouă, taburi Spirtoase. Verificat în CI (44 PHP + browser + RPC real; Lighthouse 96/100/100/100). Nu activa pagina oficială.
 

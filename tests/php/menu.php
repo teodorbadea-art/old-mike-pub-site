@@ -31,10 +31,16 @@ try{
  check(count($panels)===8,'eight spirit tabs including gin and liqueurs');
  $panelCount=array_sum(array_map(static fn($p)=>count($p['rows']),$panels));check($panelCount===array_sum(array_map('count',$spirits['lists'])),'tabs retain every spirit once');
  $gin=array_values(array_filter($panels,static fn($p)=>$p['label']==='Gin'))[0];check(count($gin['rows'])===3,'three published gins separated from mixed source category');
- check(str_contains($page,'type="image/avif"')&&str_contains($page,'-800.avif 800w')&&str_contains($page,'-1200.webp 1200w')&&str_contains($page,'-2000.webp 2000w'),'all requested formats/widths');
+ check(str_contains($page,'type="image/avif"')&&str_contains($page,'-480.avif 480w')&&str_contains($page,'-800.webp 800w')&&str_contains($page,'.webp 1536w'),'native+480/800formats/widths');
  check(str_contains($page,'fetchpriority="high" loading="eager"'),'hero priority');
  check(!str_contains($page,'data:image/')&&!str_contains($page,';base64,'),'no embedded image data');
- check(str_contains($page,'assets/images/meniu/hero-meniu-800.webp')&&!str_contains($page,'hero-single-chefs'),'menu hero distinct from homepage');
+ check(str_contains($page,'assets/images/meniu/hero-meniu.webp')&&!str_contains($page,'hero-single-chefs'),'menu hero distinct from homepage');
+ check(!is_file($root.'/assets/images/meniu/hero-meniu-mobile.webp')&&is_file($root.'/assets/images/meniu/hero-meniu-mobile-800.webp')&&str_contains($page,'hero-meniu-mobile-800.webp 800w'),'mobile source generated from shipped800file, no mobile master needed');
+ check(str_contains($page,'id="porc"')&&!str_contains($page,'pending_image'),'pork is a standalone section, no placeholder text');
+ check(str_contains($page,'assets/images/meniu/hero-meniu-mobile-480.avif'),'mobile AVIF source');
+ check(!str_contains($page,'-2000.')&&!str_contains($page,'-1200.'),'no2000/1200media requests');
+ $css=file_get_contents($root.'/assets/site.css');check(str_starts_with($css,"@import url('oldmike-design.css');"),'shared typography import first');
+ check(!preg_match('/\\d+\\s*%\\s*(?:alcool|alc\\b)/iu',$page),'ABV suffix removed from customer HTML and JSON-LD');
  echo 'PASS '.$count.' menu checks: cache/outage/formatting/new category/escaping/257 complete real items'.PHP_EOL;
 }finally{
  foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($base,FilesystemIterator::SKIP_DOTS),RecursiveIteratorIterator::CHILD_FIRST)as $p){$p->isDir()?rmdir($p->getPathname()):unlink($p->getPathname());}rmdir($base);
