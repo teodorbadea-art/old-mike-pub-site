@@ -1,5 +1,5 @@
 # M3.1 — corecții cerute după evaluarea M3
-PHP autonom, imagini externe WebP/AVIF la 800/1200/2000, hero nou și Bere cu bucătari, text mobil separat și taburi Spirtoase. Vezi docs/menu-redesign/README.md. Nu publica până la aprobare.
+PHP autonom, imagini externe WebP/AVIF la 800/1200/2000, hero nou și Bere cu bucătari, text mobil separat și taburi Spirtoase. Vezi [M3.1](35_M31_PHP_IMAGINI_TABURI.md) și docs/menu-redesign/README.md. 44 probe PHP + Chrome + RPC real PASS; Lighthouse 96/100/100/100. Nu publica până la aprobare.
 
 # M3 — meniu editorial LIVE în previzualizare
 Utilizatorul a cerut pagina completă cu prețuri sincronizate, dar vrea evaluare ÎNAINTE de publicare. Vezi [starea M3](34_M3_MENIU_EDITORIAL_PREVIEW.md) și [README](../menu-redesign/README.md). Verificat în CI, nepublicat; lipsește fotografia coastelor BBQ. Nu aplica rutarea sau pachetul pe producție.

@@ -11,7 +11,16 @@
 
 ## Verificare browser M3.1
 
-Rezultatele Chrome 1440/390/360 px, controlul taburilor cu tastatura, lipsa suprapunerii hero/text pe mobil, fallback-ul fără JavaScript, proba RPC reală din PHP și Lighthouse se completează după rularea CI. Scorul 99/100/100/100 al versiunii M3 precedente nu se transferă automat acestei versiuni.
+- [x] Chrome la **1440/390/360 px**: fără scroll orizontal, 257 de produse, imagini/fonturi/header/subsol corecte.
+- [x] Pe telefon, marginea de sus a etichetei este la cel puțin 16 px sub imaginea hero; fotografie integrală, fără crop.
+- [x] Taburi: un singur panou vizibil, Gin are cele trei produse, click și săgeți de tastatură funcționale; fără JavaScript toate listele sunt vizibile și cele 257 de produse rămân în HTML.
+- [x] Liste extensibile, navigare activă și mobilă, reducerea animațiilor.
+- [x] **PHP cURL HTTPS → RPC real: 257 de produse**, 20.10.2026 04:38 UTC, numai citire.
+- [x] Lighthouse mobil pe HTML de producție cu gzip în CI: **96 performanță / 100 accesibilitate / 100 bune practici / 100 SEO**.
+- [x] Capturile hero desktop/telefon, Bere și Spirtoase au fost inspectate vizual.
+
+Revizie verificată: `8f6b552f9941fe95383c0eb231f656e45bc1e4b2`.
+Rulare: https://github.com/teodorbadea-art/old-mike-pub-site/actions/runs/39370595552
 
 ## Înainte de publicare
 

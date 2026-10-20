@@ -1,3 +1,6 @@
+# M3.1 prioritar — corecții pentru evaluare, NU publica
+Citește docs/continuity/35_M31_PHP_IMAGINI_TABURI.md. PHP autonom complet, 120 media externe, hero nou, Bere nouă, taburi Spirtoase. Verificat în CI (44 PHP + browser + RPC real; Lighthouse 96/100/100/100). Nu activa pagina oficială.
+
 # M3 prioritar — previzualizare, NU publica
 Utilizatorul a autorizat redesignul complet cu produse/prețuri live în site, inversând amânarea M2.12. Citește docs/continuity/34_M3_MENIU_EDITORIAL_PREVIEW.md și docs/menu-redesign/README.md. PHP + Chrome + conexiunea reală RPC au trecut în CI; Lighthouse 99/100/100/100. Fără aplicare live sau schimbare rutare până la evaluarea utilizatorului. Lipsește fotografia reală a coastelor BBQ.
 
