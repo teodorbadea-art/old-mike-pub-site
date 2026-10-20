@@ -10,7 +10,7 @@ function model(array $rows,array $config,string $root):array{
     foreach($config['sections'] as $s){
         $s['lists']=[];
         foreach($s['categories'] as $category)if(isset($groups[$s['group']][$category]))$s['lists'][$category]=$groups[$s['group']][$category];
-        if(!$s['lists']||!$s['image']||!is_file($root.'/assets/images/'.$s['image'].'.webp'))continue;
+        if(!$s['lists']||!$s['image']||!is_file($root.'/assets/images/'.$s['image'].'-2000.webp'))continue;
         foreach($s['lists'] as $category=>$list)$used[$s['group']][$category]=true;
         $sections[$s['group']][]=$s;
     }
@@ -18,17 +18,43 @@ function model(array $rows,array $config,string $root):array{
     return ['groups'=>$groups,'sections'=>$sections,'compact'=>$compact];
 }
 function picture(string $stem,string $alt,string $root,bool $hero=false):string{
-    $path='assets/images/'.$stem.'.webp';$size=@getimagesize($root.'/'.$path);if(!$size)return '';
-    $srcset=[];foreach([480,800,1200] as $w)if(is_file($root.'/assets/images/'.$stem.'-'.$w.'.webp'))$srcset[]='assets/images/'.$stem.'-'.$w.'.webp '.$w.'w';
-    $srcset[]=$path.' '.$size[0].'w';$mobile='';
-    if($hero&&is_file($root.'/assets/images/'.$stem.'-mobile.webp'))$mobile='<source media="(max-width:600px)" srcset="assets/images/'.e($stem).'-mobile-480.webp 480w, assets/images/'.e($stem).'-mobile-800.webp 800w" sizes="100vw">';
-    return '<picture>'.$mobile.'<img src="'.e($path).'" srcset="'.e(implode(', ',$srcset)).'" sizes="'.($hero?'100vw':'(max-width:800px) 100vw, (max-width:1500px) 55vw, 800px').'" width="'.$size[0].'" height="'.$size[1].'" alt="'.e($alt).'" '.($hero?'fetchpriority="high" loading="eager"':'loading="lazy"').' decoding="async"></picture>';
+    $base='assets/images/'.$stem;$path=$base.'-800.webp';$size=@getimagesize($root.'/'.$base.'-2000.webp');if(!$size)return '';
+    $sets=[];foreach(['avif','webp'] as $format){$items=[];foreach([800,1200,2000]as $width)$items[]=$base.'-'.$width.'.'.$format.' '.$width.'w';$sets[$format]=implode(', ',$items);}
+    $sizes=$hero?'100vw':'(max-width:800px) 100vw, (max-width:1500px) 55vw, 800px';
+    return '<picture><source type="image/avif" srcset="'.e($sets['avif']).'" sizes="'.e($sizes).'"><img src="'.e($path).'" srcset="'.e($sets['webp']).'" sizes="'.e($sizes).'" width="'.$size[0].'" height="'.$size[1].'" alt="'.e($alt).'" '.($hero?'fetchpriority="high" loading="eager"':'loading="lazy"').' decoding="async"></picture>';
 }
 function rows_html(array $rows):string{
     $html='';foreach($rows as $r){
-        $portion=portion($r['portion_display']??'');$desc=description($r['description_ro']??'');
-        $html.='<li class="om-dish" data-menu-item><div class="om-dish-line"><span class="om-dish-name">'.e(name($r['name_ro'])).'</span><span class="om-dish-dots" aria-hidden="true"></span><strong class="om-dish-price">'.e(price($r['price'])).'</strong></div><div class="om-dish-meta">'.(!empty($r['featured'])?'<span class="om-recommended">Recomandat</span>':'').($portion!==''?'<span class="om-dish-portion">'.e($portion).'</span>':'').'</div>'.($desc!==''?'<p class="om-dish-description">'.e($desc).'</p>':'').'</li>';
+        $displayName=$r['name_ro'];$isDrink=$r['group_code']==='Bauturi';$portion=portion($r['portion_display']??'');$desc=description($r['description_ro']??'');$inline='';
+        if($isDrink){$drink=drink_details($r);$inline=$drink['inline'];$desc=$drink['description'];$displayName=$drink['name'];}
+        $name='<span class="om-dish-name">'.e(name($displayName)).'</span>';
+        if($isDrink)$name='<span class="om-drink-heading">'.$name.($inline!==''?'<span class="om-drink-measure">'.e($inline).'</span>':'').'</span>';
+        $meta=(!empty($r['featured'])?'<span class="om-recommended">Recomandat</span>':'').(!$isDrink&&$portion!==''?'<span class="om-dish-portion">'.e($portion).'</span>':'');
+        $html.='<li class="om-dish'.($isDrink?' om-dish-drink':'').'" data-menu-item><div class="om-dish-line">'.$name.'<span class="om-dish-dots" aria-hidden="true"></span><strong class="om-dish-price">'.e(price($r['price'])).'</strong></div>'.($meta!==''?'<div class="om-dish-meta">'.$meta.'</div>':'').($desc!==''?'<p class="om-dish-description">'.e($desc).'</p>':'').'</li>';
     }return $html;
+}
+/** Presentation grouping only; published category and product data stay intact. */
+function spirit_panels(array $lists,array $config):array{
+    $panels=[];$used=[];
+    foreach($config['spirit_tabs']as $tab){$rows=[];
+        foreach($tab['categories']as $category)foreach($lists[$category]??[]as $index=>$row){
+            if(isset($used[$category][$index]))continue;
+            if(isset($tab['match_name'])&&!preg_match($tab['match_name'],$row['name_ro']))continue;
+            if(isset($tab['exclude_name'])&&preg_match($tab['exclude_name'],$row['name_ro']))continue;
+            $used[$category][$index]=true;$rows[]=$row;
+        }
+        if($rows)$panels[]=['id'=>'spirit-'.$tab['id'],'label'=>$tab['label'],'rows'=>$rows];
+    }
+    foreach($lists as $category=>$rows){$remaining=[];foreach($rows as $index=>$row)if(!isset($used[$category][$index]))$remaining[]=$row;
+        if($remaining)$panels[]=['id'=>'spirit-'.substr(hash('sha256',$category),0,10),'label'=>label($category,$config),'rows'=>$remaining];
+    }return $panels;
+}
+function spirits_html(array $lists,array $config):string{
+    $panels=spirit_panels($lists,$config);$html='<div class="om-spirits" data-spirit-tabs><nav class="om-spirit-tabs" aria-label="Tipuri de spirtoase">';
+    foreach($panels as $p)$html.='<a id="tab-'.e($p['id']).'" href="#'.e($p['id']).'">'.e($p['label']).'</a>';
+    $html.='</nav>';
+    foreach($panels as $p)$html.='<section class="om-spirit-panel" id="'.e($p['id']).'" aria-labelledby="title-'.e($p['id']).'"><h3 id="title-'.e($p['id']).'" class="om-subcategory-title">'.e($p['label']).'</h3>'.dishes($p['rows'],$p['label']).'</section>';
+    return $html.'</div>';
 }
 function dishes(array $rows,string $category):string{
     $first=count($rows)<=8?count($rows):6;
@@ -50,12 +76,12 @@ function render(array $menu,string $root,bool $preview=false):string{
     $total=count($menu['rows']);$description='Meniul Old Mike Pub: preparate și băuturi, cu prețuri actualizate. Strada Matei Voievod 67, București. Rezervări: 0787 366 166.';
     ob_start();
     ?>
-<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="<?= $preview?'noindex,nofollow':'index,follow' ?>"><meta name="theme-color" content="#100e0b"><title>Meniu Old Mike Pub București | Preparate și prețuri actualizate</title><meta name="description" content="<?= e($description) ?>"><link rel="canonical" href="https://garden.oldmike.ro/meniu.html"><meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:site_name" content="Old Mike Pub"><meta property="og:title" content="Meniu Old Mike Pub · Gusturi pentru seri bune"><meta property="og:description" content="<?= e($description) ?>"><meta property="og:url" content="https://garden.oldmike.ro/meniu.html"><meta property="og:image" content="https://garden.oldmike.ro/assets/images/oldmike-share-v1.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/brand/favicon-32.png"><link rel="stylesheet" href="assets/oldmike-design.css?v=1"><link rel="stylesheet" href="assets/site.css?v=m3"><script type="application/ld+json"><?= json_encode(json_ld($m),JSON_UNESCAPED_UNICODE|JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT|JSON_INVALID_UTF8_SUBSTITUTE) ?></script></head>
+<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="<?= $preview?'noindex,nofollow':'index,follow' ?>"><meta name="theme-color" content="#100e0b"><title>Meniu Old Mike Pub București | Preparate și prețuri actualizate</title><meta name="description" content="<?= e($description) ?>"><link rel="canonical" href="https://garden.oldmike.ro/meniu.html"><meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:site_name" content="Old Mike Pub"><meta property="og:title" content="Meniu Old Mike Pub · Gusturi pentru seri bune"><meta property="og:description" content="<?= e($description) ?>"><meta property="og:url" content="https://garden.oldmike.ro/meniu.html"><meta property="og:image" content="https://garden.oldmike.ro/assets/images/meniu/hero-meniu-1200.webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/brand/favicon-32.png"><link rel="stylesheet" href="assets/oldmike-design.css?v=1"><link rel="stylesheet" href="assets/site.css?v=m31"><script type="application/ld+json"><?= json_encode(json_ld($m),JSON_UNESCAPED_UNICODE|JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT|JSON_INVALID_UTF8_SUBSTITUTE) ?></script></head>
 <body class="menu-editorial">
 <?php if($preview): ?><aside class="om-preview-notice">Previzualizare · <?= $total ?> produse și prețuri reale<?= $menu['at']?' · '.e((new \DateTimeImmutable('@'.$menu['at']))->setTimezone(new \DateTimeZone('Europe/Bucharest'))->format('d.m.Y H:i')):'' ?> · Site-ul oficial nu a fost modificat.</aside><?php endif ?>
 <?= file_get_contents(__DIR__.'/header.html') ?>
 <main id="continut">
-<section class="om-menu-hero" aria-labelledby="menu-title"><div class="om-menu-hero-image"><?= picture('hero-single-chefs-v4','Bucătari miniaturali construiesc un burger Old Mike cu o singură bucată de carne.',$root,true) ?></div><div class="om-menu-hero-copy"><p class="eyebrow">La ce ți-e poftă?</p><h1 id="menu-title">Gusturi pentru<br><em>seri bune.</em></h1><p>Burgeri, pizza, un prânz bun.<br>Și încă un motiv să mai stai.</p><div class="om-hero-actions"><a class="button" href="#pranz">Vezi meniul de prânz <span aria-hidden="true">↓</span></a><a class="button ghost" href="tel:+40787366166">Sună · Rezervă</a></div></div><span class="om-hero-caption">Imagine ilustrativă</span></section>
+<section class="om-menu-hero" aria-labelledby="menu-title"><figure class="om-menu-hero-image"><?= picture($config['hero']['image'],$config['hero']['alt'],$root,true) ?><figcaption>Imagine ilustrativă</figcaption></figure><div class="om-menu-hero-copy"><p class="eyebrow">La ce ți-e poftă?</p><h1 id="menu-title">Gusturi pentru<br><em>seri bune.</em></h1><p>Burgeri, pizza, un prânz bun.<br>Și încă un motiv să mai stai.</p><div class="om-hero-actions"><a class="button" href="#pranz">Vezi meniul de prânz <span aria-hidden="true">↓</span></a><a class="button ghost" href="tel:+40787366166">Sună · Rezervă</a></div></div></section>
 <div class="om-menu-wrap">
 <section class="om-lunch" id="pranz" aria-labelledby="lunch-title"><div><p class="om-kicker">Pauza cu gust bun</p><h2 id="lunch-title">Marea <em>Prânzeală.</em></h2><p class="om-lunch-parts"><?= e($lunch['parts']) ?></p><p class="om-lunch-hours"><?= e($lunch['hours']) ?></p></div><div class="om-lunch-price"><strong><?= e(str_replace(' lei','',price($lunch['price']))) ?><small>lei</small></strong><a class="om-text-link" href="https://meniu.oldmike.ro/m/old-mike/loc-oldmike-matei">Deschide meniul electronic <span aria-hidden="true">↗</span></a></div></section>
 </div>
@@ -68,7 +94,7 @@ function render(array $menu,string $root,bool $preview=false):string{
 <section class="om-menu-group" id="<?= e($gid) ?>" aria-labelledby="title-<?= e($gid) ?>"><div class="om-group-heading"><span class="om-kicker">Pe îndelete</span><h2 id="title-<?= e($gid) ?>"><?= e($groupNames[$g]??name($g)) ?><span aria-hidden="true">.</span></h2></div>
 <?php foreach($m['sections'][$g]??[] as $s):$number++; ?>
 <section class="om-category <?= $number%2===0?'om-category-reverse':'' ?>" id="<?= e($s['id']) ?>" aria-labelledby="title-<?= e($s['id']) ?>"><figure class="om-category-figure"><div class="om-category-image"><?= picture($s['image'],$s['alt'],$root) ?></div><figcaption>Imagine ilustrativă</figcaption></figure><div class="om-category-copy"><p class="om-kicker"><?= str_pad((string)$number,2,'0',STR_PAD_LEFT) ?> / <?= e($s['kicker']) ?></p><h2 id="title-<?= e($s['id']) ?>"><?= e($s['title']) ?><br><em><?= e($s['italic']) ?></em></h2>
-<?php foreach($s['lists'] as $c=>$rows):if(count($s['lists'])>1): ?><h3 class="om-subcategory-title"><?= e(label($c,$config)) ?></h3><?php endif ?><?= dishes($rows,label($c,$config)) ?><?php endforeach ?></div></section>
+<?php if($s['id']==='spirtoase'): ?><?= spirits_html($s['lists'],$config) ?><?php else: ?><?php foreach($s['lists'] as $c=>$rows):if(count($s['lists'])>1): ?><h3 class="om-subcategory-title"><?= e(label($c,$config)) ?></h3><?php endif ?><?= dishes($rows,label($c,$config)) ?><?php endforeach ?><?php endif ?></div></section>
 <?php endforeach ?>
 <?php if(!empty($m['compact'][$g])): ?><section class="om-compact" id="altele-<?= e($gid) ?>" aria-labelledby="title-altele-<?= e($gid) ?>"><div class="om-compact-heading"><p class="om-kicker">Și încă ceva bun</p><h2 id="title-altele-<?= e($gid) ?>">Și <em>altele.</em></h2></div><div class="om-compact-grid">
 <?php foreach($m['compact'][$g] as $c=>$rows): ?><section class="om-compact-category" aria-labelledby="compact-<?= substr(hash('sha256',$g.'/'.$c),0,12) ?>"><h3 id="compact-<?= substr(hash('sha256',$g.'/'.$c),0,12) ?>"><?= e(label($c,$config)) ?></h3><?= dishes($rows,label($c,$config)) ?></section><?php endforeach ?>

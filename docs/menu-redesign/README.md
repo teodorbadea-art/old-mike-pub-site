@@ -1,35 +1,41 @@
-# Old Mike — meniu editorial M3, pentru aprobare
+# Old Mike — M3.1, pachet PHP complet pentru evaluare
 
-Pagina oficială nu a fost înlocuită. Previzualizarea autonomă se deschide fără instalare și conține produsele și prețurile reale din copia de evaluare. Fișierul PHP este varianta care citește datele live.
+Pagina oficială nu este înlocuită. Acest pachet corectează M3 cu un hero nou, Bere cu bucătari miniaturali, imagini separate WebP/AVIF, text mobil separat de fotografie și taburi pentru Spirtoase.
 
-## Ce conține pachetul
+## Fișierele de folosit
 
-- `public/meniu.php`: intrarea PHP, cu HTML complet pentru vizitatori și motoare de căutare.
-- `public/lib/menu/data.php`: apelul public Supabase și cache-ul de 10 minute, cu ultima copie bună la întrerupere. Nu scrie în baza de date și nu folosește chei secrete.
-- `public/lib/menu/config.php`: unicul loc pentru maparea categorie → imagine, texte editoriale și oferta de prânz. Categoriile necunoscute apar automat în „Și altele”.
-- `public/lib/menu/render.php`: afișarea și JSON-LD Restaurant/Menu, cu toate produsele și prețurile.
-- `public/assets/site.css`: stilurile existente, urmate de blocul comentat „OLD MIKE M3 · MENIU EDITORIAL LIVE”. Același bloc este livrat separat în `instructiuni-si-prompturi/meniu-adaugiri.css`.
-- Fonturi locale Manrope și Cormorant, navigarea comună, ilustrații WebP și variante responsive.
-- 13 ilustrații noi: 8 pentru mâncare și 5 pentru băuturi. Imaginile existente sunt păstrate. Prompturile exacte și textele alternative sunt în documentele de imagini; textele alternative folosite pe pagină sunt în configurare.
+- **`public/meniu.php` este complet și autonom**, aproximativ 32 KB. Include proxy-ul public Supabase, validarea răspunsului, cache-ul de 600 de secunde, fallback-ul, toate textele, header/subsol, HTML complet și JSON-LD. Nu are nevoie de module PHP externe sau de Composer. CSS, JavaScript, fonturile și imaginile sunt fișiere externe.
+- `public/assets/images/meniu/`: 20 de ilustrații × 3 lățimi (800/1200/2000 px) × 2 formate (WebP și AVIF), în total 120 de fișiere. `picture` folosește AVIF cu fallback WebP; `srcset` conține toate cele trei lățimi. Hero-ul are `fetchpriority="high"` și încărcare eager; celelalte imagini sunt lazy.
+- `public/assets/site.css`: stilurile comune plus blocul M3/M3.1 comentat. Același bloc este separat în `instructiuni-si-prompturi/meniu-adaugiri.css`.
+- `public/cache/menu.json`: copia publică reală de pornire, pentru funcționare și la prima întrerupere. `cache/.htaccess` blochează citirea ei din browser.
+- `public/previzualizare.html`: copia pentru evaluare, cu aceleași imagini externe. Dezarhivează pachetul înainte de deschidere și păstrează folderul `assets` lângă HTML. Nu este meniu live. Nu există imagini base64 în PHP sau în previzualizare.
 
-## Actualizarea datelor
+## Date live și cache
 
-RPC-ul public întoarce numai produsele publicate și disponibile pentru restaurantul `old-mike`, locația `loc-oldmike-matei`. Copia folosită la evaluare are 257 de produse; PHP nu fixează acest număr și acceptă produse/categorii noi.
+Endpoint-ul public `get_public_menu` este apelat exclusiv din PHP pentru `old-mike`, locația `loc-oldmike-matei`, cu cheia publicabilă furnizată. Nu sunt folosite chei secrete și nu se scrie în Supabase.
 
-Cache-ul se reîmprospătează la primul acces după expirarea celor 10 minute. Nu este actualizare instantanee prin push. Scrierea este atomică și protejată prin lock. Un răspuns invalid nu înlocuiește copia bună. La întrerupere se păstrează ultima copie, chiar dacă are prețuri mai vechi. O listă goală validă este tratată ca meniu gol legitim. Fără nicio copie disponibilă rămân telefonul și legătura spre meniul electronic, fără mesaje tehnice.
+La acces după 10 minute, PHP încearcă să actualizeze copia. Cache-ul este scris atomic, cu lock. La răspuns invalid sau întrerupere rămâne ultima copie bună; nu apar erori tehnice clientului. Fără nicio copie disponibilă rămân telefonul și linkul către meniul electronic. Actualizarea se face la primul acces după expirarea cache-ului, nu prin push instantaneu.
 
-Oferta de prânz este configurată separat: **33,99 lei, ciorbă + fel de bază + garnitură, luni–vineri, 12:00–16:00**, conform confirmării utilizatorului. RPC-ul produselor nu expune această ofertă; schimbarea ei se face în `config.php`.
+Oferta de prânz rămâne configurată separat: **33,99 lei, ciorbă + fel de bază + garnitură, luni–vineri 12:00–16:00**, conform confirmării utilizatorului. RPC-ul produselor nu furnizează această ofertă.
 
-## Fotografii și limite
+## Băuturi și taburi
 
-Imaginile de mâncare au pornit de la fotografii reale publicate în Meniul Electronic. Tomahawk-ul fotografiat este de porc. Produsul „PENNE Carbonara Original” are o fotografie cu paste panglică; dorada menționată cu orez în nume apare fotografiată cu legume și midii. Ilustrațiile au urmat fotografiile; datele catalogului nu au fost modificate. Aceste nepotriviri merită verificate separat în catalog.
+Cantitatea și procentul de alcool sunt afișate inline lângă nume, de exemplu `40 ml · 40%`. Procentul este extras numai din textul public care spune explicit „alcool”, „alc” sau „vol”; lipsurile nu sunt completate din presupuneri. Restul descrierii rămâne afișat. Procentele de fructe nu sunt interpretate ca alcool.
 
-**Lipsește fotografia reală a coastelor BBQ cu cartofi prăjiți.** Categoria porc apare temporar ca listă, fără fotografie și fără spațiu gol. Este necesară fotografia restaurantului pentru ultima ilustrație. Generarea reconstruiește fotografia și poate modifica detalii fine; imaginile trebuie aprobate vizual înainte de lansare.
+Spirtoasele sunt grupate în Whisky, Rom, Vodka, Gin, Tequila, Coniac, Shot-uri și Lichior și vermut. În catalog, „Lichior/vermuth/gin” este o categorie comună; trei ginuri sunt separate în afișare prin regula de nume din configurare. Nu se schimbă categoria produselor din Supabase. Produsele cu denumiri necunoscute nu sunt eliminate: rămân în tabul categoriei sursă. Anomaliile catalogului (de exemplu Martini la Tequilla) sunt păstrate ca date, nu corectate implicit.
 
-## Verificări și lansare
+Taburile suportă click, tastatură (săgeți, Home, End), focus și roluri ARIA. Fără JavaScript, toate listele rămân în HTML și sunt vizibile, pentru acces și indexare. În cache și în schema JSON-LD rămân toate cele 257 de produse reale din copia de evaluare.
 
-32 de verificări PHP au trecut: cache rece/cald, întrerupere simulată, răspuns invalid, categorie nouă, formatare, escaping, toate cele 257 de produse în HTML și JSON-LD. Endpoint-ul real a returnat 257 de produse prin PHP cURL HTTPS în CI. Conectivitatea PHP de pe cPanel trebuie verificată înainte de lansare.
+## Imagini și rezoluție
 
-Chrome a verificat afișarea la 1440, 390 și 360 px, fără scroll orizontal, fonturile, imaginile, listele extensibile, navigarea activă, meniul mobil și reducerea animațiilor. Scorurile Lighthouse și verificările rămase sunt în `CHECKLIST.md`.
+Hero-ul nou arată o masă cu burger cu o singură bucată de carne, pizza, platou, halbe și cinci bucătari. Berea are un bucătar la dozator și unul care transportă spuma cu o lopățică, fără mărci lizibile. Pe mobil, fotografia integrală este deasupra textului; eticheta nu se suprapune peste bucătari.
 
-Nu s-au schimbat `meniu.html`, rutarea Apache, DNS sau baza de date. Ramura `design/m3-live-menu-editorial` nu publică automat pe Vercel. Instrucțiunile cPanel se execută numai după aprobarea previzualizării.
+Exporturile au lățimile cerute. Sursele existente au 1200–1536 px, iar cele noi au 1536 px (Bere) și 1672 px (hero); exportul de 2000 px este mărit, fără a pretinde detaliu nativ 2K. Manifestul include dimensiunile sursei și ale fiecărui export. Originalele nu sunt suprascrise și compoziția nu este decupată.
+
+Lipsește fotografia reală a coastelor BBQ cu cartofi prăjiți. Porc rămâne listă fără imagine. Tomahawk-ul din fotografia sursă este de porc. Fotografiile din catalog pentru „PENNE Carbonara Original” și dorada cu orez nu corespund complet denumirilor; ilustrațiile au urmat fotografiile. Vezi prompturile și limitele documentate; nu s-au modificat datele.
+
+## Surse de dezvoltare
+
+În Git, implementarea se întreține în `server/lib/menu/`; `scripts/build_menu_php.py` generează fișierul autonom `meniu.php`. Configurarea categorie → imagine este în `server/lib/menu/config.php` și într-un singur bloc în PHP-ul livrat. Nu edita ambele variante separat: pentru dezvoltare editează modulul și regenerează; pentru o instalare simplă poți edita direct blocul de configurare din PHP.
+
+Instrucțiunile cPanel și lista de verificare sunt alături. Activarea rutării oficiale se face numai după aprobarea previzualizării. Nu s-au modificat `meniu.html`, Apache, DNS, baza de date sau Meniul Electronic.

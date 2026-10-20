@@ -1,0 +1,922 @@
+{
+  "cat-burgeri": {
+    "source": "assets/images/burger-single-chefs-v3.webp",
+    "native": [
+      1200,
+      800
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-burgeri-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 67490
+      },
+      {
+        "path": "assets/images/meniu/cat-burgeri-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 52009
+      },
+      {
+        "path": "assets/images/meniu/cat-burgeri-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 127130
+      },
+      {
+        "path": "assets/images/meniu/cat-burgeri-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 95879
+      },
+      {
+        "path": "assets/images/meniu/cat-burgeri-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 211586
+      },
+      {
+        "path": "assets/images/meniu/cat-burgeri-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 169597
+      }
+    ]
+  },
+  "cat-pizza": {
+    "source": "assets/images/pizza-oldmike-chefs-v3.webp",
+    "native": [
+      1200,
+      800
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-pizza-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 75740
+      },
+      {
+        "path": "assets/images/meniu/cat-pizza-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 56948
+      },
+      {
+        "path": "assets/images/meniu/cat-pizza-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 145720
+      },
+      {
+        "path": "assets/images/meniu/cat-pizza-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 108061
+      },
+      {
+        "path": "assets/images/meniu/cat-pizza-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 241438
+      },
+      {
+        "path": "assets/images/meniu/cat-pizza-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 196906
+      }
+    ]
+  },
+  "cat-platouri": {
+    "source": "assets/images/platouri-chefs-v1.webp",
+    "native": [
+      1200,
+      800
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-platouri-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 73866
+      },
+      {
+        "path": "assets/images/meniu/cat-platouri-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 54922
+      },
+      {
+        "path": "assets/images/meniu/cat-platouri-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 148742
+      },
+      {
+        "path": "assets/images/meniu/cat-platouri-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 106504
+      },
+      {
+        "path": "assets/images/meniu/cat-platouri-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 242262
+      },
+      {
+        "path": "assets/images/meniu/cat-platouri-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 192943
+      }
+    ]
+  },
+  "cat-gratar": {
+    "source": "assets/images/vita-chefs-fries-v2.webp",
+    "native": [
+      1200,
+      800
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-gratar-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 78250
+      },
+      {
+        "path": "assets/images/meniu/cat-gratar-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 58527
+      },
+      {
+        "path": "assets/images/meniu/cat-gratar-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 151790
+      },
+      {
+        "path": "assets/images/meniu/cat-gratar-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 109478
+      },
+      {
+        "path": "assets/images/meniu/cat-gratar-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 252590
+      },
+      {
+        "path": "assets/images/meniu/cat-gratar-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 191914
+      }
+    ]
+  },
+  "cat-deserturi": {
+    "source": "assets/images/papanasi-chefs-v1.webp",
+    "native": [
+      1200,
+      800
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-deserturi-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 68498
+      },
+      {
+        "path": "assets/images/meniu/cat-deserturi-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 54862
+      },
+      {
+        "path": "assets/images/meniu/cat-deserturi-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 137372
+      },
+      {
+        "path": "assets/images/meniu/cat-deserturi-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 103080
+      },
+      {
+        "path": "assets/images/meniu/cat-deserturi-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 229188
+      },
+      {
+        "path": "assets/images/meniu/cat-deserturi-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 180763
+      }
+    ]
+  },
+  "cat-tomahawk": {
+    "source": "assets/images/menu-editorial/cat-tomahawk.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-tomahawk-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 71898
+      },
+      {
+        "path": "assets/images/meniu/cat-tomahawk-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 55121
+      },
+      {
+        "path": "assets/images/meniu/cat-tomahawk-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 135488
+      },
+      {
+        "path": "assets/images/meniu/cat-tomahawk-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 103306
+      },
+      {
+        "path": "assets/images/meniu/cat-tomahawk-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 255022
+      },
+      {
+        "path": "assets/images/meniu/cat-tomahawk-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 202671
+      }
+    ]
+  },
+  "cat-ciorbe": {
+    "source": "assets/images/menu-editorial/cat-ciorbe.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-ciorbe-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 77526
+      },
+      {
+        "path": "assets/images/meniu/cat-ciorbe-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 59115
+      },
+      {
+        "path": "assets/images/meniu/cat-ciorbe-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 139214
+      },
+      {
+        "path": "assets/images/meniu/cat-ciorbe-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 108807
+      },
+      {
+        "path": "assets/images/meniu/cat-ciorbe-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 261194
+      },
+      {
+        "path": "assets/images/meniu/cat-ciorbe-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 211609
+      }
+    ]
+  },
+  "cat-salate": {
+    "source": "assets/images/menu-editorial/cat-salate.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-salate-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 83658
+      },
+      {
+        "path": "assets/images/meniu/cat-salate-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 62361
+      },
+      {
+        "path": "assets/images/meniu/cat-salate-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 147706
+      },
+      {
+        "path": "assets/images/meniu/cat-salate-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 115241
+      },
+      {
+        "path": "assets/images/meniu/cat-salate-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 275412
+      },
+      {
+        "path": "assets/images/meniu/cat-salate-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 228201
+      }
+    ]
+  },
+  "cat-paste": {
+    "source": "assets/images/menu-editorial/cat-paste.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-paste-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 63182
+      },
+      {
+        "path": "assets/images/meniu/cat-paste-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 49674
+      },
+      {
+        "path": "assets/images/meniu/cat-paste-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 112460
+      },
+      {
+        "path": "assets/images/meniu/cat-paste-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 90796
+      },
+      {
+        "path": "assets/images/meniu/cat-paste-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 210680
+      },
+      {
+        "path": "assets/images/meniu/cat-paste-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 182298
+      }
+    ]
+  },
+  "cat-peste": {
+    "source": "assets/images/menu-editorial/cat-peste.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-peste-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 85454
+      },
+      {
+        "path": "assets/images/meniu/cat-peste-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 62615
+      },
+      {
+        "path": "assets/images/meniu/cat-peste-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 159980
+      },
+      {
+        "path": "assets/images/meniu/cat-peste-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 116534
+      },
+      {
+        "path": "assets/images/meniu/cat-peste-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 303034
+      },
+      {
+        "path": "assets/images/meniu/cat-peste-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 228939
+      }
+    ]
+  },
+  "cat-gatite": {
+    "source": "assets/images/menu-editorial/cat-gatite.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-gatite-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 66288
+      },
+      {
+        "path": "assets/images/meniu/cat-gatite-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 52915
+      },
+      {
+        "path": "assets/images/meniu/cat-gatite-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 121830
+      },
+      {
+        "path": "assets/images/meniu/cat-gatite-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 101444
+      },
+      {
+        "path": "assets/images/meniu/cat-gatite-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 234842
+      },
+      {
+        "path": "assets/images/meniu/cat-gatite-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 202301
+      }
+    ]
+  },
+  "cat-pasare": {
+    "source": "assets/images/menu-editorial/cat-pasare.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-pasare-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 72952
+      },
+      {
+        "path": "assets/images/meniu/cat-pasare-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 56629
+      },
+      {
+        "path": "assets/images/meniu/cat-pasare-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 133406
+      },
+      {
+        "path": "assets/images/meniu/cat-pasare-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 104431
+      },
+      {
+        "path": "assets/images/meniu/cat-pasare-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 249404
+      },
+      {
+        "path": "assets/images/meniu/cat-pasare-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 202248
+      }
+    ]
+  },
+  "cat-starters": {
+    "source": "assets/images/menu-editorial/cat-starters.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-starters-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 56476
+      },
+      {
+        "path": "assets/images/meniu/cat-starters-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 43171
+      },
+      {
+        "path": "assets/images/meniu/cat-starters-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 96938
+      },
+      {
+        "path": "assets/images/meniu/cat-starters-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 76697
+      },
+      {
+        "path": "assets/images/meniu/cat-starters-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 177544
+      },
+      {
+        "path": "assets/images/meniu/cat-starters-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 146249
+      }
+    ]
+  },
+  "cat-vinuri": {
+    "source": "assets/images/menu-editorial/cat-vinuri.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-vinuri-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 56146
+      },
+      {
+        "path": "assets/images/meniu/cat-vinuri-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 42842
+      },
+      {
+        "path": "assets/images/meniu/cat-vinuri-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 105002
+      },
+      {
+        "path": "assets/images/meniu/cat-vinuri-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 79764
+      },
+      {
+        "path": "assets/images/meniu/cat-vinuri-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 201892
+      },
+      {
+        "path": "assets/images/meniu/cat-vinuri-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 156774
+      }
+    ]
+  },
+  "cat-cocktailuri": {
+    "source": "assets/images/menu-editorial/cat-cocktailuri.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-cocktailuri-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 68626
+      },
+      {
+        "path": "assets/images/meniu/cat-cocktailuri-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 52081
+      },
+      {
+        "path": "assets/images/meniu/cat-cocktailuri-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 128912
+      },
+      {
+        "path": "assets/images/meniu/cat-cocktailuri-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 98894
+      },
+      {
+        "path": "assets/images/meniu/cat-cocktailuri-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 248972
+      },
+      {
+        "path": "assets/images/meniu/cat-cocktailuri-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 195061
+      }
+    ]
+  },
+  "cat-spirtoase": {
+    "source": "assets/images/menu-editorial/cat-spirtoase.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-spirtoase-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 55924
+      },
+      {
+        "path": "assets/images/meniu/cat-spirtoase-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 41334
+      },
+      {
+        "path": "assets/images/meniu/cat-spirtoase-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 103266
+      },
+      {
+        "path": "assets/images/meniu/cat-spirtoase-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 76547
+      },
+      {
+        "path": "assets/images/meniu/cat-spirtoase-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 195506
+      },
+      {
+        "path": "assets/images/meniu/cat-spirtoase-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 147118
+      }
+    ]
+  },
+  "cat-cafea": {
+    "source": "assets/images/menu-editorial/cat-cafea.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-cafea-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 43342
+      },
+      {
+        "path": "assets/images/meniu/cat-cafea-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 33523
+      },
+      {
+        "path": "assets/images/meniu/cat-cafea-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 76256
+      },
+      {
+        "path": "assets/images/meniu/cat-cafea-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 59667
+      },
+      {
+        "path": "assets/images/meniu/cat-cafea-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 144102
+      },
+      {
+        "path": "assets/images/meniu/cat-cafea-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 116009
+      }
+    ]
+  },
+  "cat-racoritoare": {
+    "source": "assets/images/menu-editorial/cat-racoritoare.webp",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-racoritoare-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 70602
+      },
+      {
+        "path": "assets/images/meniu/cat-racoritoare-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 53241
+      },
+      {
+        "path": "assets/images/meniu/cat-racoritoare-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 132138
+      },
+      {
+        "path": "assets/images/meniu/cat-racoritoare-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 101533
+      },
+      {
+        "path": "assets/images/meniu/cat-racoritoare-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 253336
+      },
+      {
+        "path": "assets/images/meniu/cat-racoritoare-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 202579
+      }
+    ]
+  },
+  "cat-bere": {
+    "source": "work/menu-m31-generated/cat-bere-source.png",
+    "native": [
+      1536,
+      1024
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/cat-bere-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 88612
+      },
+      {
+        "path": "assets/images/meniu/cat-bere-800.avif",
+        "width": 800,
+        "height": 533,
+        "bytes": 57155
+      },
+      {
+        "path": "assets/images/meniu/cat-bere-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 171038
+      },
+      {
+        "path": "assets/images/meniu/cat-bere-1200.avif",
+        "width": 1200,
+        "height": 800,
+        "bytes": 109947
+      },
+      {
+        "path": "assets/images/meniu/cat-bere-2000.webp",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 341382
+      },
+      {
+        "path": "assets/images/meniu/cat-bere-2000.avif",
+        "width": 2000,
+        "height": 1333,
+        "bytes": 211837
+      }
+    ]
+  },
+  "hero-meniu": {
+    "source": "work/menu-m31-generated/hero-meniu-original.png",
+    "native": [
+      1672,
+      941
+    ],
+    "upscaled_2000": true,
+    "variants": [
+      {
+        "path": "assets/images/meniu/hero-meniu-800.webp",
+        "width": 800,
+        "height": 450,
+        "bytes": 130612
+      },
+      {
+        "path": "assets/images/meniu/hero-meniu-800.avif",
+        "width": 800,
+        "height": 450,
+        "bytes": 91596
+      },
+      {
+        "path": "assets/images/meniu/hero-meniu-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 248018
+      },
+      {
+        "path": "assets/images/meniu/hero-meniu-1200.avif",
+        "width": 1200,
+        "height": 675,
+        "bytes": 174435
+      },
+      {
+        "path": "assets/images/meniu/hero-meniu-2000.webp",
+        "width": 2000,
+        "height": 1125,
+        "bytes": 491422
+      },
+      {
+        "path": "assets/images/meniu/hero-meniu-2000.avif",
+        "width": 2000,
+        "height": 1125,
+        "bytes": 332310
+      }
+    ]
+  }
+}

@@ -1,24 +1,23 @@
-# Verificare finală — înainte de lansare
+# Verificare M3.1 — înainte de lansare
 
-## Verificat
+## Verificat local
 
-- [x] 257 de produse reale în copia de evaluare; conexiunea reală PHP cURL → Supabase verificată în CI, numai pentru citire.
-- [x] 32 de verificări PHP trecute: cache rece/cald, întrerupere, răspuns invalid, formatare, escaping, categorie nouă și 257 de elemente în HTML/JSON-LD.
-- [x] Supabase indisponibil, simulat: se afișează ultima copie bună; un răspuns invalid nu o înlocuiește.
-- [x] Categorie nouă: apare automat în „Și altele”, fără imagine și fără schimbarea configurării.
-- [x] Chrome la 390 și 360 px: fără scroll orizontal; liste extensibile, navigare mobilă și categorie activă funcționale.
-- [x] Chrome la 1440 px: structură editorială, imagini mari, fonturi locale și header/subsol prezente.
-- [x] Preferința pentru reducerea animațiilor este respectată; focus vizibil și controale principale de minimum 44 px.
-- [x] 13 imagini noi, cu 39 de WebP-uri valide; imaginile existente și logo-ul oficial sunt păstrate, cu variante optimizate.
-- [x] Lighthouse mobil, audit CI pe HTML-ul de producție cu gzip: **99 performanță, 100 accesibilitate, 100 bune practici, 100 SEO**. LCP 2,0 s; CLS 0,008; TBT 0 ms. Raport măsurat pentru revizia `ff584f822d8afc9ed4b8cbda12c7b0e76545d19f`.
+- [x] `meniu.php` autonom: fără `require`/`include` la runtime, randare identică modulelor sursă.
+- [x] 44 de probe PHP: cache rece/cald, expirare, întrerupere simulată, ultima copie bună, răspuns invalid, categorie nouă, escaping și toate cele 257 de produse în HTML/JSON-LD.
+- [x] Cantitate și alcool inline numai când valorile există; lipsurile nu sunt inventate, procentul de fructe nu este tratat drept alcool.
+- [x] Spirtoase: 8 taburi, inclusiv Gin separat din categoria comună, fără pierderi sau duplicări de produse.
+- [x] 20 de ilustrații, fiecare în WebP și AVIF la 800/1200/2000 px: 120 de fișiere separate în `assets/images/meniu/`. Dimensiuni și decodare verificate; fără base64.
+- [x] Hero diferit de prima pagină și Bere cu bucătari miniaturali; hero eager și `fetchpriority="high"`.
 
-Auditul folosește un server de evaluare comprimat și date reale din snapshot, nu găzduirea cPanel. Previzualizarea autonomă rămâne `noindex`; varianta PHP de producție are `index,follow`. Scorul de pe domeniul final se verifică după instalare, deoarece depinde și de hosting.
+## Verificare browser M3.1
 
-## De închis înainte de publicare
+Rezultatele Chrome 1440/390/360 px, controlul taburilor cu tastatura, lipsa suprapunerii hero/text pe mobil, fallback-ul fără JavaScript, proba RPC reală din PHP și Lighthouse se completează după rularea CI. Scorul 99/100/100/100 al versiunii M3 precedente nu se transferă automat acestei versiuni.
 
-- [ ] Fotografia reală a coastelor BBQ cu cartofi prăjiți; apoi generarea și aprobarea ilustrației Porc. Între timp, categoria este listă fără imagine.
-- [ ] Aprobarea vizuală a utilizatorului: desktop, telefon și toate ilustrațiile.
-- [ ] Instalarea în document root-ul Garden; PHP 8.1+, cURL, cache cu drept de scriere și compresie activă.
-- [ ] Verificarea transportului HTTPS PHP → Supabase de pe găzduirea cPanel; confirmarea reîmprospătării cache-ului după 10 minute.
-- [ ] Activarea rutării `meniu.html` numai după acordul de lansare.
-- [ ] Verificarea finală pe un telefon real și pe domeniul public: linkuri, apel, navigare, prețuri și Lighthouse.
+## Înainte de publicare
+
+- [ ] Evaluarea utilizatorului pentru noul hero, Bere și restul paginii.
+- [ ] Fotografia reală a coastelor BBQ cu cartofi prăjiți; Porc rămâne temporar listă fără fotografie.
+- [ ] PHP 8.1+, extensia cURL, permisiuni de scriere în cache și compresie pe hosting.
+- [ ] Instalare și verificarea conexiunii PHP → Supabase pe cPanel Garden, apoi confirmarea reîmprospătării cache-ului după 10 minute.
+- [ ] Rutarea `meniu.html` doar după acordul explicit de lansare.
+- [ ] Verificare pe telefon real și Lighthouse pe domeniul final; CI nu este dovada performanței cPanel.

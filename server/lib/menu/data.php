@@ -77,3 +77,14 @@ function portion(?string $s):string {
 }
 function description(?string $s):string{return ucfirst_ro(trim((string)$s));}
 function price(mixed $value):string{$n=(float)$value;return number_format($n,abs($n-round($n))<0.00001?0:2,',','.').' lei';}
+/** Display only alcohol percentages actually supplied in the public text. */
+function drink_details(array $row):array {
+    $quantity=portion($row['portion_display']??'');$text=trim((string)($row['description_ro']??''));$abv='';
+    // An explicit alcohol marker prevents interpreting fruit percentages as ABV.
+    $pattern='/(?<![\d.,])(100|\d{1,2}(?:[.,]\d{1,2})?)\s*%\s*(?:alcool|alc\.?|vol\.?)(?!\p{L})/iu';
+    if(preg_match($pattern,$text,$match)||preg_match($pattern,(string)$row['name_ro'],$match)){
+        $n=(float)str_replace(',','.',$match[1]);
+        if($n>=0&&$n<=100){$abv=rtrim(rtrim(number_format($n,2,',',''),'0'),',').'%';$text=trim(preg_replace($pattern,'',$text)??$text," \t\n\r\0\x0B·,;–-");}
+    }
+    return ['name'=>$abv!==''?trim(preg_replace($pattern,'',(string)$row['name_ro'])??$row['name_ro']):$row['name_ro'],'quantity'=>$quantity,'abv'=>$abv,'inline'=>implode(' · ',array_filter([$quantity,$abv],static fn($v)=>$v!=='')),'description'=>description($text)];
+}

@@ -168,6 +168,44 @@ body{line-height:var(--om-body-leading)}textarea{font:inherit}
 @media(max-width:1100px) and (min-width:801px){.om-category,.om-category-reverse{gap:28px;grid-template-columns:minmax(0,52fr) minmax(0,48fr)}.om-dish-name,.om-dish-price{font-size:14px}.om-menu-hero-copy{width:58%}.om-menu-hero-copy h1{font-size:82px}}
 @media(max-width:800px){.om-menu-hero{min-height:60vh;min-height:60svh;align-items:flex-end}.om-menu-hero-copy{width:100%;padding:320px 24px 38px}.om-menu-hero-copy h1{font-size:clamp(58px,10vw,84px)}.om-menu-hero-copy>p:not(.eyebrow){font-size:15px;max-width:100%;margin-bottom:22px}.om-menu-hero-image{inset:0 0 auto;height:440px}.om-menu-hero-image img{object-position:center 40%;object-fit:cover}.om-menu-hero:after{background:linear-gradient(0deg,#100e0b 0%,#100e0b 12%,#100e0bdd 32%,#100e0b22 65%,#100e0b00)}.om-hero-caption{bottom:auto;top:14px;right:20px;font-size:10px;color:#eadcc7;background:#100e0b99;padding:3px 6px}.om-menu-wrap{padding-inline:24px}.om-lunch{grid-template-columns:minmax(0,1fr) minmax(160px,.5fr);padding:28px;gap:24px;margin-top:20px}.om-lunch-price{padding-left:24px}.om-lunch-price>strong{font-size:64px}.om-lunch-parts{font-size:14px}.om-lunch-hours{font-size:13px}.om-lunch-price .om-text-link{font-size:12px}.om-menu-nav-inner{padding-inline:16px}.om-menu-body{padding-top:26px}.om-group-heading{margin-bottom:32px;padding-bottom:18px}.om-category,.om-category-reverse{display:flex;flex-direction:column;gap:20px;margin-bottom:58px}.om-category-figure{position:static;width:100%}.om-category-image{aspect-ratio:3/2}.om-category-copy{padding:0;width:100%}.om-category-copy h2{font-size:46px;line-height:1.01;margin-bottom:26px}.om-dish{padding-block:13px 15px}.om-dish-name,.om-dish-price{font-size:15px}.om-dish-description{font-size:13px;line-height:1.6}.om-compact{padding:24px 22px 8px;margin-bottom:50px}.om-compact-grid{gap:30px}.om-menu-end{padding-block:48px}.om-menu-group,.om-category,.om-compact{scroll-margin-top:80px}}
 @media(max-width:520px){.om-menu-hero-copy{padding:280px 20px 30px}.om-menu-hero-copy h1{font-size:63px;margin:20px 0}.om-menu-hero-copy .eyebrow{font-size:10px}.om-menu-hero-image{height:400px}.om-menu-hero-image img{object-position:center 42%}.om-hero-actions{gap:10px}.om-hero-actions .button{padding:0 14px;font-size:12px;gap:10px;min-height:46px}.om-menu-wrap{padding-inline:20px}.om-lunch{display:block;padding:24px 22px;margin-bottom:24px}.om-lunch h2{font-size:49px;line-height:1.02;margin-bottom:16px}.om-lunch-parts{font-size:14px}.om-lunch-price{display:flex;align-items:center;justify-content:space-between;gap:16px;border-left:0;border-top:1px solid #705530;margin-top:22px;padding:20px 0 0}.om-lunch-price>strong{font-size:66px;line-height:1;margin:0}.om-lunch-price>strong small{font-size:14px}.om-lunch-price .om-text-link{max-width:140px;line-height:1.4;font-size:12px;gap:10px}.om-menu-nav a{padding-inline:12px;font-size:12px}.om-category-figure{width:calc(100% + 40px);margin-inline:-20px}.om-category-figure figcaption{padding-inline:20px;margin-top:8px}.om-category-image{aspect-ratio:3/2}.om-category-copy h2{font-size:44px}.om-category-copy .om-kicker{font-size:10px}.om-dish-line{gap:6px}.om-dish-name,.om-dish-price{font-size:15px}.om-dish-dots{min-width:8px}.om-dish-description{font-size:12.5px}.om-compact{padding:24px 20px 4px}.om-compact-heading{display:block}.om-compact-heading h2{font-size:40px;margin-top:10px}.om-compact-grid{grid-template-columns:minmax(0,1fr);gap:30px}.om-group-heading{align-items:center}.om-group-heading h2{font-size:36px}.om-group-heading .om-kicker{font-size:10px;letter-spacing:.12em}.om-menu-end{padding-inline:0}.om-menu-end h2{font-size:59px}}
+/* M3.1 — full-frame menu-table hero, no text over chefs; inline drink data/tabs. */
+.menu-editorial .om-menu-hero{flex-direction:column;align-items:stretch;min-height:70svh}
+.menu-editorial .om-menu-hero:after{display:none}
+.menu-editorial .om-menu-hero-image{position:relative;inset:auto;z-index:auto;margin:0;width:100%;height:auto;aspect-ratio:16/9;order:2}
+.menu-editorial .om-menu-hero-image picture{position:relative;inset:auto;display:block;width:100%;height:100%}
+.menu-editorial .om-menu-hero-image img{width:100%;height:100%;object-fit:contain;object-position:center}
+.menu-editorial .om-menu-hero-image figcaption{position:absolute;bottom:14px;right:5.2%;padding:3px 7px;background:#100e0bbf;color:#e7ddcf;font-size:11px}
+.menu-editorial .om-menu-hero-copy{order:1;width:100%;max-width:1500px;margin:auto;padding:38px 5.2% 32px;display:grid;grid-template-columns:1.1fr 1fr;grid-template-areas:"kicker intro" "title intro" "title actions";gap:10px 48px;align-items:center}
+.menu-editorial .om-menu-hero-copy .eyebrow{grid-area:kicker;margin:0 0 8px}
+.menu-editorial .om-menu-hero-copy h1{grid-area:title;font-size:clamp(60px,6.5vw,96px);line-height:.98;margin:0}
+.menu-editorial .om-menu-hero-copy>p:not(.eyebrow){grid-area:intro;align-self:end;margin:0 0 12px;font-size:17px;line-height:1.65;max-width:none}
+.menu-editorial .om-hero-actions{grid-area:actions;align-self:start}
+.om-drink-heading{min-width:0;display:inline;line-height:1.55}
+.om-drink-heading .om-dish-name{display:inline}
+.om-drink-measure{display:inline;font:400 11px/1.5 var(--om-font-body);font-variant-numeric:tabular-nums;color:#c6baaa;margin-left:9px;white-space:nowrap}
+.om-spirit-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:-4px 0 28px;position:relative}
+.om-spirit-tabs a{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:8px 11px;border:1px solid #6b5431;border-radius:3px;color:#d5c8b5;font-size:12px;white-space:nowrap}
+.om-spirit-tabs a:hover{border-color:var(--gold);color:var(--cream)}
+.om-spirit-tabs [aria-selected=true]{background:var(--gold);color:#18120a;border-color:var(--gold)}
+.om-spirit-panel[hidden]{display:none!important}
+.om-spirits.is-enhanced .om-spirit-panel>.om-subcategory-title{display:none}
+.om-spirit-panel{scroll-margin-top:90px}
+.om-spirit-panel:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
+@media(max-width:800px){
+ .menu-editorial .om-menu-hero{min-height:60svh}
+ .menu-editorial .om-menu-hero-image{order:0;height:auto;aspect-ratio:16/9}
+ .menu-editorial .om-menu-hero-copy{order:1;display:block;padding:28px 24px 34px}
+ .menu-editorial .om-menu-hero-copy h1{font-size:clamp(54px,10vw,76px);margin:16px 0 22px;line-height:1}
+ .menu-editorial .om-menu-hero-copy>p:not(.eyebrow){font-size:15px;margin:0 0 24px;max-width:none}
+ .menu-editorial .om-menu-hero-image figcaption{font-size:10px;bottom:8px;right:16px}
+ .om-spirit-tabs{gap:6px;margin-bottom:24px}
+}
+@media(max-width:520px){
+ .menu-editorial .om-menu-hero-copy{padding:26px 20px 30px}
+ .menu-editorial .om-menu-hero-copy h1{font-size:59px}
+ .om-drink-measure{font-size:11px;margin-left:7px}
+ .om-spirit-tabs a{font-size:12px;padding-inline:10px}
+}
 @media(prefers-reduced-motion:no-preference){.om-category-image{animation:om-image-enter linear both;animation-timeline:view();animation-range:entry 0% entry 80%}@keyframes om-image-enter{from{opacity:.78;translate:0 12px}to{opacity:1;translate:0 0}}}
 @media(prefers-reduced-motion:reduce){.menu-editorial *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{.menu-editorial .om-menu-nav,.menu-editorial .om-header,.menu-editorial .om-footer,.menu-editorial .om-menu-hero,.menu-editorial .om-menu-end{display:none}.menu-editorial{background:white;color:#181612}.om-menu-wrap{padding:0}.om-category{display:block;margin-bottom:24px}.om-category-figure{display:none}.om-dish-name,.om-dish-description,.om-dish-price{color:#181612}.om-compact-grid{display:block}.om-lunch{background:white;color:#181612}.menu-editorial details:not([open])>*:not(summary){display:block!important}}

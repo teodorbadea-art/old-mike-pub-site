@@ -21,6 +21,20 @@ try{
  $empty=menu($base,static fn()=>[],$now+700);check($empty['rows']===[],'legitimate empty menu accepted');
  $live=json_decode(file_get_contents($root.'/data/menu-redesign/menu-preview-snapshot.json'),true);check(valid_rows($live['rows']),'real snapshot valid');$page=render($live,$root,true);check(substr_count($page,'data-menu-item')===257,'257 products rendered exactly once');
  preg_match('~<script type="application/ld\+json">(.*?)</script>~s',$page,$match);$ld=json_decode($match[1],true,512,JSON_THROW_ON_ERROR);$schemaCount=0;foreach($ld['hasMenu']['hasMenuSection'] as $section)$schemaCount+=count($section['hasMenuItem']);check($schemaCount===257,'257 schema items');check(strpos($page,'href="#mancare"')<strpos($page,'href="#bauturi"'),'food before drinks');
+ $drink=OldMikeMenu\drink_details(['name_ro'=>'Chivas Regal','portion_display'=>'40 ML','description_ro'=>'40% alcool']);
+ check($drink['inline']==='40 ml · 40%'&&$drink['description']==='','drink quantity+ABV inline, no duplicate description');
+ $drink=OldMikeMenu\drink_details(['name_ro'=>'Wyborowa','portion_display'=>'40 ML','description_ro'=>'37,5% alc']);check($drink['inline']==='40 ml · 37,5%','decimal ABV');
+ $drink=OldMikeMenu\drink_details(['name_ro'=>'Whisky','portion_display'=>'40 ML','description_ro'=>'single malt']);check($drink['inline']==='40 ml'&&$drink['abv']==='','unknown ABV never guessed');
+ $drink=OldMikeMenu\drink_details(['name_ro'=>'Palinca 50% Alcool','portion_display'=>'30 ML','description_ro'=>null]);check($drink['inline']==='30 ml · 50%'&&$drink['name']==='Palinca','explicit name ABV moved to measure');
+ $drink=OldMikeMenu\drink_details(['name_ro'=>'Suc','portion_display'=>'250 ML','description_ro'=>'100% fructe']);check($drink['abv']==='','fruit percentage is not alcohol');
+ $config=require $root.'/server/lib/menu/config.php';$model=OldMikeMenu\model($live['rows'],$config,$root);$spirits=array_values(array_filter($model['sections']['Bauturi'],static fn($s)=>$s['id']==='spirtoase'))[0];$panels=OldMikeMenu\spirit_panels($spirits['lists'],$config);
+ check(count($panels)===8,'eight spirit tabs including gin and liqueurs');
+ $panelCount=array_sum(array_map(static fn($p)=>count($p['rows']),$panels));check($panelCount===array_sum(array_map('count',$spirits['lists'])),'tabs retain every spirit once');
+ $gin=array_values(array_filter($panels,static fn($p)=>$p['label']==='Gin'))[0];check(count($gin['rows'])===3,'three published gins separated from mixed source category');
+ check(str_contains($page,'type="image/avif"')&&str_contains($page,'-800.avif 800w')&&str_contains($page,'-1200.webp 1200w')&&str_contains($page,'-2000.webp 2000w'),'all requested formats/widths');
+ check(str_contains($page,'fetchpriority="high" loading="eager"'),'hero priority');
+ check(!str_contains($page,'data:image/')&&!str_contains($page,';base64,'),'no embedded image data');
+ check(str_contains($page,'assets/images/meniu/hero-meniu-800.webp')&&!str_contains($page,'hero-single-chefs'),'menu hero distinct from homepage');
  echo 'PASS '.$count.' menu checks: cache/outage/formatting/new category/escaping/257 complete real items'.PHP_EOL;
 }finally{
  foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($base,FilesystemIterator::SKIP_DOTS),RecursiveIteratorIterator::CHILD_FIRST)as $p){$p->isDir()?rmdir($p->getPathname()):unlink($p->getPathname());}rmdir($base);
