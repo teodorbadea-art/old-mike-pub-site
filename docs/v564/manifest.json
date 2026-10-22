@@ -1,0 +1,10 @@
+{
+  "meniu.php": {
+    "before": "15efe8f22d6fc08051146b849faaed7d6109cc5f7d6ff398670532f6a26c1b24",
+    "after": "b469de42155f6f14eee08f419dc14c662809da683fcecb95f2b2c1c06bc4896a"
+  },
+  "assets/site.css": {
+    "before": "19df37d0d9d585f4da1af09877525b784a97ee7a8b160bc02ca9ceecc2882ed3",
+    "after": "38d310d9aee4b44f4f0ae721ffe8b7092e97cdd526b0e8e1af64f539fb6df7fb"
+  }
+}

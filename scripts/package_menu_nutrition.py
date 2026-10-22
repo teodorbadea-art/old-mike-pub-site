@@ -12,4 +12,6 @@ sources+=['tests/php/menu.php','tests/php/menu-nutrition.php','data/menu-redesig
 with zipfile.ZipFile(OUT/'Garden-V564-private.zip','w',zipfile.ZIP_DEFLATED)as z:
  for name in files+sources:z.write(ROOT/name,'candidate/'+name)
  z.write(OUT/'manifest.json','manifest.json')
+with zipfile.ZipFile(OUT/'Garden-V564-DOAR-FISIERE-PUBLICE.zip','w',zipfile.ZIP_DEFLATED)as z:
+ for name in files:z.write(ROOT/name,name)
 print('Prepared private Garden ZIP: two public files; tests and sources stay outside public')
