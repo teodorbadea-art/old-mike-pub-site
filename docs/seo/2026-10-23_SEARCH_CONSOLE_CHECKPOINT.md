@@ -1,3 +1,13 @@
+# Actualizare finală — 23 octombrie 2026, SEO pregătit, nepublicat
+
+FACT / capturi: proprietatea Domain oldmike.ro verificată, sitemap Garden Success, homepage indexată. Test live meniu: disponibil pentru Google. VALIDAT DE UTILIZATOR: indexarea meniului a fost solicitată; indexarea efectivă încă neconfirmată.
+
+DECIZIE: Garden nume principal, Pub doar denumire alternativă în schema; fără titlu combinat sau prezentare «cunoscut și ca». Detalii complete, teste, pachet de șase fișiere și revenire: [audit și livrare SEO](2026-10-23_SEO_GARDEN.md). [PR #1 pentru revizie](https://github.com/teodorbadea-art/old-mike-pub-site/pull/1). Ramură feat/garden-seo-20261023, bazată pe feat/v564-menu-nutrition. PHP și 12 verificări browser 390/1440 PASS. Nu au fost executate deployment-uri sau modificări DNS în lot. Nu relua verificarea TXT; următorul pas este aprobarea pachetului și publicarea controlată în cPanel, apoi acces de Manager la profilul GBP existent.
+
+---
+
+## Istoric anterior acestei actualizări (pașii de mai jos nu mai sunt stadiul curent)
+
 # SEO Garden — checkpoint 23 octombrie 2026
 
 ## Domeniu și pasul curent
