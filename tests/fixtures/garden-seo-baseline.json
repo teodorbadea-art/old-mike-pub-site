@@ -1,0 +1,678 @@
+{
+  "index.html": {
+    "assets": [
+      [
+        "link",
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "32x32",
+          "href": "assets/brand/favicon-32.png"
+        }
+      ],
+      [
+        "link",
+        {
+          "rel": "apple-touch-icon",
+          "sizes": "180x180",
+          "href": "assets/brand/favicon-180.png"
+        }
+      ],
+      [
+        "link",
+        {
+          "rel": "stylesheet",
+          "href": "assets/site.css"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/brand/oldmike-logo.png",
+          "width": "73",
+          "height": "73",
+          "alt": "Logo oficial Old Mike"
+        }
+      ],
+      [
+        "source",
+        {
+          "media": "(max-width:800px)",
+          "srcset": "assets/images/hero-single-chefs-v4-mobile.webp"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/hero-single-chefs-v4.webp",
+          "width": "1536",
+          "height": "1024",
+          "alt": "Compoziție artistică: doi bucătari miniaturali construiesc un burger cu o singură bucată de carne",
+          "fetchpriority": "high",
+          "decoding": "async"
+        }
+      ]
+    ],
+    "forms": [],
+    "scripts": [
+      "<script id=\"site-config\" type=\"application/json\">{\"version\": \"M2.8\", \"timezone\": \"Europe/Bucharest\", \"hours\": {\"1\": [600, 1440], \"2\": [600, 1440], \"3\": [600, 1440], \"4\": [600, 1440], \"5\": [600, 1440], \"6\": [720, 1440], \"7\": [720, 1440]}}</script>",
+      "<script src=\"assets/site.js\" defer></script>",
+      "<script src=\"assets/site-runtime.js\" defer></script>"
+    ],
+    "h1": [
+      "<h1 id=\"hero-title\">Poftă de<br><em>ceva bun.</em></h1>"
+    ],
+    "ids": [
+      "site-nav",
+      "continut",
+      "hero-title",
+      "site-config"
+    ],
+    "classes": [
+      "home",
+      "skip",
+      "site-header",
+      "brand",
+      "brand-name",
+      "mobile-call",
+      "nav-toggle",
+      "site-nav",
+      "nav-phone",
+      "header-cta",
+      "home-hero",
+      "hero-media",
+      "hero-copy",
+      "eyebrow",
+      "intro",
+      "actions",
+      "button hero-menu",
+      "button ghost hero-call",
+      "hero-detail opening-status",
+      "practical-band",
+      "home-paths",
+      "site-footer",
+      "footer-main",
+      "footer-phone",
+      "footer-club",
+      "footer-bottom",
+      "form-note"
+    ]
+  },
+  "contact.html": {
+    "assets": [
+      [
+        "link",
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "32x32",
+          "href": "assets/brand/favicon-32.png"
+        }
+      ],
+      [
+        "link",
+        {
+          "rel": "apple-touch-icon",
+          "sizes": "180x180",
+          "href": "assets/brand/favicon-180.png"
+        }
+      ],
+      [
+        "link",
+        {
+          "rel": "stylesheet",
+          "href": "assets/site.css"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/brand/oldmike-logo.png",
+          "width": "73",
+          "height": "73",
+          "alt": "Logo oficial Old Mike"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/atmosfera-terasa-v1.webp",
+          "srcset": "assets/images/atmosfera-terasa-v1-480.webp 480w, assets/images/atmosfera-terasa-v1-800.webp 800w, assets/images/atmosfera-terasa-v1.webp 1200w",
+          "sizes": "(max-width:800px) 100vw, (max-width:1440px) 76vw, 1000px",
+          "width": "1200",
+          "height": "800",
+          "alt": "Scenă generată de seară pe terasa Old Mike",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "decoding": "async"
+        }
+      ]
+    ],
+    "forms": [],
+    "scripts": [
+      "<script id=\"site-config\" type=\"application/json\">{\"version\": \"M2.8\", \"timezone\": \"Europe/Bucharest\", \"hours\": {\"1\": [600, 1440], \"2\": [600, 1440], \"3\": [600, 1440], \"4\": [600, 1440], \"5\": [600, 1440], \"6\": [720, 1440], \"7\": [720, 1440]}}</script>",
+      "<script src=\"assets/site.js\" defer></script>",
+      "<script src=\"assets/site-runtime.js\" defer></script>"
+    ],
+    "h1": [
+      "<h1 id=\"page-cover-title\">Ne vedem<br><em>la Old Mike.</em></h1>"
+    ],
+    "ids": [
+      "site-nav",
+      "continut",
+      "page-cover-title",
+      "program",
+      "program-title",
+      "map-title",
+      "cerere-grup",
+      "group-title",
+      "site-config"
+    ],
+    "classes": [
+      "inner-page",
+      "skip",
+      "site-header",
+      "brand",
+      "brand-name",
+      "mobile-call",
+      "nav-toggle",
+      "site-nav",
+      "nav-phone",
+      "header-cta",
+      "page-main",
+      "page-intro page-cover cover-contact",
+      "page-cover-media",
+      "page-cover-title",
+      "eyebrow",
+      "button ghost",
+      "intro",
+      "contact-layout contact-details",
+      "contact-card",
+      "label",
+      "big-phone",
+      "contact-links",
+      "text-link",
+      "text-link",
+      "text-link",
+      "text-link",
+      "contact-hours",
+      "eyebrow",
+      "opening-status",
+      "map-section",
+      "section-heading",
+      "eyebrow",
+      "button ghost",
+      "arrow",
+      "map-canvas",
+      "map-placeholder",
+      "button ghost map-load",
+      "map-choice-note",
+      "map-note",
+      "group-request",
+      "request-intro",
+      "eyebrow",
+      "request-note",
+      "group-contact",
+      "button",
+      "site-footer",
+      "footer-main",
+      "footer-phone",
+      "footer-club",
+      "footer-bottom",
+      "form-note"
+    ]
+  },
+  "evenimente.html": {
+    "assets": [
+      [
+        "link",
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "32x32",
+          "href": "assets/brand/favicon-32.png"
+        }
+      ],
+      [
+        "link",
+        {
+          "rel": "apple-touch-icon",
+          "sizes": "180x180",
+          "href": "assets/brand/favicon-180.png"
+        }
+      ],
+      [
+        "link",
+        {
+          "rel": "stylesheet",
+          "href": "assets/site.css"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/brand/oldmike-logo.png",
+          "width": "73",
+          "height": "73",
+          "alt": "Logo oficial Old Mike"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/atmosfera-meci-v1.webp",
+          "srcset": "assets/images/atmosfera-meci-v1-480.webp 480w, assets/images/atmosfera-meci-v1-800.webp 800w, assets/images/atmosfera-meci-v1.webp 1200w",
+          "sizes": "(max-width:800px) 100vw, (max-width:1440px) 76vw, 1000px",
+          "width": "1200",
+          "height": "800",
+          "alt": "Scenă generată cu oaspeți care urmăresc un meci în terasa acoperită Old Mike",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "decoding": "async"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/poster-sport-permanent-v1.webp",
+          "srcset": "assets/images/poster-sport-permanent-v1-480.webp 480w, assets/images/poster-sport-permanent-v1-800.webp 800w, assets/images/poster-sport-permanent-v1.webp 1200w",
+          "sizes": "(max-width:800px) 100vw, 480px",
+          "width": "1200",
+          "height": "1499",
+          "alt": "Poster: Meciurile importante live la Old Mike. Fotbal mare, bere rece, gașca ta. Str. Matei Voievod 67, București. Rezervări: 0787 366 166. Scenă ilustrativă generată.",
+          "loading": "lazy",
+          "decoding": "async"
+        }
+      ]
+    ],
+    "forms": [],
+    "scripts": [
+      "<script id=\"site-config\" type=\"application/json\">{\"version\": \"M2.8\", \"timezone\": \"Europe/Bucharest\", \"hours\": {\"1\": [600, 1440], \"2\": [600, 1440], \"3\": [600, 1440], \"4\": [600, 1440], \"5\": [600, 1440], \"6\": [720, 1440], \"7\": [720, 1440]}}</script>",
+      "<script src=\"assets/site.js\" defer></script>",
+      "<script src=\"assets/site-runtime.js\" defer></script>"
+    ],
+    "h1": [
+      "<h1 id=\"page-cover-title\">Seri de trecut<br><em>în calendar.</em></h1>"
+    ],
+    "ids": [
+      "site-nav",
+      "continut",
+      "page-cover-title",
+      "evergreen-title",
+      "site-config"
+    ],
+    "classes": [
+      "inner-page",
+      "skip",
+      "site-header",
+      "brand",
+      "brand-name",
+      "mobile-call",
+      "nav-toggle",
+      "site-nav",
+      "nav-phone",
+      "header-cta",
+      "page-main",
+      "page-intro page-cover cover-events",
+      "page-cover-media",
+      "page-cover-title",
+      "eyebrow",
+      "intro",
+      "empty-events",
+      "button ghost",
+      "evergreen-event",
+      "evergreen-poster",
+      "evergreen-copy",
+      "eyebrow",
+      "button",
+      "evergreen-address",
+      "events-bottom",
+      "text-link",
+      "arrow",
+      "site-footer",
+      "footer-main",
+      "footer-phone",
+      "footer-club",
+      "footer-bottom",
+      "form-note"
+    ]
+  },
+  "galerie.html": {
+    "assets": [
+      [
+        "link",
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "32x32",
+          "href": "assets/brand/favicon-32.png"
+        }
+      ],
+      [
+        "link",
+        {
+          "rel": "apple-touch-icon",
+          "sizes": "180x180",
+          "href": "assets/brand/favicon-180.png"
+        }
+      ],
+      [
+        "link",
+        {
+          "rel": "stylesheet",
+          "href": "assets/site.css"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/brand/oldmike-logo.png",
+          "width": "73",
+          "height": "73",
+          "alt": "Logo oficial Old Mike"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/atmosfera-gasca-v1.webp",
+          "srcset": "assets/images/atmosfera-gasca-v1-480.webp 480w, assets/images/atmosfera-gasca-v1-800.webp 800w, assets/images/atmosfera-gasca-v1.webp 1200w",
+          "sizes": "(max-width:800px) 100vw, (max-width:1440px) 76vw, 1000px",
+          "width": "1200",
+          "height": "800",
+          "alt": "Scenă de socializare generată, inspirată de spațiile Old Mike",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "decoding": "async"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/atmosfera-meci-v1.webp",
+          "srcset": "assets/images/atmosfera-meci-v1-480.webp 480w, assets/images/atmosfera-meci-v1-800.webp 800w, assets/images/atmosfera-meci-v1.webp 1200w",
+          "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1440px) 44vw, 620px",
+          "width": "1200",
+          "height": "800",
+          "alt": "Scenă ilustrativă generată în spațiul Old Mike: Meciul se vede mai bine împreună.",
+          "loading": "lazy",
+          "decoding": "async",
+          "data-full": "assets/images/atmosfera-meci-v1.webp"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/atmosfera-gasca-v1.webp",
+          "srcset": "assets/images/atmosfera-gasca-v1-480.webp 480w, assets/images/atmosfera-gasca-v1-800.webp 800w, assets/images/atmosfera-gasca-v1.webp 1200w",
+          "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1440px) 44vw, 620px",
+          "width": "1200",
+          "height": "800",
+          "alt": "Scenă ilustrativă generată în spațiul Old Mike: Mai spune o dată povestea.",
+          "loading": "lazy",
+          "decoding": "async",
+          "data-full": "assets/images/atmosfera-gasca-v1.webp"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/atmosfera-terasa-v1.webp",
+          "srcset": "assets/images/atmosfera-terasa-v1-480.webp 480w, assets/images/atmosfera-terasa-v1-800.webp 800w, assets/images/atmosfera-terasa-v1.webp 1200w",
+          "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1440px) 44vw, 620px",
+          "width": "1200",
+          "height": "800",
+          "alt": "Scenă ilustrativă generată în spațiul Old Mike: Încă puțin pe terasă.",
+          "loading": "lazy",
+          "decoding": "async",
+          "data-full": "assets/images/atmosfera-terasa-v1.webp"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/atmosfera-impreuna-v1.webp",
+          "srcset": "assets/images/atmosfera-impreuna-v1-480.webp 480w, assets/images/atmosfera-impreuna-v1-800.webp 800w, assets/images/atmosfera-impreuna-v1.webp 1200w",
+          "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1440px) 44vw, 620px",
+          "width": "1200",
+          "height": "800",
+          "alt": "Scenă ilustrativă generată în spațiul Old Mike: Pentru încă o seară împreună.",
+          "loading": "lazy",
+          "decoding": "async",
+          "data-full": "assets/images/atmosfera-impreuna-v1.webp"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/terrace-wide-v2.webp",
+          "srcset": "assets/images/terrace-wide-v2-480.webp 480w, assets/images/terrace-wide-v2-800.webp 800w, assets/images/terrace-wide-v2.webp 1536w",
+          "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1440px) 44vw, 620px",
+          "width": "1536",
+          "height": "1024",
+          "alt": "Terasa exterioară, reinterpretare cinematică generată după fotografia locației Old Mike",
+          "loading": "lazy",
+          "decoding": "async",
+          "data-full": "assets/images/terrace-wide-v2.webp"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/covered-terrace-v2.webp",
+          "srcset": "assets/images/covered-terrace-v2-480.webp 480w, assets/images/covered-terrace-v2-800.webp 800w, assets/images/covered-terrace-v2.webp 1536w",
+          "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1440px) 44vw, 620px",
+          "width": "1536",
+          "height": "1024",
+          "alt": "Terasa acoperită, reinterpretare cinematică generată după fotografia locației Old Mike",
+          "loading": "lazy",
+          "decoding": "async",
+          "data-full": "assets/images/covered-terrace-v2.webp"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/interior-wide-v2.webp",
+          "srcset": "assets/images/interior-wide-v2-480.webp 480w, assets/images/interior-wide-v2-800.webp 800w, assets/images/interior-wide-v2.webp 1536w",
+          "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1440px) 44vw, 620px",
+          "width": "1536",
+          "height": "1024",
+          "alt": "Interior, reinterpretare cinematică generată după fotografia locației Old Mike",
+          "loading": "lazy",
+          "decoding": "async",
+          "data-full": "assets/images/interior-wide-v2.webp"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/images/bar-wide-v2.webp",
+          "srcset": "assets/images/bar-wide-v2-480.webp 480w, assets/images/bar-wide-v2-800.webp 800w, assets/images/bar-wide-v2.webp 1536w",
+          "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1440px) 44vw, 620px",
+          "width": "1536",
+          "height": "1024",
+          "alt": "Barul, reinterpretare cinematică generată după fotografia locației Old Mike",
+          "loading": "lazy",
+          "decoding": "async",
+          "data-full": "assets/images/bar-wide-v2.webp"
+        }
+      ],
+      [
+        "img",
+        {
+          "alt": "Fotografie mărită"
+        }
+      ]
+    ],
+    "forms": [],
+    "scripts": [
+      "<script id=\"site-config\" type=\"application/json\">{\"version\": \"M2.8\", \"timezone\": \"Europe/Bucharest\", \"hours\": {\"1\": [600, 1440], \"2\": [600, 1440], \"3\": [600, 1440], \"4\": [600, 1440], \"5\": [600, 1440], \"6\": [720, 1440], \"7\": [720, 1440]}}</script>",
+      "<script src=\"assets/site.js\" defer></script>",
+      "<script src=\"assets/site-runtime.js\" defer></script>"
+    ],
+    "h1": [
+      "<h1 id=\"page-cover-title\">Serile au<br><em>locul lor.</em></h1>"
+    ],
+    "ids": [
+      "site-nav",
+      "continut",
+      "page-cover-title",
+      "atmosfera",
+      "atmosfera-title",
+      "scena-meci",
+      "scena-gasca",
+      "scena-terasa",
+      "scena-impreuna",
+      "spatii",
+      "spatii-title",
+      "zona-1",
+      "zona-2",
+      "zona-3",
+      "zona-4",
+      "image-viewer",
+      "site-config"
+    ],
+    "classes": [
+      "inner-page gallery-page",
+      "skip",
+      "site-header",
+      "brand",
+      "brand-name",
+      "mobile-call",
+      "nav-toggle",
+      "site-nav",
+      "nav-phone",
+      "header-cta",
+      "page-main gallery-main",
+      "page-intro page-cover cover-gallery",
+      "page-cover-media",
+      "page-cover-title",
+      "eyebrow",
+      "intro",
+      "gallery-jumps gallery-primary-jumps",
+      "gallery-section",
+      "gallery-section-heading",
+      "eyebrow",
+      "venue-grid atmosphere-grid",
+      "venue-shot atmosphere-shot",
+      "gallery-button venue-photo",
+      "venue-enlarge",
+      "venue-shot atmosphere-shot",
+      "gallery-button venue-photo",
+      "venue-enlarge",
+      "venue-shot atmosphere-shot",
+      "gallery-button venue-photo",
+      "venue-enlarge",
+      "venue-shot atmosphere-shot",
+      "gallery-button venue-photo",
+      "venue-enlarge",
+      "atmosphere-note",
+      "gallery-section gallery-spaces",
+      "gallery-section-heading",
+      "eyebrow",
+      "gallery-jumps",
+      "venue-grid",
+      "venue-shot",
+      "gallery-button venue-photo",
+      "feature-index",
+      "venue-enlarge",
+      "venue-shot",
+      "gallery-button venue-photo",
+      "feature-index",
+      "venue-enlarge",
+      "venue-shot",
+      "gallery-button venue-photo",
+      "feature-index",
+      "venue-enlarge",
+      "venue-shot",
+      "gallery-button venue-photo",
+      "feature-index",
+      "venue-enlarge",
+      "gallery-bottom",
+      "button",
+      "button ghost",
+      "arrow",
+      "close-dialog",
+      "site-footer",
+      "footer-main",
+      "footer-phone",
+      "footer-club",
+      "footer-bottom",
+      "form-note"
+    ]
+  },
+  "confidentialitate.html": {
+    "assets": [
+      [
+        "link",
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "32x32",
+          "href": "assets/brand/favicon-32.png"
+        }
+      ],
+      [
+        "link",
+        {
+          "rel": "apple-touch-icon",
+          "sizes": "180x180",
+          "href": "assets/brand/favicon-180.png"
+        }
+      ],
+      [
+        "link",
+        {
+          "rel": "stylesheet",
+          "href": "assets/site.css"
+        }
+      ],
+      [
+        "img",
+        {
+          "src": "assets/brand/oldmike-logo.png",
+          "width": "73",
+          "height": "73",
+          "alt": "Logo oficial Old Mike"
+        }
+      ]
+    ],
+    "forms": [],
+    "scripts": [
+      "<script id=\"site-config\" type=\"application/json\">{\"version\": \"M2.8\", \"timezone\": \"Europe/Bucharest\", \"hours\": {\"1\": [600, 1440], \"2\": [600, 1440], \"3\": [600, 1440], \"4\": [600, 1440], \"5\": [600, 1440], \"6\": [720, 1440], \"7\": [720, 1440]}}</script>",
+      "<script src=\"assets/site.js\" defer></script>",
+      "<script src=\"assets/site-runtime.js\" defer></script>"
+    ],
+    "h1": [
+      "<h1>Confidențialitate<br><em>și contact.</em></h1>"
+    ],
+    "ids": [
+      "site-nav",
+      "continut",
+      "site-config"
+    ],
+    "classes": [
+      "inner-page",
+      "skip",
+      "site-header",
+      "brand",
+      "brand-name",
+      "mobile-call",
+      "nav-toggle",
+      "site-nav",
+      "nav-phone",
+      "header-cta",
+      "page-main text-page",
+      "page-intro",
+      "eyebrow",
+      "intro",
+      "site-footer",
+      "footer-main",
+      "footer-phone",
+      "footer-club",
+      "footer-bottom",
+      "form-note"
+    ]
+  }
+}
