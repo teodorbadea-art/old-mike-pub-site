@@ -1,0 +1,36 @@
+{
+  "index.html": {
+    "before_sha256": "584aa6277f76a98ef538073172a76539ce58f5a84bd0afbcc616d448d4fd5551",
+    "after_sha256": "276845646ffcec9a7721bd418a21d9821b0d7e26a09acb5fefdadc85d20837ed",
+    "title": "Old Mike Garden | Restaurant și terasă în Sector 2, București",
+    "description": "Old Mike Garden: restaurant, pub și terasă în Sectorul 2, pe Strada Matei Voievod 67, București. Burgeri, pizza și rezervări la 0787 366 166."
+  },
+  "contact.html": {
+    "before_sha256": "563910e521a356cb76a205318de321a42442a91126be84f8fbc826a387f17525",
+    "after_sha256": "b42d9d7aec9160945aadda6279459012eab221a9dda1bebc324f00577a91bfe4",
+    "title": "Contact Old Mike Garden | Rezervări și adresă în București",
+    "description": "Rezervă o masă la Old Mike Garden: 0787 366 166. Strada Matei Voievod 67, Sector 2, București. Vezi programul și indicațiile de orientare."
+  },
+  "evenimente.html": {
+    "before_sha256": "69a02f8021df759c07f71ba1501325e657086945b7ff8c75968cdbc59b48f659",
+    "after_sha256": "6b836d19da45ad2618dafe5aff4b7ba4fa4dc6433b2f9e34e0cc2653460158a0",
+    "title": "Evenimente Old Mike Garden | Meciuri și seri în București",
+    "description": "Vezi evenimentele publicate și meciurile de la Old Mike Garden, pe Matei Voievod 67, București. Pentru rezervări și grupuri: 0787 366 166."
+  },
+  "galerie.html": {
+    "before_sha256": "d00d856a26b44ed4bf86e9f3f938fefb8d44d74a807093e4b2c704371f0e8e5e",
+    "after_sha256": "5c890af8a2479a23dcb3501e80461594c1b341717ba2458fc5d01f33ed5f4877",
+    "title": "Galerie Old Mike Garden | Terasă și atmosferă de pub",
+    "description": "Descoperă terasa, interiorul și barul Old Mike Garden din București. Vezi spațiile restaurantului de pe Strada Matei Voievod 67 și rezervă o masă."
+  },
+  "confidentialitate.html": {
+    "before_sha256": "5c088037b56f91e7e4e945d4563ed17f60d50257162515e253a470c740cbfba1",
+    "after_sha256": "ed0d613c35331a9c1796f48b7851d2955bceb491424491aeac66f41c810b6629",
+    "title": "Confidențialitate | Old Mike Garden",
+    "description": "Informații despre confidențialitate, harta Google și legăturile externe ale site-ului Old Mike Garden. Contact: office@oldmike.ro."
+  },
+  "meniu.php": {
+    "before_sha256": "b469de42155f6f14eee08f419dc14c662809da683fcecb95f2b2c1c06bc4896a",
+    "after_sha256": "6c1848937ccfd5670e1307a29c3f559cc4ce300f7958592ded4f9f620407b392"
+  }
+}

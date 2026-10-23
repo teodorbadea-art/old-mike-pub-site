@@ -1,0 +1,6 @@
+index.html
+contact.html
+evenimente.html
+galerie.html
+confidentialitate.html
+meniu.php

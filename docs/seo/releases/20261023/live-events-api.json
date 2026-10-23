@@ -1,0 +1,5 @@
+{
+  "status": 200,
+  "events": 0,
+  "public_endpoint": "api/index.php?action=events"
+}
