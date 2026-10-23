@@ -1,6 +1,8 @@
-# Old Mike Garden — SEO pregătit pentru verificare, 23 octombrie 2026
+# Old Mike Garden — audit SEO și plan de lucru, 23 octombrie 2026
 
-## Stare exactă
+**PUBLICAT LIVE după aprobarea utilizatorului.** Vezi [raportul final, backup-ul și testele live](2026-10-23_LANSARE_LIVE.md). Secțiunea de pregătire de mai jos păstrează cronologia; nu relua instalarea.
+
+## Stare înainte de publicare (istoric)
 
 - FACT: site public servit din cPanel/AffixHost, separat de site-ul grupului. DNS autoritativ Cloudflare: aldo.ns.cloudflare.com și connie.ns.cloudflare.com. TXT Google verificat prin două resolvere. DNS nu a fost modificat în acest lot.
 - VALIDAT DE UTILIZATOR / capturi: proprietatea Domain `oldmike.ro` este verificată în Search Console; sitemap-ul Garden are status Success; pagina principală este indexată; testul live pentru meniu permite indexarea. Utilizatorul a confirmat solicitarea indexării meniului. Indexarea efectivă a meniului rămâne de verificat.

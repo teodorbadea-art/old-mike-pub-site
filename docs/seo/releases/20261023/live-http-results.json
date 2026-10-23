@@ -1,0 +1,110 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "bytes": 7375,
+    "title": "Old Mike Garden | Restaurant și terasă în Sector 2, București",
+    "robots": "index,follow",
+    "canonical": "https://garden.oldmike.ro/",
+    "h1": 1,
+    "matches_approved_file": true
+  },
+  {
+    "path": "index.html",
+    "status": 200,
+    "bytes": 7375,
+    "title": "Old Mike Garden | Restaurant și terasă în Sector 2, București",
+    "robots": "index,follow",
+    "canonical": "https://garden.oldmike.ro/",
+    "h1": 1,
+    "matches_approved_file": true
+  },
+  {
+    "path": "meniu.php",
+    "status": 200,
+    "bytes": 287074,
+    "title": "Meniu Old Mike Garden București | Preparate și prețuri actualizate",
+    "robots": "index,follow",
+    "canonical": "https://garden.oldmike.ro/meniu.html",
+    "h1": 1,
+    "products": 257,
+    "nutrition_tables": 148
+  },
+  {
+    "path": "meniu.html",
+    "status": 200,
+    "bytes": 287074,
+    "title": "Meniu Old Mike Garden București | Preparate și prețuri actualizate",
+    "robots": "index,follow",
+    "canonical": "https://garden.oldmike.ro/meniu.html",
+    "h1": 1,
+    "products": 257,
+    "nutrition_tables": 148
+  },
+  {
+    "path": "contact.html",
+    "status": 200,
+    "bytes": 9556,
+    "title": "Contact Old Mike Garden | Rezervări și adresă în București",
+    "robots": "index,follow",
+    "canonical": "https://garden.oldmike.ro/contact.html",
+    "h1": 1,
+    "matches_approved_file": true
+  },
+  {
+    "path": "evenimente.html",
+    "status": 200,
+    "bytes": 6875,
+    "title": "Evenimente Old Mike Garden | Meciuri și seri în București",
+    "robots": "index,follow",
+    "canonical": "https://garden.oldmike.ro/evenimente.html",
+    "h1": 1,
+    "matches_approved_file": true
+  },
+  {
+    "path": "galerie.html",
+    "status": 200,
+    "bytes": 13618,
+    "title": "Galerie Old Mike Garden | Terasă și atmosferă de pub",
+    "robots": "index,follow",
+    "canonical": "https://garden.oldmike.ro/galerie.html",
+    "h1": 1,
+    "matches_approved_file": true
+  },
+  {
+    "path": "confidentialitate.html",
+    "status": 200,
+    "bytes": 5670,
+    "title": "Confidențialitate | Old Mike Garden",
+    "robots": "index,follow",
+    "canonical": "https://garden.oldmike.ro/confidentialitate.html",
+    "h1": 1,
+    "matches_approved_file": true
+  },
+  {
+    "path": "robots.txt",
+    "status": 200,
+    "bytes": 111
+  },
+  {
+    "path": "sitemap.xml",
+    "status": 200,
+    "bytes": 398
+  },
+  {
+    "path": "cache/menu.json",
+    "status": 403,
+    "bytes": 358
+  },
+  {
+    "path": "assets/site.css",
+    "status": 200,
+    "bytes": 58000,
+    "honeypot_preserved": true
+  },
+  {
+    "path": "assets/site-runtime.js",
+    "status": 200,
+    "bytes": 4120
+  }
+]
