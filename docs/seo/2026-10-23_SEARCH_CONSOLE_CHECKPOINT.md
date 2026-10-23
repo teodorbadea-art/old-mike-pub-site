@@ -1,3 +1,11 @@
+# PUBLICAT LIVE — 23 octombrie 2026
+
+Utilizatorul a aprobat publicarea prin «ok, confirm». Cele șase fișiere Garden sunt LIVE; backup privat seo-garden-backup-20261023-172223. 257 produse, 148 nutriție, cache 403, 12 probe Chromium 390/1440 PASS. CSS/runtime/.htaccess/robots/sitemap identice; DNS și celelalte aplicații neatinse. Vezi [raportul final cu teste și revenire](2026-10-23_LANSARE_LIVE.md). Nu relua instalarea. Urmează acces de Manager la profilul Google Business Profile existent și verificarea lui. GSC este deja verificat și sitemap-ul acceptat; nu relua TXT-ul DNS. Indexarea efectivă a meniului rămâne de verificat în GSC.
+
+---
+
+## Istoric anterior publicării
+
 # Actualizare finală — 23 octombrie 2026, SEO pregătit, nepublicat
 
 FACT / capturi: proprietatea Domain oldmike.ro verificată, sitemap Garden Success, homepage indexată. Test live meniu: disponibil pentru Google. VALIDAT DE UTILIZATOR: indexarea meniului a fost solicitată; indexarea efectivă încă neconfirmată.
